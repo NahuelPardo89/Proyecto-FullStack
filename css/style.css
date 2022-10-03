@@ -8,7 +8,8 @@ body{
   
 
 
-.enlaceboton {    font-family: verdana, arial, sans-serif;
+.enlaceboton {    
+    font-family: verdana, arial, sans-serif;
     font-size: 10pt;
     font-weight: bold;
     padding: 4px;
@@ -17,6 +18,7 @@ body{
     text-decoration: none;
     border-radius: 6px;
  }
+
  .enlaceboton:link,
  .enlaceboton:visited {
     border-top: 1px solid #cccccc;
@@ -24,6 +26,7 @@ body{
     border-left: 1px solid #cccccc;
     border-right: 2px solid #666666;
  }
+ 
  .enlaceboton:hover {
      border-bottom: 1px solid #cccccc;
     border-top: 2px solid #666666;
