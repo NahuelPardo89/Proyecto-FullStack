@@ -133,9 +133,17 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 
 ## Requisitos específicos
 ### Product Backlog:
-- #US01: Como administrador quiero poder agregar, eliminar y modificar servicios y productos para mantener la página al día con la empresa.
-- #US02: Como administrador quiero que los usuarios de la página puedan acceder a esta desde cualquier dispositivo manteniéndose el diseño y la legibilidad del sitio.
-- #US03: Como administrador quiero ver el listado de usuarios registrados
+- #US01: Como cliente quiero tener una una pagina de inicio en la cual pueda loguear o registrarme
+- #US02: Como cliente quiero tener una una pagina de registro en la cual el usuario pueda ingresar los siguientes datos: Apellido/s, Nombre/s, Teléfono, Email, DNI y Contraseña
+- #US03: Como cliente quiero tener una página que hable sobre nuestra empresa para que los usuarios conozcan mas detalles
+- #US04: Como cliente quiero que el usuario tenga un formulario de contacto para plasmar sus dudas o problematicas
+- #US05: Como Cliente quiero que todos los datos de registro se almacenen en una base de datos para su posterior acceso 
+- #US06: Como Cliente quiero que mi página de inicio cuente con una seccion de navegación la cual permita acceder de manera sencilla a las otras páginas
+- #US07: Como Cliente quiero tener acceso de usuario administrador a la pagina para su futuro gestionamiento
+- #US08: Como Cliente quiero que los usuarios de la página puedan acceder a esta desde cualquier dispositivo manteniéndose el diseño y la legibilidad del sitio.
+- #US09: Como administrador quiero poder agregar, eliminar y modificar servicios y productos para mantener la página al día con la empresa.
+- #US10:  Como administrador quiero ver el listado de usuarios registrados
+- #US03: 
 - #US04: Como administrador quiero poder ver las instalaciones reservadas
 - #US05: Como usuario quiero ver las instalaciones que posee A.M.P.A  para elegir o para ver si ofrecen el servicio que necesito
 - #US06: Como usuario registrado quiero poder reservar una instalación y conocer el costo de dicha reserva.
