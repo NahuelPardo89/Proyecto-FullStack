@@ -31,8 +31,8 @@ CONTENIDO
 3. REQUISITOS ESPECÍFICOS	
     3. Product Backlog	
     3. Sprints	
-        3. Sprint 1	
-        3. Spint 2	
+        - Sprint 1	
+        - Sprint 2	
 
 
 
