@@ -67,11 +67,11 @@ Esta especificación de requisitos está dirigida a los usuarios de la web "Comp
 
 | Nombre                 | Rol           | Categoría Profesional | Responsabilidad             | Información de contacto |
 |------------------------|---------------|-----------------------|-----------------------------|-------------------------|
-| Pardo Lesa Nahuel Cruz | Scrum Master  | Estudiante de TSDWAD  | Desarrollador de página web | nahue.pardo74@gmail.com |
+| Nahuel Cruz Pardo Lesa | Scrum Master  | Estudiante de TSDWAD  | Desarrollador de página web | nahue.pardo74@gmail.com |
 
 | Nombre                     | Rol         | Categoría Profesional | Responsabilidad             | Información de contacto |
 |----------------------------|-------------|-----------------------|-----------------------------|-------------------------|
-| Pardo Lesa Catriel Ignacio | Colaborador | Estudiante de TSDWAD  | Desarrollador de página web | cartup90@gmail.com      |
+|  Catriel Ignacio Pardo Lesa | Colaborador | Estudiante de TSDWAD  | Desarrollador de página web | cartup90@gmail.com      |
 
 | Nombre             | Rol         | Categoría Profesional | Responsabilidad             | Información de contacto  |
 |--------------------|-------------|-----------------------|-----------------------------|--------------------------|
