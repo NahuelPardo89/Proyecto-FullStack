@@ -4,6 +4,7 @@
   
 .navRight{
     text-align: right;
+    
 }
 
 .navLeft{
@@ -15,7 +16,18 @@
     padding: 0px;
     box-sizing: border-box;
     background-image: url("../imagenes/fondoReg.jpg");
+
 }
+
+.bodyindex{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url("../imagenes/fondoReg.jpg");
+
+}
+
+
 .formreg{
    
     background: rgb(21, 20, 27);
@@ -80,12 +92,14 @@
 .enlaceboton {    
     font-family: "calibri";
     font-size: 18px;
-    font-weight: bold;
-    padding: 4px;
     background-color: #0e0e0d;
     color: #fff6f6;
     text-decoration: none;
     border-radius: 6px;
+    width: 300px;
+    padding: 30px;
+    margin: auto ;
+    
  }
 
  .enlaceboton:link,
