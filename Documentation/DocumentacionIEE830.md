@@ -3,14 +3,12 @@
 ## Ficha del documento
 
 
-| Fecha | Revisión | Autor | Verificado dep. Calidad. |   |
-|:Sept :|:--------:|:-----:|:------------------------:|---|
-| 2022  |          |       |                          |   |
+| FECHA | REVISIÓN | AUTOR | VERIFICADO DP. CALIDAD |   
+|-------|----------|-------|------------------------|
+| 2022  |          |       |                        |   
 
 
-1. Elemento de la lista 1
-2. Elemento de la lista 2
-3. Elemento de la lista 3
+
 
 
 # Contenido
