@@ -24,7 +24,10 @@ CONTENIDO
     1. Referencias	
     1. Resumen
     	
-2. DESCRIPCIÓN GENERAL	
+2. DESCRIPCIÓN GENERAL
+    2. Perspectiva del producto	
+    2. Características de los usuarios	
+    2. Restricciones		
    
 3. REQUISITOS ESPECÍFICOS	
     3. Product Backlog	
