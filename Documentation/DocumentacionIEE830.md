@@ -17,12 +17,12 @@
 ## FICHA DEL DOCUMENTO	
 CONTENIDO	
 1. INTRODUCCIÓN	
-1.1.	Propósito	
-1.2.	Alcance	
-1.3.	Personal involucrado	
-1.4.	Definiciones, acrónimos y abreviaturas	
-1.5. 	Referencias	
-1.6.	Resumen	
+1. 1.	Propósito	
+1. 2.	Alcance	
+1. 3.	Personal involucrado	
+1. 4.	Definiciones, acrónimos y abreviaturas	
+1. 5.	Referencias	
+1. 6.	Resumen	
 2	DESCRIPCIÓN GENERAL	
 2.1	Perspectiva del producto	
 2.3	Características de los usuarios	
