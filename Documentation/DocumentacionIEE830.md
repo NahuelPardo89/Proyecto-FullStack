@@ -1,4 +1,7 @@
-h1 asd
+# Especificación de requisitos de software
+
+# Proyecto:  A.M.P.A. COMPLEJO DEPORTIVO
+
 
 
 
