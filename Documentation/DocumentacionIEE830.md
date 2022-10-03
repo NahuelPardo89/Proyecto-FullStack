@@ -22,7 +22,8 @@ CONTENIDO
     1. Personal involucrado	
     1. Definiciones, acrónimos y abreviaturas	
     1. Referencias	
-    1. Resumen	
+    1. Resumen
+    	
 2. DESCRIPCIÓN GENERAL	
     2. Perspectiva del producto	
     2. Características de los usuarios	
