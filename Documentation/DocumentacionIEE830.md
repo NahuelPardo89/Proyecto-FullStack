@@ -3,9 +3,9 @@
 ## Ficha del documento
 
 
-| FECHA | REVISIÓN | AUTOR | VERIFICADO DP. CALIDAD |   
+| FECHA | REVISIÓN | AUTOR | VERIFICADO DEP. CALIDAD |   
 |-------|----------|-------|------------------------|
-| 2022  |          |       |                        |   
+| 03/10/2022  |    ALPHA 1.0      | DevCord Inspiradores Digitales      |                        |   
 
 
 
