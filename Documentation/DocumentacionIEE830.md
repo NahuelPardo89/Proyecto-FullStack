@@ -91,18 +91,16 @@ Esta especificación de requisitos está dirigida a los usuarios de la web "Comp
 
 |  **Nombre** |                                     Descripción                                     |
 |:-----------|:-----------------------------------------------------------------------------------|
-| **Usuario** | Persona que usará el sistema para gestionar procesos                                |
-|  **SIS-I**  | Sistema de Información Web para la Gestión de Procesos Administrativos y Académicos |
-|   **ERS**   | Especificación de Requisitos Software                                               |
+| **Usuario** | Persona que usará el sistema                                |
+|   **Usuario Administrador**   | Persona que administrará el sistema                               |
 |    **RF**   | Requerimiento Funcional                                                             |
 |   **RNF**   | Requerimiento No Funcional                                                          |
-|   **FTP**   | Protocolo de Transferencia de Archivos                                              |
 
 ### Referencias
 |   Título del Documento   | Referencia |
 |:------------------------:|:----------:|
 | Standard IEEE 830 - 1998 | IEEE       |
-|                          |            |
+
 
 ### Resumen
 Este   documento   consta   de   tres   secciones.   En   la   primera   sección   se   realiza   una introducción al mismo y se proporciona una visión general del próposito y alcance del proyecto. También el personal involucrado. En la segunda sección del documento se realiza una descripción general del producto, con el fin de conocer las principales funciones que este debe o no realizar, como así también las caraterísticas de los usuarios. Por   último,   la   tercera   sección   del   documento   es   aquella   en   la   que   se   definen detalladamente los requisitos que debe satisfacer el sistema
