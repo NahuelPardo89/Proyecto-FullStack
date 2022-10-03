@@ -1,7 +1,11 @@
-# Especificación de requisitos de software
+# Especificación de requisitos de software Proyecto:  A.M.P.A. COMPLEJO DEPORTIVO
 
-## Proyecto:  A.M.P.A. COMPLEJO DEPORTIVO
+## Ficha del documento
 
+
+| Fecha | Revisión | Autor | Verificado dep. Calidad. |   |
+|:-----:|:--------:|:-----:|:------------------------:|---|
+| 2022  |          |       |                          |   |
 
 
 
