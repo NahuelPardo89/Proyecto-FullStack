@@ -4,7 +4,7 @@
 
 
 | Fecha | Revisión | Autor | Verificado dep. Calidad. |   |
-|:-----:|:--------:|:-----:|:------------------------:|---|
+|:Sept :|:--------:|:-----:|:------------------------:|---|
 | 2022  |          |       |                          |   |
 
 
@@ -105,6 +105,7 @@ Esta especificación de requisitos está dirigida a los usuarios de la web "Comp
 |                          |            |
 
 ### Resumen
+Este   documento   consta   de   tres   secciones.   En   la   primera   sección   se   realiza   una introducción al mismo y se proporciona una visión general del próposito y alcance del proyecto. También el personal involucrado. En la segunda sección del documento se realiza una descripción general del producto, con el fin de conocer las principales funciones que este debe o no realizar, como así también las caraterísticas de los usuarios. Por   último,   la   tercera   sección   del   documento   es   aquella   en   la   que   se   definen detalladamente los requisitos que debe satisfacer el sistema
 
 
 ## Descripción General:
