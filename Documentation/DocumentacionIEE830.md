@@ -136,27 +136,24 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 - #US01: Como cliente quiero tener una una pagina de inicio en la cual pueda loguear o registrarme
 - #US02: Como cliente quiero tener una una pagina de registro en la cual el usuario pueda ingresar los siguientes datos: Apellido/s, Nombre/s, Teléfono, Email, DNI y Contraseña
 - #US03: Como cliente quiero tener una página que hable sobre nuestra empresa para que los usuarios conozcan mas detalles
-- #US04: Como cliente quiero que el usuario tenga un formulario de contacto para plasmar sus dudas o problematicas
+- #US04: Como cliente quiero que el usuario tenga un formulario de contacto para plasmar sus dudas o problematicas y que esta información se envíe a un mail empresarial
 - #US05: Como Cliente quiero que todos los datos de registro se almacenen en una base de datos para su posterior acceso 
 - #US06: Como Cliente quiero que mi página de inicio cuente con una seccion de navegación la cual permita acceder de manera sencilla a las otras páginas
 - #US07: Como Cliente quiero tener acceso de usuario administrador a la pagina para su futuro gestionamiento
 - #US08: Como Cliente quiero que los usuarios de la página puedan acceder a esta desde cualquier dispositivo manteniéndose el diseño y la legibilidad del sitio.
-- #US09: Como administrador quiero poder agregar, eliminar y modificar servicios y productos para mantener la página al día con la empresa.
-- #US10:  Como administrador quiero ver el listado de usuarios registrados
-- #US03: 
-- #US04: Como administrador quiero poder ver las instalaciones reservadas
-- #US05: Como usuario quiero ver las instalaciones que posee A.M.P.A  para elegir o para ver si ofrecen el servicio que necesito
-- #US06: Como usuario registrado quiero poder reservar una instalación y conocer el costo de dicha reserva.
-- #US07: Como usuario no registrado quiero registrarme en el sitio para poder realizar la reserva de instalaciones
-- #US08: Como proveedor de servicios y productos quiero poder administrar mi sección de la tienda
-- #US09: Como usuario registrado quiero poder pagar la reserva de las instalaciones o cualquier otro servicio que ofrezcan desde la misma página web para no tener que hacer el pago en el momento de utilizar los servicios.
-- #US10: Como usuario quiero poder cancelar mis reservas.
-- #US11: Como Proveedor deseo tener todos los medios de pagos como débito, crédito, transferencia, mercado pago y otras,  desde la página.
-- #US12: Como Proveedor deseo que cada instalación cuente con estrellas y comentarios para que los usuarios brinden su opinión y poder mejorar los servicios brindados.
-- #US13: Como Proveedor deseo que cuando el Usuario ingrese aparezca una foto del carnet de socio en la pantalla.
-- #US14: Como Usuario debo contar con descuentos si utilizo las instalaciones con frecuencia.
-- #US15: Como empleado del complejo deseo poder chequear si el usuario ya hizo el pago cuando ingresa al complejo a utilizar las instalaciones para que este no tenga necesidad de mostrar ningún comprobante 
-- #US16: Como usuario registrado quiero ver las fechas y horarios disponibles de las instalaciones ofrecidas en la web para saber cuando están libres para hacer uso de las mismas
+- #US09: Como Cliente deseo tener todos los medios de pagos como débito, crédito, transferencia, mercado pago y otras,  desde la página.
+- #US10: Como Cliente deseo que cada instalación cuente con estrellas y comentarios para que los usuarios brinden su opinión y poder mejorar los servicios brindados.
+- #US11: Como usuario administrador quiero poder agregar, eliminar y modificar servicios y productos para mantener la página al día con la empresa.
+- #US12: Como usuario administrador quiero poder acceder a la base de datos para ver el listado de usuarios registrados
+- #US13: Como usuario administrador quiero poder ver las instalaciones reservadas y quien las reservo
+- #US14: Como usuario no regisrado quiero ver las instalaciones que posee A.M.P.A  para elegir o para ver si ofrecen el servicio que necesito.
+- #US15: Como usuario no registrado quiero registrarme en el sitio para poder realizar la reserva de instalaciones
+- #US16: Como usuario registrado quiero poder reservar una instalación y conocer el costo de dicha reserva.
+- #US17: Como usuario registrado quiero poder pagar la reserva de las instalaciones o cualquier otro servicio que ofrezcan desde la misma página web para no tener que hacer el pago en el momento de utilizar los servicios.
+- #US18: Como usuario registrado quiero poder cancelar mis reservas.
+- #US19: Como usuario registrado debo contar con descuentos si utilizo las instalaciones con frecuencia.
+- #US20: Como usuario administrador deseo poder ver si se efectuó el pago de la reserva realizadas por los usuarios registrados
+- #US22: Como usuario registrado quiero ver las fechas y horarios disponibles de las instalaciones ofrecidas en la web para saber cuando están libres para hacer uso de las mismas
 
 ### Sprint Backlog
 - TK#01: Crear documento IEEE830
