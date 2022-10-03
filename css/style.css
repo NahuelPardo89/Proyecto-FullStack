@@ -6,8 +6,13 @@ body{
     
 }
   
+.navRight{
+    text-align: right;
+}
 
-
+.navLeft{
+    text-align: left;
+}
 .enlaceboton {    
     font-family: verdana, arial, sans-serif;
     font-size: 10pt;
@@ -33,3 +38,4 @@ body{
     border-right: 1px solid #cccccc;
     border-left: 2px solid #666666;
  }
+ 
