@@ -1,0 +1,32 @@
+
+body{
+    background-image: url(../imagenes/fondonav.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    
+}
+  
+
+
+.enlaceboton {    font-family: verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #0e0e0d;
+    color: #fff6f6;
+    text-decoration: none;
+    border-radius: 6px;
+ }
+ .enlaceboton:link,
+ .enlaceboton:visited {
+    border-top: 1px solid #cccccc;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #cccccc;
+    border-right: 2px solid #666666;
+ }
+ .enlaceboton:hover {
+     border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+ }
