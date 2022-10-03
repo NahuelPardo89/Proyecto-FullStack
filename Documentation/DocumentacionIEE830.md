@@ -23,16 +23,15 @@ CONTENIDO
     1. Definiciones, acrónimos y abreviaturas	
     1. Referencias	
     1. Resumen	
-2	DESCRIPCIÓN GENERAL	
-2.1	Perspectiva del producto	
-2.3	Características de los usuarios	
-2.4	Restricciones	
-3	REQUISITOS ESPECÍFICOS	
-3.2	Product Backlog	
-3.2.1	Product Backlog	
-3.3	Sprints	
-3.3.1	Sprint 1	
-3.3.2	Spint 2	
+2. DESCRIPCIÓN GENERAL	
+    2. Perspectiva del producto	
+    2. Características de los usuarios	
+    2. Restricciones	
+3. REQUISITOS ESPECÍFICOS	
+    3. Product Backlog	
+    3. Sprints	
+        3. Sprint 1	
+        3. Spint 2	
 
 
 
