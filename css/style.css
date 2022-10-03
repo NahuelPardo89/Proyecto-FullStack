@@ -1,10 +1,6 @@
 
-body{
-    background-image: url(../imagenes/fondonav.jpg);
-    background-size: cover;
-    background-repeat:no-repeat;
-    
-}
+ 
+
   
 .navRight{
     text-align: right;
@@ -18,7 +14,7 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-image: url();
+    background-image: url("../imagenes/fondoReg.jpg");
 }
 .formreg{
    
@@ -30,7 +26,7 @@ body{
     border-radius: 4px;
     font-family: 'Calibri';
     color: #fff6f6;
-    box-shadow: 7px 13px 37px black;
+    box-shadow: 7px 13px 37px white;
 }
 
 .formreg h4{
@@ -69,7 +65,7 @@ body{
 }
 
 .inputreg{
-    width: 100%;
+    width: 95%;
     background: rgb(21, 20, 27);
     padding: 10px;
     border-radius: 4px;
