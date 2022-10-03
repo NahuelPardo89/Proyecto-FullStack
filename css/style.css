@@ -13,9 +13,77 @@ body{
 .navLeft{
     text-align: left;
 }
+
+.formbody{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url();
+}
+.formreg{
+   
+    background: rgb(21, 20, 27);
+    width: 400px;
+    padding: 30px;
+    margin: auto ;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Calibri';
+    color: #fff6f6;
+    box-shadow: 7px 13px 37px black;
+}
+
+.formreg h4{
+
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.formreg p{
+    height: 40px;
+    text-align: center;
+    font-family: "calibri";
+    font-size: 18px;
+    line-height: 40px;
+
+}
+
+.formreg a{
+    color: white;
+    text-decoration: none;
+}
+
+.formreg a:hover{
+    color: white;
+    text-decoration:underline ;
+}
+
+.formreg .enlaceboton{
+   width: 100%;
+   border: none;
+   padding: 12px;
+   margin: 16px 0;
+   box-shadow: 7px 7px 27px white;
+}
+
+.inputreg{
+    width: 100%;
+    background: rgb(21, 20, 27);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border:1px solid white;
+    font-family: "calibri";
+    font-size: 25px;
+    text-align: center;
+    color: white;
+
+}
 .enlaceboton {    
-    font-family: verdana, arial, sans-serif;
-    font-size: 10pt;
+    font-family: "calibri";
+    font-size: 18px;
     font-weight: bold;
     padding: 4px;
     background-color: #0e0e0d;
