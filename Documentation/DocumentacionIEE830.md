@@ -1,6 +1,6 @@
 # Especificación de requisitos de software
 
-# Proyecto:  A.M.P.A. COMPLEJO DEPORTIVO
+## Proyecto:  A.M.P.A. COMPLEJO DEPORTIVO
 
 
 
