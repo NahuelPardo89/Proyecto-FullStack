@@ -17,8 +17,8 @@
 ## FICHA DEL DOCUMENTO	
 CONTENIDO	
 1. INTRODUCCIÓN	
-  1.1 Propósito	
-  1.2 Alcance	
+    1.1 Propósito	
+    1.2 Alcance	
 1. 3.	Personal involucrado	
 1. 4.	Definiciones, acrónimos y abreviaturas	
 1. 5.	Referencias	
