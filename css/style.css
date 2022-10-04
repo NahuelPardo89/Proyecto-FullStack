@@ -123,6 +123,7 @@ footer{
     display: flex;
     justify-content: center;
     margin: auto;
+    
 }
 
 .navRight{
@@ -135,10 +136,13 @@ footer{
 }
 
 .navLeft{
+    
     text-align: center;
     display: flex;
     
 }
+
+
 .enlaceboton {    
     font-family: "calibri";
     font-size: 18px;
@@ -253,3 +257,31 @@ footer{
 
 }
 /* -------------FIN SECCION FORMULARIO-------------------------*/
+
+/* -------------SECCION MAIN-------------------------*/
+
+/* -------------FIN SECCION MAIN-------------------------*/
+
+
+/* -------------SECCION HEADER-------------------------*/
+
+.encabezado {
+    background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
+    height: 63em;
+}
+
+#imgLogo {
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#nombreComplejo {
+    font-size: 100px;
+    font-variant: inherit;
+    font-weight: 800;
+    margin-top: 18%;
+    margin-left: 22%;
+    color: rgb(0, 0, 0);
+}
