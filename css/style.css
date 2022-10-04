@@ -1,3 +1,5 @@
+
+/* -------------SECCION FOOTER-------------------------*/
 footer{
     margin: 0px;
     padding: 0px;
@@ -24,28 +26,27 @@ footer{
     text-decoration: none;
     color:white;
     font-weight: bold;
-
 }
 
 .sitemap a {
     text-decoration: none;
     color:white;
     font-weight: bold;
-
 }
+
 .conteiner-footer-all{
     width: 100%;
     max-width: 1200px;
     margin: auto;
     font-family: "calibri";
     padding: 40px;
-    
+   
 }
+
 .column1{
     max-width: 400px;
-    
-
 }
+
 .column1 h1{
     font-size: 22px;
 }
@@ -59,6 +60,7 @@ footer{
 .column2 {
     max-width: 400px;
 }
+
 .column2 h1{
     font-size: 22px;
 }
@@ -107,17 +109,50 @@ footer{
     display: flex;
     justify-content:space-between;
 }
-  
+
+/* -------------FIN SECCION FOOTER-------------------------*/
+
+
+/* -------------SECCION NAV-------------------------*/
 .navRight{
     text-align: right;
-    
-    
+     
 }
 
 .navLeft{
     text-align: left;
 }
+.enlaceboton {    
+    font-family: "calibri";
+    font-size: 18px;
+    background-color: #0e0e0d;
+    color: #fff6f6;
+    text-decoration: none;
+    border-radius: 6px;
+    
+    padding: 40px;
+    margin: 3px ;
+    
+ }
 
+ .enlaceboton:link,
+ .enlaceboton:visited {
+    border-top: 1px solid #cccccc;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #cccccc;
+    border-right: 2px solid #666666;
+ }
+ 
+ .enlaceboton:hover {
+     border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+ }
+ 
+/* -------------FIN SECCION NAV-------------------------*/
+
+/* -------------SECCION FROMULARIO-------------------------*/
 .formbody{
     margin: 0px;
     padding: 0px;
@@ -197,31 +232,4 @@ footer{
     color: white;
 
 }
-.enlaceboton {    
-    font-family: "calibri";
-    font-size: 18px;
-    background-color: #0e0e0d;
-    color: #fff6f6;
-    text-decoration: none;
-    border-radius: 6px;
-    
-    padding: 40px;
-    margin: 3px ;
-    
- }
-
- .enlaceboton:link,
- .enlaceboton:visited {
-    border-top: 1px solid #cccccc;
-    border-bottom: 2px solid #666666;
-    border-left: 1px solid #cccccc;
-    border-right: 2px solid #666666;
- }
- 
- .enlaceboton:hover {
-     border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #666666;
-    border-right: 1px solid #cccccc;
-    border-left: 2px solid #666666;
- }
- 
+/* -------------FIN SECCION FORMULARIO-------------------------*/
