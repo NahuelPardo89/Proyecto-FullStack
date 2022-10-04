@@ -113,10 +113,10 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 | **Formación**       | Manejo de herramientas informáticas       |
 | **Actividades**     | 1.Control y manejo del sistema en general |
 
-| **Tipo de usuario** |  Registrado                                                                                                                                                                                                                  |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Formación**       | Manejo de entornos web                                                                                                                                                                                                       |
-| **Actividades**     | 1. Observar servicios y productos del complejo. 2. Reservar el uso de alguna de las instalaciones del complejo. 3. Poder cancelar  mis reservas. 4. Poder efectuar compra de accesorios. 5. Poder contactarme con la empresa |
+| **Tipo de usuario** | Registrado                                                                                                                                                                                                                  |
+|:---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Formación**       | Manejo de entornos web                                                                                                                                                                                                      |
+| **Actividades**     | 1. Observar servicios y productos del complejo. 2. Reservar el uso de alguna de las instalaciones del complejo. 3. Poder cancelar mis reservas. 4. Poder efectuar compra de accesorios. 5. Poder contactarme con la empresa |
 
 | **Tipo de usuario** | No Registrado                                                                                              |
 |---------------------|------------------------------------------------------------------------------------------------------------|
