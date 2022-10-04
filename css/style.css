@@ -1,6 +1,112 @@
+footer{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    width: 100%;
+}
 
- 
+.footer-botton{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+    
+}
 
+.copyrigth{
+    color: #cccccc;
+}
+
+.copyrigth a {
+
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+
+}
+
+.sitemap a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+
+}
+.conteiner-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: "calibri";
+    padding: 40px;
+    
+}
+.column1{
+    max-width: 400px;
+    
+
+}
+.column1 h1{
+    font-size: 22px;
+}
+
+.column1 p {
+    font-size: 18px;
+    color: #cccccc;
+    margin-top: 20px;
+}
+
+.column2 {
+    max-width: 400px;
+}
+.column2 h1{
+    font-size: 22px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img {
+    width: 35px;
+    height: 35px;
+}
+
+.row label {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #cccccc;
+}
+
+.column3{
+    max-width: 400px;
+
+}
+
+.column3 h1{
+    font-size: 22px;
+}
+
+.row2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label {
+    margin-left: 20px;
+
+}
+
+.footer-body{
+    display: flex;
+    justify-content:space-between;
+}
   
 .navRight{
     text-align: right;
