@@ -28,6 +28,8 @@ footer{
     font-weight: bold;
 }
 
+
+
 .sitemap a {
     text-decoration: none;
     color:white;
@@ -83,11 +85,13 @@ footer{
 
 .column3{
     max-width: 400px;
+    color: #cccccc
 
 }
 
 .column3 h1{
     font-size: 22px;
+    color: white;
 }
 
 .row2 {
@@ -114,24 +118,40 @@ footer{
 
 
 /* -------------SECCION NAV-------------------------*/
+.nav-conteiner{
+    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
 .navRight{
-    text-align: right;
+    
+    text-align: center;
+    justify-content:right;
+    display: flex;
+    padding-left: 100px;
      
 }
 
 .navLeft{
-    text-align: left;
+    text-align: center;
+    display: flex;
+    
 }
 .enlaceboton {    
     font-family: "calibri";
     font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+    height: 10px;
     background-color: #0e0e0d;
     color: #fff6f6;
     text-decoration: none;
     border-radius: 6px;
     
-    padding: 40px;
-    margin: 3px ;
+    padding: 30px;
+    margin: 4px ;
     
  }
 
