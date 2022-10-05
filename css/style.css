@@ -15,14 +15,7 @@
     margin-top: 5px;
     margin-left: 5px;
 }
-#nombreComplejo {
-    font-size: 100px;
-    font-variant: inherit;
-    font-weight: 800;
-    margin-top: 18%;
-    margin-left: 22%;
-    color: rgb(0, 0, 0);
-}
+
 
 
 /* -------------SECCION NAV-------------------------*/
@@ -89,12 +82,20 @@
 /* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
 #main-section{
 
-    
+    display: inline-block;
     background: orangered;
     min-height: 800px;
+    min-width: 100%;
+    padding-bottom: 20px;
+    font-family: "calibri";
+    justify-content: center;
+    
 }
 
-
+#main-section h1{
+    font-size: 40px;
+    text-align: center;
+}
 
 /* ------------- SECCION ARTICLES-------------------------*/
 
@@ -105,11 +106,18 @@
     background: yellowgreen;
     margin: 10px;
     box-shadow: 1px 1px 10px #000;
-    justify-content: space-between;
     display: inline-block;
     padding-bottom: 60px;
+    float: left;
 }
 
+.main-article h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.main-article p {
+    font-size: 20px;
+}
 .main-article img {
     max-width:600px ;
 }
@@ -117,17 +125,54 @@
 
 /* -------------FIN SECCION ARTICLES-------------------------*/
 
+.center-box{
+    width: 600px;
+    background: yellowgreen;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #000;
+    display: inline-block;
+    padding-bottom: 60px;
+    
+
+}
+
+.center-box h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.center-box p {
+    font-size: 20px;
+}
+
+
+
+.center-box img {
+    max-width:600px;
+}
 /* -------------SECCION ASIDE-------------------------*/
 aside{
     display: inline-block;
-    width: 300px;
-    min-height: 600px;
+    width: 500px;
+    margin:10px;
+    min-height: 1000px;
     background: blue;
     float:right;
 
 }
-.conteiner-aside{
+aside,.main-article {
+    background-color: white;
+}
+aside h1 {
+    font-size: 40px;
+    text-align: center;
+}
 
+aside section{
+    width: 80%;
+    height: 200px;
+    background:#666666;
+    margin-bottom: 10px;
 }
 
 /* -------------FIN SECCION ASIDE-------------------------*/
