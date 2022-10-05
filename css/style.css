@@ -1,27 +1,170 @@
+/* -------------SECCION HEADER-------------------------*/
 
-body{
-    background-image: url(../imagenes/fondonav.jpg);
-    background-size: cover;
-    background-repeat:no-repeat;
+
+
+
+
+
+
+/* -------------FIN SECCION HEADER-------------------------*/
+/* -------------SECCION FOOTER-------------------------*/
+footer{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    width: 100%;
+}
+
+.footer-botton{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
     
 }
-  
+
+.copyrigth{
+    color: #cccccc;
+}
+
+.copyrigth a {
+
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+
+
+.sitemap a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+.conteiner-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: "calibri";
+    padding: 40px;
+   
+}
+
+.column1{
+    max-width: 400px;
+}
+
+.column1 h1{
+    font-size: 22px;
+}
+
+.column1 p {
+    font-size: 18px;
+    color: #cccccc;
+    margin-top: 20px;
+}
+
+.column2 {
+    max-width: 400px;
+}
+
+.column2 h1{
+    font-size: 22px;
+}
+
+.row {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img {
+    width: 35px;
+    height: 35px;
+}
+
+.row label {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #cccccc;
+}
+
+.column3{
+    max-width: 400px;
+    color: #cccccc
+
+}
+
+.column3 h1{
+    font-size: 22px;
+    color: white;
+}
+
+.row2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label {
+    margin-left: 20px;
+
+}
+
+.footer-body{
+    display: flex;
+    justify-content:space-between;
+}
+
+/* -------------FIN SECCION FOOTER-------------------------*/
+
+
+/* -------------SECCION NAV-------------------------*/
+.nav-conteiner{
+    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+}
+
 .navRight{
-    text-align: right;
+    
+    text-align: center;
+    justify-content:right;
+    display: flex;
+    padding-left: 100px;
+     
 }
 
 .navLeft{
-    text-align: left;
+    
+    text-align: center;
+    display: flex;
+    
 }
+
+
 .enlaceboton {    
-    font-family: verdana, arial, sans-serif;
-    font-size: 10pt;
+    font-family: "calibri";
+    font-size: 18px;
     font-weight: bold;
-    padding: 4px;
+    width: 150px;
+    height: 10px;
     background-color: #0e0e0d;
     color: #fff6f6;
     text-decoration: none;
     border-radius: 6px;
+    
+    padding: 30px;
+    margin: 4px ;
+    
  }
 
  .enlaceboton:link,
@@ -33,9 +176,127 @@ body{
  }
  
  .enlaceboton:hover {
-     border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
     border-top: 2px solid #666666;
     border-right: 1px solid #cccccc;
     border-left: 2px solid #666666;
  }
  
+/* -------------FIN SECCION NAV-------------------------*/
+
+/* -------------SECCION FROMULARIO-------------------------*/
+.formbody{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url("../imagenes/fondoReg.jpg");
+
+}
+
+.bodyindex{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url("../imagenes/fondoReg.jpg");
+    display: block;
+
+}
+
+
+.formreg{
+   
+    background: rgb(21, 20, 27);
+    width: 400px;
+    padding: 30px;
+    margin: auto ;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Calibri';
+    color: #fff6f6;
+    box-shadow: 7px 13px 37px white;
+}
+
+.formreg h4{
+
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.formreg p{
+    height: 40px;
+    text-align: center;
+    font-family: "calibri";
+    font-size: 18px;
+    line-height: 40px;
+
+}
+
+.formreg a{
+    color: white;
+    text-decoration: none;
+}
+
+.formreg a:hover{
+    color: white;
+    text-decoration:underline ;
+}
+
+.formreg .enlaceboton{
+   width: 100%;
+   height: 40px;
+   border: none;
+   padding: 12px;
+   margin: 16px 0;
+   box-shadow: 7px 7px 27px rgb(139, 138, 138);
+}
+.formreg .enlaceboton:hover{
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+
+}
+.inputreg{
+    width: 95%;
+    background: rgb(21, 20, 27);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border:1px solid white;
+    font-family: "calibri";
+    font-size: 25px;
+    text-align: center;
+    color: white;
+
+}
+/* -------------FIN SECCION FORMULARIO-------------------------*/
+
+/* -------------SECCION MAIN-------------------------*/
+
+/* -------------FIN SECCION MAIN-------------------------*/
+
+
+/* -------------SECCION HEADER-------------------------*/
+
+.encabezado {
+    background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
+    height: 63em;
+}
+
+#imgLogo {
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#nombreComplejo {
+    font-size: 100px;
+    font-variant: inherit;
+    font-weight: 800;
+    margin-top: 18%;
+    margin-left: 22%;
+    color: rgb(0, 0, 0);
+}

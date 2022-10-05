@@ -3,14 +3,12 @@
 ## Ficha del documento
 
 
-| Fecha | Revisión | Autor | Verificado dep. Calidad. |   |
-|:-----:|:--------:|:-----:|:------------------------:|---|
-| 2022  |          |       |                          |   |
+| FECHA | REVISIÓN | AUTOR | VERIFICADO DEP. CALIDAD |   
+|-------|----------|-------|------------------------|
+| 03/10/2022  |    ALPHA 1.0      | DevCord Inspiradores Digitales      |                        |   
 
 
-1. Elemento de la lista 1
-2. Elemento de la lista 2
-3. Elemento de la lista 3
+
 
 
 # Contenido
@@ -69,11 +67,11 @@ Esta especificación de requisitos está dirigida a los usuarios de la web "Comp
 
 | Nombre                 | Rol           | Categoría Profesional | Responsabilidad             | Información de contacto |
 |------------------------|---------------|-----------------------|-----------------------------|-------------------------|
-| Pardo Lesa Nahuel Cruz | Scrum Master  | Estudiante de TSDWAD  | Desarrollador de página web | nahue.pardo74@gmail.com |
+| Nahuel Cruz Pardo Lesa | Scrum Master  | Estudiante de TSDWAD  | Desarrollador de página web | nahue.pardo74@gmail.com |
 
 | Nombre                     | Rol         | Categoría Profesional | Responsabilidad             | Información de contacto |
 |----------------------------|-------------|-----------------------|-----------------------------|-------------------------|
-| Pardo Lesa Catriel Ignacio | Colaborador | Estudiante de TSDWAD  | Desarrollador de página web | cartup90@gmail.com      |
+|  Catriel Ignacio Pardo Lesa | Colaborador | Estudiante de TSDWAD  | Desarrollador de página web | cartup90@gmail.com      |
 
 | Nombre             | Rol         | Categoría Profesional | Responsabilidad             | Información de contacto  |
 |--------------------|-------------|-----------------------|-----------------------------|--------------------------|
@@ -91,20 +89,19 @@ Esta especificación de requisitos está dirigida a los usuarios de la web "Comp
 
 |  **Nombre** |                                     Descripción                                     |
 |:-----------|:-----------------------------------------------------------------------------------|
-| **Usuario** | Persona que usará el sistema para gestionar procesos                                |
-|  **SIS-I**  | Sistema de Información Web para la Gestión de Procesos Administrativos y Académicos |
-|   **ERS**   | Especificación de Requisitos Software                                               |
+| **Usuario** | Persona que usará el sistema                                |
+|   **Usuario Administrador**   | Persona que administrará el sistema                               |
 |    **RF**   | Requerimiento Funcional                                                             |
 |   **RNF**   | Requerimiento No Funcional                                                          |
-|   **FTP**   | Protocolo de Transferencia de Archivos                                              |
 
 ### Referencias
 |   Título del Documento   | Referencia |
 |:------------------------:|:----------:|
 | Standard IEEE 830 - 1998 | IEEE       |
-|                          |            |
+
 
 ### Resumen
+Este   documento   consta   de   tres   secciones.   En   la   primera   sección   se   realiza   una introducción al mismo y se proporciona una visión general del próposito y alcance del proyecto. También el personal involucrado. En la segunda sección del documento se realiza una descripción general del producto, con el fin de conocer las principales funciones que este debe o no realizar, como así también las caraterísticas de los usuarios. Por   último,   la   tercera   sección   del   documento   es   aquella   en   la   que   se   definen detalladamente los requisitos que debe satisfacer el sistema
 
 
 ## Descripción General:
@@ -116,10 +113,10 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 | **Formación**       | Manejo de herramientas informáticas       |
 | **Actividades**     | 1.Control y manejo del sistema en general |
 
-| **Tipo de usuario** |  Registrado                                                                                                                                                                                                                  |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Formación**       | Manejo de entornos web                                                                                                                                                                                                       |
-| **Actividades**     | 1. Observar servicios y productos del complejo. 2. Reservar el uso de alguna de las instalaciones del complejo. 3. Poder cancelar  mis reservas. 4. Poder efectuar compra de accesorios. 5. Poder contactarme con la empresa |
+| **Tipo de usuario** | Registrado                                                                                                                                                                                                                  |
+|:---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Formación**       | Manejo de entornos web                                                                                                                                                                                                      |
+| **Actividades**     | 1. Observar servicios y productos del complejo. 2. Reservar el uso de alguna de las instalaciones del complejo. 3. Poder cancelar mis reservas. 4. Poder efectuar compra de accesorios. 5. Poder contactarme con la empresa |
 
 | **Tipo de usuario** | No Registrado                                                                                              |
 |---------------------|------------------------------------------------------------------------------------------------------------|
@@ -132,22 +129,28 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 
 ## Requisitos específicos
 ### Product Backlog:
-- #US01: Como administrador quiero poder agregar, eliminar y modificar servicios y productos para mantener la página al día con la empresa.
-- #US02: Como administrador quiero que los usuarios de la página puedan acceder a esta desde cualquier dispositivo manteniéndose el diseño y la legibilidad del sitio.
-- #US03: Como administrador quiero ver el listado de usuarios registrados
-- #US04: Como administrador quiero poder ver las instalaciones reservadas
-- #US05: Como usuario quiero ver las instalaciones que posee A.M.P.A  para elegir o para ver si ofrecen el servicio que necesito
-- #US06: Como usuario registrado quiero poder reservar una instalación y conocer el costo de dicha reserva.
-- #US07: Como usuario no registrado quiero registrarme en el sitio para poder realizar la reserva de instalaciones
-- #US08: Como proveedor de servicios y productos quiero poder administrar mi sección de la tienda
-- #US09: Como usuario registrado quiero poder pagar la reserva de las instalaciones o cualquier otro servicio que ofrezcan desde la misma página web para no tener que hacer el pago en el momento de utilizar los servicios.
-- #US10: Como usuario quiero poder cancelar mis reservas.
-- #US11: Como Proveedor deseo tener todos los medios de pagos como débito, crédito, transferencia, mercado pago y otras,  desde la página.
-- #US12: Como Proveedor deseo que cada instalación cuente con estrellas y comentarios para que los usuarios brinden su opinión y poder mejorar los servicios brindados.
-- #US13: Como Proveedor deseo que cuando el Usuario ingrese aparezca una foto del carnet de socio en la pantalla.
-- #US14: Como Usuario debo contar con descuentos si utilizo las instalaciones con frecuencia.
-- #US15: Como empleado del complejo deseo poder chequear si el usuario ya hizo el pago cuando ingresa al complejo a utilizar las instalaciones para que este no tenga necesidad de mostrar ningún comprobante 
-- #US16: Como usuario registrado quiero ver las fechas y horarios disponibles de las instalaciones ofrecidas en la web para saber cuando están libres para hacer uso de las mismas
+- #US01: Como **cliente** quiero tener una una pagina de inicio en la cual pueda loguear o registrarme
+- #US02: Como **cliente** quiero tener una una pagina de registro en la cual el usuario pueda ingresar los siguientes datos: Apellido/s, Nombre/s, Teléfono, Email, DNI y Contraseña
+- #US03: Como **cliente** quiero tener una página que hable sobre nuestra empresa para que los usuarios conozcan mas detalles
+- #US04: Como **cliente** quiero que el usuario tenga un formulario de contacto para plasmar sus dudas o problematicas y que esta información se envíe a un mail empresarial
+- #US05: Como **Cliente** quiero que todos los datos de registro se almacenen en una base de datos para su posterior acceso 
+- #US06: Como **Cliente** quiero que mi página de inicio cuente con una seccion de navegación la cual permita acceder de manera sencilla a las otras páginas
+- #US07: Como **Cliente** quiero tener acceso de usuario administrador a la pagina para su futuro gestionamiento
+- #US08: Como **Cliente** quiero que los usuarios de la página puedan acceder a esta desde cualquier dispositivo manteniéndose el diseño y la legibilidad del sitio.
+- #US09: Como **Cliente** deseo tener todos los medios de pagos como débito, crédito, transferencia, mercado pago y otras,  desde la página.
+- #US10: Como **Cliente** deseo que cada instalación cuente con estrellas y comentarios para que los usuarios brinden su opinión y poder mejorar los servicios brindados.
+- #US11: Como **usuario administrador** quiero poder agregar, eliminar y modificar servicios y productos para mantener la página al día con la empresa.
+- #US12: Como **usuario administrador** quiero poder acceder a la base de datos para ver el listado de usuarios registrados
+- #US13: Como **usuario administrador** quiero poder ver las instalaciones reservadas y quien las reservo
+- #US14: Como **usuario administrador** deseo poder ver si se efectuó el pago de la reserva realizadas por los usuarios registrados
+- #US15: Como **usuario no regisrado** quiero ver las instalaciones que posee A.M.P.A  para elegir o para ver si ofrecen el servicio que necesito.
+- #US16: Como **usuario no registrado** quiero registrarme en el sitio para poder realizar la reserva de instalaciones
+- #US17: Como **usuario registrado** quiero poder reservar una instalación y conocer el costo de dicha reserva.
+- #US18: Como **usuario registrado** quiero poder pagar la reserva de las instalaciones o cualquier otro servicio que ofrezcan desde la misma página web para no tener que hacer el pago en el momento de utilizar los servicios.
+- #US19: Como **usuario registrado** quiero poder cancelar mis reservas.
+- #US20: Como **usuario registrado** debo contar con descuentos si utilizo las instalaciones con frecuencia.
+- #US21: Como **usuario registrado** quiero ver las fechas y horarios disponibles de las instalaciones ofrecidas en la web para saber cuando están libres para hacer uso de las mismas
+
 
 ### Sprint Backlog
 - TK#01: Crear documento IEEE830
@@ -174,7 +177,7 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 | **Sprint Backlog**                       | TK#01: Crear documento IEEE830 TK#02: Diagramación del sitio                                                                                                                                                                                                                                                                                                                                                                     |
 | **Responsabilidades**                    | ● Registrar la Especificación de Requerimientos mediante la documentación IEEE830 (subirlo en una carpeta de GitHub en la rama main). ● Git/GitHub : Instalación y registración ● Crear Project estilo Kanban con incorporación de Historias de Usuarios, tareas, e incidencias. ● Idea de mapa del Sitio ● Llevar registro de meetings y toda la info necesaria dentro de la Wiki de GitHub. (Ver consideraciones generales)    |
 | **Calendario**                           | Fecha Inicio = 17/09/2022 -  Fecha de Fin = 03/10/2022                                                                                                                                                                                                                                                                                                                                                                           |
-| **Inconvenientes:** |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Inconvenientes:** |  **Sprint Review**: No hubo mayores inconvenientes, salvo dudas lógicas sobre el confeccionamiento del documenteo IEE830, pero se cumplió con los requisitos del sprint                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 
 
