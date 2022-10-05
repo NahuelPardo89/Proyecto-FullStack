@@ -1,4 +1,145 @@
 
+
+
+/* -------------SECCION HEADER-------------------------*/
+
+.encabezado {
+   /*  background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);*/
+    height: 90px;
+}
+
+#imgLogo {
+    height: 80px;
+    width: 100px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#nombreComplejo {
+    font-size: 100px;
+    font-variant: inherit;
+    font-weight: 800;
+    margin-top: 18%;
+    margin-left: 22%;
+    color: rgb(0, 0, 0);
+}
+
+
+/* -------------SECCION NAV-------------------------*/
+.nav-conteiner{
+    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.navRight{
+    
+    text-align: center;
+    justify-content:right;
+    display: flex;
+    padding-left: 100px;
+     
+}
+
+.navLeft{
+    
+    text-align: center;
+    display: flex;
+    
+}
+
+
+.enlaceboton {    
+    font-family: "calibri";
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+    height: 10px;
+    background-color: #0e0e0d;
+    color: #fff6f6;
+    text-decoration: none;
+    border-radius: 6px;
+    
+    padding: 30px;
+    margin: 4px ;
+    
+ }
+
+ .enlaceboton:link,
+ .enlaceboton:visited {
+    border-top: 1px solid #cccccc;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #cccccc;
+    border-right: 2px solid #666666;
+ }
+ 
+ .enlaceboton:hover {
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+ }
+ 
+/* -------------FIN SECCION NAV-------------------------*/
+
+
+
+/* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
+#main-section{
+
+    
+    background: orangered;
+    min-height: 800px;
+}
+
+
+
+/* ------------- SECCION ARTICLES-------------------------*/
+
+
+    
+.main-article{
+    width: 600px;
+    background: yellowgreen;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #000;
+    justify-content: space-between;
+    display: inline-block;
+    padding-bottom: 60px;
+}
+
+.main-article img {
+    max-width:600px ;
+}
+
+
+/* -------------FIN SECCION ARTICLES-------------------------*/
+
+/* -------------SECCION ASIDE-------------------------*/
+aside{
+    display: inline-block;
+    width: 300px;
+    min-height: 600px;
+    background: blue;
+    float:right;
+
+}
+.conteiner-aside{
+
+}
+
+/* -------------FIN SECCION ASIDE-------------------------*/
+
+    
+    
+/* -------------FIN SECCION MAIN-------------------------*/
+
+
+
+
+
 /* -------------SECCION FOOTER-------------------------*/
 footer{
     margin: 0px;
@@ -38,7 +179,7 @@ footer{
 
 .conteiner-footer-all{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
     font-family: "calibri";
     padding: 40px;
@@ -117,66 +258,8 @@ footer{
 /* -------------FIN SECCION FOOTER-------------------------*/
 
 
-/* -------------SECCION NAV-------------------------*/
-.nav-conteiner{
-    
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    
-}
 
-.navRight{
-    
-    text-align: center;
-    justify-content:right;
-    display: flex;
-    padding-left: 100px;
-     
-}
-
-.navLeft{
-    
-    text-align: center;
-    display: flex;
-    
-}
-
-
-.enlaceboton {    
-    font-family: "calibri";
-    font-size: 18px;
-    font-weight: bold;
-    width: 150px;
-    height: 10px;
-    background-color: #0e0e0d;
-    color: #fff6f6;
-    text-decoration: none;
-    border-radius: 6px;
-    
-    padding: 30px;
-    margin: 4px ;
-    
- }
-
- .enlaceboton:link,
- .enlaceboton:visited {
-    border-top: 1px solid #cccccc;
-    border-bottom: 2px solid #666666;
-    border-left: 1px solid #cccccc;
-    border-right: 2px solid #666666;
- }
- 
- .enlaceboton:hover {
-    border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #666666;
-    border-right: 1px solid #cccccc;
-    border-left: 2px solid #666666;
- }
- 
-/* -------------FIN SECCION NAV-------------------------*/
-
-/* -------------SECCION FROMULARIO-------------------------*/
+/* -------------SECCION FROMULARIO REGISTRO Y INICIO SESION-------------------------*/
 .formbody{
     margin: 0px;
     padding: 0px;
@@ -264,41 +347,3 @@ footer{
 
 }
 /* -------------FIN SECCION FORMULARIO-------------------------*/
-
-/* -------------SECCION MAIN-------------------------*/
-
-/* -------------FIN SECCION MAIN-------------------------*/
-
-
-/* -------------SECCION HEADER-------------------------*/
-
-.encabezado {
-    background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
-    height: 63em;
-}
-
-#imgLogo {
-    height: 80px;
-    width: 100px;
-    position: absolute;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-#nombreComplejo {
-    font-size: 100px;
-    font-variant: inherit;
-    font-weight: 800;
-    margin-top: 18%;
-    margin-left: 22%;
-    color: rgb(0, 0, 0);
-}
-
-/* -------------SECCION ASIDE-------------------------*/
-
-
-
-
-
-
-
-/* -------------FIN SECCION ASIDE-------------------------*/
