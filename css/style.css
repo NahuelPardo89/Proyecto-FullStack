@@ -81,14 +81,18 @@
 
 /* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
 #main-section{
-
-    display: inline-block;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;
     background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
     min-height: 800px;
-    min-width: 100%;
+    
     padding-bottom: 20px;
     font-family: "calibri";
-    justify-content: center;
+    
     
 }
 
@@ -104,9 +108,11 @@
 
     
 .main-article{
-    width: 600px;
+    width: 25%;
+
     background: yellowgreen;
     margin: 10px;
+    margin-bottom: auto;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
     padding-bottom: 60px;
@@ -121,16 +127,18 @@
     font-size: 20px;
 }
 .main-article img {
-    max-width:600px ;
+    max-width:400px ;
 }
 
 
 /* -------------FIN SECCION ARTICLES-------------------------*/
 
 .center-box{
-    width: 1200px;
+    width: 50%;
+    
     background: yellowgreen;
     margin: 10px;
+    margin-bottom: auto;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
     padding-bottom: 60px;
@@ -150,7 +158,7 @@
 
 
 .center-box img {
-    max-width:900px;
+    max-width:800px ;
    
 }
 /* -------------SECCION ASIDE-------------------------*/
@@ -158,6 +166,7 @@ aside{
     display: inline-block;
     width: 500px;
     margin:10px;
+    margin-bottom: auto;
     min-height: 1000px;
     background: blue;
     float:right;
