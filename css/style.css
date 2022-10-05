@@ -83,7 +83,7 @@
 #main-section{
 
     display: inline-block;
-    background: orangered;
+    background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
     min-height: 800px;
     min-width: 100%;
     padding-bottom: 20px;
@@ -126,7 +126,7 @@
 /* -------------FIN SECCION ARTICLES-------------------------*/
 
 .center-box{
-    width: 600px;
+    width: 1200px;
     background: yellowgreen;
     margin: 10px;
     box-shadow: 1px 1px 10px #000;
@@ -148,7 +148,8 @@
 
 
 .center-box img {
-    max-width:600px;
+    max-width:900px;
+   
 }
 /* -------------SECCION ASIDE-------------------------*/
 aside{
