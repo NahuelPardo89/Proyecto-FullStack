@@ -135,7 +135,7 @@ body {
     font-size: 20px;
 }
 .main-article img {
-    max-width:400px ;
+    max-width:25% ;
 }
 
 
@@ -166,7 +166,7 @@ body {
 
 
 .center-box img {
-    max-width:800px ;
+    max-width:50% ;
    
 }
 /* -------------SECCION ASIDE-------------------------*/
