@@ -1,5 +1,6 @@
-
-
+body {
+   background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
+}
 
 /* -------------SECCION HEADER-------------------------*/
 
@@ -88,7 +89,7 @@
     justify-content: space-between;
     padding: 20px;
     margin: auto;
-    background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
+    
     min-height: 800px;
     
     padding-bottom: 20px;
