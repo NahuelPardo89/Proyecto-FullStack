@@ -27,7 +27,9 @@ body {
 .nav-conteiner{
     
     display: flex;
+    width: 100%;
     justify-content: center;
+   
     margin: auto;
     
 }
