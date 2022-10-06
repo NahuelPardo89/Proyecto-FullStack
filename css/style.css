@@ -82,7 +82,8 @@
 /* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
 #main-section{
     width: 100%;
-    max-width: 1600px;
+   
+    
     display: flex;
     justify-content: space-between;
     padding: 20px;
