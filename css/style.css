@@ -218,23 +218,19 @@ aside section{
 
 /* -------------SECCION FOOTER MAIN-------------------------*/
 /* ------------------------------------------------------------*/
-footer{
-    margin: 0px;
-    padding: 0px;
-    background:black;
-    box-sizing: border-box;
-    color: white;
-    width: 100%;
-}
+
 /* -------------SECCION FOOTER BOTTON-------------------------*/
 /* ------------------------------------------------------------*/
 #conteiner-footer{
     width: 100%;
-    
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background:black;
     font-family: "calibri";
-    padding: 40px;
-   
+    color: white;
 }
 
 .conteiner-footer-main{
@@ -243,7 +239,7 @@ footer{
 }
 
 .conteiner-column1{
-    max-width: 400px;
+    max-width: 33%;
 }
 
 .conteiner-column1 h1{
@@ -257,7 +253,7 @@ footer{
 }
 
 .conteiner-column2 {
-    max-width: 400px;
+    max-width: 33%;
 }
 
 .conteiner-column2 h1{
@@ -281,7 +277,7 @@ footer{
 }
 
 .conteiner-column3{
-    max-width: 400px;
+    max-width: 33%;
     color: #cccccc
 
 }
