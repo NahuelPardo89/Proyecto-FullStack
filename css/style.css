@@ -59,28 +59,28 @@ body {
     display: flex;
     margin-left: 5%;
     
+    
      
 }
 
 .conteiner-navRight .enlaceboton{
     max-width: 90%;
-    padding: 2%;
+    
 }
 /* -------------BOTONES-------------------------*/
 /* ----------------------------------------------------*/
 .enlaceboton {    
     
     width: 100%;
-    min-width: 16%;
-    min-height: min-content;
+    min-width: max-content;
     background-color: #0e0e0d;
     font-family: "calibri";
-    font-size: 100%;
+    font-size: 200%;
     font-weight: bold;
     color: #fff6f6;
     text-decoration: none;
     border-radius: 6px;
-    padding: 2%;
+    padding: 1%;
     margin: auto ;
     
  }
@@ -95,9 +95,9 @@ body {
  
  .enlaceboton:hover {
     border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #666666;
+    border-top: 2px solid aqua;
     border-right: 1px solid #cccccc;
-    border-left: 2px solid #666666;
+    border-left: 2px solid aqua;
     color: aqua;
  }
  /* -------------BOTONES-------------------------*/
@@ -110,7 +110,6 @@ body {
 /* -------------------------------------------------------------------*/
 #conteiner-main-section{
     width: 100%;
-   
     display: flex;
     justify-content: space-between;
     padding: 20px;
