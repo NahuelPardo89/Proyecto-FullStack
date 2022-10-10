@@ -1,9 +1,36 @@
 body {
    background-image: url(https://deportes.unlam.edu.ar/upload/imagenes/articulo/136_Gimnasio.jpeg);
-   width: 100%;
    
    
 }
+/* MAQUETACION */
+#conteiner-body { 
+    
+    
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    grid-template-rows: 0.2fr 1.9fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header"
+      "Main Aside"
+      "Footer Footer";
+  }
+  
+#conteiner-encabezado { 
+    grid-area: Header; 
+   }
+  
+#conteiner-main-section { grid-area: Main;
+   }
+  
+#conteiner-aside { grid-area: Aside; 
+    }
+  
+#conteiner-footer { grid-area: Footer;
+    }
+
 
 /* -------------SECCION HEADER-------------------------*/
 /* ----------------------------------------------------*/
@@ -15,6 +42,7 @@ body {
     display: inline-block;
     justify-content: center;
     background:black;
+    
    
     
 }
@@ -109,19 +137,27 @@ body {
 /* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
 /* -------------------------------------------------------------------*/
 #conteiner-main-section{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     padding: 20px;
     margin: auto;
-    
-    min-height: 800px;
-    
     padding-bottom: 20px;
     font-family: "calibri";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "left1 right1"
+      "left2 right2"
+      ;
+  }
+ .conteiner-articles-left1{grid-area: left1; }
+ .conteiner-articles-left2{grid-area: left2; }
+ 
+ .conteiner-articles-right1{grid-area: right1; }
+ .conteiner-articles-right1{grid-area: right2; }
     
-    
-}
+
 
 #conteiner-main-section h1{
     font-size: 40px;
@@ -135,15 +171,15 @@ body {
 
     
 .conteiner-articles-left {
-    width: 25%;
-
+    
+    
     background: yellowgreen;
     margin: 10px;
     margin-bottom: auto;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
     padding-bottom: 60px;
-    float: left;
+    
 }
 
 .conteiner-articles-left h1 {
@@ -163,7 +199,7 @@ body {
 /* ------------- SECCION ARTICLES CENTER-------------------------*/
 /* ------------------------------------------------------------*/
 .conteiner-articles-center{
-    width: 50%;
+    
     background: yellowgreen;
     margin: 10px;
     margin-bottom: auto;
@@ -194,14 +230,14 @@ body {
 
 /* -------------SECCION ASIDE-------------------------*/
 /* ------------------------------------------------------------*/
-aside{
+#conteiner-aside{
     display: inline-block;
-    width: 25%;
+    
     margin:10px;
     margin-bottom: auto;
     min-height: 1000px;
     background: blue;
-    float:right;
+    
 
 }
 aside,.main-article {
@@ -235,7 +271,7 @@ aside section{
 /* -------------SECCION FOOTER BOTTON-------------------------*/
 /* ------------------------------------------------------------*/
 #conteiner-footer{
-    width: 100%;
+    
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -345,6 +381,76 @@ aside section{
 
 
 /* -------------FIN SECCION FOOTER-------------------------*/
+
+
+/* -----------------RESOLUCIÓN PARA MÓVILES-------------------------*/
+@media screen and (max-width: 600px){
+#conteiner-body {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1.9fr 1fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Header"
+          "Main"
+          "Aside"
+          "Footer";
+    }
+      
+    #conteiner-encabezado { grid-area: Header;
+        margin: 0px;
+        padding: 0px;
+        max-width: 500px; }
+      
+    #conteiner-main-section { grid-area: Main; 
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "uno"
+      "dos"
+      "tres"
+      "cuatro";
+    max-width: 500px ;
+    padding: 0px;
+    max-height: 1900px;
+
+}
+.conteiner-articles-left1{
+    grid-area: uno;
+    
+}
+.conteiner-articles-left2{
+    grid-area: dos;
+}      
+.conteiner-articles-right1{
+    grid-area: tres;
+}
+.conteiner-articles-ritgh2{
+    grid-area: cuatro;
+}
+#conteiner-aside { 
+        grid-area: Aside;
+        margin: 0px;
+        padding: 0px;
+        max-width: 500px;
+        margin: auto;
+        height:200px;
+    }
+      
+#conteiner-footer { grid-area: Footer;
+        margin: 0px;
+        padding: 0px;
+        max-width: 500px;
+    }
+
+
+      
+    
+}
+/* -----------------FIN DE RESOLUCIÓN PARA MÓVILES-------------------------*/
 
 
 /* -------------AQUI PONER TODO EL CSS QUE CORRESPONDA A OTRO HTML QUE NO SEA INDEX, DESPUES VEREMOS SI LO PONEMOS EN ARCHIVO -------------------------*/
