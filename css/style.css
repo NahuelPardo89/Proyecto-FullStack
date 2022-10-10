@@ -73,15 +73,17 @@ body {
     
     width: 100%;
     min-width: max-content;
-    background-color: #0e0e0d;
+    height: inherit;
+    background-color: #050505;
     font-family: "calibri";
-    font-size: 200%;
+    font-size: 150%;
     font-weight: bold;
     color: #fff6f6;
     text-decoration: none;
     border-radius: 6px;
-    padding: 1%;
-    margin: auto ;
+    padding: 20%;
+    margin:auto;
+    
     
  }
 
