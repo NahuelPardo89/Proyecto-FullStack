@@ -2,24 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto</title>
+    <title>Formulario contacto</title>
+    <link rel="stylesheet" href="css/contactostyle.css">
 </head>
 <body>
-    
-    <h2>¡Dejanos tu mensaje!</h2>
-    <h2>Formulario de contacto</h2>
-    <form action="">
-    <p><label for="nombre">NOMBRE</label>
-    <input type="text" name="nombre" id="nombre"></p>
-    <p><label for="apellido">APELLIDO</label>
-    <input type="text" name="apellido" id="apellido"></p>
-    <p><label for="telefono">TELÉFONO</label>
-    <input type="number" name="telefono" id="telefono"></p>
-    <p><label for="email">CORREO ELETRÓNICO</label>
-    <input type="email" name="email" id="email"></p>
+    <form action=""> 
+
+    <h2>CONTACTO</h2>
+    <h3>¡Dejanos tu mensaje!</h3>
+    <p><label for="nombre">NOMBRE*</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombres" required></p>
+    <p><label for="apellido">APELLIDO*</label>
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required></p>
+    <p><label for="telefono">TELÉFONO*</label>
+    <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required></p>
+    <p><label for="email">CORREO ELETRÓNICO*</label>
+    <input type="email" name="email" id="email" placeholder="Email" required></p>
     <p>ESCRIBA SU MENSAJE POR FAVOR</p>
-    <textarea name="comentarios" id="comentarios" cols="45" rows="10"></textarea>
-    <p><input type="button" name="boton" value="ENVIAR"></p> 
+    <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="45" rows="10"></textarea>
+    <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+    <h4> * los campos son obligatorios</h4>
     </form>
     
 </body>    
