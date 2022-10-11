@@ -1,40 +1,59 @@
 body {
    background-color: #fff6f6;
+   margin:0px;
+   padding: 0px;
    
    
 }
 /* MAQUETACION */
+
 #conteiner-body { 
     
     
     display: grid;
-    grid-template-columns: 1.6fr 0.8fr;
-    grid-template-rows: 0.2fr 1.9fr 0.6fr;
+    grid-template-columns: 1.5fr 1.5fr 0.5fr;
+    grid-template-rows:1fr ;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas:
-      "Header Header"
-      "Main Aside"
-      "Footer Footer";
+    
+  }
+
+  .navbar-nav a {
+    color: black;
+    
+  }
+  .navbar-nav .btn {
+    color: aliceblue;
+    
+  }
+  .navbar-nav .nav-item:hover a{
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+  .nav-link{
+    border-radius: 10%;
+    
+    
+   
   }
   
-#conteiner-encabezado { 
-    grid-area: Header; 
-   }
   
-#conteiner-main-section { grid-area: Main;
-   }
-  
-#conteiner-aside { grid-area: Aside; 
-    }
-  
-#conteiner-footer { grid-area: Footer;
-    }
+.nav-link:hover{
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #cccccc;
+    background:#0d6efd;
+    color: aliceblue;
+
+}
+
 
 
 /* -------------SECCION HEADER-------------------------*/
 /* ----------------------------------------------------*/
-
+/* ----------
 #conteiner-encabezado {
     
     width: 100%;
@@ -60,6 +79,7 @@ body {
 
 /* -------------SECCION NAV-------------------------*/
 /* ----------------------------------------------------*/
+/* ----------
 .conteiner-nav{
     
     display:flex;
@@ -97,6 +117,7 @@ body {
 }
 /* -------------BOTONES-------------------------*/
 /* ----------------------------------------------------*/
+/* ---
 .enlaceboton {    
     
     width: 100%;
@@ -138,13 +159,14 @@ body {
 
 /* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
 /* -------------------------------------------------------------------*/
+/* -----------
 #conteiner-main-section{
     display: grid;
     padding: 20px;
     margin: auto;
     padding-bottom: 20px;
     font-family: "calibri";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -158,7 +180,7 @@ body {
  
  .conteiner-articles-right1{grid-area: right1; }
  .conteiner-articles-right1{grid-area: right2; }
-    
+ 
 
 
 #conteiner-main-section h1{
@@ -176,11 +198,11 @@ body {
     
     
     background: yellowgreen;
-    margin: 10px;
-    margin-bottom: auto;
+    margin:1%;
+    padding: 1%;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
-    padding-bottom: 60px;
+    
     
 }
 
@@ -200,30 +222,29 @@ body {
 
 /* ------------- SECCION ARTICLES CENTER-------------------------*/
 /* ------------------------------------------------------------*/
-.conteiner-articles-center{
-    
+.conteiner-articles-right{
+    margin:1%;
+    padding: 1%;
     background: yellowgreen;
-    margin: 10px;
-    margin-bottom: auto;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
-    padding-bottom: 60px;
+    
     
 
 }
 
-.conteiner-articles-center h1{
-    font-size: 50px;
+.conteiner-articles-right h1{
+    font-size: 40px;
     text-align: center;
 }
 
-.conteiner-articles-center p {
+.conteiner-articles-right p {
     font-size: 20px;
 }
 
 
 
-.conteiner-articles-center img {
+.conteiner-articles-right img {
     max-width:100% ;
    
 }
@@ -232,29 +253,33 @@ body {
 
 /* -------------SECCION ASIDE-------------------------*/
 /* ------------------------------------------------------------*/
-#conteiner-aside{
-    display: inline-block;
+
+aside{
     
-    margin:10px;
-    margin-bottom: auto;
-    min-height: 1000px;
+    margin:1%;
+    display: inline-block;
+    box-shadow: 1px 1px 10px #000;
     background: blue;
+    
     
 
 }
+/* ---
 aside,.main-article {
     background-color: white;
 }
+------*/
 aside h1 {
-    font-size: 40px;
+    font-size: 200%;
     text-align: center;
+    color: white;
 }
 
-aside section{
-    width: 80%;
-    height: 200px;
-    background:#666666;
-    margin-bottom: 10px;
+aside div{
+    
+    max-width: 95%;
+    background:white;
+    
 }
 
 /* -------------FIN SECCION ASIDE-------------------------*/
@@ -274,27 +299,33 @@ aside section{
 /* ------------------------------------------------------------*/
 #conteiner-footer{
     
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+    
+    
     margin: 0px;
     padding: 0px;
+    justify-content: center;
     background:black;
     font-family: "calibri";
     color: white;
 }
 
 .conteiner-footer-main{
-    display: flex;
-    justify-content:space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    text-align: center;
+    
+    
 }
-
 .conteiner-column1{
-    max-width: 33%;
+    
+    margin-right: 2%;
 }
 
 .conteiner-column1 h1{
     font-size: 22px;
+    
+    margin: 2%;
 }
 
 .conteiner-column1 p {
@@ -303,44 +334,33 @@ aside section{
     margin-top: 20px;
 }
 
-.conteiner-column2 {
-    max-width: 33%;
+.conteiner-column2{
+    
+    margin-right: 2%;
+    
 }
 
 .conteiner-column2 h1{
     font-size: 22px;
+    margin: 2%;
 }
 
-.row {
-    margin-top: 20px;
-    display: flex;
-}
 
-.row img {
-    width: 35px;
-    height: 35px;
-}
-
-.row label {
-    margin-top: 10px;
-    margin-left: 10px;
-    color: #cccccc;
-}
 
 .conteiner-column3{
-    max-width: 33%;
-    color: #cccccc
-
+    
+    margin-right: 2%;
 }
 
 .conteiner-column3 h1{
     font-size: 22px;
-    color: white;
+    margin: 2%;
 }
 
 .row2 {
     margin-top: 20px;
     display: flex;
+    padding-left: 25%;
 }
 
 .row2 img{
@@ -355,7 +375,7 @@ aside section{
 
 
 .conteiner-footer-botton{
-    max-width: 1200px;
+    
     display: flex;
     justify-content: space-between;
     padding: 20px;
