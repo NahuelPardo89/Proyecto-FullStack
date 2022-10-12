@@ -7,16 +7,7 @@ body {
 }
 /* MAQUETACION */
 
-#conteiner-body { 
-    
-    
-    display: grid;
-    grid-template-columns: 1.5fr 1.5fr 0.5fr;
-    grid-template-rows:1fr ;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    
-  }
+
 
   .navbar-nav a {
     color: black;
@@ -67,7 +58,6 @@ body {
     
 }
 /* -----------------------
-
 #imgLogo {
     height: 80px;
     width: 100px;
@@ -89,17 +79,12 @@ body {
     margin: auto;
     
 }
-
-
-
 .conteiner-navLeft{
     width: 66%;
     text-align: center;
     display:flex;
     
 }
-
-
 .conteiner-navRight{
     width: 35%;
     text-align: center;
@@ -111,7 +96,6 @@ body {
     
      
 }
-
 .conteiner-navRight .enlaceboton{
     max-width: 90%;
     
@@ -136,7 +120,6 @@ body {
     
     
  }
-
  .enlaceboton:link,
  .enlaceboton:visited {
     border-top: 1px solid #cccccc;
@@ -182,25 +165,30 @@ body {
  .conteiner-articles-right1{grid-area: right1; }
  .conteiner-articles-right1{grid-area: right2; }
  
-
-
 #conteiner-main-section h1{
     font-size: 40px;
     text-align: center;
     color: red;
     font-weight: bold;
 }
-
 /* ------------- SECCION ARTICLES LEFT-------------------------*/
 /* ------------------------------------------------------------*/
 
+#conteiner-body { 
     
+    
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 0.8fr;
+    grid-template-rows:1fr ;
+    gap: 0.5% 0.5%;
+    grid-auto-flow: row;
+    
+  }    
 .conteiner-articles-left {
     
     
     background: yellowgreen;
-    margin:1%;
-    padding: 1%;
+    
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
     
@@ -208,12 +196,10 @@ body {
 }
 
 .conteiner-articles-left h1 {
-    font-size: 40px;
+    font-size: 200%;
     text-align: center;
 }
-.conteiner-articles-left p {
-    font-size: 20px;
-}
+
 .conteiner-articles-left img {
     max-width:100% ;
 }
@@ -224,8 +210,7 @@ body {
 /* ------------- SECCION ARTICLES CENTER-------------------------*/
 /* ------------------------------------------------------------*/
 .conteiner-articles-right{
-    margin:1%;
-    padding: 1%;
+    
     background: yellowgreen;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
@@ -235,14 +220,9 @@ body {
 }
 
 .conteiner-articles-right h1{
-    font-size: 40px;
+    font-size: 200%;
     text-align: center;
 }
-
-.conteiner-articles-right p {
-    font-size: 20px;
-}
-
 
 
 .conteiner-articles-right img {
@@ -257,7 +237,7 @@ body {
 
 aside{
     
-    margin:1%;
+    
     display: inline-block;
     box-shadow: 1px 1px 10px #000;
     background: blue;
@@ -265,18 +245,14 @@ aside{
     
 
 }
-/* ---
-aside,.main-article {
-    background-color: white;
-}
-------*/
+
 aside h1 {
     font-size: 200%;
     text-align: center;
     color: white;
 }
 
-aside div{
+aside li{
     
     max-width: 95%;
     background:white;
@@ -298,13 +274,9 @@ aside div{
 
 /* -------------SECCION FOOTER BOTTON-------------------------*/
 /* ------------------------------------------------------------*/
-#conteiner-footer{
-    
-    
-    
+footer{
     margin: 0px;
     padding: 0px;
-    justify-content: center;
     background:black;
     font-family: "calibri";
     color: white;
@@ -313,7 +285,8 @@ aside div{
 .conteiner-footer-main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+    gap: 0px 0px;
+    grid-auto-flow: row;
     text-align: center;
     
     
@@ -323,16 +296,16 @@ aside div{
     margin-right: 2%;
 }
 
-.conteiner-column1 h1{
-    font-size: 22px;
+.conteiner-column1 h2{
+    font-size: 150%;
     
     margin: 2%;
 }
 
 .conteiner-column1 p {
-    font-size: 18px;
     color: #cccccc;
-    margin-top: 20px;
+    margin-top: 1%;
+    
 }
 
 .conteiner-column2{
@@ -341,8 +314,8 @@ aside div{
     
 }
 
-.conteiner-column2 h1{
-    font-size: 22px;
+.conteiner-column2 h2{
+    font-size: 150%;
     margin: 2%;
 }
 
@@ -353,8 +326,8 @@ aside div{
     margin-right: 2%;
 }
 
-.conteiner-column3 h1{
-    font-size: 22px;
+.conteiner-column3 h2{
+    font-size: 150%;
     margin: 2%;
 }
 
@@ -485,19 +458,14 @@ aside div{
     padding: 0px;
     box-sizing: border-box;
     background-image: url("../imagenes/fondoReg.jpg");
-
 }
-
 .bodyindex{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     background-image: url("../imagenes/fondoReg.jpg");
     display: block;
-
 }
-
-
 .formreg{
    
     background: rgb(21, 20, 27);
@@ -510,34 +478,27 @@ aside div{
     color: #fff6f6;
     box-shadow: 7px 13px 37px white;
 }
-
 .formreg h4{
-
     font-size: 22px;
     margin-bottom: 20px;
     text-align: center;
     
 }
-
 .formreg p{
     height: 40px;
     text-align: center;
     font-family: "calibri";
     font-size: 18px;
     line-height: 40px;
-
 }
-
 .formreg a{
     color: white;
     text-decoration: none;
 }
-
 .formreg a:hover{
     color: white;
     text-decoration:underline ;
 }
-
 .formreg .enlaceboton{
    width: 100%;
    height: 40px;
@@ -551,7 +512,6 @@ aside div{
     border-top: 2px solid #666666;
     border-right: 1px solid #cccccc;
     border-left: 2px solid #666666;
-
 }
 .inputreg{
     width: 95%;
@@ -564,7 +524,6 @@ aside div{
     font-size: 25px;
     text-align: center;
     color: white;
-
 }
 /* -------------FIN SECCION FORMULARIO-------------------------*/
 #carrousel-servicios{
