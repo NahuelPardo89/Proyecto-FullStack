@@ -1,198 +1,76 @@
 body {
-   background-color: #fff6f6;
-   margin:0px;
-   padding: 0px;
-   
-   
+    background-color: #fff6f6;
+    margin: 0px;
+    padding: 0px;
+
 }
+
 /* MAQUETACION */
 
+#conteiner-encabezado {
+    margin-bottom: 0.5%;
+}
 
-
-  .navbar-nav a {
+.navbar-nav a {
     color: black;
-    
-  }
-  .navbar-nav .btn {
+
+}
+
+.navbar-nav .btn {
     color: aliceblue;
-    
-  }
-  .navbar-nav .nav-item:hover a{
+
+}
+
+.navbar-nav .nav-item:hover a {
     color: aliceblue;
     font-weight: bold;
-  }
+}
 
-  .nav-link{
+.nav-link {
     border-radius: 10%;
-    
-    
-   
-  }
-  
-  
-.nav-link:hover{
+
+
+
+}
+
+
+.nav-link:hover {
     border-bottom: 1px solid #cccccc;
     border-top: 2px solid #cccccc;
     border-right: 1px solid #cccccc;
     border-left: 2px solid #cccccc;
     cursor: pointer;
-    background:#0d6efd;
+    background: #0d6efd;
     color: aliceblue;
 
 }
 
 
 
-/* -------------SECCION HEADER-------------------------*/
-/* ----------------------------------------------------*/
-/* ----------
-#conteiner-encabezado {
-    
-    width: 100%;
-    min-height: auto;
-    display: inline-block;
-    justify-content: center;
-    background:black;
-    
-   
-    
-}
-/* -----------------------
-#imgLogo {
-    height: 80px;
-    width: 100px;
-    position: absolute;
-    margin-top: 5px;
-    margin-left: 5px;
-}
------------------------------*/
 
-
-/* -------------SECCION NAV-------------------------*/
-/* ----------------------------------------------------*/
-/* ----------
-.conteiner-nav{
-    
-    display:flex;
-    width: 95%;
-    
-    margin: auto;
-    
-}
-.conteiner-navLeft{
-    width: 66%;
-    text-align: center;
-    display:flex;
-    
-}
-.conteiner-navRight{
-    width: 35%;
-    text-align: center;
-    justify-content: right;
-    
-    display: flex;
-    margin-left: 5%;
-    
-    
-     
-}
-.conteiner-navRight .enlaceboton{
-    max-width: 90%;
-    
-}
-/* -------------BOTONES-------------------------*/
-/* ----------------------------------------------------*/
-/* ---
-.enlaceboton {    
-    
-    width: 100%;
-    min-width: max-content;
-    height: inherit;
-    background-color: #050505;
-    font-family: "calibri";
-    font-size: 150%;
-    font-weight: bold;
-    color: #fff6f6;
-    text-decoration: none;
-    border-radius: 6px;
-    padding: 20%;
-    margin:auto;
-    
-    
- }
- .enlaceboton:link,
- .enlaceboton:visited {
-    border-top: 1px solid #cccccc;
-    border-bottom: 2px solid #666666;
-    border-left: 1px solid #cccccc;
-    border-right: 2px solid #666666;
- }
- 
- .enlaceboton:hover {
-    border-bottom: 1px solid #cccccc;
-    border-top: 2px solid aqua;
-    border-right: 1px solid #cccccc;
-    border-left: 2px solid aqua;
-    color: aqua;
- }
- /* -------------BOTONES-------------------------*/
-
-/* -------------FIN SECCION NAV-------------------------*/
-
-
-
-/* -------------SECCION MAIN(ARTICLES Y ASIDE)-------------------------*/
-/* -------------------------------------------------------------------*/
-/* -----------
-#conteiner-main-section{
-    display: grid;
-    padding: 20px;
-    margin: auto;
-    padding-bottom: 20px;
-    font-family: "calibri";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "left1 right1"
-      "left2 right2"
-      ;
-  }
- .conteiner-articles-left1{grid-area: left1; }
- .conteiner-articles-left2{grid-area: left2; }
- 
- .conteiner-articles-right1{grid-area: right1; }
- .conteiner-articles-right1{grid-area: right2; }
- 
-#conteiner-main-section h1{
-    font-size: 40px;
-    text-align: center;
-    color: red;
-    font-weight: bold;
-}
 /* ------------- SECCION ARTICLES LEFT-------------------------*/
 /* ------------------------------------------------------------*/
 
-#conteiner-body { 
-    
-    
+#conteiner-body {
+
+
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 0.8fr;
-    grid-template-rows:1fr ;
+    grid-template-rows: 1fr;
     gap: 0.5% 0.5%;
     grid-auto-flow: row;
-    
-  }    
+
+}
+
 .conteiner-articles-left {
-    
-    
+
+
     background: yellowgreen;
-    
+
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
-    
-    
+
+
 }
 
 .conteiner-articles-left h1 {
@@ -201,48 +79,48 @@ body {
 }
 
 .conteiner-articles-left img {
-    max-width:100% ;
+    max-width: 100%;
 }
 
 
 /* -------------FIN SECCION ARTICLES LEFT-------------------------*/
 
-/* ------------- SECCION ARTICLES CENTER-------------------------*/
+/* ------------- SECCION ARTICLES RIGHT-------------------------*/
 /* ------------------------------------------------------------*/
-.conteiner-articles-right{
-    
+.conteiner-articles-right {
+
     background: yellowgreen;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
-    
-    
+
+
 
 }
 
-.conteiner-articles-right h1{
+.conteiner-articles-right h1 {
     font-size: 200%;
     text-align: center;
 }
 
 
 .conteiner-articles-right img {
-    max-width:100% ;
-   
+    max-width: 100%;
+
 }
 
-/* ------------- FIN SECCION ARTICLES CENTER-------------------------*/
+/* ------------- FIN SECCION ARTICLES RIGHT-------------------------*/
 
 /* -------------SECCION ASIDE-------------------------*/
 /* ------------------------------------------------------------*/
 
-aside{
-    
-    
+aside {
+
+
     display: inline-block;
     box-shadow: 1px 1px 10px #000;
     background: blue;
-    
-    
+
+
 
 }
 
@@ -252,17 +130,17 @@ aside h1 {
     color: white;
 }
 
-aside li{
-    
+aside li {
+
     max-width: 95%;
-    background:white;
-    
+    background: white;
+
 }
 
 /* -------------FIN SECCION ASIDE-------------------------*/
 
-    
-    
+
+
 /* -------------FIN SECCION MAIN-------------------------*/
 
 
@@ -274,60 +152,66 @@ aside li{
 
 /* -------------SECCION FOOTER BOTTON-------------------------*/
 /* ------------------------------------------------------------*/
-footer{
-    margin: 0px;
+footer {
+    margin-top: 0.5%;
     padding: 0px;
-    background:black;
+    background: black;
     font-family: "calibri";
     color: white;
 }
 
-.conteiner-footer-main{
+.conteiner-footer-main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    text-align: center;
     
-    
+
+
 }
-.conteiner-column1{
-    
+
+.conteiner-column1 {
+
     margin-right: 2%;
 }
 
-.conteiner-column1 h2{
+.conteiner-column1 h2 {
     font-size: 150%;
-    
+    text-align: center;
     margin: 2%;
 }
 
 .conteiner-column1 p {
     color: #cccccc;
+    text-align:justify;
+    padding:0% 10%;
     margin-top: 1%;
-    
+
 }
 
-.conteiner-column2{
-    
+.conteiner-column2 {
+
     margin-right: 2%;
-    
+
 }
 
-.conteiner-column2 h2{
+.conteiner-column2 h2 {
     font-size: 150%;
+    text-align: center;
     margin: 2%;
 }
 
 
 
-.conteiner-column3{
-    
+
+.conteiner-column3 {
+
     margin-right: 2%;
 }
 
-.conteiner-column3 h2{
+.conteiner-column3 h2 {
     font-size: 150%;
+    text-align: center;
     margin: 2%;
 }
 
@@ -337,7 +221,7 @@ footer{
     padding-left: 25%;
 }
 
-.row2 img{
+.row2 img {
     width: 36px;
     height: 36px;
 }
@@ -348,13 +232,12 @@ footer{
 }
 
 
-.conteiner-footer-botton{
-    
+.conteiner-footer-botton {
+
     display: flex;
     justify-content: space-between;
     padding: 20px;
     color: #cccccc
-    
 }
 
 
@@ -362,7 +245,7 @@ footer{
 .conteiner-footer-botton a {
 
     text-decoration: none;
-    color:white;
+    color: white;
     font-weight: bold;
 }
 
@@ -380,158 +263,126 @@ footer{
 
 
 /* -----------------RESOLUCIÓN PARA MÓVILES-------------------------*/
-@media screen and (max-width: 600px){
-#conteiner-body {  display: grid;
+@media screen and (max-width: 600px) {
+    #conteiner-body {
+        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 80px 1.9fr 1fr 0.3fr;
+        grid-template-rows: 1fr  ;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "Header"
-          "Main"
-          "Aside"
-          "Footer";
+            "Header"
+            "Main"
+            "Aside"
+            "Footer";
     }
-      
-    #conteiner-encabezado { grid-area: Header;
+
+    #conteiner-encabezado {
+        grid-area: Header;
         margin: 0px;
         padding: 0px;
-        max-width: 500px; }
-      
-    #conteiner-main-section { grid-area: Main; 
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "uno"
-      "dos"
-      "tres"
-      "cuatro";
-    max-width: 500px ;
-    padding: 0px;
-    max-height: 1900px;
+        
+    }
 
-}
-.conteiner-articles-left1{
-    grid-area: uno;
-    
-}
-.conteiner-articles-left2{
-    grid-area: dos;
-}      
-.conteiner-articles-right1{
-    grid-area: tres;
-}
-.conteiner-articles-ritgh2{
-    grid-area: cuatro;
-}
-#conteiner-aside { 
+    #conteiner-main-section {
+        grid-area: Main;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "uno"
+            "dos"
+            "tres"
+            "cuatro";
+        
+        
+
+    }
+
+    .conteiner-articles-left1 {
+        grid-area: uno;
+
+    }
+
+    .conteiner-articles-left2 {
+        grid-area: dos;
+    }
+
+    .conteiner-articles-right1 {
+        grid-area: tres;
+    }
+
+    .conteiner-articles-right2 {
+        grid-area: cuatro;
+    }
+
+    #conteiner-aside {
         grid-area: Aside;
         margin: 0px;
         padding: 0px;
-        max-width: 500px;
+        
         margin: auto;
-        height:200px;
+        
     }
-      
-#conteiner-footer { grid-area: Footer;
+
+    footer{
+        grid-area: Footer;
+        display: grid;
+        
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "FooterMain"
+            "FooterCopy"
+           ;
         margin: 0px;
         padding: 0px;
-        max-width: 500px;
+       
+    }
+    .conteiner-footer-main{
+        grid-area: FooterMain;
+        display: inline-block;
     }
 
+    .conteiner-column1 {
 
-      
+        margin:0px;
+        padding: 0px;
+    }
+    .conteiner-column2 {
+        
+        margin:0px;
+        padding: 0px;
+    }
+    .row2{
+        margin:2%;
+        padding-left: 5%; 
+    }
     
+    .conteiner-column3 {
+
+        margin:0px;
+        padding: 0px;
+    }
+    .conteiner-footer-botton{
+        grid-area: FooterCopy;
+
+    }
+
 }
+
 /* -----------------FIN DE RESOLUCIÓN PARA MÓVILES-------------------------*/
 
 
-/* -------------AQUI PONER TODO EL CSS QUE CORRESPONDA A OTRO HTML QUE NO SEA INDEX, DESPUES VEREMOS SI LO PONEMOS EN ARCHIVO -------------------------*/
-/* -------------SECCION FROMULARIO REGISTRO Y INICIO SESION -------------------------*/
 
-/* ---------
-.formbody{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background-image: url("../imagenes/fondoReg.jpg");
-}
-.bodyindex{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background-image: url("../imagenes/fondoReg.jpg");
-    display: block;
-}
-.formreg{
-   
-    background: rgb(21, 20, 27);
-    width: 400px;
-    padding: 30px;
-    margin: auto ;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'Calibri';
-    color: #fff6f6;
-    box-shadow: 7px 13px 37px white;
-}
-.formreg h4{
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
-    
-}
-.formreg p{
-    height: 40px;
-    text-align: center;
-    font-family: "calibri";
-    font-size: 18px;
-    line-height: 40px;
-}
-.formreg a{
-    color: white;
-    text-decoration: none;
-}
-.formreg a:hover{
-    color: white;
-    text-decoration:underline ;
-}
-.formreg .enlaceboton{
-   width: 100%;
-   height: 40px;
-   border: none;
-   padding: 12px;
-   margin: 16px 0;
-   box-shadow: 7px 7px 27px rgb(139, 138, 138);
-}
-.formreg .enlaceboton:hover{
-    border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #666666;
-    border-right: 1px solid #cccccc;
-    border-left: 2px solid #666666;
-}
-.inputreg{
-    width: 95%;
-    background: rgb(21, 20, 27);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border:1px solid white;
-    font-family: "calibri";
-    font-size: 25px;
-    text-align: center;
-    color: white;
-}
-/* -------------FIN SECCION FORMULARIO-------------------------*/
-#carrousel-servicios{
+#carrousel-servicios {
     margin-top: 20px;
     margin-bottom: 20px;
-    box-shadow:0px 0px 24px 0px #2081C3;
+    box-shadow: 0px 0px 24px 0px #2081C3;
 
 }
-.NAVBAR{
+
+.NAVBAR {
     border-bottom: 1px solid #2081C3;
 }
