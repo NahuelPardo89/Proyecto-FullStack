@@ -44,6 +44,7 @@ body {
     border-top: 2px solid #cccccc;
     border-right: 1px solid #cccccc;
     border-left: 2px solid #cccccc;
+    cursor: pointer;
     background:#0d6efd;
     color: aliceblue;
 
@@ -477,6 +478,8 @@ aside div{
 
 /* -------------AQUI PONER TODO EL CSS QUE CORRESPONDA A OTRO HTML QUE NO SEA INDEX, DESPUES VEREMOS SI LO PONEMOS EN ARCHIVO -------------------------*/
 /* -------------SECCION FROMULARIO REGISTRO Y INICIO SESION -------------------------*/
+
+/* ---------
 .formbody{
     margin: 0px;
     padding: 0px;
