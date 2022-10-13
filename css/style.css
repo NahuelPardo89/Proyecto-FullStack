@@ -2,6 +2,7 @@ body {
     background-color: #fff6f6;
     margin: 0px;
     padding: 0px;
+    
 
 }
 
@@ -59,7 +60,7 @@ body {
     grid-template-rows: 1fr;
     gap: 0.5% 0.5%;
     grid-auto-flow: row;
-
+    
 }
 
 .conteiner-articles-left {
@@ -69,7 +70,7 @@ body {
 
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
-
+    border-radius: 1%;
 
 }
 
@@ -92,7 +93,7 @@ body {
     background: yellowgreen;
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
-
+    border-radius: 1%;
 
 
 }
@@ -118,7 +119,9 @@ aside {
 
     display: inline-block;
     box-shadow: 1px 1px 10px #000;
-    background: blue;
+    border-radius: 1%;
+    
+    
 
 
 
@@ -127,14 +130,30 @@ aside {
 aside h1 {
     font-size: 200%;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 aside li {
-
-    max-width: 95%;
+    
+    max-width: 90%;
     background: white;
+    list-style:none;
+    font-family: "calibri";
+    box-shadow: 1px 1px 10px #000;
+    
 
+}
+aside li p {
+    text-align: justify;
+    padding:3%;
+}
+
+aside li h4{
+    text-align: center;
+}
+aside img{
+    
+    max-width: 100%;
 }
 
 /* -------------FIN SECCION ASIDE-------------------------*/
