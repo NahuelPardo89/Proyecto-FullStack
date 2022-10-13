@@ -66,7 +66,7 @@ body {
 .conteiner-articles-left {
 
 
-    background: yellowgreen;
+    
 
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
@@ -90,7 +90,7 @@ body {
 /* ------------------------------------------------------------*/
 .conteiner-articles-right {
 
-    background: yellowgreen;
+    
     box-shadow: 1px 1px 10px #000;
     display: inline-block;
     border-radius: 1%;
@@ -131,14 +131,16 @@ aside h1 {
     font-size: 200%;
     text-align: center;
     color: black;
+    
 }
 
 aside li {
     
     max-width: 90%;
-    background: white;
+    background: rgb(235, 235, 235);
     list-style:none;
     font-family: "calibri";
+    font-style: oblique;
     box-shadow: 1px 1px 10px #000;
     
 
@@ -150,6 +152,12 @@ aside li p {
 
 aside li h4{
     text-align: center;
+    font-weight: bolder;
+}
+aside li a{
+    text-decoration: none;
+    color: rgb(18, 21, 197);
+    font-weight: bold;
 }
 aside img{
     
