@@ -1,288 +1,308 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <!--  ***********CSS DE BOOTSTRAP***********  -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <title>A.M.P.A</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--  ***********CSS DE BOOTSTRAP***********  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    </head>
+    <title>A.M.P.A</title>
 
-    <!--  ***********AQUI EMPIEZA BODY ***********  -->
+</head>
 
-    <body>
+<!--  ***********AQUI EMPIEZA BODY ***********  -->
+
+<body>
 
 
-        <!--  ***********SECTION QUE CONTIENE HEADER Y NAV ***********  -->
-        <section id="conteiner-encabezado">
-            <!--  ***********AQUI EMPIEZA HEADER ***********  -->
-            <header>
-                <div class="text-center">
-                    <img src="imagenes/ampa-sin-fondo.png" class="img-fluid" alt="logo-ampa" style="width: 80px;">
-                </div>
+    <!--  ***********SECTION QUE CONTIENE HEADER Y NAV ***********  -->
+    <section id="conteiner-encabezado">
+        <!--  ***********AQUI EMPIEZA HEADER ***********  -->
+        <header>
 
-            </header>
-            <!--  ***********AQUI TERMINA HEADER ***********  -->
+            <label> Redes Sociales</label>
+            <a href="index.html">
+                <img class="icon" src="imagenes/icon/Facebook.png" alt="Facebook icon">
+            </a>
+            <a href="index.html">
+                <img class="icon" src="imagenes/icon/instagram.png" alt="Facebook icon">
+            </a>
 
-            <!--  ***********AQUI EMPIEZA A NAV ***********  -->
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="imagenes/ampa-sin-fondo.png" alt="logo-ampa" style="width: 45px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="btn-group ">
+                <a href="#" class="btn btn-light active" aria-current="page">Español</a>
+                <a href="#" class="btn btn-light">English</a>
+
+            </div>
+
+        </header>
+        <!--  ***********AQUI TERMINA HEADER ***********  -->
+
+        <!--  ***********AQUI EMPIEZA A NAV ***********  -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagenes/ampa-sin-fondo.png" alt="logo-ampa" style="width: 45px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Incio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Incio</a>
+                                <a class="nav-link" href="iniciarsesion.html">Iniciar sesion</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="servicios.html">Servicios</a>
+                                <a class="btn btn-primary" href="registro.html" role="button">Registro</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="iniciarsesion.html">Iniciar sesion</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-primary" href="registro.html" role="button">Registro</a>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
+                    </form>
                 </div>
-            </nav>
-
-
-            <!--  ***********AQUI TERMINA  NAV ***********  -->
-        </section>
-        <!--  ***********AQUI TERMINA DIV QUE CONTIENE A NAV ***********  -->
-
-
-        <!--  ***********AQUI EMPIEZA SECTION QUE CONTIENE ARTICLES Y ASIDE ***********  -->
-
-        <section id="conteiner-body">
-
-
-            <div class="conteiner-articles-left">
-
-                <article>
-                    <div class="conteiner-articles-left1">
-                        <h1>ARTICULO LEFT 1</h1>
-                        <img src="imagenes/canchaPaddle.jpg" alt="foto cancha de paddle">
-                        <p>
-                            PISO: cesped sintético </br>
-                            PARED: Acrilico
-                        </p>
-                    </div>
-                </article>
-
-                <article>
-                    <div class="conteiner-articles-left2">
-                        <h1>ARTICULO LEFT 2</h1>
-                        <img src="imagenes/canchaFutbol.jpg" alt="cancha de futbol">
-                        <p>
-                            PISO: cesped sintético </br>
-
-                        </p>
-
-                    </div>
-                </article>
             </div>
-
-            <!--  ***********AQUI TERMINA SECTION PARA ARTICLE ***********  -->
-
-            <!--  ***********AQUI EMPIEZA LA SECCION CENTER  PARA ARTICLE ***********  -->
-            <div class="conteiner-articles-right">
-                <article>
-                    <div class="conteiner-articles-right1">
-                        <h1>ARTICULO RIGHT 1</h1>
-                        <img src="imagenes/canchaPaddle.jpg" alt="foto cancha de paddle">
-                        <p>
-                            PISO: cesped sintético </br>
-                            PARED: Acrilico
-                        </p>
-                    </div>
-                </article>
-
-                <article>
-                    <div class="conteiner-articles-right2">
-                        <h1>ARTICULO RIGHT 2</h1>
-                        <img src="imagenes/canchaFutbol.jpg" alt="cancha de futbol">
-                        <p>
-                            PISO: cesped sintético </br>
-
-                        </p>
-
-                    </div>
-                </article>
-            </div>
+        </nav>
 
 
-            <!--  ***********AQUI TERMINA LA SEECCION CENTER  PARA ARTICLE ***********  -->
-
-            <!--  ***********AQUI EMPIEZA ASIDE ***********  -->
-
-            <aside>
-                <h1>PRÓXIMOS TORNEOS</h1>
-                <ul>
-                    <li class="conteiner-aside1">
-
-                        
-                        <img src="imagenes/torneo-paddle.png" alt="foto torneo paddle" > </br>
-                        <h4>Torneo de Paddle Profesional</h2>
-                        <p>
-                            Seremos sede del circuito de Paddle Profesional 
-                            Para mas inscripciones y mas informacion: <a href="https://padel.org.ar/">Circuito de Padel Argentito</a>
-                        </p>
-
-                    </li>
-
-                    <li class="conteiner-aside2">
-                        <img src="imagenes/torneo-futbol.jpg" alt="foto torneo futbol" > </br>
-                        <h4>Primer Torneo de Fútbol Femenino</h2>
-                        <p>
-                            Realizaremos el primer torneo de futbol femenino de nuestro complejo 
-                            Para mas inscripciones y mas informacion contactenos: <a href="contacto.html">Contacto A.M.P.A</a>
-                        </p>
-                    </li>
-
-                </ul>
+        <!--  ***********AQUI TERMINA  NAV ***********  -->
+    </section>
+    <!--  ***********AQUI TERMINA DIV QUE CONTIENE A NAV ***********  -->
 
 
-            </aside>
+    <!--  ***********AQUI EMPIEZA SECTION QUE CONTIENE ARTICLES Y ASIDE ***********  -->
+
+    <section id="conteiner-body">
 
 
-        </section>
+        <div class="conteiner-articles-left">
 
-        <!--  ***********AQUI TERMINA ASIDE ***********  -->
-
-        <!--  ***********AQUI TERMINA SECTION QUE CONTIENE ARTICLES Y ASIDE ***********  -->
-
-        <!--  ***********AQUI EMPIEZA FOOTER ***********  -->
-        <!--  ***********SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
-        <footer>
-            <!--  ***********SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
-            <div class="conteiner-footer-main">
-
-                <!--  ***********SECTION QUE CONTIENE COLUMN1 MAS INFORMACION SOBRE NUESTRO COMPLEJO***********  -->
-                <div class="conteiner-column1">
-                    <h2>
-                        Mas información sobre nuesto complejo
-                    </h2>
+            <article>
+                <div class="conteiner-articles-left1">
+                    <h1>COMPLEJO DEPORTIVO A.M.P.A</h1>
+                    <img src="imagenes/ampa-sin-fondo.png" class="rounded mx-auto d-block" alt="foto complejo">
                     <p>
-                        Asociación Mutual de Programadores Argentinos( A.M.P.A)
-                        Complejo deportivo para afiliados y no afiliados.
+                        PISO: cesped sintético </br>
+                        PARED: Acrilico
+                        PISO: cesped sintético </br>
+                        PARED: Acrilico
+                        PISO: cesped sintético </br>
+                        PARED: Acrilico
+                        PISO: cesped sintético </br>
+                        PARED: Acrilico
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="conteiner-articles-left2">
+                    <h1>ARTICULO LEFT 2</h1>
+                    <img src="" class="rounded mx-auto d-block" alt="cancha de futbol">
+                    <p>
+                        PISO: cesped sintético </br>
+
                     </p>
 
                 </div>
+            </article>
+        </div>
 
-                <!--  ***********SECTION QUE CONTIENE COLUMN2: REDES SOCIALES ***********  -->
-                <div class="conteiner-column2">
-                    <h2>
-                        Redes Sociales
-                    </h2>
-                    <div class="row2">
-                        <img src="imagenes/icon/Facebook.png" alt="logo facebook">
-                        <label>
-                            Siguenos en Facebook
-                        </label>
-                    </div>
+        <!--  ***********AQUI TERMINA SECTION PARA ARTICLE ***********  -->
 
-                    <div class="row2">
-                        <img src="imagenes/icon/instagram.png" alt="logo instagram">
-                        <label>
-                            Siguenos en Instagram
-                        </label>
-                    </div>
+        <!--  ***********AQUI EMPIEZA LA SECCION CENTER  PARA ARTICLE ***********  -->
+        <div class="conteiner-articles-right">
+            <article>
+                <div class="conteiner-articles-right1">
+                    <h1>ARTICULO RIGHT 1</h1>
+                    <img src="imagenes/canchaPaddle.jpg" class="rounded mx-auto d-block" alt="foto cancha de paddle">
+                    <p>
+                        PISO: cesped sintético </br>
+                        PARED: Acrilico
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <div class="conteiner-articles-right2">
+                    <h1>ARTICULO RIGHT 2</h1>
+                    <img src="imagenes/canchaFutbol.jpg" class="rounded mx-auto d-block" alt="cancha de futbol">
+                    <p>
+                        PISO: cesped sintético </br>
+
+                    </p>
 
                 </div>
-
-                <!--  ***********SECTION QUE CONTIENE COLUMN3 INFORMACIÓN DE CONTACTO ***********  -->
-                <div class="conteiner-column3">
-                    <h2>
-                        Información de Contacto
-                    </h2>
-
-                    <div class="row2">
-                        <img src="imagenes/icon/casa.png" alt="logo casa">
-                        <label>
-                            España 36, Córdoba capital, Argentina
-                        </label>
-                    </div>
-
-                    <div class="row2">
-                        <img src="imagenes/icon/telefono.png" alt="logo telefono">
-                        <label>
-                            +54-351-4672916
-                        </label>
-                    </div>
-
-                    <div class="row2">
-                        <img src="imagenes/icon/email.png" alt="logo email">
-                        <label>
-                            contacto@ampa.com
-                        </label>
-                    </div>
-                </div>
+            </article>
+        </div>
 
 
+        <!--  ***********AQUI TERMINA LA SEECCION CENTER  PARA ARTICLE ***********  -->
 
+        <!--  ***********AQUI EMPIEZA ASIDE ***********  -->
+
+        <aside>
+            <h1>PRÓXIMOS TORNEOS</h1>
+            <ul>
+                <li class="conteiner-aside1">
+
+
+                    <img src="imagenes/torneo-paddle.png" alt="foto torneo paddle"> </br>
+                    <h4>Torneo de Paddle Profesional</h2>
+                        <p>
+                            Seremos sede del circuito de Paddle Profesional
+                            Para mas inscripciones y mas informacion: <a href="https://padel.org.ar/">Circuito de Padel
+                                Argentito</a>
+                        </p>
+
+                </li>
+
+                <li class="conteiner-aside2">
+                    <img src="imagenes/torneo-futbol.jpg" alt="foto torneo futbol"> </br>
+                    <h4>Primer Torneo de Fútbol Femenino</h2>
+                        <p>
+                            Realizaremos el primer torneo de futbol femenino de nuestro complejo
+                            Para mas inscripciones y mas informacion contactenos: <a href="contacto.html">Contacto
+                                A.M.P.A</a>
+                        </p>
+                </li>
+
+            </ul>
+
+
+        </aside>
+
+
+    </section>
+
+    <!--  ***********AQUI TERMINA ASIDE ***********  -->
+
+    <!--  ***********AQUI TERMINA SECTION QUE CONTIENE ARTICLES Y ASIDE ***********  -->
+
+    <!--  ***********AQUI EMPIEZA FOOTER ***********  -->
+    <!--  ***********SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
+    <footer>
+        <!--  ***********SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
+        <div class="conteiner-footer-main">
+
+            <!--  ***********SECTION QUE CONTIENE COLUMN1 MAS INFORMACION SOBRE NUESTRO COMPLEJO***********  -->
+            <div class="conteiner-column1">
+                <h2>
+                    Mas información sobre nuesto complejo
+                </h2>
+                <p>
+                    Asociación Mutual de Programadores Argentinos( A.M.P.A)
+                    Complejo deportivo para afiliados y no afiliados.
+                </p>
 
             </div>
-            <!--  ***********AQUI TERMINA SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
 
-
-            <!--  ***********SECTION QUE CONTIENE COPYRIGTH -->
-            <div class="conteiner-footer-botton">
-                <div>
-                    © 2022 Todos los derechos reservados | <a href="">DevCord Inspiradores digitales</a>
-
+            <!--  ***********SECTION QUE CONTIENE COLUMN2: REDES SOCIALES ***********  -->
+            <div class="conteiner-column2">
+                <h2>
+                    Redes Sociales
+                </h2>
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/Facebook.png" alt="logo facebook">
+                    <label>
+                        <a href="http://"> Siguenos en Facebook</a>
+                    </label>
                 </div>
 
-                <div>
-                    <a href="aboutus.html">informacion de la compañia |</a>
-                    <a href="">Terminos y condiciones </a>
-
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/instagram.png" alt="logo instagram">
+                    <label>
+                        <a href="http://"> Siguenos en Instagram</a>
+                    </label>
                 </div>
 
             </div>
 
-            <!--  *********** FIN SECTION QUE CONTIENE COPYRIGTH -->
+            <!--  ***********SECTION QUE CONTIENE COLUMN3 INFORMACIÓN DE CONTACTO ***********  -->
+            <div class="conteiner-column3">
+                <h2>
+                    Información de Contacto
+                </h2>
 
-        </footer>
-        <!--  ***********FIN SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/casa.png" alt="logo casa">
+                    <label>
+                        España 36, Córdoba capital, Argentina
+                    </label>
+                </div>
+
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/telefono.png" alt="logo telefono">
+                    <label>
+                        +54-351-4672916
+                    </label>
+                </div>
+
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/email.png" alt="logo email">
+                    <label>
+                        contacto@ampa.com
+                    </label>
+                </div>
+            </div>
 
 
-        
-
-        <!--  ***********AQUI TERMINA FOOTER***********  -->
-
-        <!--  ***********JS DE BOOTSTRAP***********  -->
-        
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script>
 
 
-    <!--  ***********AQUI TERMINA BODY ***********  -->
+        </div>
+        <!--  ***********AQUI TERMINA SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
+
+
+        <!--  ***********SECTION QUE CONTIENE COPYRIGTH -->
+        <div class="conteiner-footer-botton">
+            <div>
+                © 2022 Todos los derechos reservados | <a href="">DevCord Inspiradores digitales</a>
+
+            </div>
+
+            <div>
+                <a href="aboutus.html">informacion de la compañia |</a>
+                <a href="">Terminos y condiciones </a>
+
+            </div>
+
+        </div>
+
+        <!--  *********** FIN SECTION QUE CONTIENE COPYRIGTH -->
+
+    </footer>
+    <!--  ***********FIN SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
+
+
+
+
+    <!--  ***********AQUI TERMINA FOOTER***********  -->
+
+    <!--  ***********JS DE BOOTSTRAP***********  -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+
+<!--  ***********AQUI TERMINA BODY ***********  -->
 
 </html>

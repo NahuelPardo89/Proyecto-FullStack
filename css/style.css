@@ -1,16 +1,30 @@
 body {
-    background-color: #fff6f6;
+    background: white;
     margin: 0px;
     padding: 0px;
     
 
 }
-
+.icon{
+    width: 36px;
+    height: 36px;
+}
 /* MAQUETACION */
 
 #conteiner-encabezado {
     margin-bottom: 0.5%;
 }
+header {
+    
+    text-align: right;
+    
+    
+    
+}
+header div{
+    margin-left: 4%;
+}
+
 
 .navbar-nav a {
     color: black;
@@ -54,10 +68,10 @@ body {
 
 #conteiner-body {
 
-
+    
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 0.8fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 0.5fr;
     gap: 0.5% 0.5%;
     grid-auto-flow: row;
     
@@ -68,11 +82,16 @@ body {
 
     
 
-    box-shadow: 1px 1px 10px #000;
+    
     display: inline-block;
+    box-shadow: 1px 1px 10px #000;
+    max-width: 100%;
+    max-height: 100%; 
     border-radius: 1%;
 
 }
+
+
 
 .conteiner-articles-left h1 {
     font-size: 200%;
@@ -81,7 +100,11 @@ body {
 
 .conteiner-articles-left img {
     max-width: 100%;
+    
+    
+    
 }
+
 
 
 /* -------------FIN SECCION ARTICLES LEFT-------------------------*/
@@ -196,6 +219,11 @@ footer {
 
 
 }
+.conteiner-footer-main a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
 
 .conteiner-column1 {
 
@@ -248,10 +276,7 @@ footer {
     padding-left: 25%;
 }
 
-.row2 img {
-    width: 36px;
-    height: 36px;
-}
+
 
 .row2 label {
     margin-left: 20px;
