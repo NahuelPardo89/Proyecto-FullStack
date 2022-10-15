@@ -84,7 +84,7 @@ header div{
     
     display: inline-block;
     
-    
+    font-family: calibri;
     color: black;
     
     box-shadow: 1px 1px 10px #000;
@@ -97,28 +97,60 @@ header div{
 
 
 .conteiner-articles h1 {
+    font-family: calibri;
     font-size: 200%;
-    
+    font-weight: bold;
     text-align: center;
+    background: whitesmoke;
+    
 }
 
 
-.conteiner-articles1{
+
+.conteiner-articles1 .card{
+    text-align: left;
+   padding: 0%;
+}
+
+.conteiner-articles1 .card-body{
+    
+    margin:0px;
+    padding:0px ;
+}
+.conteiner-articles1 .card-body h5{
+    
+    background: whitesmoke;
+    text-align: center;
+    font-style: italic;
+    
+}
+
+.conteiner-articles1 .card-body .card-text{
+    
+    padding-left: 4%;
+    padding-right: 4%;
+    text-align: justify;
+    font-style: italic;
+    
+}
+
+.conteiner-articles2{
     display: flex;
     background: whitesmoke;
     color:black;
     text-align: center;
     font-family: calibri;
+    font-style: italic;
 }
 
-.conteiner-articles1 div {
+.conteiner-articles2 div {
     width: 33.3%;
     
     padding: 2%;
     
 }
 
-.conteiner-articles1 div p {
+.conteiner-articles2 div p {
     text-align: justify;
 }
 
