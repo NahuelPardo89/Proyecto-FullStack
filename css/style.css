@@ -360,51 +360,22 @@ footer {
         
     }
 
-    #conteiner-main-section {
-        grid-area: Main;
-        display: grid;
-        padding: 0px;
-        margin: 0px;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "uno"
-            "dos"
-            "tres"
-            "cuatro";
+    
+
+    .conteiner-articles2 {
         
         
-
-    }
-
-    .conteiner-articles-left1 {
-        grid-area: uno;
         display: inline-block;
 
     }
-    .conteiner-articles-left1 img {
-        max-width: 100%;
+
+    .conteiner-articles2 div {
+        width: 100%;
         
-    }
-    .conteiner-articles-left1 label {
-        max-width: 100%;
-        padding-right: 3%;
+        padding: 2%;
         
     }
     
-
-    .conteiner-articles-left2 {
-        grid-area: dos;
-    }
-
-    .conteiner-articles-right1 {
-        grid-area: tres;
-    }
-
-    .conteiner-articles-right2 {
-        grid-area: cuatro;
-    }
 
     #conteiner-aside {
         grid-area: Aside;
