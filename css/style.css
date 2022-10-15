@@ -109,7 +109,8 @@ header div{
 
 .conteiner-articles1 .card{
     text-align: left;
-   padding: 0%;
+    padding: 0%;
+    border: 0px;
 }
 
 .conteiner-articles1 .card-body{
@@ -117,7 +118,7 @@ header div{
     margin:0px;
     padding:0px ;
 }
-.conteiner-articles1 .card-body h5{
+.conteiner-articles1 .card-body h3{
     
     background: whitesmoke;
     text-align: center;
@@ -152,6 +153,9 @@ header div{
 
 .conteiner-articles2 div p {
     text-align: justify;
+}
+.conteiner-articles3 {
+    
 }
 
 /* -------------FIN SECCION ARTICLES LEFT-------------------------*/
