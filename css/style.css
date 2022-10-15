@@ -76,7 +76,7 @@ header div{
     
 }
 
-.conteiner-articles-left {
+.conteiner-articles {
 
 
     
@@ -84,64 +84,43 @@ header div{
     
     display: inline-block;
     
-    background-image: url(../imagenes/INSTALACIONESAMPA.png);
-    background-size:cover;
-    color: aliceblue;
-    font-weight: bolder;
+    
+    color: black;
+    
     box-shadow: 1px 1px 10px #000;
     text-align: center;
-    padding: 1%;
+    
     border-radius: 1%;
 
 }
 
 
 
-.conteiner-articles-left h1 {
+.conteiner-articles h1 {
     font-size: 200%;
     
     text-align: center;
 }
 
 
-.conteiner-articles-left1{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+.conteiner-articles1{
+    display: flex;
+    background: whitesmoke;
+    color:black;
+    text-align: center;
+    font-family: calibri;
 }
-.conteiner-articles-left1 img{
-    width:100%;
+
+.conteiner-articles1 div {
+    width: 33.3%;
     
-    
+    padding: 2%;
     
 }
 
-.conteiner-articles-left1  p{
-    max-width:70%;
-    
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 1%;
-    padding-bottom: 10%;
-    
-    
+.conteiner-articles1 div p {
     text-align: justify;
-    
-    
-    
 }
-
-.conteiner-articles-left1 label iframe{
-    max-width:max-content;
-    border-radius: 10%;
-    align-content: center;
-    
-    
-    
-}
-
 
 /* -------------FIN SECCION ARTICLES LEFT-------------------------*/
 
