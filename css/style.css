@@ -154,8 +154,19 @@ header div{
 .conteiner-articles2 div p {
     text-align: justify;
 }
+.conteiner-articles3 {
+    display: flex;
+    text-align: center;
+}
+.conteiner-articles3 iframe{
+    width: 59%;
+    border-radius: 15%;
+}
 
-
+.conteiner-articles3 img{
+    width: 40%;
+    border-radius: 15%;
+}
 /* -------------FIN SECCION ARTICLES LEFT-------------------------*/
 
 
@@ -378,7 +389,17 @@ footer {
         
     }
     
+    .conteiner-articles3{
+        display: inline-block;
+    }
+    .conteiner-articles3 img{
+        width: 100%;
+    }
 
+    .conteiner-articles3 iframe{
+        width: 100%;
+        height: 300px;
+    }
     #conteiner-aside {
         grid-area: Aside;
         margin: 0px;
