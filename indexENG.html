@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                    
     <!--  ***********CSS DE BOOTSTRAP***********  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -26,16 +27,16 @@
         <header>
 
             <label> Redes Sociales</label>
-            <a href="index.html">
+            <a href="https://www.facebook.com/">
                 <img class="icon" src="imagenes/icon/Facebook.png" alt="Facebook icon">
             </a>
-            <a href="index.html">
+            <a href="https://www.instagram.com/">
                 <img class="icon" src="imagenes/icon/instagram.png" alt="Facebook icon">
             </a>
 
             <div class="btn-group ">
-                <a href="file:///C:/xampp/htdocs/Proyecto-FullStack/Proyecto-FullStack/index.html" class="btn btn-light active" aria-current="page">Español</a>
-                <a href="file:///C:/xampp/htdocs/Proyecto-FullStack/Proyecto-FullStack/en/index.html" class="btn btn-light">English</a>
+                <a href="index.html" class="btn btn-light active" aria-current="page">Español</a>
+                <a href="indexENG.html" class="btn btn-light ">English</a>
 
             </div>
 
@@ -59,7 +60,7 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Incio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link btn-abrir-popup" id="btn-abrir-popup" href="#">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
@@ -134,7 +135,7 @@
                           <img src="imagenes/Gimnacio.jpg" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h3 class="card-title">GIMNASIO</h3>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text">Equipamiento completo y de ultima generación</p>
                             
                           </div>
                         </div>
@@ -233,8 +234,7 @@
                     <h4>Primer Torneo de Fútbol Femenino</h2>
                         <p>
                             Realizaremos el primer torneo de futbol femenino de nuestro complejo
-                            Para mas inscripciones y mas informacion contactenos: <a href="contacto.html">Contacto
-                                A.M.P.A</a>
+                            Para mas inscripciones y mas informacion contáctenos. 
                         </p>
                 </li>
 
@@ -242,7 +242,35 @@
 
 
         </aside>
+         <!--  ***********CONTACTO POP-UP ***********  -->
+        
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" class="btn-cerrar-popup" id="btn-cerrar-popup"> <i class='fa fa-times'></i></a>
+                <h3>CONTACTO</h3>
+                <h4>¡Dejanos tu mensaje!</h4>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <p><label for="nombre">NOMBRE*</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombres" required></p>
+                            <p><label for="apellido">APELLIDO*</label>
+                            <input type="text" name="apellido" id="apellido" placeholder="Apellido" required></p>
+                            <p><label for="telefono">TELÉFONO*</label>
+                            <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required></p>
+                            <p><label for="email">CORREO ELETRÓNICO*</label>
+                            <input type="email" name="email" id="email" placeholder="Email" required></p>
+                            <p>ESCRIBA SU MENSAJE POR FAVOR</p>
+                            <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="45" rows="10"></textarea>
+                            
+                    </div>
+                    <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                            <h4> * los campos son obligatorios</h4>
+                </form>
+            </div>
 
+        </div>
+        <script src="contactPopup.js"></script>
+        <!--  ***********AQUI TERMINA CONTACTO POP-UP ***********  -->
 
     </section>
 
@@ -276,14 +304,14 @@
                 <div class="row2">
                     <img class="icon" src="imagenes/icon/Facebook.png" alt="logo facebook">
                     <label>
-                        <a href="http://"> Seguinos en Facebook</a>
+                        <a href="https://www.facebook.com/"> Seguinos en Facebook</a>
                     </label>
                 </div>
 
                 <div class="row2">
                     <img class="icon" src="imagenes/icon/instagram.png" alt="logo instagram">
                     <label>
-                        <a href="http://"> Seguinos en Instagram</a>
+                        <a href="https://www.instagram.com/"> Seguinos en Instagram</a>
                     </label>
                 </div>
 
