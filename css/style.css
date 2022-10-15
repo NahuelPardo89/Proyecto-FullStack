@@ -70,8 +70,7 @@ header div{
 
     
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 0.8fr;
-    grid-template-rows: 0.5fr;
+    grid-template-columns: 2fr  0.6fr;
     gap: 0.5% 0.5%;
     grid-auto-flow: row;
     
@@ -84,9 +83,14 @@ header div{
 
     
     display: inline-block;
+    
+    background-image: url(../imagenes/INSTALACIONESAMPA.png);
+    background-size:cover;
+    color: aliceblue;
+    font-weight: bolder;
     box-shadow: 1px 1px 10px #000;
-    max-width: 100%;
-    max-height: 100%; 
+    text-align: center;
+    padding: 1%;
     border-radius: 1%;
 
 }
@@ -95,44 +99,53 @@ header div{
 
 .conteiner-articles-left h1 {
     font-size: 200%;
+    
     text-align: center;
 }
 
-.conteiner-articles-left img {
-    max-width: 100%;
+
+.conteiner-articles-left1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.conteiner-articles-left1 img{
+    width:100%;
     
     
     
 }
 
+.conteiner-articles-left1  p{
+    max-width:70%;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 10%;
+    
+    
+    text-align: justify;
+    
+    
+    
+}
+
+.conteiner-articles-left1 label iframe{
+    max-width:max-content;
+    border-radius: 10%;
+    align-content: center;
+    
+    
+    
+}
 
 
 /* -------------FIN SECCION ARTICLES LEFT-------------------------*/
 
-/* ------------- SECCION ARTICLES RIGHT-------------------------*/
-/* ------------------------------------------------------------*/
-.conteiner-articles-right {
 
-    
-    box-shadow: 1px 1px 10px #000;
-    display: inline-block;
-    border-radius: 1%;
-
-
-}
-
-.conteiner-articles-right h1 {
-    font-size: 200%;
-    text-align: center;
-}
-
-
-.conteiner-articles-right img {
-    max-width: 100%;
-
-}
-
-/* ------------- FIN SECCION ARTICLES RIGHT-------------------------*/
 
 /* -------------SECCION ASIDE-------------------------*/
 /* ------------------------------------------------------------*/
@@ -339,6 +352,8 @@ footer {
     #conteiner-main-section {
         grid-area: Main;
         display: grid;
+        padding: 0px;
+        margin: 0px;
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
@@ -354,8 +369,19 @@ footer {
 
     .conteiner-articles-left1 {
         grid-area: uno;
+        display: inline-block;
 
     }
+    .conteiner-articles-left1 img {
+        max-width: 100%;
+        
+    }
+    .conteiner-articles-left1 label {
+        max-width: 100%;
+        padding-right: 3%;
+        
+    }
+    
 
     .conteiner-articles-left2 {
         grid-area: dos;
