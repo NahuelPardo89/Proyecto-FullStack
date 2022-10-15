@@ -448,3 +448,92 @@ footer {
 .NAVBAR {
     border-bottom: 1px solid #2081C3;
 }
+
+/* -----------------CONTACTO POP-UP-------------------------*/
+.overlay {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.overlay.active {
+    visibility: visible;
+}
+.popup {
+    background-color: #fff6f6;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    padding: 20px;
+    width: 600px;
+    text-align: center;
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 16px;
+    line-height: 16px;
+    
+    float: right;
+    color: #aaa;
+    transition: .3s ease all;
+}
+.popup .btn-cerrar-popup:hover {
+    color: #000;
+    
+}
+.overlay form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.overlay h3 {
+    color: rgba(0, 0, 0, .6);
+    text-align: center;
+    margin: 10;
+    font-size: 30px ;
+    margin-bottom: 5px;
+}
+
+.overlay h4 {
+    color: rgba(0, 0, 0, .6);
+    text-align: center;
+}
+
+.overlay input, .overlay textarea {
+width: 100%;
+margin-bottom: 5px;
+padding: 7px;
+box-sizing: border-box;
+font-size: 14px;
+border:none
+}
+
+.overlay textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.overlay #boton {
+    background: #31384A;
+    
+    color: beige;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.overlay #boton:hover {
+    outline: #cccccc 3px solid;
+    cursor: pointer;
+}
+
