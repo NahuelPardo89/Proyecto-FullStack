@@ -97,7 +97,7 @@ header div{
 
 
 .conteiner-articles h1 {
-    font-family: calibri;
+    font-family: Calibri;
     font-size: 200%;
     font-weight: bold;
     text-align: center;
@@ -123,6 +123,7 @@ header div{
     background: whitesmoke;
     text-align: center;
     font-style: italic;
+    
     
 }
 
