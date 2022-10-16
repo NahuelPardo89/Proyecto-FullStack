@@ -9,53 +9,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
-     <header>
-       <div class="text-center">
-        <img src="imagenes/ampa-sin-fondo.png" class="img-fluid" alt="logo-ampa" style="width: 80px;">
-    </div>
+    <section id="conteiner-encabezado">
+      <!--  ***********AQUI EMPIEZA HEADER ***********  -->
+      <header>
 
-     </header>
-     <!--  ***********AQUI EMPIEZA DIV QUE CONTIENE A NAV ***********  -->
-     <div class="NAVBAR">
-     
-       <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="imagenes/ampa-sin-fondo.png" alt="logo-ampa" style="width: 45px;">
+          <label> Redes Sociales</label>
+          <a href="https://www.facebook.com/">
+              <img class="icon" src="imagenes/icon/Facebook.png" alt="Facebook icon">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="servicios.html">Servicios</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="iniciarsesion.html">Iniciar sesion</a>
+          <a href="https://www.instagram.com/">
+              <img class="icon" src="imagenes/icon/instagram.png" alt="Facebook icon">
+          </a>
+
+          <div class="btn-group ">
+              <a href="index.html" class="btn btn-light " aria-current="page">Español</a>
+              <a href="indexENG.html" class="btn btn-light active">English</a>
+
+          </div>
+
+      </header>
+      <!--  ***********AQUI TERMINA HEADER ***********  -->
+
+      <!--  ***********AQUI EMPIEZA A NAV ***********  -->
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                  <img src="imagenes/logoAmpa2.png" alt="logo-ampa" style="width: 80px;">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="btn btn-primary" href="registro.html" role="button">Registro</a>
+                          <a class="nav-link btn-abrir-popup" id="btn-abrir-popup" href="#">Contacto</a>
                       </li>
-                </ul>
-            </form>
+                      <li class="nav-item">
+                          <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="servicios.html">Servicios</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                              <a class="nav-link btn-abrir-iniciosesion" id="btn-abrir-iniciosesion" href="#">Iniciar sesion</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="btn btn-primary btn-abrir-popupReg" id="btn-abrir-popupReg" href="#">Registro</a>
+                          </li>
+                      </ul>
+                  </form>
+              </div>
           </div>
-        </div>
       </nav>
-      
-    </div>
+
+
+      <!--  ***********AQUI TERMINA  NAV ***********  -->
+  </section>
 <!--  ***********AQUI TERMINA DIV QUE CONTIENE A NAV ***********  -->
        
      
