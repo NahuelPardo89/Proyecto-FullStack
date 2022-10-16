@@ -1,19 +1,21 @@
 
-header .NAVBAR{
-    margin: 0%;
-} 
+
 
 
 /* -----------------CONTENIDO MAIN/ARTICLE DE INFORMACION-------------------------*/
 
 #container-aboutus{
+    display: flex;
     background-color: rgb(245, 245, 245);
+    text-align: center;
+    
+    
 }
 
-#container-aboutus .container{
-    text-align: center;
-    padding: 200px 10px;
+#container-aboutus img{
+    max-width: 60%;
 }
+
 
 li{
     font-size: 1em;
@@ -29,119 +31,4 @@ ul{
 
 /* -----------------FIN DE CONTENIDO MAIN/ARTICLE DE INFORMACION-------------------------*/
 
-/* -----------------SECCION FOOTER-------------------------*/
 
-footer{
-    margin-top: 2.5%;
-    background: black;
-    padding: 0px;
-    font-family: "calibri";
-    color: white;
-}
-
-.conteiner-footer-main{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 0px 0px;
-grid-auto-flow: row;
-margin-bottom: 10px;
-}
-
-.conteiner-footer-main a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.conteiner-column1{
-    margin-right: 2%;
-}
-
-.conteiner-column1 h2{
-    font-size: 150%;
-    text-align: center;
-    margin: 2%;
-}
-
-.conteiner-column1 p{
-    color: #cccccc;
-    text-align: justify;
-    padding: 0% 10%;
-    margin-top: 1%;
-}
-
-.conteiner-column2{
-    margin-right: 60%;
-}
-
-.conteiner-column2 h2{
-    font-size: 150%;
-    text-align: center;
-    margin: 2%;
-}
-
-.conteiner-column3 {
-
-    margin-right: 2%;
-}
-
-.conteiner-column3 h2 {
-    font-size: 150%;
-    text-align: center;
-    margin: 2%;
-}
-
-.row2{
-    margin-top: 20px;
-    display: flex;
-    padding-left: 25px;
-}
-
-.row2 img{
-    width: 36px;
-    height: 36px;
-}
-
-.row2 label{
-    margin-left: 20px;
-}
-
-.conteiner-footer-botton{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    color: #cccccc;
-}
-
-.conteiner-footer-botton a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* -----------------FIN DEL FOOTER-------------------------*/
-
-/* -----------------SECCION MEDIA QUERIE-------------------------*/
-
-@media (min-width: 720px){
-     
-    #container-aboutus .container{
-        display: flex;
-        justify-content: space-evenly;
-
-    }
-
-    #container-aboutus .texto{
-        padding-left: 70px;
-    }
-
-    #container-aboutus .img-container{
-        background-image: url(../imagenes/equipotrabajo.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 600px;
-        width: 200%;
-    }
-}
-
-/* -----------------FIN DE SECCION MEDIA QUERIE-------------------------*/

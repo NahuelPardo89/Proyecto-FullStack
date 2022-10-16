@@ -453,6 +453,19 @@ footer {
         grid-area: FooterCopy;
 
     }
+    #container-aboutus {
+        display: inline-block;
+        justify-content: space-evenly;
+
+    }
+
+    #container-aboutus .texto{
+        padding-left: 70px;
+    }
+
+    #container-aboutus img{
+       width: 100%;
+    }
 
 }
 
