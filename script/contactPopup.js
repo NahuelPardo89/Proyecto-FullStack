@@ -6,9 +6,10 @@ var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
     overlay2 = document.getElementById('overlay2'),
     popupReg = document.getElementById('popupReg'),
     btnCerrarPopupReg = document.getElementById('btn-cerrar-popupReg');
-
-
-btnAbrirPopup.addEventListener('click', function(){
+    btnAbrirPopupInicioSesion = document.getElementById('btn-abrir-iniciosesion');
+    popupInicioSesion = document.getElementById('popupInicioSesion');
+    btnCerrarPopupInicioSesion = document.getElementById('btn-cerrar-popupInicioSesion');
+    btnAbrirPopup.addEventListener('click', function(){
     overlay.classList.add('active');
 });
 
@@ -22,4 +23,11 @@ btnAbrirPopupReg.addEventListener('click', function(){
 
 btnCerrarPopupReg.addEventListener('click', function(){
     overlay2.classList.remove('active2');
+});
+
+btnAbrirPopupInicioSesion.addEventListener('click', function(){
+    overlay3.classList.add('active3');
+});
+btnCerrarPopupInicioSesion.addEventListener('click', function(){
+    overlay3.classList.remove('active3');
 });
