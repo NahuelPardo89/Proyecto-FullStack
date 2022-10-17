@@ -37,25 +37,19 @@ header div{
 }
 
 .navbar-nav .nav-item:hover a {
-    color: aliceblue;
+    color:black;
     font-weight: bold;
 }
 
-.nav-link {
-    border-radius: 10%;
 
-
-
-}
 
 
 .nav-link:hover {
-    border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #cccccc;
+    
     border-right: 1px solid #cccccc;
-    border-left: 2px solid #cccccc;
+    border-left: 1px solid #cccccc;
     cursor: pointer;
-    background: #0d6efd;
+    background: rgb(214, 210, 210);
     color: aliceblue;
 
 }
@@ -718,7 +712,7 @@ border:none
 .overlay3 form {
     width: 80%;
     margin: auto;
-    background: whitesmoke;
+    background: white;
     padding: 10px 20px; 
     box-sizing: border-box;
     margin-top: 10px;
