@@ -6,6 +6,7 @@
     <title>A.M.P.A.- Servicios</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
@@ -74,6 +75,96 @@
       <!--  ***********AQUI TERMINA  NAV ***********  -->
   </section>
 <!--  ***********AQUI TERMINA DIV QUE CONTIENE A NAV ***********  -->
+ <!--  ***********CONTACTO POP-UP ***********  -->
+        
+ <div class="overlay" id="overlay">
+  <div class="popup" id="popup">
+      <a href="#" class="btn-cerrar-popup" id="btn-cerrar-popup"> <i class='fa fa-times'></i></a>
+      <h3>CONTACTO</h3>
+      <h4>¡Dejanos tu mensaje!</h4>
+      <form action="">
+          <div class="contenedor-inputs">
+              <p><label for="nombre">NOMBRE*</label>
+                  <input type="text" name="nombre" id="nombre" placeholder="Nombres" required></p>
+                  <p><label for="apellido">APELLIDO*</label>
+                  <input type="text" name="apellido" id="apellido" placeholder="Apellido" required></p>
+                  <p><label for="telefono">TELÉFONO*</label>
+                  <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required></p>
+                  <p><label for="email">CORREO ELETRÓNICO*</label>
+                  <input type="email" name="email" id="email" placeholder="Email" required></p>
+                  <p>ESCRIBA SU MENSAJE POR FAVOR</p>
+                  <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="45" rows="10"></textarea>
+                  
+          </div>
+          <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                  <h4> * los campos son obligatorios</h4>
+      </form>
+  </div>
+
+</div>
+
+<!--  ***********AQUI TERMINA CONTACTO POP-UP ***********  -->
+<!--  ***********REGISTRO POP-UP ***********  -->
+
+<div class="overlay2" id="overlay2">
+  <div class="popupReg" id="popupReg">
+      <a href="#" class="btn-cerrar-popupReg" id="btn-cerrar-popupReg"> <i class='fa fa-times'></i></a>
+      <h3>REGISTRO</h3>
+      <h4>¡Crea tu cuenta!</h4>
+      <form action="">
+          <div class="contenedor-inputsReg">
+              <p><label for="nombre">NOMBRE DE USUARIO*</label>
+                  <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
+                  <p><label for="apellido">CONTRASEÑA*</label>
+                  <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
+                  <p><label for="email">CORREO ELETRÓNICO*</label>
+                  <input type="email" name="email" id="email" placeholder="Escriba aquí su e-mail" required></p>
+                  
+          </div>
+          <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                  
+      </form>
+  </div>
+
+</div>
+
+
+
+
+<div class="overlay3" id="overlay3">
+  <div class="popupInicioSesion" id="popupInicioSesion">
+      <a href="#" class="btn-cerrar-popupInicioSesion" id="btn-cerrar-popupInicioSesion"> <i class='fa fa-times'></i></a>
+      <h3>INICIAR SESION</h3>
+      <h4>Ingresa en tu cuenta</h4>
+      <form action="">
+          <div class="contenedor-inputsReg">
+              <p><label for="nombre">NOMBRE DE USUARIO*</label>
+                  <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
+                  <p><label for="apellido">CONTRASEÑA*</label>
+                  <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
+                  
+          </div>
+          <p><input type="button" name="boton" id="boton" value="Iniciar Sesion"></p> 
+                  
+      </form>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script/contactPopup.js"></script>
        
      
 <div class="container-fluid">
@@ -98,7 +189,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="imagenes/canchaFutbol.jpg" class="d-block w-100" alt="cancha-de-futbol">
+                <img src="imagenes/canchaFutbol.jpg" class="d-block w-100" id="imgFutbol_carousel" alt="cancha-de-futbol">
                 <div class="carousel-caption">
                   <h5>Cancha de Futbol A.M.P.A.</h5>
                   <button type="button" class="btn btn-light"><a href="https://www.whatsapp.com/?lang=es" target="_blank" style="text-decoration:none; color: #000000">Reservar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -358,6 +449,7 @@
   </div>
 </div>
 <!--  ***********AQUI TERMINA CONTAINER DE ARTICULOS ***********  -->
+
 
 
 

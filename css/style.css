@@ -496,6 +496,8 @@ footer {
     align-items: center;
     justify-content: center;
     visibility: hidden;
+    z-index: 100;
+
 }
 .overlay.active {
     visibility: visible;
@@ -584,6 +586,7 @@ border:none
     align-items: center;
     justify-content: center;
     visibility: hidden;
+    z-index: 60;
     
 }
 .overlay2.active2 {
@@ -676,6 +679,7 @@ border:none
     align-items: center;
     justify-content: center;
     visibility: hidden;
+    z-index: 60;
     
 }
 .overlay3.active3 {
@@ -742,4 +746,10 @@ border:none
 .overlay3 #boton:hover {
     outline: #cccccc 3px solid;
     cursor: pointer;
+}
+
+
+#carouselExampleCaptions {
+    position: relative;
+    z-index: 50;
 }
