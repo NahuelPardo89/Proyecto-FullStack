@@ -509,9 +509,10 @@ footer {
     padding: 20px;
 
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
     width: 90%;
     max-width: 650px;
+    
 }
 
 .popup .btn-cerrar-popup {
@@ -527,10 +528,11 @@ footer {
     
 }
 .overlay form {
+    
     width: 80%;
     margin: auto;
     background: rgba(0,0,0,0.6);
-    padding: 10px 20px; 
+    padding: 10px; 
     box-sizing: border-box;
     margin-top: 10px;
     border-radius: 20px;
@@ -559,10 +561,8 @@ font-size: 14px;
 border:none
 }
 
-.overlay textarea {
-    min-height: 100px;
-    max-height: 200px;
-    max-width: 100%;
+#comentarios {
+    height: 8em;
 }
 
 .overlay #boton {
@@ -603,6 +603,8 @@ border:none
     padding: 20px;
     width: 500px;
     text-align: center;
+    width: 90%;
+    max-width: 650px;
     
 }
 
@@ -620,7 +622,7 @@ border:none
     
 }
 .overlay2 form {
-    width: 450px;
+    width: 80%;
     margin: auto;
     background: rgba(0,0,0,0.6);
     padding: 10px 20px; 
@@ -696,6 +698,8 @@ border:none
     padding: 20px;
     width: 500px;
     text-align: center;
+    width: 90%;
+    max-width: 650px;
     
 }
 .popupInicioSesion .btn-cerrar-popupInicioSesion {
@@ -712,13 +716,15 @@ border:none
     
 }
 .overlay3 form {
-    width: 450px;
+    width: 80%;
     margin: auto;
     background: rgba(0,0,0,0.6);
     padding: 10px 20px; 
     box-sizing: border-box;
     margin-top: 10px;
     border-radius: 20px;
+    max-height: 600px
+
 }
 .overlay3 h3 {
     color: rgba(0, 0, 0, .6);
