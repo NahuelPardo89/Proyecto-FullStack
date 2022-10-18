@@ -72,7 +72,7 @@
                     <form class="d-flex" role="search">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="iniciarsesion.html">Iniciar sesion</a>
+                                <a class="nav-link btn-abrir-iniciosesion" id="btn-abrir-iniciosesion" href="#">Iniciar sesion</a>
                             </li>
                             <li class="nav-item">
                                 <a class="btn btn-primary btn-abrir-popupReg" id="btn-abrir-popupReg" href="#">Registro</a>
@@ -96,15 +96,7 @@
 
         <div class="conteiner-articles">
             <h1>COMPLEJO DEPORTIVO A.M.P.A</h1>
-            <!--  **********
-            <p>
-                Todo lo que necesitas para acceder a un mundo de deporte, salud y bienestar.
-                Centro de entrenamiento de alto rendimiento perteneciente a la Asociación Mutual de
-                Programadores Argentinos, Se encuentra ubicado en Ituzaingó 282, Córdoba capital.
-                Gimnasio recreativo, de mediano y alto rendimiento <br>
-                
-            </p>
-            **  -->
+           
             <article class="conteiner-articles1">
               
                     <h2>INSTALACIONES</h2>
@@ -141,18 +133,7 @@
                         </div>
                     </div>
 
-                    <!--  ***********
-                    
-
-
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7859275633714!2d-64.18733846928276!3d-31.42002364407771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b2bb80ae7%3A0x71dd277fea7e9a77!2sItuzaing%C3%B3%20282%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1665765118552!5m2!1ses!2sar"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                ****  -->
+                   
             </article>
 
             <article class="conteiner-articles2">
@@ -261,7 +242,7 @@
                             <p><label for="email">CORREO ELETRÓNICO*</label>
                             <input type="email" name="email" id="email" placeholder="Email" required></p>
                             <p>ESCRIBA SU MENSAJE POR FAVOR</p>
-                            <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="45" rows="10"></textarea>
+                            <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="15" rows="10"></textarea>
                             
                     </div>
                     <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
@@ -282,9 +263,9 @@
                 <form action="">
                     <div class="contenedor-inputsReg">
                         <p><label for="nombre">NOMBRE DE USUARIO*</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre" required></p>
+                            <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
                             <p><label for="apellido">CONTRASEÑA*</label>
-                            <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su apellido" required></p>
+                            <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
                             <p><label for="email">CORREO ELETRÓNICO*</label>
                             <input type="email" name="email" id="email" placeholder="Escriba aquí su e-mail" required></p>
                             
@@ -295,6 +276,43 @@
             </div>
 
         </div>
+        
+        
+        
+        
+         <div class="overlay3" id="overlay3">
+            <div class="popupInicioSesion" id="popupInicioSesion">
+                <a href="#" class="btn-cerrar-popupInicioSesion" id="btn-cerrar-popupInicioSesion"> <i class='fa fa-times'></i></a>
+                <h3>INICIAR SESION</h3>
+                <h4>Ingresa en tu cuenta</h4>
+                <form action="">
+                    <div class="contenedor-inputsReg">
+                        <p><label for="nombre">NOMBRE DE USUARIO*</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
+                            <p><label for="apellido">CONTRASEÑA*</label>
+                            <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
+                            
+                    </div>
+                    <p><input type="button" name="boton" id="boton" value="Iniciar Sesion"></p> 
+                            
+                </form>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <script src="script/contactPopup.js"></script>
         
         <!--  ***********AQUI TERMINA CONTACTO POP-UP ***********  -->
@@ -314,10 +332,10 @@
             <!--  ***********SECTION QUE CONTIENE COLUMN1 MAS INFORMACION SOBRE NUESTRO COMPLEJO***********  -->
             <div class="conteiner-column1">
                 <h2>
-                    Mas información sobre nuesto complejo
+                    Más información sobre nuesto complejo
                 </h2>
                 <p>
-                    Asociación Mutual de Programadores Argentinos( A.M.P.A)
+                    Asociación Mutual de Programadores Argentinos(A.M.P.A)
                     Complejo deportivo para afiliados y no afiliados.
                 </p>
 
@@ -338,7 +356,7 @@
                 <div class="row2">
                     <img class="icon" src="imagenes/icon/instagram.png" alt="logo instagram">
                     <label>
-                        <a href="https://www.instagram.com/"> Seguinos en Instagram</a>
+                        <a href="https://www.instagram.com/"width="50" height="50" alt="logo facebook"> Seguinos en Instagram</a>
                     </label>
                 </div>
 
@@ -353,7 +371,7 @@
                 <div class="row2">
                     <img class="icon" src="imagenes/icon/casa.png" alt="logo casa">
                     <label>
-                        España 36, Córdoba capital, Argentina
+                        Ituzaingo 282, Córdoba capital, Argentina
                     </label>
                 </div>
 

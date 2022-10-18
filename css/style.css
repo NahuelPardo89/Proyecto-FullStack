@@ -37,25 +37,19 @@ header div{
 }
 
 .navbar-nav .nav-item:hover a {
-    color: aliceblue;
+    color:black;
     font-weight: bold;
 }
 
-.nav-link {
-    border-radius: 10%;
 
-
-
-}
 
 
 .nav-link:hover {
-    border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #cccccc;
+    
     border-right: 1px solid #cccccc;
-    border-left: 2px solid #cccccc;
+    border-left: 1px solid #cccccc;
     cursor: pointer;
-    background: #0d6efd;
+    background: rgb(214, 210, 210);
     color: aliceblue;
 
 }
@@ -453,6 +447,19 @@ footer {
         grid-area: FooterCopy;
 
     }
+    #container-aboutus {
+        display: inline-block;
+        justify-content: space-evenly;
+
+    }
+
+    #container-aboutus .texto{
+        padding-left: 70px;
+    }
+
+    #container-aboutus img{
+       width: 100%;
+    }
 
 }
 
@@ -474,7 +481,7 @@ footer {
 /* -----------------CONTACTO POP-UP-------------------------*/
 .overlay {
     background-color: rgba(0, 0, 0, .5);
-    position: fixed;
+    position:absolute;
     top: 0;
     bottom: 0;
     right: 0;
@@ -483,17 +490,23 @@ footer {
     align-items: center;
     justify-content: center;
     visibility: hidden;
+    z-index: 100;
+
 }
 .overlay.active {
     visibility: visible;
 }
 .popup {
-    background-color: #cfcfcf;
+    background-color: white;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .5);
     border-radius: 8%;
     padding: 20px;
-    width: 600px;
+
     text-align: center;
+    margin-top: 130px;
+    width: 90%;
+    max-width: 650px;
+    
 }
 
 .popup .btn-cerrar-popup {
@@ -509,13 +522,15 @@ footer {
     
 }
 .overlay form {
-    width: 450px;
+    
+    width: 80%;
     margin: auto;
-    background: rgba(0,0,0,0.6);
-    padding: 10px 20px; 
+    background: whitesmoke;
+    padding: 10px; 
     box-sizing: border-box;
     margin-top: 10px;
     border-radius: 20px;
+    position: relative;
 }
 
 .overlay h3 {
@@ -540,10 +555,8 @@ font-size: 14px;
 border:none
 }
 
-.overlay textarea {
-    min-height: 100px;
-    max-height: 200px;
-    max-width: 100%;
+#comentarios {
+    height: 8em;
 }
 
 .overlay #boton {
@@ -571,18 +584,21 @@ border:none
     align-items: center;
     justify-content: center;
     visibility: hidden;
+    z-index: 60;
     
 }
 .overlay2.active2 {
     visibility: visible;
 }
 .popupReg {
-    background-color: #cfcfcf;
+    background-color: white;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .5);
     border-radius: 8%;
     padding: 20px;
     width: 500px;
     text-align: center;
+    width: 90%;
+    max-width: 650px;
     
 }
 
@@ -600,9 +616,9 @@ border:none
     
 }
 .overlay2 form {
-    width: 450px;
+    width: 80%;
     margin: auto;
-    background: rgba(0,0,0,0.6);
+    background: whitesmoke;
     padding: 10px 20px; 
     box-sizing: border-box;
     margin-top: 10px;
@@ -648,4 +664,96 @@ border:none
 .overlay2 #boton:hover {
     outline: #cccccc 3px solid;
     cursor: pointer;
+}
+
+
+
+.overlay3 {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 60;
+    
+}
+.overlay3.active3 {
+    visibility: visible;
+}
+.popupInicioSesion {
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .5);
+    border-radius: 8%;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+    width: 90%;
+    max-width: 650px;
+    
+}
+.popupInicioSesion .btn-cerrar-popupInicioSesion {
+    font-size: 16px;
+    line-height: 16px;
+    
+    float: right;
+    color: #aaa;
+    transition: .3s ease all;
+    margin-right: 5px;
+}
+.popupInicioSesion .btn-cerrar-popupInicioSesion:hover {
+    color: #000;
+    
+}
+.overlay3 form {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 20px;
+    max-height: 600px
+
+}
+.overlay3 h3 {
+    color: rgba(0, 0, 0, .6);
+    text-align: center;
+    margin: 10;
+    font-size: 30px ;
+    margin-bottom: 5px;
+}
+.overlay3 h4 {
+    color: rgba(0, 0, 0, .6);
+    text-align: center;
+}
+
+.overlay3 input, .overlay3 textarea {
+width: 100%;
+margin-bottom: 5px;
+padding: 7px;
+box-sizing: border-box;
+font-size: 14px;
+border:none
+}
+.overlay3 #boton {
+    background: #31384A;
+    
+    color: beige;
+    padding: 15px;
+    border-radius: 5px;
+}
+.overlay3 #boton:hover {
+    outline: #cccccc 3px solid;
+    cursor: pointer;
+}
+
+
+#carouselExampleCaptions {
+    position: relative;
+    z-index: 50;
 }

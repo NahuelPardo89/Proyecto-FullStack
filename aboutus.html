@@ -5,6 +5,7 @@
     <title>Nosotros</title>
     <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
     <!--  ***********CSS DE BOOTSTRAP***********  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -12,61 +13,78 @@
 
     <!--  ***HEADER CON NAV***  -->
 
-    <header id="conteiner-encabezado">
-        <div class="NAVBAR">
+    <section id="conteiner-encabezado">
+        <!--  ***********AQUI EMPIEZA HEADER ***********  -->
+        <header>
 
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="imagenes/ampa-sin-fondo.png" alt="logo-ampa" style="width: 45px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <label> Redes Sociales</label>
+            <a href="https://www.facebook.com/">
+                <img class="icon" src="imagenes/icon/Facebook.png" alt="Facebook icon">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img class="icon" src="imagenes/icon/instagram.png" alt="Facebook icon">
+            </a>
+
+            <div class="btn-group ">
+                <a href="index.html" class="btn btn-light " aria-current="page">Español</a>
+                <a href="indexENG.html" class="btn btn-light active">English</a>
+
+            </div>
+
+        </header>
+        <!--  ***********AQUI TERMINA HEADER ***********  -->
+
+        <!--  ***********AQUI EMPIEZA A NAV ***********  -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagenes/logoAmpa2.png" alt="logo-ampa" style="width: 80px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-abrir-popup" id="btn-abrir-popup" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link btn-abrir-iniciosesion" id="btn-abrir-iniciosesion" href="#">Iniciar sesion</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contacto.html" >Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="servicios.html">Servicios</a>
+                                <a class="btn btn-primary btn-abrir-popupReg" id="btn-abrir-popupReg" href="#">Registro</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="iniciarsesion.html">Iniciar sesion</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-primary" href="registro.html" role="button">Registro</a>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
+                    </form>
                 </div>
-            </nav>
-    
-        </div>
-       
-        <!--  ***CIERRE DEL NAV Y HEADER***  -->
+            </div>
+        </nav>
 
-    </header>
+
+        <!--  ***********AQUI TERMINA  NAV ***********  -->
+    </section>
 
     <!--  **SECCION o ARTICLE QUE CONTIENE INFORMACION SOBRE NUESTRO COMPLEJO**  -->
 
     <section id="container-aboutus">
 
-        <div class="container">
+        
 
-            <div class="img-container"></div>
+            <img src="imagenes/equipotrabajo.jpg" alt="Equipo de trabajo">
             
             <div class="texto">
                 <h2>Somos <span class="color-acento">A.M.P.A!</span></h2>
@@ -84,115 +102,192 @@
                     <li>Vice Presidente: TOSCO, Mario Miguel</li>
                     <li>Secretario: GONZALEZ, Ezequiel</li>
                     <li>Tesorero: GALETTO,  Sergio Hugo</li>
-                    <li>Vocal Titular: ESCUDERO, Aldo Gabriel</li>
-                    <li>Vocal Titular: PEREZ, Pedro Javier</li>
-                    <li>Vocal Titular: ROLOTTI, Paola</li>
-                    <li>Vocal Titular: CEPEDA, Angel José</li>
+                    <li>Vocales:</li>
+                    <li>ESCUDERO, Aldo Gabriel</li>
+                    <li>PEREZ, Pedro Javier</li>
+                    <li>ROLOTTI, Paola</li>
+                    <li>CEPEDA, Angel José</li>
                     <li>Junta Fiscalizadora:</li>
                     <li>RIVERO, Héctor Daniel</li>
                     <li>MOYANO, Emmanuel</li>
-                    <li>CORREA, Héctor Daniel</li>
+                    <li>CORREA, Pamela</li>
                 </ul>    
             </div>
-        </div>
+        
         
         <!--  **FIN DE SECCION o ARTICLE QUE CONTIENE INFORMACION SOBRE NUESTRO COMPLEJO**  -->
 
     </section>  
+     <!--  ***********CONTACTO POP-UP ***********  -->
+        
+     <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" class="btn-cerrar-popup" id="btn-cerrar-popup"> <i class='fa fa-times'></i></a>
+            <h3>CONTACTO</h3>
+            <h4>¡Dejanos tu mensaje!</h4>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <p><label for="nombre">NOMBRE*</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombres" required></p>
+                        <p><label for="apellido">APELLIDO*</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" required></p>
+                        <p><label for="telefono">TELÉFONO*</label>
+                        <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required></p>
+                        <p><label for="email">CORREO ELETRÓNICO*</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required></p>
+                        <p>ESCRIBA SU MENSAJE POR FAVOR</p>
+                        <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="45" rows="10"></textarea>
+                        
+                </div>
+                <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                        <h4> * los campos son obligatorios</h4>
+            </form>
+        </div>
+
+    </div>
+    
+    <!--  ***********AQUI TERMINA CONTACTO POP-UP ***********  -->
+     <!--  ***********REGISTRO POP-UP ***********  -->
+    
+     <div class="overlay2" id="overlay2">
+        <div class="popupReg" id="popupReg">
+            <a href="#" class="btn-cerrar-popupReg" id="btn-cerrar-popupReg"> <i class='fa fa-times'></i></a>
+            <h3>REGISTRO</h3>
+            <h4>¡Crea tu cuenta!</h4>
+            <form action="">
+                <div class="contenedor-inputsReg">
+                    <p><label for="nombre">NOMBRE DE USUARIO*</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
+                        <p><label for="apellido">CONTRASEÑA*</label>
+                        <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
+                        <p><label for="email">CORREO ELETRÓNICO*</label>
+                        <input type="email" name="email" id="email" placeholder="Escriba aquí su e-mail" required></p>
+                        
+                </div>
+                <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                        
+            </form>
+        </div>
+
+    </div>
+    
+    
+    
+    
+     <div class="overlay3" id="overlay3">
+        <div class="popupInicioSesion" id="popupInicioSesion">
+            <a href="#" class="btn-cerrar-popupInicioSesion" id="btn-cerrar-popupInicioSesion"> <i class='fa fa-times'></i></a>
+            <h3>INICIAR SESION</h3>
+            <h4>Ingresa en tu cuenta</h4>
+            <form action="">
+                <div class="contenedor-inputsReg">
+                    <p><label for="nombre">NOMBRE DE USUARIO*</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
+                        <p><label for="apellido">CONTRASEÑA*</label>
+                        <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
+                        
+                </div>
+                <p><input type="button" name="boton" id="boton" value="Iniciar Sesion"></p> 
+                        
+            </form>
+        </div>
+
+    </div>
+    <script src="script/contactPopup.js"></script>
 
     <!--  **EMPIEZA EL FOOTER DE LA PAGINA**  -->
 
     <footer>
-
         <!--  ***********SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
-        
         <div class="conteiner-footer-main">
-        
-            <!--  ***********SECTION QUE CONTIENE COLUMN1 MAS INFORMACION SOBRE NUESTRO COMPLEJO***********  -->
 
+            <!--  ***********SECTION QUE CONTIENE COLUMN1 MAS INFORMACION SOBRE NUESTRO COMPLEJO***********  -->
             <div class="conteiner-column1">
                 <h2>
-                    Mas información sobre nuesto complejo
+                    Más información sobre nuesto complejo
                 </h2>
                 <p>
-                    Asociación Mutual de Programadores Argentinos( A.M.P.A)
+                    Asociación Mutual de Programadores Argentinos(A.M.P.A)
                     Complejo deportivo para afiliados y no afiliados.
                 </p>
 
             </div>
 
             <!--  ***********SECTION QUE CONTIENE COLUMN2: REDES SOCIALES ***********  -->
-
             <div class="conteiner-column2">
                 <h2>
                     Redes Sociales
                 </h2>
                 <div class="row2">
-                <img src="imagenes/icon/Facebook.png" alt="logo facebook">
-                <label >
-                    <a href="https://">Seguinos en Facebook</a>
-                </label>
+                    <img class="icon" src="imagenes/icon/Facebook.png" alt="logo facebook">
+                    <label>
+                        <a href="https://www.facebook.com/"> Seguinos en Facebook</a>
+                    </label>
                 </div>
 
                 <div class="row2">
-                    <img src="imagenes/icon/instagram.png" alt="logo instagram">
-                    <label >
-                        <a href="https://">Seguinos en Instagram</a> 
-                     </label>
+                    <img class="icon" src="imagenes/icon/instagram.png" alt="logo instagram">
+                    <label>
+                        <a href="https://www.instagram.com/"> Seguinos en Instagram</a>
+                    </label>
                 </div>
 
             </div>
 
             <!--  ***********SECTION QUE CONTIENE COLUMN3 INFORMACIÓN DE CONTACTO ***********  -->
-
             <div class="conteiner-column3">
                 <h2>
                     Información de Contacto
                 </h2>
 
                 <div class="row2">
-                    <img src="imagenes/icon/casa.png" alt="logo casa">
-                     <label > 
-                        España 36, Córdoba capital, Argentina
+                    <img class="icon" src="imagenes/icon/casa.png" alt="logo casa">
+                    <label>
+                        Ituzaingo 282, Córdoba capital, Argentina
                     </label>
                 </div>
 
                 <div class="row2">
-                    <img src="imagenes/icon/telefono.png" alt="logo telefono">
-                    <label > 
-                         +54-351-4672916
+                    <img class="icon" src="imagenes/icon/telefono.png" alt="logo telefono">
+                    <label>
+                        +54-351-4672916
                     </label>
                 </div>
-            
+
                 <div class="row2">
-                    <img src="imagenes/icon/email.png" alt="logo email">
-                    <label > 
+                    <img class="icon" src="imagenes/icon/email.png" alt="logo email">
+                    <label>
                         contacto@ampa.com
                     </label>
                 </div>
             </div>
 
+
+
+
         </div>
-        <!--  ***********AQUI TERMINA SECTION QUE CONTIENE COLUMN 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
+        <!--  ***********AQUI TERMINA SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
 
 
         <!--  ***********SECTION QUE CONTIENE COPYRIGTH -->
         <div class="conteiner-footer-botton">
-            <div class="copy">
-                © 2022 Todos los derechos reservados | <a href="index.html">DevCord Inspiradores digitales</a>
-                
+            <div>
+                © 2022 Todos los derechos reservados | <a href="">DevCord Inspiradores digitales</a>
+
             </div>
 
-            <div class="copy2">
+            <div>
                 <a href="aboutus.html">informacion de la compañia |</a>
-                <a href="index.html">Terminos y condiciones </a>
+                <a href="">Terminos y condiciones </a>
 
             </div>
+
         </div>
 
         <!--  *********** FIN SECTION QUE CONTIENE COPYRIGTH -->
 
     </footer>
+    <!--  ***********FIN SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
 
     <!--  **FIN DE TODO EL FOOTER**  -->
 </body>    
