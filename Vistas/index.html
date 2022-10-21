@@ -233,20 +233,22 @@
                 <h4>¡Dejanos tu mensaje!</h4>
                 <form action="">
                     <div class="contenedor-inputs">
-                        <p><label for="nombre">NOMBRE*</label>
+                        <p><label for="nombre">NOMBRE<span class="obligatorio">*</span></label>
                             <input type="text" name="nombre" id="nombre" placeholder="Nombres" required></p>
-                            <p><label for="apellido">APELLIDO*</label>
+                            <p><label for="apellido">APELLIDO<span class="obligatorio">*</span></label>
                             <input type="text" name="apellido" id="apellido" placeholder="Apellido" required></p>
-                            <p><label for="telefono">TELÉFONO*</label>
-                            <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required></p>
-                            <p><label for="email">CORREO ELETRÓNICO*</label>
+                            <p><label for="telefono">TELÉFONO<span class="obligatorio">*</span></label>
+                            <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required></p>
+                            <p><label for="email">CORREO ELETRÓNICO<span class="obligatorio">*</span></label>
                             <input type="email" name="email" id="email" placeholder="Email" required></p>
                             <p>ESCRIBA SU MENSAJE POR FAVOR</p>
                             <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="15" rows="10"></textarea>
                             
                     </div>
                     <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
-                            <h4> * los campos son obligatorios</h4>
+                            <p class="aviso">
+                  <span class="obligatorio">*</span>los campos son obligatorios.</p> 
+                    
                 </form>
             </div>
 
@@ -271,6 +273,8 @@
                             
                     </div>
                     <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                    
+                   
                             
                 </form>
             </div>

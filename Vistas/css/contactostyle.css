@@ -1,12 +1,13 @@
 
 form {
     width: 450px;
+    height: auto;
     margin: auto;
-    background: rgba(0,0,0,0.6);
+    background: rgba 111, 172, 184 ;
     padding: 10px 20px; 
     box-sizing: border-box;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 h2 {
@@ -51,6 +52,11 @@ textarea {
     border-right: 1px solid #cccccc;
     border-left: 2px solid #cccccc;
     cursor: pointer;
+}
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
 }
 
 @media (max-width:480px) {
