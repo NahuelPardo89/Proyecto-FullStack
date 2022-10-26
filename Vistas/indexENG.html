@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                    
+    <!--  ***********CSS DE BOOTSTRAP***********  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>A.M.P.A</title>
+
+</head>
+
+<!--  ***********AQUI EMPIEZA BODY ***********  -->
+
+<body>
+
+
+    <!--  ***********SECTION QUE CONTIENE HEADER Y NAV ***********  -->
+    <section id="conteiner-encabezado">
+        <!--  ***********AQUI EMPIEZA HEADER ***********  -->
+        <header>
+
+            <label> Social Networks</label>
+            <a href="https://www.facebook.com/">
+                <img class="icon" src="imagenes/icon/Facebook.png" alt="Facebook icon">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img class="icon" src="imagenes/icon/instagram.png" alt="Facebook icon">
+            </a>
+
+            <div class="btn-group ">
+                <a href="index.html" class="btn btn-light active" aria-current="page">Español</a>
+                <a href="indexENG.html" class="btn btn-light ">English</a>
+
+            </div>
+
+        </header>
+        <!--  ***********AQUI TERMINA HEADER ***********  -->
+
+        <!--  ***********AQUI EMPIEZA A NAV ***********  -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagenes/logoAmpa2.png" alt="logo-ampa" style="width: 80px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-abrir-popup" id="btn-abrir-popup" href="#">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Services</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="iniciarsesion.html">Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary btn-abrir-popupReg" id="btn-abrir-popupReg" href="#">Sing uP</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+        <!--  ***********AQUI TERMINA  NAV ***********  -->
+    </section>
+    <!--  ***********AQUI TERMINA DIV QUE CONTIENE A NAV ***********  -->
+
+
+    <!--  ***********AQUI EMPIEZA SECTION QUE CONTIENE ARTICLES Y ASIDE ***********  -->
+
+    <section id="conteiner-body">
+
+
+        <div class="conteiner-articles">
+            <h1>SPORTS COMPLEX A.M.P.A</h1>
+            <!--  **********
+            <p>
+                Todo lo que necesitas para acceder a un mundo de deporte, salud y bienestar.
+                Centro de entrenamiento de alto rendimiento perteneciente a la Asociación Mutual de
+                Programadores Argentinos, Se encuentra ubicado en Ituzaingó 282, Córdoba capital.
+                Gimnasio recreativo, de mediano y alto rendimiento <br>
+                
+            </p>
+            **  -->
+            <article class="conteiner-articles1">
+              
+                    <h2>FACILITIES</h2>
+                    <div class="card-group">
+                        <div class="card">
+                          <img src="imagenes/canchaFutbol.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3 class="card-title">SOCCER FIELD</h3>
+                            <p class="card-text">
+                                7-a-side football pitches with state-of-the-art synthetic grass flooring.
+                                They have led lighting and scoreboard.  
+
+                            </p>
+                            
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="imagenes/canchaPaddle.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3 class="card-title">PADDLE COURT</h3>
+                            <p class="card-text">
+                                Paddle courts with carpet flooring and acrylic walls.
+                            </p>
+                            
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="imagenes/Gimnacio.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3 class="card-title">GYM</h3>
+                            <p class="card-text">Complete and state-of-the-art equipment</p>
+                            
+                          </div>
+                        </div>
+                    </div>
+
+                    <!--  ***********
+                    
+
+
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7859275633714!2d-64.18733846928276!3d-31.42002364407771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b2bb80ae7%3A0x71dd277fea7e9a77!2sItuzaing%C3%B3%20282%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1665765118552!5m2!1ses!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                ****  -->
+            </article>
+
+            <article class="conteiner-articles2">
+               
+                    <div>
+                        <img src="imagenes/icon/icono-mano.png" alt="icono mano" class="icon">
+                        <h3>OUR MISION</h3>
+                        <p>
+                            Contribute to the comprehensive development of people by constantly helping and supporting them to achieve their goals.
+                            We offer our partners quality service in a friendly and modern environment controlled by staff
+                            qualified where in addition to looking for the physical benefit they can also socialize.
+                            To fulfill our mission, we base our actions on the following principles:
+                            Honesty and Respect, Creativity, Teamwork, Commitment to Loyalty and Solidarity
+                        </p>
+                    </div>
+                
+                     <div style="background:white ;">
+                        <img src="imagenes/icon/icono-ojo.png" alt="icono ojo" class="icon">
+                        <h3>OUR VISION</h3>
+                        <p>
+                            To be the best fitness and recreational option in Córdoba Capital, for our activities and services. Partners talk
+                            we listen. The voice of the partner always drives the development of our strategic plans and actions.
+                            This vision is maintained by obtaining partners' suggestions and expectations at every opportunity and
+                            differentiating ourselves in how we deliver our services. In how we present them to you and what we offer you day by day.
+                        </p>
+                    
+                    </div>
+                    <div>
+                        <img src="imagenes/icon/icono-personas.png" alt="icono personas" class="icon">
+                        <h3>COMMITMENT</h3>
+                        <p>
+                            Dedicate our efforts to know and satisfy the needs of our partners, providing them with a service
+                            quality that meets your expectations. Offer them a pleasant atmosphere, with a team of enthusiastic professionals,
+                            in a clean and organized environment.
+                        </p>
+                    </div>
+                   
+                   
+                
+            </article>
+
+            <article class="conteiner-articles3">
+                <img src="imagenes/logoAmpa2.png" alt="logo ampa 2">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7859275633714!2d-64.18733846928276!3d-31.42002364407771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b2bb80ae7%3A0x71dd277fea7e9a77!2sItuzaing%C3%B3%20282%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1665765118552!5m2!1ses!2sar"
+                        width="400" height="480" style="border:0;  " allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+            </article>
+
+        </div>
+
+        <!--  ***********AQUI TERMINA SECTION PARA ARTICLE ***********  -->
+
+
+
+
+
+
+        <!--  ***********AQUI EMPIEZA ASIDE ***********  -->
+
+        <aside>
+            <h1>UPCOMING TOURNAMENTS</h1>
+            <ul>
+                <li class="conteiner-aside1">
+
+
+                    <img src="imagenes/torneo-paddle.png" alt="foto torneo paddle"> </br>
+                    <h4>Professional Paddle Tournament</h2>
+                        <p>
+                            We will host the Professional Paddle circuit
+                            For more registration and more information: <a href="https://padel.org.ar/">Argentine Padel Circuit</a>
+                        </p>
+
+                </li>
+
+                <li class="conteiner-aside2">
+                    <img src="imagenes/torneo-futbol.jpg" alt="foto torneo futbol"> </br>
+                    <h4>First Women's Soccer Tournament</h2>
+                        <p>
+                            We will hold the first women's soccer tournament in our complex
+                            For more registrations and more information contact us.
+                        </p>
+                </li>
+
+            </ul>
+
+
+        </aside>
+         <!--  ***********CONTACTO POP-UP ***********  -->
+        
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" class="btn-cerrar-popup" id="btn-cerrar-popup"> <i class='fa fa-times'></i></a>
+                <h3>CONTACTS</h3>
+                <h4>¡leave us your message!</h4>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <p><label for="nombre">NAME*</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombres" required></p>
+                            <p><label for="apellido">LAST NAME*</label>
+                            <input type="text" name="apellido" id="apellido" placeholder="Apellido" required></p>
+                            <p><label for="telefono">PHONE NUMEBER*</label>
+                            <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required></p>
+                            <p><label for="email">E-MAIL*</label>
+                            <input type="email" name="email" id="email" placeholder="Email" required></p>
+                            <p>WRITE YOUR MESSAGER</p>
+                            <textarea name="comentarios" id="comentarios" placeholder="Escriba aquí su mensaje" required cols="45" rows="10"></textarea>
+                            
+                    </div>
+                    <p><input type="button" name="boton" id="boton" value="ENVIAR"></p> 
+                            <h4> * fields are required</h4>
+                </form>
+            </div>
+
+        </div>
+        
+        <!--  ***********AQUI TERMINA CONTACTO POP-UP ***********  -->
+         <!--  ***********REGISTRO POP-UP ***********  -->
+        
+         <div class="overlay2" id="overlay2">
+            <div class="popupReg" id="popupReg">
+                <a href="#" class="btn-cerrar-popupReg" id="btn-cerrar-popupReg"> <i class='fa fa-times'></i></a>
+                <h3>SING UP</h3>
+                <h4>¡creat your account!</h4>
+                <form action="">
+                    <div class="contenedor-inputsReg">
+                        <p><label for="nombre">USERNAME*</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="This will be your username" required></p>
+                            <p><label for="apellido">PASSWORD*</label>
+                            <input type="password" name="contraseña" id="apellido" placeholder="This will be your password" required></p>
+                            <p><label for="email">E-MAIL*</label>
+                            <input type="email" name="email" id="email" placeholder="YourEmail@..." required></p>
+                            
+                    </div>
+                    <p><input type="button" name="boton" id="boton" value="SEND"></p> 
+                            
+                </form>
+            </div>
+
+        </div>
+        <script src="script/contactPopup.js"></script>
+        
+        <!--  ***********AQUI TERMINA CONTACTO POP-UP ***********  -->
+
+    </section>
+
+    <!--  ***********AQUI TERMINA ASIDE ***********  -->
+
+    <!--  ***********AQUI TERMINA SECTION QUE CONTIENE ARTICLES Y ASIDE ***********  -->
+
+    <!--  ***********AQUI EMPIEZA FOOTER ***********  -->
+    <!--  ***********SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
+    <footer>
+        <!--  ***********SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
+        <div class="conteiner-footer-main">
+
+            <!--  ***********SECTION QUE CONTIENE COLUMN1 MAS INFORMACION SOBRE NUESTRO COMPLEJO***********  -->
+            <div class="conteiner-column1">
+                <h2>
+                    More information about our complex
+                </h2>
+                <p>
+                    Mutual Association of Argentine Programmers (A.M.P.A)
+                    Sports complex for members and non-members.
+                </p>
+
+            </div>
+
+            <!--  ***********SECTION QUE CONTIENE COLUMN2: REDES SOCIALES ***********  -->
+            <div class="conteiner-column2">
+                <h2>
+                    SOCIAL NETWORKS
+                </h2>
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/Facebook.png" alt="logo facebook">
+                    <label>
+                        <a href="https://www.facebook.com/"> Follow us Facebook</a>
+                    </label>
+                </div>
+
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/instagram.png" alt="logo instagram">
+                    <label>
+                        <a href="https://www.instagram.com/"> Follow us Instagram</a>
+                    </label>
+                </div>
+
+            </div>
+
+            <!--  ***********SECTION QUE CONTIENE COLUMN3 INFORMACIÓN DE CONTACTO ***********  -->
+            <div class="conteiner-column3">
+                <h2>
+                    Contact information
+                </h2>
+
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/casa.png" alt="logo casa">
+                    <label>
+                        Ituzaingo 282, Córdoba capital, Argentine
+                    </label>
+                </div>
+
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/telefono.png" alt="logo telefono">
+                    <label>
+                        +54-351-4672916
+                    </label>
+                </div>
+
+                <div class="row2">
+                    <img class="icon" src="imagenes/icon/email.png" alt="logo email">
+                    <label>
+                        contacto@ampa.com
+                    </label>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!--  ***********AQUI TERMINA SECTION QUE CONTIENE COLUMN 1, 2, 3 DATOS PRINCIPALES DEL FOOTER  ***********  -->
+
+
+        <!--  ***********SECTION QUE CONTIENE COPYRIGTH -->
+        <div class="conteiner-footer-botton">
+            <div>
+                © 2022 All Rigth Reserved| <a href="">DevCord Inspiradores digitales</a>
+
+            </div>
+
+            <div>
+                <a href="aboutus.html">company information |</a>
+                <a href="">Term and conditions </a>
+
+            </div>
+
+        </div>
+
+        <!--  *********** FIN SECTION QUE CONTIENE COPYRIGTH -->
+
+    </footer>
+    <!--  ***********FIN SECTION QUE CONTIENE TODO EL FOOTER ***********  -->
+
+
+
+
+    <!--  ***********AQUI TERMINA FOOTER***********  -->
+
+    <!--  ***********JS DE BOOTSTRAP***********  -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+
+<!--  ***********AQUI TERMINA BODY ***********  -->
+
+</html>
