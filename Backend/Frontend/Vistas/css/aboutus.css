@@ -1,0 +1,34 @@
+
+
+
+
+/* -----------------CONTENIDO MAIN/ARTICLE DE INFORMACION-------------------------*/
+
+#container-aboutus{
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    
+    
+}
+
+#container-aboutus img{
+    max-width: 60%;
+}
+
+
+li{
+    font-size: 1em;
+}
+
+ul{
+    list-style: none;
+}
+
+.color-acento{
+    color: blue;
+}
+
+/* -----------------FIN DE CONTENIDO MAIN/ARTICLE DE INFORMACION-------------------------*/
+
+
