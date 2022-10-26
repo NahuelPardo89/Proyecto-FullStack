@@ -1,28 +1,28 @@
 from flask import Flask, render_template, request, redirect, url_for,flash
 
-
+from Backend.modelo.conexionDb import Conexion
 from Backend.modelo.clases.persona import Persona
 from Backend.modelo.clases.producto import Producto
 from Backend.modelo.modelPersona import modelPersona
-from flask_mysqldb import MySQL
+from Backend.modelo.modelProducto import ModelProducto
+#from flask_mysqldb import MySQL
+import mysql.connector
+from mysql.connector import Error 
+
 from datetime import datetime#usado para nombre foto
 import os #usado para interactuar con archivos
 from flask import send_from_directory #para traer foto del directorio
-app=Flask(__name__,template_folder="view")
+app=Flask(__name__,template_folder="Frontend/vista")
 
-#mysql connection
-app.config["MYSQL_HOST"]= "localhost"
-app.config["MYSQL_USER"]= "root"
-app.config["MYSQL_PASSWORD"]= "copado34414604"
-app.config["MYSQL_DB"]= "ampav3"
-mysql=MySQL(app)
+app.secret_key="mysecretkey"
+conexion=Conexion()#creo conexion con base de datos
+mysql1= conexion.getConn()#obtengo conexion
 
-
-CARPETA=os.path.join("uploads")#configuracion de carpeta archivos
+CARPETA=os.path.join("uploads")#configuracion de carpeta archivos subidos
 
 app.config["CARPETA"]=CARPETA
 
-@app.route('/uploads/<nombrefoto>')
+@app.route('/Frontend/vista/uploads/<nombrefoto>')
 def uploads(nombrefoto):
     return send_from_directory(app.config["CARPETA"],nombrefoto)
 
@@ -36,10 +36,10 @@ app.secret_key="mysecretkey"
 
 @app.route("/")
 def index():
-    cursor= mysql.connection.cursor()
-    cursor.execute("SELECT * FROM productos")
-    data = cursor.fetchall()
-    return render_template("index.html", productos=data)
+    #cursor= mysql1.connection.cursor()
+    #cursor.execute("SELECT * FROM productos")
+   
+    return render_template("index.html")
 
 @app.route("/login", methods=["GET","POST"])
 def login():
@@ -73,18 +73,19 @@ def registroProducto():
        
         if _foto.filename != "":
             nuevoNombreFoto=tiempo+_foto.filename
-            _foto.save("uploads/"+nuevoNombreFoto)
+            _foto.save("Frontend/vista/uploads/"+nuevoNombreFoto)
        
         producto= Producto(None,_proveedor,_nombre,_marca,_descripcion,_precio,_stock,nuevoNombreFoto)
         
         
-        cursor=mysql.connection.cursor()
-        cursor.execute("INSERT INTO `productos` ( `idProveedor`, `Nombre`, `marca`, `descripcion`, `precio`, `stock`, `foto`)  VALUES (%s,%s,%s,%s,%s,%s,%s)",(
-        producto.getIdProveedor(),producto.getNombre(),producto.getMarca(),producto.getDescripcion(),producto.getPrecio(), producto.getStock(),producto.getFoto()))
-        mysql.connection.commit()
+         ##cursor=mysql.connection.cursor()
+        #cursor.execute("INSERT INTO `productos` ( `idProveedor`, `Nombre`, `marca`, `descripcion`, `precio`, `stock`, `foto`)  VALUES (%s,%s,%s,%s,%s,%s,%s)",(
+        #producto.getIdProveedor(),producto.getNombre(),producto.getMarca(),producto.getDescripcion(),producto.getPrecio(), producto.getStock(),producto.getFoto()))
+        ##mysql.connection.commit()
+        ModelProducto.addProducto(mysql1,producto)
         flash("producto agregado") #muestra mensaje despues del commit
 
-        return redirect(url_for("index")) #redireciona a index
+        return redirect(url_for("admin")) #redireciona a index
 
 
 @app.route("/edit-product/<int:id>")
@@ -153,10 +154,9 @@ def delete_product(id):
     
 
 @app.route("/admin")
-def adminPanel():
-    cursor= mysql.connection.cursor()
-    cursor.execute("SELECT * FROM productos")
-    data = cursor.fetchall()
+def admin():
+     
+    data = ModelProducto.selectAllProducto(mysql1)
     return render_template("admin.html", productos=data)
 @app.route("/contacto")
 def enviarConsulta():

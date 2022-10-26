@@ -1,0 +1,162 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+    <p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+      </div>
+    </nav>
+    
+    <!-- place navbar here -->
+  </header>
+  <main>
+        <form action="/registroProducto" method="POST" enctype="multipart/form-data">
+
+            <input type="text" name="nombre" placeholder="nombre">
+            <input type="text" name="marca" placeholder="marca">
+            <input type="text" name="descripcion" placeholder="descripcion">
+            <input type="number" name="precio" placeholder="precio">
+            <input type="number" name="cantidad" placeholder="cantidad">
+            <input type="number" name="proveedor" placeholder="proveedor">
+            <input type="file" name="foto" placeholder="foto">
+            
+            <button type="submit">Guardar</button>
+        </form>
+       <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        
+                        <th scope="col">id producto</th>
+                        <th scope="col">id proveedor</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">marca</th>
+                        <th scope="col">descripcion</th>
+                        <th scope="col">precio</th>
+                        <th scope="col">stock</th>
+                        <th scope="col">foto</th>
+                        <th scope="col">accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in productos %}
+                    
+                    <tr class="">
+                        
+                        <td scope="row">{{ producto.0 }}</td>
+                        <td scope="row">{{ producto.1 }}</td>
+                        <td scope="row">{{ producto.2 }}</td>
+                        <td scope="row">{{ producto.3 }}</td>
+                        <td scope="row">{{ producto.4 }}</td>
+                        <td scope="row">{{ producto.5 }}</td>
+                        <td scope="row">{{ producto.6 }}</td>
+                        
+                        <td scope="row">
+                            {{ producto.7 }}
+                            <img class="img-thumbnail" width="100" src="Frontend/vista/uploads/{{ producto.7}}" alt="">
+                        </td>
+                        
+                        <td>
+                            <a href="edit-product/{{ producto.0 }}">Editar</a>
+                            <a href="/deleteProducto/{{ producto.0 }}">Eliminar</a>
+                        </td>
+                        
+                    </tr>
+                    {% endfor %}
+                
+                    
+                
+                
+
+                
+                </tbody>
+            </table>
+       </div>
+       <div class="container" >
+            <div class="row">
+                {% for producto in productos %}
+                <div class="col-md-3">
+                
+    
+                    <div data-aos="fade-down" class="card shadow-sm h-100 border-success">
+                        <img class="card-img-top" src="/uploads/{{ producto.7}}" alt="Title">
+                     
+                        <div class="card-body">
+                            <h4 class="card-title">{{producto.2}}</h4>
+                            <p class="card-text">{{ producto.3}}</p>
+                            <p class="card-text">$ {{ producto.5}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="#" class="btn  btn-success">Comprar</a>
+    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>    
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>        
+        
+  </main>
+  <footer>
+    bs5-footer
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

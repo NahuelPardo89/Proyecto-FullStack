@@ -1,5 +1,5 @@
 #from conexionDb import Conexion
-from .clases.persona import Persona
+#from .clases.persona import Persona
 
 
 ###
@@ -29,7 +29,7 @@ class modelPersona:
         cursor.execute("INSERT INTO `personas` (`idPersona`, `Nombre`, `apellido`, `Telefono`, `direccion`, `contraseña`) VALUES (%s,%s,%s,%s,%s,%s)", (
         persona.getId(), persona.getNombre(), persona.getApellido(), persona.getTel(),persona.getDireccion(),persona.getContraseña()))
         conn.commit()
-        conn.close()
+        
 
     def updatePersona(conn, persona):
         cursor = conn.cursor()
@@ -43,7 +43,7 @@ class modelPersona:
                 WHERE idPersona=%s
             """, (persona.getNombre(), persona.getApellido(), persona.getTel(),persona.getDireccion(),persona.getContraseña(),persona.getId()))
         conn.commit()
-        conn.close()
+        
 
     def deletePersona(conn, persona):
 
@@ -51,21 +51,21 @@ class modelPersona:
         cursor.execute("DELETE FROM personas WHERE idPersona=%s",
                        (persona.getId(),))
         conn.commit()
-        conn.close()
+        
 
     def selectOnePersona(conn, persona):
         cursor = conn.cursor()
         cursor.execute(
             "SELECT * FROM personas WHERE idPersona=%s", (persona.getId(),))
         fila = cursor.fetchall()
-        conn.close()
+        
         return fila
 
     def selectAllPersona(conn):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM personas")
         data = cursor.fetchall()
-        conn.close()
+        
         return data
     ##methods####
 
@@ -77,7 +77,7 @@ class modelPersona:
         cursor.execute("INSERT INTO `clientes` (`idCliente`, `idPersona`, `socio`) VALUES (%s,%s,%s)", (
             cliente.getIdCliente(), cliente.getId(), cliente.getSocio()))
         conn.commit()
-        conn.close()
+        
 
     def updateCliente(conn, cliente):
         cursor = conn.cursor()
@@ -87,7 +87,7 @@ class modelPersona:
                 WHERE idCliente=%s
             """, (cliente.getSocio(), cliente.getIdCliente()))
         conn.commit()
-        conn.close()
+        
 
     def deleteCliente(conn, cliente):
 
@@ -95,21 +95,21 @@ class modelPersona:
         cursor.execute("DELETE FROM clientes WHERE idCliente=%s",
                        (cliente.getIdCliente(),))
         conn.commit()
-        conn.close()
+        
 
     def selectOneCliente(conn, cliente):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM clientes WHERE idCliente=%s",
                        (cliente.getIdCliente(),))
         fila = cursor.fetchall()
-        conn.close()
+        
         return fila
 
     def selectAllCliente(conn):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM clientes")
         data = cursor.fetchall()
-        conn.close()
+        
         return data
 
     ######################### EMPLEADOS###############################
@@ -120,7 +120,7 @@ class modelPersona:
         empleado.getId(), empleado.getIdDepartamento(), empleado.getIdInstalacion(), empleado.getHorario()))
 
         conn.commit()
-        conn.close()
+       
 
     def updateEmpleado(conn, empleado):
         cursor = conn.cursor()
@@ -132,7 +132,7 @@ class modelPersona:
                 WHERE idEmpleado=%s
             """, (empleado.getIdDepartamento(), empleado.getIdInstalacion(), empleado.getHorario(),empleado.getIdEmpleado()))
         conn.commit()
-        conn.close()
+        
 
     def deleteEmpleado(conn, empleado):
 
@@ -140,21 +140,21 @@ class modelPersona:
         cursor.execute("DELETE FROM empleados WHERE idEmpleado=%s",
                        (empleado.getIdEmpleado(),))
         conn.commit()
-        conn.close()
+        
 
     def selectOneEmpleado(conn, empleado):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM empleados WHERE idEmpleado=%s",
                        (empleado.getIdEmpleado(),))
         fila = cursor.fetchall()
-        conn.close()
+        
         return fila
 
     def selectAllEmpleado(conn):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM empleados")
         data = cursor.fetchall()
-        conn.close()
+        
         return data
 
     # producto = Producto(5,1,"zpa","adidas","chica",23,2,"fototruca.jpg")
