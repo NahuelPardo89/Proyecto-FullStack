@@ -5,40 +5,30 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema ampa
+-- Schema ampav1
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema ampa
+-- Schema ampav1
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `ampa` DEFAULT CHARACTER SET utf8 ;
-USE `ampa` ;
+CREATE SCHEMA IF NOT EXISTS `ampav1` DEFAULT CHARACTER SET utf8 ;
+USE `ampav1` ;
 
 -- -----------------------------------------------------
--- Table `ampa`.`instalaciones`
+-- Table `ampav1`.`instalaciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`instalaciones` (
-  `idInstalacion` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `ampav1`.`instalaciones` (
+  `idInstalacion` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(200) NOT NULL,
+  `precio` INT NOT NULL,
   PRIMARY KEY (`idInstalacion`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`departamento`
+-- Table `ampav1`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`departamento` (
-  `idDepto` INT NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idDepto`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `ampa`.`users`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`users` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`users` (
   `idUser` INT NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
   `apellido` VARCHAR(45) NOT NULL,
@@ -50,40 +40,33 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`empleados`
+-- Table `ampav1`.`empleados`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`empleados` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`empleados` (
   `idEmpleado` INT NOT NULL AUTO_INCREMENT,
   `idUser` INT NOT NULL,
-  `idDepto` INT NOT NULL,
   `idInstalacion` INT NOT NULL,
   `Horario` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idEmpleado`),
-  INDEX `IdDepartamento_idx` (`idDepto` ASC) VISIBLE,
+  PRIMARY KEY (`idEmpleado`, `idUser`),
   INDEX `idInstalacion_idx` (`idInstalacion` ASC) VISIBLE,
   INDEX `idPersonaEmpleados_idx` (`idUser` ASC) VISIBLE,
-  CONSTRAINT `IdDepartamentoPersonal`
-    FOREIGN KEY (`idDepto`)
-    REFERENCES `ampa`.`departamento` (`idDepto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `idInstalacionPersonal`
     FOREIGN KEY (`idInstalacion`)
-    REFERENCES `ampa`.`instalaciones` (`idInstalacion`)
+    REFERENCES `ampav1`.`instalaciones` (`idInstalacion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idPersonaEmpleados`
     FOREIGN KEY (`idUser`)
-    REFERENCES `ampa`.`users` (`idUser`)
+    REFERENCES `ampav1`.`users` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`Proveedores`
+-- Table `ampav1`.`Proveedores`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`Proveedores` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`Proveedores` (
   `idProveedor` INT NOT NULL AUTO_INCREMENT,
   `idEmpleado` INT NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
@@ -93,16 +76,16 @@ CREATE TABLE IF NOT EXISTS `ampa`.`Proveedores` (
   INDEX `idEmpleadoProveedor_idx` (`idEmpleado` ASC) VISIBLE,
   CONSTRAINT `idEmpleadoProveedor`
     FOREIGN KEY (`idEmpleado`)
-    REFERENCES `ampa`.`empleados` (`idEmpleado`)
+    REFERENCES `ampav1`.`empleados` (`idEmpleado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`productos`
+-- Table `ampav1`.`productos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`productos` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`productos` (
   `idProd` INT NOT NULL AUTO_INCREMENT,
   `idProveedor` INT NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
@@ -115,120 +98,121 @@ CREATE TABLE IF NOT EXISTS `ampa`.`productos` (
   INDEX `Idproveedor_idx` (`idProveedor` ASC) VISIBLE,
   CONSTRAINT `IdproveedorProd`
     FOREIGN KEY (`idProveedor`)
-    REFERENCES `ampa`.`Proveedores` (`idProveedor`)
+    REFERENCES `ampav1`.`Proveedores` (`idProveedor`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`Clientes`
+-- Table `ampav1`.`Clientes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`Clientes` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`Clientes` (
   `idCliente` INT NOT NULL AUTO_INCREMENT,
   `idUser` INT NOT NULL,
   `socio` TINYINT NOT NULL,
-  PRIMARY KEY (`idCliente`),
+  PRIMARY KEY (`idCliente`, `idUser`),
   INDEX `idPersonaCliente_idx` (`idUser` ASC) VISIBLE,
   CONSTRAINT `idPersonaCliente`
     FOREIGN KEY (`idUser`)
-    REFERENCES `ampa`.`users` (`idUser`)
+    REFERENCES `ampav1`.`users` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`CarritoProductos`
+-- Table `ampav1`.`CarritoProductos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`CarritoProductos` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`CarritoProductos` (
   `idCarrito` INT NOT NULL AUTO_INCREMENT,
   `idCliente` INT NOT NULL,
   `idEmpleado` INT NOT NULL,
+  `monto` INT NOT NULL,
+  `fecha` DATE NOT NULL,
   PRIMARY KEY (`idCarrito`),
   INDEX `idClientes_idx` (`idCliente` ASC) VISIBLE,
   INDEX `idPersonal_idx` (`idEmpleado` ASC) VISIBLE,
   CONSTRAINT `idClientesCarritoP`
     FOREIGN KEY (`idCliente`)
-    REFERENCES `ampa`.`Clientes` (`idCliente`)
+    REFERENCES `ampav1`.`Clientes` (`idCliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idPersonalCarritoP`
     FOREIGN KEY (`idEmpleado`)
-    REFERENCES `ampa`.`empleados` (`idEmpleado`)
+    REFERENCES `ampav1`.`empleados` (`idEmpleado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`detalleCarritoProductos`
+-- Table `ampav1`.`detalleCarritoProductos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`detalleCarritoProductos` (
-  `idDetalle` INT NOT NULL AUTO_INCREMENT,
-  `idCarrito` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `ampav1`.`detalleCarritoProductos` (
+  `idDetalleProducto` INT NOT NULL AUTO_INCREMENT,
+  `idCarritoProductos` INT NOT NULL,
   `idProducto` INT NOT NULL,
   `cantidad` INT NOT NULL,
-  `monto` INT NOT NULL,
-  PRIMARY KEY (`idDetalle`),
-  INDEX `idCarrito_idx` (`idCarrito` ASC) VISIBLE,
+  PRIMARY KEY (`idDetalleProducto`, `idCarritoProductos`),
+  INDEX `idCarrito_idx` (`idCarritoProductos` ASC) VISIBLE,
   INDEX `idProd_idx` (`idProducto` ASC) VISIBLE,
   CONSTRAINT `idCarritoDetalle`
-    FOREIGN KEY (`idCarrito`)
-    REFERENCES `ampa`.`CarritoProductos` (`idCarrito`)
+    FOREIGN KEY (`idCarritoProductos`)
+    REFERENCES `ampav1`.`CarritoProductos` (`idCarrito`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idProdDetalle`
     FOREIGN KEY (`idProducto`)
-    REFERENCES `ampa`.`productos` (`idProd`)
+    REFERENCES `ampav1`.`productos` (`idProd`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`CarritoReservas`
+-- Table `ampav1`.`CarritoReservas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`CarritoReservas` (
+CREATE TABLE IF NOT EXISTS `ampav1`.`CarritoReservas` (
   `idCarrito` INT NOT NULL AUTO_INCREMENT,
-  `idCliente` INT NOT NULL,
   `idEmpleado` INT NOT NULL,
+  `idCliente` INT NOT NULL,
+  `monto` INT NOT NULL,
+  `fecha` DATE NOT NULL,
   PRIMARY KEY (`idCarrito`),
   INDEX `idClientes_idx` (`idCliente` ASC) VISIBLE,
   INDEX `idePersonal_idx` (`idEmpleado` ASC) VISIBLE,
   CONSTRAINT `idClienteCarritoR`
     FOREIGN KEY (`idCliente`)
-    REFERENCES `ampa`.`Clientes` (`idCliente`)
+    REFERENCES `ampav1`.`Clientes` (`idCliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idPerdonalCarritoR`
     FOREIGN KEY (`idEmpleado`)
-    REFERENCES `ampa`.`empleados` (`idEmpleado`)
+    REFERENCES `ampav1`.`empleados` (`idEmpleado`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ampa`.`detalleCarritoReservas`
+-- Table `ampav1`.`detalleCarritoReservas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ampa`.`detalleCarritoReservas` (
-  `idDetalle` INT NOT NULL AUTO_INCREMENT,
-  `idInstalacion` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `ampav1`.`detalleCarritoReservas` (
+  `idDetalleReserva` INT NOT NULL AUTO_INCREMENT,
   `idCarritoReservas` INT NOT NULL,
-  `cantidad` INT NOT NULL,
-  `monto` INT NOT NULL,
-  PRIMARY KEY (`idDetalle`),
+  `idInstalacion` INT NOT NULL,
+  PRIMARY KEY (`idDetalleReserva`, `idCarritoReservas`),
   INDEX `idInstalacion_idx` (`idInstalacion` ASC) VISIBLE,
   INDEX `idCarritoReserva_idx` (`idCarritoReservas` ASC) VISIBLE,
   CONSTRAINT `idInstalacionDetalle`
     FOREIGN KEY (`idInstalacion`)
-    REFERENCES `ampa`.`instalaciones` (`idInstalacion`)
+    REFERENCES `ampav1`.`instalaciones` (`idInstalacion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `idCarritoReservaDetalle`
     FOREIGN KEY (`idCarritoReservas`)
-    REFERENCES `ampa`.`CarritoReservas` (`idCarrito`)
+    REFERENCES `ampav1`.`CarritoReservas` (`idCarrito`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
