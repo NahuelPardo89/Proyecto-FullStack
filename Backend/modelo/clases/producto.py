@@ -12,7 +12,7 @@ class Producto:
     #Getters
    
     def getAtributos(self):
-        return (self._idProveedor,self._nombre,self._marca,self._descripcion,self._precio, self._stock,self._foto)
+        return (self._id,self._idProveedor,self._nombre,self._marca,self._descripcion,self._precio, self._stock,self._foto)
     
     def getId(self):
         return self._id

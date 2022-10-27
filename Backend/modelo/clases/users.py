@@ -1,4 +1,4 @@
-class Persona:
+class User:
     def __init__(self, id,nombre,apellido,telefono,direccion,contraseña):
         
         self._id= id
@@ -51,18 +51,15 @@ class Persona:
 
     #methods
 
-class Empleado(Persona):
-    def __init__(self, id,nombre,apellido,telefono,direccion,contraseña,idEmpleado,idDepartamento,idInstalacion,horario,):
+class Empleado(User):
+    def __init__(self, id,nombre,apellido,telefono,direccion,contraseña,idEmpleado,instalacion,horario,):
         super().__init__(id,nombre,apellido,telefono,direccion,contraseña)
-        self._idEmpleado= idEmpleado
-        self._horario= horario
-        self._idDepartamento=idDepartamento
-        self._idInstalacion=idInstalacion
+        self._idEmpleado    = idEmpleado
+        self._horario       = horario
+        self._idInstalacion = instalacion.getIdInstalacion()#definir metodo
        
     #Getters
-    def getIdDepartamento(self):
-        return self._idDepartamento
-    
+       
     def getIdInstalacion(self):
         return self._idInstalacion
     
@@ -77,10 +74,8 @@ class Empleado(Persona):
     #setters
     def setIdEmpleado(self,id):
         self._idEmpleado=id
-        
-    def setIdDepartamento(self,id):
-        self._idDepartamento=id
-   
+    
+       
     def setIdInstalacion(self,id):
         self._idInstalacion=id    
          
@@ -90,7 +85,7 @@ class Empleado(Persona):
 
 
 
-class Cliente(Persona):
+class Cliente(User):
   
     def __init__(self, id,nombre,apellido,telefono,direccion,contraseña,idCliente,socio):
         super().__init__(id,nombre,apellido,telefono,direccion,contraseña)
