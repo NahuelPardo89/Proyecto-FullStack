@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for,flash
 from Backend.modelo.conexionDb import Conexion
 from Backend.modelo.clases.persona import Persona
 from Backend.modelo.clases.producto import Producto
-from Backend.modelo.modelPersona import modelPersona
+from Backend.modelo.modelUser import modelPersona
 from Backend.modelo.modelProducto import ModelProducto
 #from flask_mysqldb import MySQL
 import mysql.connector
