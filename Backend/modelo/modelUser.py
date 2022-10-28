@@ -1,5 +1,5 @@
 #from conexionDb import Conexion
-from .clases.users import User, Cliente,Empleado
+#from .clases.users import User, Cliente,Empleado
 
 
 ###
@@ -29,7 +29,7 @@ class ModelUser:
         cursor.execute("INSERT INTO `users` (`idUser`, `Nombre`, `apellido`, `Telefono`, `direccion`, `contraseña`) VALUES (%s,%s,%s,%s,%s,%s)", (
         user.getId(), user.getNombre(), user.getApellido(), user.getTel(),user.getDireccion(),user.getContraseña()))
         conn.commit()
-        
+        print(user.getNombre()," agregado"  )
 
     def updateUser(conn, user):
         cursor = conn.cursor()
@@ -78,7 +78,7 @@ class ModelUser:
         cursor.execute("INSERT INTO `clientes` (`idCliente`, `idUser`, `socio`) VALUES (%s,%s,%s)", (
             cliente.getIdCliente(), cliente.getId(), cliente.getSocio()))
         conn.commit()
-        
+        print (cliente.getNombre()+" agregado")
 
     def updateCliente(conn, cliente):
         cursor = conn.cursor()
