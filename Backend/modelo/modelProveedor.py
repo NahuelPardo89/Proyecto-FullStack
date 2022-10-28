@@ -1,0 +1,2 @@
+class ModelProveedor:
+    pass
