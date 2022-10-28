@@ -6,11 +6,11 @@ from .clases.users import User, Cliente,Empleado
 #conn = Conexion()
 #conn1 = conn.getConn()
 ####
-class modelUser:
+class ModelUser:
     @classmethod
     def login(self, conn, user):
         try:
-            cursor = conn.connection.cursor()
+            cursor = conn.cursor()
             cursor.execute(
                 "SELECT * FROM users WHERE idUser=%s", (user.getId(),))
             row = cursor.fetchone()
@@ -25,7 +25,7 @@ class modelUser:
             raise Exception(ex)
 
     def addUser(conn, user):
-        cursor = conn.connection.cursor()
+        cursor = conn.cursor()
         cursor.execute("INSERT INTO `users` (`idUser`, `Nombre`, `apellido`, `Telefono`, `direccion`, `contraseña`) VALUES (%s,%s,%s,%s,%s,%s)", (
         user.getId(), user.getNombre(), user.getApellido(), user.getTel(),user.getDireccion(),user.getContraseña()))
         conn.commit()
@@ -120,8 +120,8 @@ class modelUser:
 
     def addEmpleado(conn, empleado):
         cursor = conn.cursor()
-        cursor.execute("INSERT INTO `empleados` ( `idPersona`,`idInstalacion`, `Horario`) VALUES (%s,%s,%s,%s)", (
-        empleado.getId(), empleado.getIdDepartamento(), empleado.getIdInstalacion(), empleado.getHorario()))
+        cursor.execute("INSERT INTO `empleados` (`idEmpleado`, `idUser`, `idInstalacion`, `Horario`) VALUES (%s,%s,%s,%s)", (
+        empleado.getIdEmpleado(), empleado.getId(),empleado.getIdInstalacion(), empleado.getHorario()))
 
         conn.commit()
        
