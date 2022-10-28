@@ -3,7 +3,7 @@ from mysql.connector import Error
 
 class Conexion:
     def __init__(self):
-        self._connection=""
+        self.connection=""
         try:
             connection=mysql.connector.connect(host='localhost',database='ampav1',user='root',password='copado34414604')
             if connection.is_connected():
@@ -15,6 +15,6 @@ class Conexion:
             print ("Error while connecting to MySQL", e)
        
     def getConn(self):
-        return self._connection
+        return self.connection
     
 
