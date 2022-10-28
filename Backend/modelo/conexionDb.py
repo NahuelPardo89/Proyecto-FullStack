@@ -14,7 +14,6 @@ class Conexion:
         except Error as e:
             print ("Error while connecting to MySQL", e)
        
-    def getConn(self):
-        return self.connection
+    
     
 
