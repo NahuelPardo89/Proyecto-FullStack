@@ -1,11 +1,8 @@
-#from conexionDb import Conexion
+#CLASES
 from modelo.clases.users import User,Cliente,Empleado
 
 
-###
-#conn = Conexion()
-#conn1 = conn.getConn()
-####
+
 class ModelUser:
     @classmethod
     def login(self, conn, user):
@@ -83,7 +80,7 @@ class ModelUser:
         except Exception as ex:
             raise Exception(ex)
 
-    ##methods####
+    
 
     ######################### CLIENTES###############################
 
@@ -148,6 +145,8 @@ class ModelUser:
             return data
         except Exception as ex:
             raise Exception(ex)
+    
+    
     ######################### EMPLEADOS###############################
 
     def addEmpleado(conn, empleado):
@@ -213,40 +212,4 @@ class ModelUser:
             return data
         except Exception as ex:
             raise Exception(ex)
-    # producto = Producto(5,1,"zpa","adidas","chica",23,2,"fototruca.jpg")
-    # addProducto(conn1,producto)
-    # updateProducto(conn1,producto)
-    # deleteProducto(conn1,producto)
-    # prod=selectProducto(conn1,producto)
-    # print(prod)
-    # data=selectAll(conn1)
-    # print(data)
-#persona = Persona(33222333, "Oscar", "sierra","3584372604","roma 111","admin")
-    # addPersona(conn1,persona)
-    # updatePersona(conn1,persona)
-    # a=selectAllPersona(conn1)
-    # print(a)
-    # deletePersona(conn1,persona)
-    # cliente= Cliente(persona.getId(),persona.getNombre(),persona.getApellido(),persona.getTel(),persona.getDireccion(),persona.getContraseña(),5,25)
-    # print(persona.getId())
-    # addCliente(conn1,cliente)
-    # updateCliente(conn1,cliente)
-    # print(cliente.getId())
-    # deleteCliente(conn1,cliente)
-    # fila=selectOneCliente(conn1,cliente)
-    # print(fila)
-
-    # empleado= Empleado(persona.getId(),persona.getNombre(),persona.getApellido(),persona.getTel(),persona.getDireccion(),persona.getContraseña(),7,1,2,"updated")
-
-    # print(empleado.getId(),empleado.getNombre(),empleado.getApellido(),empleado.getTel(),empleado.getDireccion(),empleado.getContraseña(),empleado.getIdDepartamento(),empleado.getIdInstalacion(),empleado.getHorario())
-
-    # addEmpleado(conn1,empleado)
-    # updateEmpleado(conn1,empleado)
-    # deleteEmpleado(conn1,empleado)
-
-    # a=selectAllEmpleado(conn1)
-
-    # print(a)
-#a=(modelPersona.login(conn1,persona))
-
-#print(a)
+    
