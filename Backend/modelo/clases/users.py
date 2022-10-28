@@ -56,7 +56,7 @@ class Empleado(User):
         super().__init__(id,nombre,apellido,telefono,direccion,contraseña)
         self._idEmpleado    = idEmpleado
         self._horario       = horario
-        self._idInstalacion = instalacion.getIdInstalacion()#definir metodo
+        self._idInstalacion = instalacion.getidInstalacion()#definir metodo
        
     #Getters
        
