@@ -2,11 +2,13 @@ from sys import path
 #PARA IMPORTAR DESDE MODELO
 path.append('C:\\Users\\nanit\\Desktop\\proyecto\\Proyecto-FullStack\\Backend')
 
-#CONEXION
-from modelo.conexionDb import Conexion
+#DATABASE
+from modelo.database.conexionDb import Conexion
+from modelo.database.createTables import CreateTables
+from modelo.database.initDataBase import InitDb
 
 #MODELOS
-from modelo.initDataBase import InitDb
+
 from modelo.modelProducto import ModelProducto
 from modelo.modelUser import ModelUser
 from modelo.modelInstalacion import ModelInstalacion
@@ -17,23 +19,23 @@ from modelo.clases.proveedor import Proveedor
 from modelo.clases.producto import Producto
 from modelo.clases.instalaciones import Instalacion
 
-#inicializacion de bd
 
-db=InitDb()
-conn=db.database  
+#CONEXION CON BASE DE DATOS ampaDB
+db=Conexion()
+conn= db.connection
+
+#CREACION DE TABLAS
+CreateTables(conn)
+
+#CARGA DE DATOS INICIALES EN TABLAS
+InitDb(conn)
 
 
-if  conn.is_connected():
-
-    
-
-    
-    
-    
-    ########################################################################################
+########################################################################################
     #SIMULACION DE OBTENCION DE DATOS DEL FORMULARIO REGISTRO
-
-
+if  conn.is_connected():
+    
+    
     #VARIABLES ESTATICAS
       
     #idCliente =1   idCliente (se asigna automatico en bd)
