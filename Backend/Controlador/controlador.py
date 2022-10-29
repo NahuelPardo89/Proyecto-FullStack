@@ -32,7 +32,8 @@ InitDb(conn)
 
 
 ########################################################################################
-    #SIMULACION DE OBTENCION DE DATOS DEL FORMULARIO REGISTRO
+#SIMULACION DE OBTENCION DE DATOS DEL FORMULARIO REGISTRO
+
 if  conn.is_connected():
     
     
@@ -46,8 +47,9 @@ if  conn.is_connected():
 
     #                                                       DATOS CAPTURADOS                     |necesarias para contructor de la clase Cliente
     #                   dni   |  nombre   | apellido  | telefono   | direccion     |contraseña   |
-    cliente =Cliente(33000111,"ricardo"  ,"montaner",   "123456"  ,"estrada 1433", "Admin123",   1 , 1)
-
+    cliente =Cliente(33000111,"Ricardo"  ,"Montaner",   "123456"  ,"estrada 1433", "Admin123",   1 , 1)
+    
+    #AGREGO CLIENTE A LA BASE DE DATOS
     ModelUser.addCliente(conn,cliente)
     
 
@@ -63,10 +65,11 @@ if  conn.is_connected():
 
 
 
-#usuarioLogged=ModelUser.login(conn,empleado)
-#print(usuarioLogged)
+usuarioLogged=ModelUser.login(conn,cliente)
+print(usuarioLogged.getContraseña())
 
 #ModelUser.addCliente(conn,cliente)
 #ModelUser.addUser(conn,user2)
 #ModelUser.addEmpleado(conn,empleado)
 #print (empleado.getId(),empleado.getIdEmpleado(), empleado.getIdInstalacion(),empleado.getHorario())
+

@@ -44,7 +44,7 @@ class CreateTables:
                         CONSTRAINT `idPersonaEmpleados`
                             FOREIGN KEY (`idUser`)
                             REFERENCES `ampaDB`.`users` (`idUser`)
-                            ON DELETE NO ACTION
+                            ON DELETE CASCADE
                             ON UPDATE NO ACTION)
                         ENGINE = InnoDB;""")
 
@@ -89,7 +89,7 @@ class CreateTables:
                         CONSTRAINT `idPersonaCliente`
                             FOREIGN KEY (`idUser`)
                             REFERENCES `ampaDB`.`users` (`idUser`)
-                            ON DELETE NO ACTION
+                            ON DELETE CASCADE
                             ON UPDATE NO ACTION)
                         ENGINE = InnoDB; """)
         cursor.execute("""CREATE TABLE IF NOT EXISTS `ampaDB`.`CarritoProductos` (

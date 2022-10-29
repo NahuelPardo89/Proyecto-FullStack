@@ -4,22 +4,7 @@ from modelo.clases.users import User,Cliente,Empleado
 
 
 class ModelUser:
-    @classmethod
-    def login(self, conn, user):
-        try:
-            cursor = conn.cursor()
-            cursor.execute(
-                "SELECT * FROM users WHERE idUser=%s", (user.getId(),))
-            row = cursor.fetchone()
-            if row != None:
-                if user.getContraseña() == row[5]:
-                    user = User(row[0], row[1], row[2],
-                                   row[3], row[4], True)
-                    return user
-            else:
-                return None
-        except Exception as ex:
-            raise Exception(ex)
+   
     
     def addUser(conn, user):
         try:
@@ -62,7 +47,7 @@ class ModelUser:
             cursor = conn.cursor()
             cursor.execute(
                 "SELECT * FROM users WHERE idUser=%s", (id,))
-            fila = cursor.fetchall()
+            fila = cursor.fetchone()
             user=User(fila[0],fila[1],fila[2],fila[3],fila[4],fila[5])
         
             return user
@@ -130,7 +115,7 @@ class ModelUser:
             clienteData = cursor.fetchall()
             cursor.execute("SELECT * FROM users WHERE idUser=%s",
                         (clienteData[1],))
-            userData= cursor.fetchall()
+            userData= cursor.fetchone()
             cliente=Cliente(userData[0],userData[1],userData[2],userData[3],userData[4],userData[5],clienteData[0],clienteData[2])
             return cliente
         except Exception as ex:
@@ -193,10 +178,10 @@ class ModelUser:
             cursor.execute("SELECT * FROM empleados WHERE idEmpleado=%s",
                         (empleado.getIdEmpleado(),))
 
-            empleadoData = cursor.fetchall()
+            empleadoData = cursor.fetchone()
             cursor.execute("SELECT * FROM users WHERE idUser=%s",
                         (empleadoData[1],))
-            userData= cursor.fetchall()
+            userData= cursor.fetchone()
             empleado=Empleado(userData[0],userData[1],userData[2],userData[3],userData[4],userData[5],empleadoData[0],empleadoData[2],empleadoData[3])
             
             return empleado
@@ -213,3 +198,21 @@ class ModelUser:
         except Exception as ex:
             raise Exception(ex)
     
+
+
+    
+    def login(self, conn, user):
+        try:
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT * FROM users WHERE idUser=%s", (user.getId(),))
+            row = cursor.fetchone()
+            if row != None:
+                if user.getContraseña() == row[5]:
+                    user = User(row[0], row[1], row[2],
+                                   row[3], row[4], True)
+                    return user
+            else:
+                return None
+        except Exception as ex:
+            raise Exception(ex)
