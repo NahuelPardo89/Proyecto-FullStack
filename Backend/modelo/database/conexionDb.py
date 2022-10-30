@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import Error 
 
+
 class Conexion:
     def __init__(self):
         self.connection=""
@@ -13,7 +14,4 @@ class Conexion:
                     
         except Error as e:
             print ("Error while connecting to MySQL", e)
-       
     
-    
-
