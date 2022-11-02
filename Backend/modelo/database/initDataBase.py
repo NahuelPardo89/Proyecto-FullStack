@@ -58,10 +58,19 @@ class InitDb():
             
             ########################################  TABLA PRODUCTOS  ##############################################################
             
-                                #ID| ID PROVEEDOR  | NOMBRE      | MARCA   |DESCRIPCION        |PRECIO  |STOCK   | FOTO
-            cantimplora = Producto( 1 ,     1,       "Cantiplora","Decatlon","1 ltrs frio/calor",1800     ,50,     "cantimplora.jpg" )
-            zapatilla   = Producto( 2 ,     2,       "Zapatilla", "Adidas",  "talle 42",         5400,     15,     "zapaAdidas.jpg")
-
+                                  #ID| ID PROVEEDOR   | NOMBRE           | MARCA       |DESCRIPCION        |PRECIO  |STOCK   | FOTO
+            cantimplora = Producto( 1 ,     1,        "BotellaTérmica"  ,"Everlast"   ,"1 ltrs frio/calor"  ,2584     ,50,    "botella-everlast-entrenamiento.jpg" )
+            zapatilla   = Producto( 2 ,     2,        "Zapatilla"       ,"NikeAirMax" ,"talle 42"           ,35899    , 5,    "nike-airmax-correlate.jpg")
+            zapatilla   = Producto( 3 ,     2,        "Zapatilla"       ,"NikeAirMax" ,"talle 41"           ,35899    , 5,    "nike-airmax-correlate.jpg")
+            zapatilla   = Producto( 4 ,     2,        "Zapatilla"       ,"NikeAirMax" ,"talle 40"           ,35899    , 5,    "nike-airmax-correlate.jpg")
+            zapatilla   = Producto( 5 ,     2,        "Zapatilla"       ,"NikeAirMax" ,"talle 39"           ,35899    , 2,    "nike-airmax-correlate.jpg")
+            kitfitness  = Producto( 6 ,     1,        "KitFitnessHome"  ,"Everlast"   ,"kit 3 piezas"       ,9215     ,15,    "Kit-fitness.jpg")
+            gorrotenis  = Producto( 7 ,     2,        "GorroTenisBlade" ,"Wilson"     ,"Gorro tenis"        ,4799     ,10,    "gorra-tenis-wilson.jpg")
+            shortadidas = Producto( 8 ,     2,        "ShortAdidasAero" ,"Adidas"     ,"Short Aero Ready S" ,10599    , 5,    "short-adidas.jpg")
+            shortadidas = Producto( 9 ,     2,        "ShortAdidasAero" ,"Adidas"     ,"Short Aero Ready M" ,10599    , 5,    "short-adidas.jpg")
+            shortadidas = Producto(10 ,     2,        "ShortAdidasAero" ,"Adidas"     ,"Short Aero Ready L" ,10599    , 5,    "short-adidas.jpg")
+            shortadidas = Producto(11 ,     2,        "ShortAdidasAero" ,"Adidas"     ,"Short Aero Ready XL",10599    , 5,    "short-adidas.jpg")
+            raquetatenis= Producto(12 ,     1,        "RaquetaTenis"    ,"Wilson"     ,"Raqueta Wilson"     ,69999    ,10,    "raqueta-de-tenis-wilson.jpg")
             #########################################################################################################################    
             
             
