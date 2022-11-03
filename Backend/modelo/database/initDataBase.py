@@ -30,9 +30,12 @@ class InitDb():
 
             #########################################  TABLA INSTALACIONES  ###########################
                                 # ID | NOMBRE   |PRECIO USO HORA
-            gimnasio=Instalacion( 1, "Gimnasio",400)
-            paddle  =Instalacion( 2, "PADDLE",  1000)
-            futbol  =Instalacion( 3, "Gimnasio",2000)
+            gimnasio= Instalacion( 1, "Gimnasio A.M.P.A",2800)
+            paddle  = Instalacion( 2, "Cancha de Paddle A.M.PA.",  1000)
+            futbol  = Instalacion( 3, "Cancha de Futbol A.M.P.A.",1000)
+            basquet = Instalacion( 4, "Cancha de Basquet A.M.P.A.",1000)
+            salon_eventos  = Instalacion( 5, "Salon de eventos A.M.P.A.",20000)
+
             
             ######################################################################################
             
