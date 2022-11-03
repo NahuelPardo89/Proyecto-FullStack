@@ -32,3 +32,22 @@ class ModelInstalacion:
             conn.commit()
         except Exception as ex:
             raise Exception(ex)
+    def selectOneIntalacion(self,conn,instalacion):
+        try:
+            cursor=conn.cursor()
+            cursor.execute("SELECT * FROM instalaciones WHERE idInstalacion=%s",(instalacion.getId()))
+            filainstalacion=cursor.fetchone()
+        
+            return filainstalacion
+        except Exception as ex:
+            raise Exception(ex)
+
+    def selectAllInstalacion(conn):
+        try:
+            cursor=conn.cursor()
+            cursor.execute("SELECT * FROM instalaciones")
+            dataInstalacion = cursor.fetchall()
+            
+            return dataInstalacion
+        except Exception as ex:
+            raise Exception(ex)
