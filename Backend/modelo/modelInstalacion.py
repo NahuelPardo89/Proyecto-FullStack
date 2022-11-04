@@ -1,7 +1,8 @@
 from clases.instalaciones import Instalacion
 
+
 class ModelInstalacion:
-    @classmethod
+   
     def addInstalacion(self,conn, instalacion):
             try:
                 cursor=conn.cursor()
