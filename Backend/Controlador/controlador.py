@@ -1,6 +1,6 @@
 from sys import path
 #PARA IMPORTAR DESDE MODELO
-path.append('C:\\Users\\nanit\\Desktop\\proyecto\\Proyecto-FullStack\\Backend')
+path.append('C:\\Users\\nanit\\OneDrive\\Escritorio\\Proyecto\\Proyecto-FullStack\\Backend')
 
 #DATABASE
 from modelo.database.conexionDb import Conexion
