@@ -47,10 +47,10 @@ if  conn.is_connected():
 
     #                                                       DATOS CAPTURADOS                     |necesarias para contructor de la clase Cliente
     #                   dni   |  nombre   | apellido  | telefono   | direccion     |contraseña   |
-    cliente =Cliente(33000111,"Ricardo"  ,"Montaner",   "123456"  ,"estrada 1433", "Admin123",   1 , 1)
+    #cliente =Cliente(33000111,"Ricardo"  ,"Montaner",   "123456"  ,"estrada 1433", "Admin123",   1 , 1)
     
     #AGREGO CLIENTE A LA BASE DE DATOS
-    ModelUser.addCliente(conn,cliente)
+    #ModelUser.addCliente(conn,cliente)
     
 
 
