@@ -52,8 +52,8 @@ class InitDb():
             
             ########################################  TABLA PROVEEDORES  ##########################################
                             #  ID| NOMBRE   |MARCA     | TELEFONO   |EMPLEADO ASIGNADO
-            proveedor1=Proveedor(1, "Ricardo","DECATLON","03584672268",empleado1)
-            proveedor2=Proveedor(2, "Manuel", "ADIDAS",  "03584672338",empleado1)
+            proveedor1=Proveedor(1, "Ricardo","DECATLON","03584672268",empleado2)
+            proveedor2=Proveedor(2, "Manuel", "ADIDAS",  "03584672338",empleado2)
                 
             ######################################################################################################
 
@@ -81,21 +81,21 @@ class InitDb():
             #################################### INSERT A BASE DE DATOS##################################################
         
             #INSERT INSTALACION
-            ModelInstalacion.addInstalacion(conn,gimnasio)
-            ModelInstalacion.addInstalacion(conn,paddle)
-            ModelInstalacion.addInstalacion(conn,futbol)
-            ModelInstalacion.addInstalacion(conn,basquet)
-            ModelInstalacion.addInstalacion(conn,salon_eventos)
+            #ModelInstalacion.addInstalacion(conn,gimnasio)
+            #ModelInstalacion.addInstalacion(conn,paddle)
+            #ModelInstalacion.addInstalacion(conn,futbol)
+            #ModelInstalacion.addInstalacion(conn,basquet)
+            #ModelInstalacion.addInstalacion(conn,salon_eventos)
             
             #INSERT EMPLEADOS
-            ModelUser.addEmpleado(conn,empleado1)
-            ModelUser.addEmpleado(conn,empleado2)
-            ModelUser.addEmpleado(conn,empleado3)
-            ModelUser.addEmpleado(conn,empleado4)
+            #ModelUser.addEmpleado(conn,empleado1)
+            #ModelUser.addEmpleado(conn,empleado2)
+            #ModelUser.addEmpleado(conn,empleado3)
+            #ModelUser.addEmpleado(conn,empleado4)
             
             #INSERT PROVEEDORES
-            #ModelProveedor.addProveedor(conn,proveedor1) METODOS SIN IMPLEMENTAR
-            #ModelProveedor.addProveedor(conn,proveedor2)
+            ModelProveedor.addProveedor(conn,proveedor1)
+            ModelProveedor.addProveedor(conn,proveedor2)
             
             #INSERT PRODUCTOS
             ModelProducto.addProducto(conn,cantimplora)
