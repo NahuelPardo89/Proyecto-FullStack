@@ -21,8 +21,8 @@ class Proveedor:
     def getTelefono(self):
         return self._telefono
     
-    def getPersonalId(self):
-        return self._personalId
+    def getIdEmpleado(self):
+        return self._idEmpleado
    
     def setId(self, id):
         self._id= id
