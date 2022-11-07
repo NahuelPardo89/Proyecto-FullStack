@@ -1,5 +1,5 @@
 #CLASES
-from modelo.clases.users import User,Cliente,Empleado
+from Backend.modelo.clases.users import User,Cliente,Empleado
 
 
 

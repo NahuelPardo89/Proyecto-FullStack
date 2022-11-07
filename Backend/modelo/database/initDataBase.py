@@ -1,21 +1,21 @@
 from sys import path
 #PARA IMPORTAR DESDE MODELO
-path.append('C:\\Users\\nanit\\Desktop\\proyecto\\Proyecto-FullStack\\Backend')
+path.append('C:\\Users\\nanit\\OneDrive\\Escritorio\\Proyecto\\Proyecto-FullStack')
 
 
 
 
 #MODELOS
-from modelo.modelProducto import ModelProducto
-from modelo.modelUser import ModelUser
-from modelo.modelInstalacion import ModelInstalacion
-from modelo.modelProveedor import ModelProveedor
+from Backend.modelo.modelProducto import ModelProducto
+from Backend.modelo.modelUser import ModelUser
+from Backend.modelo.modelInstalacion import ModelInstalacion
+from Backend.modelo.modelProveedor import ModelProveedor
 
 #CLASES
-from modelo.clases.users import Empleado
-from modelo.clases.proveedor import Proveedor
-from modelo.clases.producto import Producto
-from modelo.clases.instalaciones import Instalacion
+from Backend.modelo.clases.users import Empleado
+from Backend.modelo.clases.proveedor import Proveedor
+from Backend.modelo.clases.producto import Producto
+from Backend.modelo.clases.instalaciones import Instalacion
 
 class InitDb():
     def __init__(self,conn):
@@ -81,8 +81,11 @@ class InitDb():
             #################################### INSERT A BASE DE DATOS##################################################
         
             #INSERT INSTALACION
-            #ModelInstalacion.addInstalacion(conn,instalacion) falta implementar
-        
+            ModelInstalacion.addInstalacion(conn,gimnasio)
+            ModelInstalacion.addInstalacion(conn,paddle)
+            ModelInstalacion.addInstalacion(conn,futbol)
+            ModelInstalacion.addInstalacion(conn,basquet)
+            ModelInstalacion.addInstalacion(conn,salon_eventos)
             
             #INSERT EMPLEADOS
             ModelUser.addEmpleado(conn,empleado1)
@@ -101,8 +104,5 @@ class InitDb():
             #devuelvo database
             
     
-    
-    
 
-    
     

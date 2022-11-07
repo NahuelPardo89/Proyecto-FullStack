@@ -1,13 +1,13 @@
-from clases.instalaciones import Instalacion
+from Backend.modelo.clases.instalaciones import Instalacion
 
 
 class ModelInstalacion:
-   
+    @classmethod 
     def addInstalacion(self,conn, instalacion):
             try:
                 cursor=conn.cursor()
                 cursor.execute("INSERT INTO `instalaciones` ( `idInstalacion`, `nombre`, `precio`)  VALUES (%s,%s,%s)",(
-                instalacion.getIdInstalacion(),instalacion.getnombre(),instalacion.getprecio()))
+                instalacion.getidInstalacion(),instalacion.getnombre(),instalacion.getprecio()))
                 conn.commit()
             except Exception as ex:
                 raise Exception(ex)
