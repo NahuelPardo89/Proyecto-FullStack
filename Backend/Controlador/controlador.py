@@ -1,23 +1,23 @@
 from sys import path
 #PARA IMPORTAR DESDE MODELO
-path.append('C:\\Users\\nanit\\OneDrive\\Escritorio\\Proyecto\\Proyecto-FullStack\\Backend')
+path.append('C:\\Users\\nanit\\OneDrive\\Escritorio\\Proyecto\\Proyecto-FullStack')
 
 #DATABASE
-from modelo.database.conexionDb import Conexion
-from modelo.database.createTables import CreateTables
-from modelo.database.initDataBase import InitDb
+from Backend.modelo.database.conexionDb import Conexion
+from Backend.modelo.database.createTables import CreateTables
+from Backend.modelo.database.initDataBase import InitDb
 
 #MODELOS
 
-from modelo.modelProducto import ModelProducto
-from modelo.modelUser import ModelUser
-from modelo.modelInstalacion import ModelInstalacion
+from Backend.modelo.modelProducto import ModelProducto
+from Backend.modelo.modelUser import ModelUser
+from Backend.modelo.modelInstalacion import ModelInstalacion
 
 #CLASES
-from modelo.clases.users import User,Empleado,Cliente
-from modelo.clases.proveedor import Proveedor
-from modelo.clases.producto import Producto
-from modelo.clases.instalaciones import Instalacion
+from Backend.modelo.clases.users import User,Empleado,Cliente
+from Backend.modelo.clases.proveedor import Proveedor
+from Backend.modelo.clases.producto import Producto
+from Backend.modelo.clases.instalaciones import Instalacion
 
 
 #CONEXION CON BASE DE DATOS ampaDB
