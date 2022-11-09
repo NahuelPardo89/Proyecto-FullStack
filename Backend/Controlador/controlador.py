@@ -20,15 +20,16 @@ from Backend.modelo.clases.producto import Producto
 from Backend.modelo.clases.instalaciones import Instalacion
 
 
+
 #CONEXION CON BASE DE DATOS ampaDB
 db=Conexion()
 conn= db.connection
 
 #CREACION DE TABLAS
-CreateTables(conn)
+#CreateTables(conn)
 
 #CARGA DE DATOS INICIALES EN TABLAS
-InitDb(conn)
+#InitDb(conn)
 
 
 ########################################################################################
@@ -42,18 +43,24 @@ if  conn.is_connected():
     #idCliente =1   idCliente (se asigna automatico en bd)
     #socio     =1   =true socio (funcionalidad futura)
     
+    #simulacion de formilario de Registro
     
-    #usuario rellena campos requeridos y pulsa Submit
-
+    dni= int(input('Ingrese numero de DNI:\n'))
+    nombre=input('ingrese nombre:\n')
+    apellido=input('ingrese apellido:\n')
+    telefono=input('ingrese numero de telefono:\n')
+    direccion=input('ingrese direccion:\n')
+    contrasena=input('íngrese contraseña:\n')
+    #usuario rellena campos requeridos y pulsa enviar
     #                                                       DATOS CAPTURADOS                     |necesarias para contructor de la clase Cliente
     #                   dni   |  nombre   | apellido  | telefono   | direccion     |contraseña   |
-    #cliente =Cliente(33000111,"Ricardo"  ,"Montaner",   "123456"  ,"estrada 1433", "Admin123",   1 , 1)
+    cliente =Cliente(   dni,   nombre  ,   apellido,   telefono ,  direccion,       contrasena,   1 , 1)
     
     #AGREGO CLIENTE A LA BASE DE DATOS
-    #ModelUser.addCliente(conn,cliente)
+    ModelUser.addCliente(conn,cliente)
+    print('Registro exitoso')
+
     
-
-
 
 
 
