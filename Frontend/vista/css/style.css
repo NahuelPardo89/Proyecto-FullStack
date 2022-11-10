@@ -523,10 +523,10 @@ footer {
 }
 .overlay form {
     
-    width: 90%;
+    width: 100%;
     margin: auto;
     background: #b6b6b4;
-    padding: 10px; 
+    padding: 1%; 
     box-sizing: border-box;
     margin-top: 5px;
     border-radius: 20px;
