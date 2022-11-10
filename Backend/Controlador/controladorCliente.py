@@ -83,11 +83,11 @@ def updateCliente(cliente):
         return False
         
     
-def deleteCliente(cliente):
+def deleteCliente(id):
     db=Conexion()
     conn= db.connection
     if  conn.is_connected():
-        ModelUser.deleteCliente(conn,cliente)
+        ModelUser.deleteCliente(conn,id)
         conn.close()
         return True
     else:
@@ -102,7 +102,7 @@ def login():
     if  conn.is_connected():
     
     
-        cliente=ModelUser.login(conn,dni,contrasena)
+        cliente= ModelUser.login(conn,dni,contrasena)
         if cliente!=None:
             return True
         else:
@@ -116,7 +116,9 @@ if __name__=="__main__":
     while i!=0:
         print("1 registro-2 updateCliente -3 deleteCliente -4 login")
         #aux=int(input("ingrese accion\n"))
-        aux=regitroCliente()
+        aux=deleteCliente(34414604)
+        if aux:
+            print("eliminado existoso") 
         i=int(input("si desea salir pulse 0"))    
         
 
