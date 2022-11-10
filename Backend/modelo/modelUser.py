@@ -32,11 +32,11 @@ class ModelUser:
         except Exception as ex:
             raise Exception(ex)
 
-    def deleteUser(conn, user):
+    def deleteUser(conn, id):
         try:
             cursor = conn.cursor()
             cursor.execute("DELETE FROM users WHERE idUser=%s",
-                        (user.getId(),))
+                        (id,))
             conn.commit()
         except Exception as ex:
             raise Exception(ex)
@@ -78,8 +78,8 @@ class ModelUser:
             cursor.execute("INSERT INTO `users` (`idUser`, `Nombre`, `apellido`, `Telefono`, `direccion`, `contraseña`) VALUES (%s,%s,%s,%s,%s,%s)", (
             cliente.getId(), cliente.getNombre(), cliente.getApellido(), cliente.getTel(),cliente.getDireccion(),cliente.getContraseña()))
             #cargo cliente
-            cursor.execute("INSERT INTO `clientes` (`idCliente`, `idUser`, `socio`) VALUES (%s,%s,%s)", (
-                cliente.getIdCliente(), cliente.getId(), cliente.getSocio()))
+            cursor.execute("INSERT INTO `clientes` ( `idUser`, `socio`) VALUES (%s,%s)", (
+                 cliente.getId(), cliente.getSocio()))
             conn.commit()
             print (cliente.getNombre()+" agregado")
         except Exception as ex:
@@ -97,11 +97,13 @@ class ModelUser:
         except Exception as ex:
             raise Exception(ex)
 
-    def deleteCliente(conn, cliente):
+    def deleteCliente(conn, id):
         try:
             cursor = conn.cursor()
-            cursor.execute("DELETE FROM clientes WHERE idCliente=%s",
-                        (cliente.getIdCliente(),))
+            cursor.execute("DELETE FROM clientes WHERE idUser=%s",
+                        (id,))
+            cursor.execute("DELETE FROM users WHERE idUser=%s",
+                        (id,))            
             conn.commit()
         except Exception as ex:
             raise Exception(ex)
@@ -168,12 +170,12 @@ class ModelUser:
         except Exception as ex:
             raise Exception(ex)
 
-    def selectOneEmpleado(conn, empleado):
+    def selectOneEmpleado(conn, id):
         
         try:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM empleados WHERE idEmpleado=%s",
-                        (empleado.getIdEmpleado(),))
+                        (id,))
 
             empleadoData = cursor.fetchone()
             cursor.execute("SELECT * FROM users WHERE idUser=%s",
@@ -197,7 +199,7 @@ class ModelUser:
     
 
 
-    
+    @classmethod
     def login(self, conn, usuario,contraseña):
         try:
             cursor = conn.cursor()
