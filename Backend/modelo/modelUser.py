@@ -110,14 +110,11 @@ class ModelUser:
         
         try:
             cursor = conn.cursor()
-            cursor.execute("SELECT * FROM clientes WHERE idCliente=%s",
-                        (id,))
+            cursor.execute("SELECT * FROM clientes WHERE idCliente=%s",(id,))
             clienteData = cursor.fetchall()
-            cursor.execute("SELECT * FROM users WHERE idUser=%s",
-                        (clienteData[1],))
-            userData= cursor.fetchone()
-            cliente=Cliente(userData[0],userData[1],userData[2],userData[3],userData[4],userData[5],clienteData[0],clienteData[2])
-            return cliente
+            print (clienteData)
+            #cliente=Cliente(clienteData[0],clienteData[1],clienteData[2],clienteData[3],clienteData[4],clienteData[5],clienteData[6],clienteData[7])
+            return clienteData
         except Exception as ex:
             raise Exception(ex)
 
@@ -201,14 +198,14 @@ class ModelUser:
 
 
     
-    def login(self, conn, user):
+    def login(self, conn, usuario,contraseña):
         try:
             cursor = conn.cursor()
             cursor.execute(
-                "SELECT * FROM users WHERE idUser=%s", (user.getId(),))
+                "SELECT * FROM users WHERE idUser=%s", (usuario,))
             row = cursor.fetchone()
             if row != None:
-                if user.getContraseña() == row[5]:
+                if contraseña == row[5]:
                     user = User(row[0], row[1], row[2],
                                    row[3], row[4], True)
                     return user
