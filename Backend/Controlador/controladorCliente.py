@@ -76,7 +76,7 @@ def updateCliente(cliente):
         if contrasena!=cliente.getContraseña():
             cliente.setContraseña(contrasena)
 
-        ModelUser.updateCliente(conn,cliente)
+        ModelUser.updateUser(conn,cliente)
         conn.close()
         return True
     else:
@@ -100,25 +100,47 @@ def login():
     db=Conexion()
     conn= db.connection
     if  conn.is_connected():
-    
-    
         cliente= ModelUser.login(conn,dni,contrasena)
-        if cliente!=None:
-            return True
-        else:
-            return False
+        return cliente
+        
     else:
         return None
-
+#uso solo de pruebas
 if __name__=="__main__":
            
     i=1
     while i!=0:
-        print("1 registro-2 updateCliente -3 deleteCliente -4 login")
-        #aux=int(input("ingrese accion\n"))
-        aux=deleteCliente(34414604)
-        if aux:
-            print("eliminado existoso") 
+        
+        print("presione 1 para registrar cliente\n presione 2 para loguearse\n ")
+        aux=int(input("ingrese accion:  "))
+        if aux==1 :
+            var=regitroCliente()
+            if var:
+                print("Registro existoso")
+            else:
+                print("error de registro")    
+        elif aux==2:
+            loggedUser=login()
+            if loggedUser!=None:
+                print("login existoso")
+                print("presione 1 para modificar datos\n presione 2 para eliminar usuario")
+                aux=int(input("ingrese accion: "))
+                if aux==1:
+                    loggedUser=updateCliente(loggedUser)
+                    if loggedUser:
+                        print("cliente actualizado")
+
+                    else:
+                        print("error de actualizacion")
+                elif aux==2:
+                    loggedUser=deleteCliente(loggedUser.getId())
+                    if loggedUser:
+                        print("cliente removido")
+                    else:
+                     print("error de eliminacion")  
+            else:
+                print("usuario o contraseña incorrecta")
+    
         i=int(input("si desea salir pulse 0"))    
         
 
