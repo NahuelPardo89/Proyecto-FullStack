@@ -60,20 +60,23 @@ def updateCliente(cliente):
         telefono=input('ingrese numero de telefono:\n')
         direccion=input('ingrese direccion:\n')
         contrasena=input('íngrese contraseña:\n')
+        
         #usuario modifica los campos deseados y pulsa enviar
-        if nombre!=cliente.getNombre():
+        if nombre!=cliente.getNombre()and nombre!="":
             cliente.setNombre(nombre)
         
-        if apellido!=cliente.getApellido():
+        if apellido!=cliente.getApellido()and apellido != "":
             cliente.setApellido(apellido)
         
-        if telefono!=cliente.getTel():
+        if telefono!=cliente.getTel()and telefono != "":
             cliente.setTel(telefono)
         
-        if direccion!=cliente.getDireccion():
+        if direccion!=cliente.getDireccion()and direccion != "":
+            print("direccion=",direccion)
             cliente.setDireccion(direccion)
         
-        if contrasena!=cliente.getContraseña():
+        if contrasena!=cliente.getContraseña()and contrasena != "":
+            print("contraseña=",contrasena)
             cliente.setContraseña(contrasena)
 
         ModelUser.updateUser(conn,cliente)
