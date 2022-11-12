@@ -4,4 +4,5 @@ Pagina web sobre complejo deportivo AMPA (ficticio) desarrollada para el Proyect
 Enlace de la version Actual 17-10-2022:
 Github Pages: https://nahuelpardo89.github.io/Proyecto-FullStack/Frontend/vista/index.html
 
-hostinger: https://g4merstore.com.ar/ (dominio provisorio)
+Wordpress DevCord: https://devcord.g4merstore.com.ar/
+
