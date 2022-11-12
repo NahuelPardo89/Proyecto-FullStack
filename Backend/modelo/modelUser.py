@@ -45,10 +45,10 @@ class ModelUser:
         user=None
         try:
             cursor = conn.cursor()
-            cursor.execute(
-                "SELECT * FROM users WHERE idUser=%s", (id,))
+            cursor.execute("SELECT * FROM users WHERE idUser=%s", (id,))
             fila = cursor.fetchone()
-            user=User(fila[0],fila[1],fila[2],fila[3],fila[4],fila[5])
+            if fila != None:
+                user=User(fila[0],fila[1],fila[2],fila[3],fila[4],fila[5])
         
             return user
         except Exception as ex:
@@ -113,10 +113,11 @@ class ModelUser:
         try:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM clientes WHERE idCliente=%s",(id,))
-            clienteData = cursor.fetchall()
-            print (clienteData)
-            #cliente=Cliente(clienteData[0],clienteData[1],clienteData[2],clienteData[3],clienteData[4],clienteData[5],clienteData[6],clienteData[7])
-            return clienteData
+            clienteData = cursor.fetchone()
+            cursor.execute("SELECT * FROM users WHERE idUser=%s",(clienteData[1],))
+            userData = cursor.fetchone()
+            cliente=Cliente(userData[0],userData[1],userData[2],userData[3],userData[4],userData[5],userData[6],userData[7])
+            return cliente
         except Exception as ex:
             raise Exception(ex)
 
