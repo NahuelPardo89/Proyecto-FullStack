@@ -135,6 +135,7 @@ const validarCampo = (expresion, input, campo) => {
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+        campos[campo] = False
         		
 	}
 }
@@ -152,5 +153,4 @@ formulario.addEventListener('submit', (e) => {
         document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo')
     }
 });
-
 
