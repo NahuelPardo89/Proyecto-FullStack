@@ -233,7 +233,7 @@
                 <h4>¡Dejanos tu mensaje!</h4>
                 <form action="/Proyecto-FullStack/Frontend/vista/index.html">
                     <div class="contenedor-inputs">
-                        <p><label for="nombre">NOMBRE<span class="obligatorio">*</span></label>
+                            <p><label for="nombre">NOMBRE<span class="obligatorio">*</span></label>
                             <input type="text" name="nombre" id="nombreCont" placeholder="Nombres" required></p>
                             <p><label for="apellido">APELLIDO<span class="obligatorio">*</span></label>
                             <input type="text" name="apellido" id="apellidoCont" placeholder="Apellido" required></p>
@@ -316,7 +316,7 @@
 
         </div>
         
-        
+        <!-- INICIO DE SESIÓN -->  
         
         
          <div class="overlay3" id="overlay3">
@@ -324,16 +324,33 @@
                 <a href="#" class="btn-cerrar-popupInicioSesion" id="btn-cerrar-popupInicioSesion"> <i class='fa fa-times'></i></a>
                 <h3>INICIAR SESION</h3>
                 <h4>Ingresa en tu cuenta</h4>
-                <form action="/Proyecto-FullStack/Frontend/vista/servicios.html">
+                <form action="/Proyecto-FullStack/Frontend/vista/servicios.html" id="formLogin">
                     <div class="contenedor-inputsReg">
-                        <p><label for="nombre">NOMBRE DE USUARIO*</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí su nombre de usuario" required></p>
-                            <p><label for="apellido">CONTRASEÑA*</label>
-                            <input type="password" name="contraseña" id="apellido" placeholder="Escriba aquí su contraseña" required></p>
-                            
+                       <!-- Nombre de usuario --> 
+                       <div id="grupo__usuarioLog" class="formulario__grupo">
+                        <p><label class="formulario__label" for="nombre">NOMBRE DE USUARIO*</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="usuarioLog" id="contenedorUsuarioLog" placeholder="Escriba aquí su nombre de usuario" ></p>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-errorLog">El usuario tiene que ser de 4 a 16 digitos (número, letras y guiones)</p>
                     </div>
-                    <p><input type="submit" name="boton" id="botonIni" value="Iniciar Sesion"></p> 
-                            
+                    <!-- Contraseña --> 
+                    <div id="grupo__contraseñaLog" class="formulario__grupo">
+                        <p><label class="formulario__label" for="contraseña">CONTRASEÑA*</label>
+                            <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="contraseñaLog" id="passLog" placeholder="Escriba aquí su contraseña"></p>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                        <p class="formulario__input-errorLog">La contraseña debe contener entre 6 y 16 digitos</p>
+                    </div>
+                     <!-- Mensaje de error -->
+                     <div class="formulario__mensaje" id="formulario__mensajeLog">
+                        <i class="fas fa-exclamation-triangle"> <b>Error:</b> Hay campos incorrectos o incompletos</i>
+                    </div> 
+                    <input type="submit" name="botonReg" id="botonLog" value="ENVIAR"> 
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exitoLog">Formulario enviado correctamente</p>
+                           
                 </form>
             </div>
 

@@ -669,6 +669,10 @@ border: 0px solid black;
     margin-bottom: 0;
     display: none;
 }
+.formulario__input-errorLog{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;}
 .formulario__input-error-activo {
     font-size: 12px;
     margin-bottom: 0;
