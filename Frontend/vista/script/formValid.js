@@ -6,14 +6,19 @@ const inputs2 = document.querySelectorAll('#formLogin input');
 
 
 const expresiones = {                                       //Expresiones regulares
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	nombre: /^[a-zA-Z]{3,16}$/, 
 	password: /^.{6,16}$/, // 6 a 16 digitos.
-	correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
+	correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
+    celular: /^[0-9]{6,20}$/,
+    dni: /^[0-9]{7,9}$/
 }
 const campos = {
-    usuario : false,
+    nombre : false,
     contraseña : false,
-    email : false
+    email : false,
+    apellido : false,
+    cel: false,
+    dni:false
 }
 
 const validarFormulario = (e) => {
@@ -59,8 +64,18 @@ const validarFormulario = (e) => {
         
         
         break;
-        case 'usuarioReg':
-            validarCampo(expresiones.usuario, e.target,'usuario')
+        case 'nombreReg':
+            validarCampo(expresiones.nombre, e.target,'nombre')
+            
+                        
+        break;
+        case 'apellidoReg':
+            validarCampo(expresiones.nombre, e.target,'apellido')
+            
+                        
+        break;
+        case 'dniReg':
+            validarCampo(expresiones.dni, e.target,'dni')
             
                         
         break;
@@ -75,9 +90,14 @@ const validarFormulario = (e) => {
             validarContraseña2()
             
         break;
-        case 'emailReg':
-            validarCampo(expresiones.correo, e.target, 'email')
+        case 'celReg':
+            validarCampo(expresiones.celular, e.target,'cel')
+            
+                        
         break;
+        //case 'emailReg':
+        //    validarCampo(expresiones.correo, e.target, 'email')
+        //break;
         
    }
 };
@@ -91,7 +111,7 @@ const validarContraseña2 = () => {
                 document.querySelector('#grupo__contraseña2 i').classList.remove('fa-check-circle')
                 document.querySelector('#grupo__contraseña2 i').classList.add('fa-times-circle')
                 document.querySelector('#grupo__contraseña2 .formulario__input-error').classList.add('formulario__input-error-activo')
-                campos[password] = false
+                campos[contraseña] = false
                 
 
     } else {
@@ -100,7 +120,7 @@ const validarContraseña2 = () => {
         document.querySelector('#grupo__contraseña2 i').classList.add('fa-check-circle')
         document.querySelector('#grupo__contraseña2 i').classList.remove('fa-times-circle')
         document.querySelector('#grupo__contraseña2 .formulario__input-error').classList.remove('formulario__input-error-activo')
-        campos[password] = true
+        campos[contraseña] = true
         
 
     }
@@ -135,7 +155,7 @@ const validarCampo = (expresion, input, campo) => {
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-        campos[campo] = False
+        campos[campo] = false
         		
 	}
 }
@@ -144,7 +164,7 @@ const validarCampo = (expresion, input, campo) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	if(campos.usuario && campos.contraseña && campos.email){
+	if(campos.nombre && campos.contraseña && campos.apellido && campos.cel && campos.dni){
         formulario.reset();
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo')
         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-error-activo')
