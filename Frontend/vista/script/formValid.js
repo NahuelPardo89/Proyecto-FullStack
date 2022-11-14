@@ -40,7 +40,7 @@ const validarFormulario = (e) => {
                     
         break;
         case 'contraseñaLog':
-            if(expresiones.usuario.test(e.target.value)){  
+            if(expresiones.password.test(e.target.value)){  
                 document.getElementById('grupo__contraseñaLog').classList.remove('formulario__grupo-incorrecto');
                 document.getElementById('grupo__contraseñaLog').classList.add('formulario__grupo-correcto');
                 document.querySelector('#grupo__contraseñaLog i').classList.add('fa-check-circle');
