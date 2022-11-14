@@ -353,20 +353,20 @@
                 <h4>Ingresa en tu cuenta</h4>
                 <form action="/Proyecto-FullStack/Frontend/vista/servicios.html" id="formLogin">
                     <div class="contenedor-inputsReg">
-                       <!-- Nombre de usuario --> 
-                       <div id="grupo__usuarioLog" class="formulario__grupo">
-                        <p><label class="formulario__label" for="nombre">NOMBRE DE USUARIO*</label>
+                       <!-- DNI --> 
+                       <div id="grupo__dniLog" class="formulario__grupo">
+                        <p><label class="formulario__label" for="nombre">DNI</label>
                         <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="usuarioLog" id="contenedorUsuarioLog" placeholder="Escriba aquí su nombre de usuario" ></p>
+                            <input type="text" class="formulario__input" name="dniLog" id="input__dniLog" placeholder="Escriba aquí su DNI" ></p>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <p class="formulario__input-errorLog">El usuario tiene que ser de 4 a 16 digitos (número, letras y guiones)</p>
+                        <p class="formulario__input-error">El DNI debe tener entre 7 y 9 dígitos (sin puntos ni comas)</p>
                     </div>
                     <!-- Contraseña --> 
                     <div id="grupo__contraseñaLog" class="formulario__grupo">
                         <p><label class="formulario__label" for="contraseña">CONTRASEÑA*</label>
                             <div class="formulario__grupo-input">
-                            <input type="password" class="formulario__input" name="contraseñaLog" id="passLog" placeholder="Escriba aquí su contraseña"></p>
+                            <input type="password" class="formulario__input" name="contraseñaLog" id="input__contraseñaLog" placeholder="Escriba aquí su contraseña"></p>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                         <p class="formulario__input-errorLog">La contraseña debe contener entre 6 y 16 digitos</p>

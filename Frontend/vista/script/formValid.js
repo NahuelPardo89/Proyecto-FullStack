@@ -15,32 +15,19 @@ const expresiones = {                                       //Expresiones regula
 const campos = {
     nombre : false,
     contraseña : false,
+    contraseña2 : false,
     email : false,
     apellido : false,
     cel: false,
-    dni:false
+    dni:false,
+    contraseñaLog : false,
+    dniLog: false
 }
 
 const validarFormulario = (e) => {
    switch (e.target.name) {
-        case 'usuarioLog':
-            if(expresiones.usuario.test(e.target.value)){  
-                document.getElementById('grupo__usuarioLog').classList.remove('formulario__grupo-incorrecto');
-                document.getElementById('grupo__usuarioLog').classList.add('formulario__grupo-correcto');
-                document.querySelector('#grupo__usuarioLog i').classList.add('fa-check-circle');
-                document.querySelector('#grupo__usuarioLog i').classList.remove('fa-times-circle');
-                document.querySelector('#grupo__usuarioLog .formulario__input-errorLog').classList.remove('formulario__input-error-activo');
-                campos[usuario] = True;
-
-
-            } else {
-              document.getElementById('grupo__usuarioLog').classList.add('formulario__grupo-incorrecto');
-              document.getElementById('grupo__usuarioLog').classList.remove('formulario__grupo-correcto');
-              document.querySelector('#grupo__usuarioLog i').classList.add('fa-times-circle');
-              document.querySelector('#grupo__usuarioLog i').classList.remove('fa-check-circle');
-              document.querySelector('#grupo__usuarioLog .formulario__input-errorLog').classList.add('formulario__input-error-activo');   
-              campos[usuario] = False;
-            }
+        case 'dniLog':
+            validarCampo(expresiones.dni,e.target,'dniLog');
         
                     
         break;
@@ -51,7 +38,7 @@ const validarFormulario = (e) => {
                 document.querySelector('#grupo__contraseñaLog i').classList.add('fa-check-circle');
                 document.querySelector('#grupo__contraseñaLog i').classList.remove('fa-times-circle');
                 document.querySelector('#grupo__contraseñaLog .formulario__input-errorLog').classList.remove('formulario__input-error-activo');
-                campos[contraseña] = True;
+                campos['contraseñaLog'] = true;
 
             } else {
               document.getElementById('grupo__contraseñaLog').classList.add('formulario__grupo-incorrecto');
@@ -59,7 +46,7 @@ const validarFormulario = (e) => {
               document.querySelector('#grupo__contraseñaLog i').classList.add('fa-times-circle');
               document.querySelector('#grupo__contraseñaLog i').classList.remove('fa-check-circle'); 
               document.querySelector('#grupo__contraseñaLog .formulario__input-errorLog').classList.add('formulario__input-error-activo'); 
-              campos[contraseña] = False;  
+              campos['contraseñaLog'] = false;  
             }
         
         
@@ -111,7 +98,7 @@ const validarContraseña2 = () => {
                 document.querySelector('#grupo__contraseña2 i').classList.remove('fa-check-circle')
                 document.querySelector('#grupo__contraseña2 i').classList.add('fa-times-circle')
                 document.querySelector('#grupo__contraseña2 .formulario__input-error').classList.add('formulario__input-error-activo')
-                campos[contraseña] = false
+                campos['contraseña2'] = false
                 
 
     } else {
@@ -120,7 +107,7 @@ const validarContraseña2 = () => {
         document.querySelector('#grupo__contraseña2 i').classList.add('fa-check-circle')
         document.querySelector('#grupo__contraseña2 i').classList.remove('fa-times-circle')
         document.querySelector('#grupo__contraseña2 .formulario__input-error').classList.remove('formulario__input-error-activo')
-        campos[contraseña] = true
+        campos['contraseña2'] = true
         
 
     }
@@ -164,7 +151,7 @@ const validarCampo = (expresion, input, campo) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	if(campos.nombre && campos.contraseña && campos.apellido && campos.cel && campos.dni){
+	if(campos.nombre && campos.contraseña && campos.apellido && campos.cel && campos.dni && campos.contraseña2){
         formulario.reset();
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo')
         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-error-activo')
@@ -174,3 +161,16 @@ formulario.addEventListener('submit', (e) => {
     }
 });
 
+formularioLog.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	if(campos.contraseñaLog && campos.dniLog){
+        formulario.reset();
+        document.getElementById('formulario__mensaje-exitoLog').classList.add('formulario__mensaje-exito-activo')
+        document.getElementById('formulario__mensajeLog').classList.remove('formulario__mensaje-error-activo')
+        setTimeout( function() { window.location.href = "servicios.html"; }, 3000 );
+    } else {
+        document.getElementById('formulario__mensajeLog').classList.add('formulario__mensaje-error-activo')
+        document.getElementById('formulario__mensaje-exitoLog').classList.remove('formulario__mensaje-exito-activo')
+    }
+});
