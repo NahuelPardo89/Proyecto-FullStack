@@ -189,8 +189,8 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 - TK#34: Registro de meetings y toda la info necesaria dentro de la Wiki de GitHub
 - TK#35: Sitio funcional en hosting remoto de Sitio Institucional en WordPress
 - TK#36: Presentación Final de Proyecto
-- 
-- 
+
+
 #### Sprint
 | **N° de sprint**                         | 00                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
