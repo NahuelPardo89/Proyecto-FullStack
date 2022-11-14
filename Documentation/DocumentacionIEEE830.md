@@ -159,18 +159,38 @@ El sitio web A.M.P.A será diseñado para gestionar de una forma eficaz y rápid
 - TK#04: Codificar el HTML de la página de inicio
 - TK#05: Realizar el diseño CCS de la página de inicio
 - TK#06: Crear sección de navegación con los enlaces a : Instalaciones, contacto, acerca de y loguearse/registrarse 
-- TK#07: Diseñar página instalaciones
-- TK#08: Codificar el HTML de la página instalaciones
-- TK#09: Realizar el diseño CCS de la página instalaciones
-- TK#10: Crear página contacto
-- TK#11: Codificar el HTML de la página de contacto
-- TK#12: Realizar el diseño CCS de la página de contacto
-- TK#13: Diseñar página acerca de
-- TK#14: Codificar el HTML de la página acerca de
-- TK#15: Realizar el diseño CCS de la página acerca de
+- TK#07: Codificar el HTML de la página instalaciones 
+- TK#08: Realizar el diseño CCS de la página Servicios
+- TK#09: Diseñar página contacto
+- TK#10: Codificar el HTML de la página de contacto
+- TK#11: Realizar el diseño CCS de la página de contacto
+- TK#12: Diseñar página ACERCA DE
+- TK#13: Codificar el HTML de la página ACERCA DE
+- TK#14: Realizar el diseño CCS de la página ACERCA DE
+- TK#15: Incluir Bootstrap
 - TK#16: Diseñar base de datos (Diseño Relacional) 
 - TK#17: Codificar base de datos
-- TK#18: Crear formulario de registro
+- TK#18: Codificar HTML formulario de registro 
+- TK#19: Codificar css de formulario de registro 
+- TK#20: Realizar diseño de la página SERVICIOS
+- TK#21: MVC -Modulación y Abstracción
+- TK#22: Navegabilidad
+- TK#23: Modelado de BB DER, modelo relacional
+- TK#24: Script de la BD en MySQL
+- TK#25: Links funcionales
+- TK#26: Responsive
+- TK#27: Formularios con funcionalidad en JavaScript
+- TK#28: Modelo de Caso de Uso de cada modularización
+- TK#29: Definir clases con sus métodos de Carrito de Productos
+- TK#30: Definir clase con sus métodos de Detalle de Carrito de Productos
+- TK#31: Definir clase con sus métodos de Instalaciones
+- TK#32: Definir clase con sus métodos de Carrito de Reservas
+- TK#33: Definir clase con sus métodos de Detalle Carrito de Reservas
+- TK#34: Registro de meetings y toda la info necesaria dentro de la Wiki de GitHub
+- TK#35: Sitio funcional en hosting remoto de Sitio Institucional en WordPress
+- TK#36: Presentación Final de Proyecto
+- 
+- 
 #### Sprint
 | **N° de sprint**                         | 00                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
