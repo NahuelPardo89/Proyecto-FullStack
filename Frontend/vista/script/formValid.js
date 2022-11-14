@@ -11,7 +11,7 @@ const expresiones = {                                       //Expresiones regula
 	correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     celular: /^[0-9]{6,20}$/,
     dni: /^[0-9]{7,9}$/,
-    dirección: /^[a-zA-Z0-9_-]{4,50}$/
+    dir: /^[a-zA-Z1-9À-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-Z1-9À-ÖØ-öø-ÿ]+\.?)$/
 }
 const campos = {
     nombre : false,
