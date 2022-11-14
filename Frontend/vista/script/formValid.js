@@ -10,7 +10,8 @@ const expresiones = {                                       //Expresiones regula
 	password: /^.{6,16}$/, // 6 a 16 digitos.
 	correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     celular: /^[0-9]{6,20}$/,
-    dni: /^[0-9]{7,9}$/
+    dni: /^[0-9]{7,9}$/,
+    dirección: /^[a-zA-Z0-9_-]{4,50}$/
 }
 const campos = {
     nombre : false,
@@ -21,7 +22,8 @@ const campos = {
     cel: false,
     dni:false,
     contraseñaLog : false,
-    dniLog: false
+    dniLog: false,
+    dir: false
 }
 
 const validarFormulario = (e) => {
@@ -79,6 +81,11 @@ const validarFormulario = (e) => {
         break;
         case 'celReg':
             validarCampo(expresiones.celular, e.target,'cel')
+            
+                        
+        break;
+        case 'dir':
+            validarCampo(expresiones.dir, e.target,'dir')
             
                         
         break;
@@ -168,7 +175,7 @@ formularioLog.addEventListener('submit', (e) => {
         formulario.reset();
         document.getElementById('formulario__mensaje-exitoLog').classList.add('formulario__mensaje-exito-activo')
         document.getElementById('formulario__mensajeLog').classList.remove('formulario__mensaje-error-activo')
-        setTimeout( function() { window.location.href = "servicios.html"; }, 3000 );
+        setTimeout( function() { window.location.href = "servicios.html"; }, 1200 );
     } else {
         document.getElementById('formulario__mensajeLog').classList.add('formulario__mensaje-error-activo')
         document.getElementById('formulario__mensaje-exitoLog').classList.remove('formulario__mensaje-exito-activo')
