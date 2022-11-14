@@ -264,14 +264,32 @@
                 <h4>¡Crea tu cuenta!</h4>
                 <form action="/Proyecto-FullStack/Frontend/vista/index.html" id="formRegistro">
                     <div class="contenedor-inputsReg">
-                            <!-- Nombre de usuario --> 
-                            <div id="grupo__usuario" class="formulario__grupo">
-                                <p><label class="formulario__label" for="nombre">NOMBRE DE USUARIO*</label>
+                            <!-- DNI --> 
+                            <div id="grupo__dni" class="formulario__grupo">
+                                <p><label class="formulario__label" for="nombre">DNI</label>
                                 <div class="formulario__grupo-input">
-                                    <input type="text" class="formulario__input" name="usuarioReg" id="contenedorUsuario" placeholder="Escriba aquí su nombre de usuario" ></p>
+                                    <input type="text" class="formulario__input" name="dniReg" id="input__dni" placeholder="Escriba aquí su DNI" ></p>
                                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
-                                <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 digitos (número, letras y guiones)</p>
+                                <p class="formulario__input-error">El DNI debe tener entre 7 y 9 dígitos (sin puntos ni comas)</p>
+                            </div>
+                            <!-- NOMBRE --> 
+                            <div id="grupo__nombre" class="formulario__grupo">
+                                <p><label class="formulario__label" for="nombre">NOMBRE</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="nombreReg" id="input__nombre" placeholder="Escriba aquí su nombre" ></p>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">El nombre debe contener entre 3 y 16 letras</p>
+                            </div>
+                            <!-- APELLIDO --> 
+                            <div id="grupo__apellido" class="formulario__grupo">
+                                <p><label class="formulario__label" for="nombre">APELLIDO</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="apellidoReg" id="input_apellido" placeholder="Escriba aquí su apellido" ></p>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">El apellido debe contener entre 3 y 16 letras</p>
                             </div>
                             <!-- Contraseña --> 
                             <div id="grupo__contraseña" class="formulario__grupo">
@@ -291,7 +309,7 @@
                                 </div>
                                 <p class="formulario__input-error">Las contraseñas no coinciden</p>
                             </div>
-                            <!-- Correo electrónico -->
+                            <!-- Correo electrónico
                             <div id="grupo__email" class="formulario__grupo">
                                 <p><label class="formulario__label" for="email">CORREO ELETRÓNICO*</label>
                                 <div class="formulario__grupo-input">
@@ -299,6 +317,24 @@
                                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                                 </div>
                                 <p class="formulario__input-error"> Ejemplo de correo (juan@gmail.com)</p>    
+                            </div> -->
+                            <!-- CELULAR --> 
+                            <div id="grupo__cel" class="formulario__grupo">
+                                <p><label class="formulario__label" for="nombre">Teléfono</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="celReg" id="input__cel" placeholder="Escriba aquí su Teléfono" ></p>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Este campo sólo puede contener número de 6 a 20 dígitos</p>
+                            </div>
+                            <!-- Dirección -->
+                            <div id="grupo__dir" class="formulario__grupo">
+                                <p><label class="formulario__label" for="dirección">DIRECCIÓN*</label>
+                                    <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="dir" id="input__dir" placeholder="Escriba su dirección" ></p>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Nombre de la calle y la numeración separada</p>
                             </div>
                             
                     </div>
@@ -326,20 +362,20 @@
                 <h4>Ingresa en tu cuenta</h4>
                 <form action="/Proyecto-FullStack/Frontend/vista/servicios.html" id="formLogin">
                     <div class="contenedor-inputsReg">
-                       <!-- Nombre de usuario --> 
-                       <div id="grupo__usuarioLog" class="formulario__grupo">
-                        <p><label class="formulario__label" for="nombre">NOMBRE DE USUARIO*</label>
+                       <!-- DNI --> 
+                       <div id="grupo__dniLog" class="formulario__grupo">
+                        <p><label class="formulario__label" for="nombre">DNI</label>
                         <div class="formulario__grupo-input">
-                            <input type="text" class="formulario__input" name="usuarioLog" id="contenedorUsuarioLog" placeholder="Escriba aquí su nombre de usuario" ></p>
+                            <input type="text" class="formulario__input" name="dniLog" id="input__dniLog" placeholder="Escriba aquí su DNI" ></p>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <p class="formulario__input-errorLog">El usuario tiene que ser de 4 a 16 digitos (número, letras y guiones)</p>
+                        <p class="formulario__input-error">El DNI debe tener entre 7 y 9 dígitos (sin puntos ni comas)</p>
                     </div>
                     <!-- Contraseña --> 
                     <div id="grupo__contraseñaLog" class="formulario__grupo">
                         <p><label class="formulario__label" for="contraseña">CONTRASEÑA*</label>
                             <div class="formulario__grupo-input">
-                            <input type="password" class="formulario__input" name="contraseñaLog" id="passLog" placeholder="Escriba aquí su contraseña"></p>
+                            <input type="password" class="formulario__input" name="contraseñaLog" id="input__contraseñaLog" placeholder="Escriba aquí su contraseña"></p>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                         <p class="formulario__input-errorLog">La contraseña debe contener entre 6 y 16 digitos</p>
