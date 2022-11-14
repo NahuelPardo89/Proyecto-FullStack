@@ -1,4 +1,4 @@
-
+from Backend.modelo.clases.producto import Producto
 class ModelProducto:
     @classmethod    
     def addProducto(self,conn,producto):
@@ -9,7 +9,7 @@ class ModelProducto:
                 conn.commit()
             except Exception as ex:
                 raise Exception(ex)
-
+    @classmethod  
     def updateProducto(self,conn,producto):
         try:
             cursor=conn.cursor()
@@ -27,7 +27,7 @@ class ModelProducto:
             conn.commit()
         except Exception as ex:
             raise Exception(ex)
-
+    @classmethod
     def deleteProducto(self,conn,producto):
         try:
             cursor=conn.cursor()
@@ -35,14 +35,15 @@ class ModelProducto:
             conn.commit()
         except Exception as ex:
             raise Exception(ex)       
-
-    def selectOneProducto(self,conn,producto):
+    @classmethod
+    def selectOneProducto(self,conn,id):
         try:
             cursor=conn.cursor()
-            cursor.execute("SELECT * FROM productos WHERE idProd=%s",(producto.getId(),))
-            fila=cursor.fetchall()
-        
-            return fila
+            cursor.execute("SELECT * FROM productos WHERE idProd=%s",(id,))
+            row=cursor.fetchone()
+            
+            producto=Producto(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7])
+            return producto
         except Exception as ex:
             raise Exception(ex)
 

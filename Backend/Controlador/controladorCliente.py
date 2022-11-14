@@ -18,7 +18,16 @@ def regitroCliente():
     conn= db.connection
     if  conn.is_connected():
         #simulacion de formulario de Registro
-        dni= int(input('Ingrese numero de DNI:\n'))
+        
+        #validacion de dni
+        i=True
+        while i:
+            dni= int(input('Ingrese numero de DNI:\n'))
+            if dni>=1000000 and dni<100000000:
+                i=False
+            else:
+                print("debe ingresar un documento valido")
+        
         #VERIFICO SI YA EXISTE EL USUARIO
         cliente= ModelUser.selectOneUser(conn,dni)
         if (cliente == None):
@@ -27,7 +36,15 @@ def regitroCliente():
             apellido=input('ingrese apellido:\n')
             telefono=input('ingrese numero de telefono:\n')
             direccion=input('ingrese direccion:\n')
-            contrasena=input('íngrese contraseña:\n')
+
+            i=True
+            while i:
+                contrasena=input('íngrese contraseña:\n')
+                if len(contrasena)>=6 and len(contrasena)<=16 :
+                    i=False
+                else:
+                    print("debe ingresar una contraseña valida(de 6 a 16 caracteres)")
+
             #usuario rellena campos requeridos y pulsa enviar
             #VARIABLES ESTATICAS
         

@@ -153,11 +153,10 @@ class ModelUser:
             cursor = conn.cursor()
             cursor.execute("""
                     UPDATE empleados
-                    SET  idDepartamento=%s,
-                        idInstalacion=%s,
+                    SET idInstalacion=%s,
                         Horario=%s
                     WHERE idEmpleado=%s
-                """, (empleado.getIdDepartamento(), empleado.getIdInstalacion(), empleado.getHorario(),empleado.getIdEmpleado()))
+                """, ( empleado.getIdInstalacion(), empleado.getHorario(),empleado.getIdEmpleado()))
             conn.commit()
         except Exception as ex:
             raise Exception(ex)
@@ -165,8 +164,10 @@ class ModelUser:
     def deleteEmpleado(conn, empleado):
         try:
             cursor = conn.cursor()
-            cursor.execute("DELETE FROM empleados WHERE idEmpleado=%s",
-                        (empleado.getIdEmpleado(),))
+            cursor.execute("DELETE FROM empleados WHERE idUser=%s",
+                        (empleado.getId(),))
+            cursor.execute("DELETE FROM users WHERE idUser=%s",
+                        (empleado.getId(),))            
             conn.commit()
         except Exception as ex:
             raise Exception(ex)
@@ -216,3 +217,24 @@ class ModelUser:
                 return None
         except Exception as ex:
             raise Exception(ex)
+    @classmethod
+    def loginAdmin(self, conn, usuario,contraseña):
+        try:
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT * FROM `users`u JOIN `empleados` e ON (u.idUser=e.idUser) WHERE e.idUser=%s ", (usuario,))
+            row = cursor.fetchone()
+            print(row)
+            
+            if row != None:
+                if contraseña == row[5]:
+                    user = Empleado(row[0], row[1], row[2],
+                                   row[3], row[4], row[5],row[6], row[8],row[9])
+                    return user
+            else:
+                return None
+        except Exception as ex:
+            raise Exception(ex)
+
+
+
