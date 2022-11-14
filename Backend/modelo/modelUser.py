@@ -224,7 +224,7 @@ class ModelUser:
             cursor.execute(
                 "SELECT * FROM `users`u JOIN `empleados` e ON (u.idUser=e.idUser) WHERE e.idUser=%s ", (usuario,))
             row = cursor.fetchone()
-            print(row)
+            
             
             if row != None:
                 if contraseña == row[5]:

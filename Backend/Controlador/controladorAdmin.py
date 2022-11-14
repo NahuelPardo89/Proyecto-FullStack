@@ -160,6 +160,7 @@ def registrarProd():
     conn= db.connection  
     producto=Producto(1,proveedor,nombre,marca,description,precio,stock,foto)
     ModelProducto.addProducto(conn,producto)
+    print("producto agregado")
 def updateProducto(producto):
     
     db=Conexion()
@@ -211,6 +212,7 @@ def deleteProducto():
     if  conn.is_connected():
         ModelProducto.deleteProducto(conn,producto)
         conn.close()
+        print("producto eliminado")
         return True
     else:
         return False
