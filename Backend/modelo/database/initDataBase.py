@@ -83,17 +83,17 @@ class InitDb():
             #################################### INSERT A BASE DE DATOS##################################################
         
             #INSERT INSTALACION
-            #ModelInstalacion.addInstalacion(conn,gimnasio)
-            #ModelInstalacion.addInstalacion(conn,paddle)
-            #ModelInstalacion.addInstalacion(conn,futbol)
-            #ModelInstalacion.addInstalacion(conn,basquet)
-            #ModelInstalacion.addInstalacion(conn,salon_eventos)
+            ModelInstalacion.addInstalacion(conn,gimnasio)
+            ModelInstalacion.addInstalacion(conn,paddle)
+            ModelInstalacion.addInstalacion(conn,futbol)
+            ModelInstalacion.addInstalacion(conn,basquet)
+            ModelInstalacion.addInstalacion(conn,salon_eventos)
             
             #INSERT EMPLEADOS
-            #ModelUser.addEmpleado(conn,empleado1)
-            #ModelUser.addEmpleado(conn,empleado2)
-            #ModelUser.addEmpleado(conn,empleado3)
-            #ModelUser.addEmpleado(conn,empleado4)
+            ModelUser.addEmpleado(conn,empleado1)
+            ModelUser.addEmpleado(conn,empleado2)
+            ModelUser.addEmpleado(conn,empleado3)
+            ModelUser.addEmpleado(conn,empleado4)
             
             #INSERT PROVEEDORES
             ModelProveedor.addProveedor(conn,proveedor1)
@@ -114,7 +114,3 @@ class InitDb():
             ModelProducto.addProducto(conn,raquetatenis)
 
             
-db= Conexion()
-conn= db.connection    
-
-InitDb(conn)
