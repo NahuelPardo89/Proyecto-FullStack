@@ -7,7 +7,8 @@ const inputs2 = document.querySelectorAll('#formLogin input');
 
 const expresiones = {                                       //Expresiones regulares
 	nombre: /^[a-zA-Z]{3,16}$/, 
-	password: /^.{6,16}$/, // 6 a 16 digitos.
+	apellido : /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/,
+    password: /^.{6,16}$/, // 6 a 16 digitos.
 	correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     celular: /^[0-9]{6,20}$/,
     dni: /^[0-9]{7,9}$/,
@@ -54,12 +55,12 @@ const validarFormulario = (e) => {
         
         break;
         case 'nombreReg':
-            validarCampo(expresiones.nombre, e.target,'nombre')
+            validarCampo(expresiones.apellido, e.target,'nombre')
             
                         
         break;
         case 'apellidoReg':
-            validarCampo(expresiones.nombre, e.target,'apellido')
+            validarCampo(expresiones.apellido, e.target,'apellido')
             
                         
         break;
