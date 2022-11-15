@@ -86,7 +86,7 @@ const validarFormulario = (e) => {
                         
         break;
         case 'dir':
-            validarCampo(expresiones.dir, e.target,'dir')
+            validarCampo(expresiones.password, e.target,'dir')
             
                         
         break;
