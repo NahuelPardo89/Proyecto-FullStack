@@ -6,3 +6,4 @@ Github Pages: https://nahuelpardo89.github.io/Proyecto-FullStack/Frontend/vista/
 
 Wordpress DevCord: https://devcord.g4merstore.com.ar/
 
+link Video: https://www.youtube.com/watch?v=B_L0aNS21BM&ab_channel=cartup90
