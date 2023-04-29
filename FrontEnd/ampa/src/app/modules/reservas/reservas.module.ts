@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ReservasRoutingModule } from './reservas-routing.module';
+import { InstalacionesComponent } from './components/instalaciones/instalaciones.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    InstalacionesComponent
+  ],
   imports: [
     CommonModule,
     ReservasRoutingModule
