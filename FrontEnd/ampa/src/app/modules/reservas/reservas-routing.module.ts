@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InstalacionesComponent } from './components/instalaciones/instalaciones.component';
+import { AgendaComponent } from './components/agenda/agenda.component';
 
 const routes: Routes = [
-  {path:'', component:InstalacionesComponent}
+  {path:'', component:InstalacionesComponent},
+  {path:'reservas/agenda', component:AgendaComponent}
 ];
 
 @NgModule({
