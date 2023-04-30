@@ -15,9 +15,26 @@
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content" *ngIf="(cards | async)?.[0]?.title === 'Ventas de productos'">
+
+        <!-- VENTAS -->
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ventas'">
           
-          <div><h2>Hola</h2></div>
+          <p>Contenido Ventas</p>
+        </mat-card-content>
+        <!-- RESERVAS -->
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Reservas'">
+          
+          <p>Contenido Reservas</p>
+        </mat-card-content>
+        <!-- INGRESOS -->
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ingresos'">
+          
+          <p>Contenido Ingresos</p>
+        </mat-card-content>
+        <!-- TOP CLIENTES -->
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Top clientes'">
+          
+          <p>Contenido top clientes</p>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

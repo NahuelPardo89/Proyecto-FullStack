@@ -13,16 +13,16 @@ export class DashboardComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Ventas de productos', cols: 1, rows: 1 },
-          { title: 'Reservas diarias', cols: 1, rows: 1 },
+          { title: 'Ventas', cols: 1, rows: 1 },
+          { title: 'Reservas', cols: 1, rows: 1 },
           { title: 'Ingresos', cols: 1, rows: 1 },
           { title: 'Top clientes', cols: 1, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Ventas de productos', cols: 2, rows: 1 },
-        { title: 'Reservas diarias', cols: 1, rows: 1 },
+        { title: 'Ventas', cols: 2, rows: 1 },
+        { title: 'Reservas', cols: 1, rows: 1 },
         { title: 'Ingresos', cols: 1, rows: 2 },
         { title: 'Top clientes', cols: 1, rows: 1 }
       ];
