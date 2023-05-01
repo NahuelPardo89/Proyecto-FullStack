@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // MODULOS
 import { SharedModule } from './modules/shared/shared.module';
+import { ReservasModule } from './modules/reservas/reservas.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SharedModule } from './modules/shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    ReservasModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

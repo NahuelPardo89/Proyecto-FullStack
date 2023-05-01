@@ -1,2 +1,72 @@
-<p>agenda works!</p>
-<h1>ESTA ES LA PAGINA DE AGENDA</h1>
+
+
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5" id="agenda">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">¡Bienvenido/a a nuestro servicio de reserva de instalaciones en línea!</h1>
+      <p class="col-lg-10 fs-4">
+
+        ¿Eres un amante de los deportes y te gusta jugar con tus amigos? ¡Nosotros hacemos que la reserva de nuestras instalaciones sea fácil y rápida! <br> Con nuestro sistema de reserva en línea, podrás reservar la instalación que desees en tu lugar favorito de manera fácil y rápida.
+        
+        Nuestro servicio te permite reservar una instalación en línea en pocos minutos, sin importar la hora o el lugar en el que te encuentres. <br> Además, podrás seleccionar el día y la hora que más te convenga para jugar con tus amigos y familiares.
+        <br>
+        ¡No esperes más para reservar tu instalación favorita y disfrutar de una tarde llena de diversión y deporte con tus seres queridos!</p>
+    </div>
+    
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+
+<!-- NOMBRE -->
+
+        <div class="input-group mb-3">
+           <span class="input-group-text" id="inputGroup-sizing-default">Nombre:</span>
+           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+<!-- APELLIDO -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Apellido:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+       </div>
+<!-- CORREO -->
+       <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+        <label for="floatingInput">Correo:</label>
+      </div>
+<!-- MULTIPLE CHOISE DE INSTALACION -->
+       <select class="form-select" aria-label="Default select example">
+        <option selected>¡Elige tu instalacion favorita!</option>
+        <option value="1">01- Cancha de futbol</option>
+        <option value="2">02- Cancha de basquet</option>
+        <option value="3">03- Cancha de paddle</option>
+        <option value="4">04- Gimnasio</option>
+        <option value="5">05- Salón de eventos AM.P.A.</option>
+      </select> <br>
+<!-- SWITCH DE EQUIPAMIENTO -->
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Quiero mi equipamiento</label>
+      </div> <br>
+
+<!-- ELIGE FECHA -->
+      <div>
+        <p>Elige tu fecha</p>
+        <input matInput [matDatepicker]="picker">
+        <p>MM/DD/YYYY</p>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+        
+<!-- BOTON RESERVAR -->
+      <div class="col-12" style="text-align: end;">
+        <button class="btn btn-primary" type="submit">Reservar</button>
+      </div>
+<!-- TERMINOS Y CONDICIONES -->
+        <hr class="my-4">
+        <small class="text-body-secondary">Al hacer click en Reservar, estas aceptando los térnminos y condiciones.</small>
+      </form>
+    </div>
+  </div>
+</div>
+
+
