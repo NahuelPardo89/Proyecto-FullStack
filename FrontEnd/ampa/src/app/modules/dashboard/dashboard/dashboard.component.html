@@ -17,21 +17,10 @@
         </mat-card-header>
 
         <!-- VENTAS -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ventas'" style="display: flex;">
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ventas'">
           
-        
-          <div *ngFor="let producto of ventas" class="container_tarjeta">
-            <mat-card class="tarjeta_producto">
-              <mat-card-header>
-                <mat-card-title>{{producto.nombre}}</mat-card-title>
-                <mat-card-subtitle>{{producto.categoria}}</mat-card-subtitle>
-              </mat-card-header>
-              <img mat-card-lg-image  src ={{producto.img}} alt={{producto.nombre}} style="margin-bottom: 20px;">
-              
-              <mat-card-footer><b>$ {{producto.precio}}</b></mat-card-footer >
-                
-            </mat-card>
-          </div>
+          
+          <app-ventas style="display: flex;"/>
 
 
         </mat-card-content>
