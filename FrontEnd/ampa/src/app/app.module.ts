@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // MODULOS
 import { SharedModule } from './modules/shared/shared.module';
+import { ReservasModule } from './modules/reservas/reservas.module';
 import { AuthModule } from './modules/auth/auth.module';
 
 
@@ -20,6 +21,7 @@ import { AuthModule } from './modules/auth/auth.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    ReservasModule,
     AuthModule
   ],
   providers: [],

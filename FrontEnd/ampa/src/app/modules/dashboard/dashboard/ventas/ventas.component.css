@@ -1,0 +1,22 @@
+.dashboard-card-content {
+    text-align: center;
+  }
+  .container_tarjeta {
+    box-sizing: border-box;
+  }
+              
+  .tarjeta_producto {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    min-width: 250px;
+    margin-right: 15px;
+  }
+  
+  .tarjeta_producto img{
+    padding: 10px;
+  }
+  
