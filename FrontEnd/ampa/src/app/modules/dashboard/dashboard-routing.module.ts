@@ -4,7 +4,7 @@ import { DashboardNavComponent } from './dashboard-nav/dashboard-nav.component';
 
 
 const routes: Routes = [
-  {path:'', component: DashboardNavComponent},
+  {path:'admin', component: DashboardNavComponent},
   {path: 'productos',loadChildren: () => import('../productos/productos.module').then(m => m.ProductosModule)},
   {path: 'reservas',loadChildren: () => import('../reservas/reservas.module').then(m => m.ReservasModule)},
 ];

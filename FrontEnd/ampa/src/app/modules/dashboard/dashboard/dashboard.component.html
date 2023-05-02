@@ -24,22 +24,31 @@
 
 
         </mat-card-content>
+
+
         <!-- RESERVAS -->
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Reservas'">
           
           <p>Contenido Reservas</p>
         </mat-card-content>
+
+
         <!-- INGRESOS -->
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ingresos'">
           
           <p>Contenido Ingresos</p>
         </mat-card-content>
-        <!-- TOP CLIENTES -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Top clientes'">
           
-          <p>Contenido top clientes</p>
+
+        <!-- CLIENTES -->
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Clientes'">
+          
+         <app-clientes/>
+
         </mat-card-content>
       </mat-card>
+
+
     </mat-grid-tile>
   </mat-grid-list>
 </div>

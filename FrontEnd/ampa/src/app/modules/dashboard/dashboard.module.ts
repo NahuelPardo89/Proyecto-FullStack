@@ -13,7 +13,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+
+
 import { VentasComponent } from './dashboard/ventas/ventas.component';
+import { ClientesComponent } from './dashboard/clientes/clientes.component';
+
 
 
 
@@ -21,7 +27,9 @@ import { VentasComponent } from './dashboard/ventas/ventas.component';
   declarations: [
     DashboardNavComponent,
     DashboardComponent,
-    VentasComponent
+    VentasComponent,
+    ClientesComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -34,7 +42,9 @@ import { VentasComponent } from './dashboard/ventas/ventas.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatTableModule
   ]
 })
 export class DashboardModule { }

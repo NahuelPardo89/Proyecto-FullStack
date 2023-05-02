@@ -21,16 +21,16 @@ export class DashboardComponent {
         return [
           { title: 'Ventas', cols: 1, rows: 1 },
           { title: 'Reservas', cols: 1, rows: 1 },
-          { title: 'Ingresos', cols: 1, rows: 1 },
-          { title: 'Clientes', cols: 1, rows: 1 }
+          { title: 'Clientes', cols: 1, rows: 1 },
+          { title: 'Ingresos', cols: 1, rows: 1 }
         ];
       }
 
       return [
         { title: 'Ventas', cols: 2, rows: 1 },
         { title: 'Reservas', cols: 1, rows: 1 },
-        { title: 'Ingresos', cols: 1, rows: 2 },
-        { title: 'Clientes', cols: 1, rows: 1 }
+        { title: 'Clientes', cols: 1, rows: 2 },
+        { title: 'Ingresos', cols: 1, rows: 1 }
       ];
     })
   );
