@@ -1,0 +1,27 @@
+
+.navbar-nav a {
+    color: white;
+
+}
+
+.navbar-nav .btn {
+    color: aliceblue;
+
+}
+
+.navbar-nav .nav-item:hover a {
+    color:black;
+    font-weight: bold;
+}
+
+
+
+
+.nav-link:hover {
+    
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    cursor: pointer;
+    background: white;
+    color: aliceblue;
+}
