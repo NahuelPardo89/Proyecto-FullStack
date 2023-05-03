@@ -1,9 +1,70 @@
 <div class="botones">
-    <button mat-raised-button color="primary">Fútbol</button>
-    <button mat-raised-button color="accent">Tenis</button>
-    <button mat-raised-button color="warn">Padel</button>
+    <button mat-raised-button color="primary" (click)="cambiarDeporte(1)">Fútbol</button>
+    <button mat-raised-button color="accent" (click)="cambiarDeporte(2)">Tenis</button>
+    <button mat-raised-button color="warn" (click)="cambiarDeporte(3)">Padel</button>
 </div>
-<div class="contenido">
-    <h2>Esto es fútbol</h2>
+<div class="contenido" [ngSwitch]="deporte">
+    <!--TURNOS FUTBOL-->
+    <div *ngSwitchCase="1">
+        <h3>Turnos Fútbol</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Nombre</th>
+                <th>Cancha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let turno of futbol">
+                <td>{{ turno.hora }}</td>
+                <td>{{ turno.nombre }}</td>
+                <td>{{ turno.cancha }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <!--TURNOS TENIS-->
+    <div *ngSwitchCase="2">
+        <h3>Turnos Tenis</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Nombre</th>
+                <th>Cancha</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let turno of tenis">
+                <td>{{ turno.hora }}</td>
+                <td>{{ turno.nombre }}</td>
+                <td>{{ turno.cancha }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--TURNOS PADEL-->
+    <div *ngSwitchCase="3">
+        <h3>Turnos Padel</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Nombre</th>
+                <th>Cancha</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let turno of padel">
+                <td>{{ turno.hora }}</td>
+                <td>{{ turno.nombre }}</td>
+                <td>{{ turno.cancha }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>
