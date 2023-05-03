@@ -12,10 +12,9 @@ const routes: Routes = [
   {path: 'reservas', component: InstalacionesComponent },
   {path:'reservas/agenda', component: AgendaComponent },
   {path: 'contacto', component: ContactoComponent },
+  
   {path:'**', redirectTo:'/home'},
- 
- 
-];
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
