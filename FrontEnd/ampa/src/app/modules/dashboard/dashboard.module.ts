@@ -17,8 +17,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 
 
+
 import { VentasComponent } from './dashboard/ventas/ventas.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
+import { ReservasComponent } from './dashboard/reservas/reservas.component';
 
 
 
@@ -29,6 +31,8 @@ import { ClientesComponent } from './dashboard/clientes/clientes.component';
     DashboardComponent,
     VentasComponent,
     ClientesComponent,
+    ReservasComponent,
+    
     
   ],
   imports: [
@@ -44,7 +48,8 @@ import { ClientesComponent } from './dashboard/clientes/clientes.component';
     MatCardModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
   ]
 })
 export class DashboardModule { }
