@@ -24,6 +24,7 @@ import { AuthModule } from './modules/auth/auth.module';
     ReservasModule,
     AuthModule
   ],
+  exports:[SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })
