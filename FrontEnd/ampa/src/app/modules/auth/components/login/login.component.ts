@@ -36,7 +36,7 @@ export class LoginComponent {
         },
         complete:() => {
           console.log("login successful");
-          this._router.navigateByUrl("/dashboard");
+          this._router.navigateByUrl("/dashboard/admin");
           this.form.reset();
         }
       })
