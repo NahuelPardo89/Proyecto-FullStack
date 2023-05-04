@@ -5,6 +5,7 @@ import { AgendaComponent } from './modules/reservas/components/agenda/agenda.com
 import { ContactoComponent } from './modules/home/components/contacto/contacto.component';
 import { ProductosComponent } from './modules/productos/components/productos/productos.component';
 import { CarritoComponent } from './modules/productos/components/carrito/carrito.component';
+import { AboutusComponent } from './modules/home/components/aboutus/aboutus.component';
 const routes: Routes = [
   {path: 'home',loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
   {path: 'dashboard',loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'productos', component: ProductosComponent},
   {path: 'productos/carrito', component: CarritoComponent},
   {path:'**', redirectTo:'/home'},
+  {path:'home/aboutus', component:AboutusComponent}
  ];
 
 @NgModule({
