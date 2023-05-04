@@ -1,0 +1,43 @@
+.container-main{
+    background-color: rgb(235, 235, 235);
+}
+
+.container{
+    padding: 5%;
+}
+
+.textoo{
+    text-align: center;
+    font-size: 0.95em;
+    margin-left: 5%;
+}
+
+.conteiner-articles3{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 7%;
+}
+
+.conteiner-articles3 iframe{
+    width: 25%;
+    border-radius: 15%;
+}
+
+.conteiner-articles3 img{
+    width: 65%;
+    border-radius: 15%;
+}
+
+.textmap{
+    text-align: center;
+    margin: 5%;
+}
+
+ul{
+    list-style: none;
+}
+
+.color-acento{
+    color: blue;
+}
