@@ -24,7 +24,7 @@ export class NavComponent implements OnInit, OnDestroy {
   // Revisar
   logout(){
     this.userLoginOn = false;
-    this._loginService.currentUserLoginON.unsubscribe();
+    
   }
 
   
