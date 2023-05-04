@@ -7,7 +7,7 @@ const routes: Routes = [
   {path:'admin', component: DashboardNavComponent},
   {path: 'productos',loadChildren: () => import('../productos/productos.module').then(m => m.ProductosModule)},
   {path: 'reservas',loadChildren: () => import('../reservas/reservas.module').then(m => m.ReservasModule)},
-  {path: 'auth',loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule)},
+ 
 ];
 
 @NgModule({
