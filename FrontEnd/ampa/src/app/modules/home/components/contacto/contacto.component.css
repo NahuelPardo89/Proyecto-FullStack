@@ -1,4 +1,58 @@
-.card-img-top{
-    max-width: 200px;
-    text-align: center;
+*{
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    padding: 40px;
+    border-radius: 0;
+    position: relative;
+    top: 33%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.row{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.col-md-7{
+    padding: 50px;
+}
+
+.col-md-5{
+    background-color: black;
+    color: white;
+    padding: 50px;
+}
+
+.form-control{
+    height: 52px;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    border-radius: 5px;
+    box-sizing: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bi{
+    font-size: 20px;
+}
+
+.d-flex p{
+    font-size: 15px;
+    padding-left: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    
+@media only screen and (max-width:600px){
+    .container{
+        width: 100%;
+        position: relative;
+        left: 50%;
+        top: 55%;
+        
+    }
 }
