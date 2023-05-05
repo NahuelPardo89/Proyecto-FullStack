@@ -11,19 +11,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/shared.module';
 import { ReservasModule } from './modules/reservas/reservas.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
+
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardUserComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,6 +32,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     BrowserAnimationsModule,
     SharedModule,
     ReservasModule,
+    DashboardModule,
     AuthModule,
     MatGridListModule,
     MatCardModule,

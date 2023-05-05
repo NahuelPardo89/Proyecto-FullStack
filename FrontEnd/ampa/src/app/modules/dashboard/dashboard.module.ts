@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
+import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 
 
 
@@ -24,7 +25,7 @@ import { VentasComponent } from './dashboard/ventas/ventas.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
 import { ReservasComponent } from './dashboard/reservas/reservas.component';
 import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
-import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
+
 
 
 
@@ -39,7 +40,7 @@ import { DashboardUserComponent } from './dashboard-user/dashboard-user.componen
     ClientesComponent,
     ReservasComponent,
     IngresosComponent,
-    DashboardUserComponent
+    DashboardUserComponent,
     
    
     
