@@ -15,8 +15,19 @@
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Mi cuenta'">
+          <div>Contenido de Cuenta</div>
+        </mat-card-content>
+        
+        
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Productos'">
+          <div>Contenido de productos</div>
+        </mat-card-content>
+        
+        
+        
+        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Servicios'">
+          <div>Contenido de servicios</div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
