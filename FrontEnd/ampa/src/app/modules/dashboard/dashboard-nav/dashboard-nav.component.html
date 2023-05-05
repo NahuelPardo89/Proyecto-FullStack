@@ -23,6 +23,12 @@
       <span>AMPA</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <div *ngIf="isAdmin === true">
     <app-dashboard/>
+    </div>
+    <div *ngIf="isAdmin === false">
+    <app-dashboard-user/>
+    </div>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>

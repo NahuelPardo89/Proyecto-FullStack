@@ -24,6 +24,7 @@ import { VentasComponent } from './dashboard/ventas/ventas.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
 import { ReservasComponent } from './dashboard/reservas/reservas.component';
 import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
+import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 
 
 
@@ -38,6 +39,7 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
     ClientesComponent,
     ReservasComponent,
     IngresosComponent,
+    DashboardUserComponent
     
    
     
