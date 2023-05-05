@@ -27,7 +27,7 @@
 
 
         <!-- RESERVAS -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Reservas'">
+        <mat-card-content class="dashboard-card-content reservas" *ngIf="card.title === 'Reservas'">
           
           
           <app-reservas/>  
@@ -35,16 +35,16 @@
 
 
         <!-- INGRESOS -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ingresos'">
+        <mat-card-content class="dashboard-card-content ingresos" *ngIf="card.title === 'Ingresos'">
           
           <app-ingresos/>
         </mat-card-content>
           
 
         <!-- CLIENTES -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Clientes'">
+        <mat-card-content class="dashboard-card-content clientes" *ngIf="card.title === 'Clientes'">
           
-         <app-clientes/>
+         <app-clientes class="clientes-component"/>
 
         </mat-card-content>
       </mat-card>
