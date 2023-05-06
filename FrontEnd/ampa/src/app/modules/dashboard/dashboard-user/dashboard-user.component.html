@@ -16,7 +16,20 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Mi cuenta'">
-          <div>Contenido de Cuenta</div>
+          <div class="container">
+            <h2>Bienvenido {{loggedInUserDni?.toString() || 'Desconocido'}}</h2>
+          </div>
+          <hr>
+          <div class="historial">
+            <div class="container reservas">
+              <h3><b>Reservas: <hr> </b>{{reservas}}</h3> 
+            </div>
+
+            <div class="container compras">
+              <h3><b>Compras Realizadas: </b> <hr>{{compras}}</h3>
+            </div>
+
+          </div>
         </mat-card-content>
         
         

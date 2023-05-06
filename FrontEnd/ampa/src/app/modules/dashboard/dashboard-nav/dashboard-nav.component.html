@@ -5,11 +5,13 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Admin. Productos</a>
-      <a mat-list-item href="#">Admin. Servicios</a>
+      <a  *ngIf="isAdmin === true" mat-list-item routerLink="/home/Productos">Productos</a>
+      <a  *ngIf="isAdmin === true" mat-list-item routerLink="/home/Servicios">Servicios</a>
+      <a  *ngIf="isAdmin === false" mat-list-item routerLink="/home">Home</a>
       <button class="btn" (click)="isAdminToggle()">
         Cambiar rol
       </button>
+      
       
     </mat-nav-list>
   </mat-sidenav>
@@ -24,6 +26,7 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>AMPA</span>
+      
     </mat-toolbar>
 
 

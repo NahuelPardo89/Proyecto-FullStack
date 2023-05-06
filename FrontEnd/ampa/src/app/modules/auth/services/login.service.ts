@@ -12,6 +12,7 @@ export class LoginService {
   currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({dni:0,nombre:'',apellido:'',teléfono:'',direccion:'',email:'',idCiudad:0,grupo:''})
 
 
+  loggedInUserDni: number | null = null;
   constructor(private http:HttpClient,) { }
 
   login(credenciales:LoginRequest):Observable<User>{

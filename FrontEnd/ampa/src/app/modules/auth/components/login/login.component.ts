@@ -30,13 +30,14 @@ export class LoginComponent {
       this.loginService.login(this.form.value as LoginRequest).subscribe({
         next: (userData) => {
           console.log(userData)
+          this.loginService.loggedInUserDni = this.form.value.dni ?? null;
         },
         error:(errorData) => {
           console.log(errorData)
         },
         complete:() => {
           console.log("login successful");
-          this._router.navigateByUrl("/dashboard/admin");
+          this._router.navigateByUrl("/dashboard");
           this.form.reset();
         }
       })
