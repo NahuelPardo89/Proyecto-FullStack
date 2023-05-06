@@ -19,3 +19,38 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+.productos {
+  background-image: url(../../../../assets/img/prod-deportivos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 28vh;
+  width: 100%;
+}
+
+
+.productos button{
+  margin-bottom: 10px;
+}
+
+.servicios {
+  background-image: url(../../../../assets/img/futbol-servicios-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 28vh;
+  width: 100%;
+}
+
+
+.servicios button{
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

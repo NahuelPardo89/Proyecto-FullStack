@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
+  <h1 class="mat-h1">Dashboard User</h1>
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
@@ -21,13 +21,17 @@
         
         
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Productos'">
-          <div>Contenido de productos</div>
+          <div class="container productos">
+            <button class="btn btn-secondary"><a routerLink="/home/Productos">Ver Productos</a></button>
+          </div>
         </mat-card-content>
         
         
         
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Servicios'">
-          <div>Contenido de servicios</div>
+          <div class="container servicios">
+            <button class="btn btn-secondary"><a routerLink="/home/Servicios">Ver Servicios</a></button>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
