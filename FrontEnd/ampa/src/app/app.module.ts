@@ -12,10 +12,19 @@ import { SharedModule } from './modules/shared/shared.module';
 import { ReservasModule } from './modules/reservas/reservas.module';
 import { AuthModule } from './modules/auth/auth.module';
 
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -23,7 +32,14 @@ import { AuthModule } from './modules/auth/auth.module';
     BrowserAnimationsModule,
     SharedModule,
     ReservasModule,
-    AuthModule
+    DashboardModule,
+    AuthModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   exports:[SharedModule],
   providers: [],

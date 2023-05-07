@@ -16,3 +16,13 @@
   right: 10px;
 }
 
+.clientes {
+  overflow-x: auto;
+}
+.reservas {
+  overflow-x: auto;
+}
+.ingresos {
+  overflow-x: auto;
+}
+

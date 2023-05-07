@@ -1,0 +1,75 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.productos {
+  background-image: url(../../../../assets/img/prod-deportivos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 28vh;
+  width: 100%;
+}
+
+
+.productos button{
+  margin-bottom: 10px;
+}
+
+.servicios {
+  background-image: url(../../../../assets/img/futbol-servicios-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 28vh;
+  width: 100%;
+}
+
+
+.servicios button{
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.historial {
+  display: flex;
+}
+.reservas{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .reservas h3 {
+    font-size: 12px;
+  }
+  .compras h3 {
+    font-size: 12px;
+  }
+}

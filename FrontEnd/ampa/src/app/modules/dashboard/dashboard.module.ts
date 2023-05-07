@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
+import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 
 
 
@@ -30,6 +31,7 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardNavComponent,
@@ -38,6 +40,7 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
     ClientesComponent,
     ReservasComponent,
     IngresosComponent,
+    DashboardUserComponent,
     
    
     

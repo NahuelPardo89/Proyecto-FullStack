@@ -1,7 +1,7 @@
 <div class="botones">
-    <button mat-raised-button color="primary" (click)="cambiarDeporte(1)">Fútbol</button>
-    <button mat-raised-button color="accent" (click)="cambiarDeporte(2)">Tenis</button>
-    <button mat-raised-button color="warn" (click)="cambiarDeporte(3)">Padel</button>
+    <button  class="btn btn-primary" (click)="cambiarDeporte(1)">Fútbol</button>
+    <button class="btn btn-danger" (click)="cambiarDeporte(2)">Tenis</button>
+    <button class="btn btn-success" (click)="cambiarDeporte(3)">Padel</button>
 </div>
 <div class="contenido" [ngSwitch]="deporte">
     <!--TURNOS FUTBOL-->

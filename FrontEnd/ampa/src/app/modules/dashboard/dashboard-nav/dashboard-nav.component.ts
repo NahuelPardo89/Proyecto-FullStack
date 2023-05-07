@@ -10,6 +10,12 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class DashboardNavComponent {
 
+  isAdmin:boolean = false;
+
+  isAdminToggle() {
+    this.isAdmin = !this.isAdmin
+  }
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),

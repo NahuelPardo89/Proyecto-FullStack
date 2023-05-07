@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
+  <h1 class="mat-h1">Dashboard Admin</h1>
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
@@ -27,7 +27,7 @@
 
 
         <!-- RESERVAS -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Reservas'">
+        <mat-card-content class="dashboard-card-content reservas" *ngIf="card.title === 'Reservas'">
           
           
           <app-reservas/>  
@@ -35,16 +35,16 @@
 
 
         <!-- INGRESOS -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ingresos'">
+        <mat-card-content class="dashboard-card-content ingresos" *ngIf="card.title === 'Ingresos'">
           
           <app-ingresos/>
         </mat-card-content>
           
 
         <!-- CLIENTES -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Clientes'">
+        <mat-card-content class="dashboard-card-content clientes" *ngIf="card.title === 'Clientes'">
           
-         <app-clientes/>
+         <app-clientes class="clientes-component"/>
 
         </mat-card-content>
       </mat-card>
