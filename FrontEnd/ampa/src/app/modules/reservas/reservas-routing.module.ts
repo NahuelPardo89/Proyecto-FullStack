@@ -5,7 +5,7 @@ import { AgendaComponent } from './components/agenda/agenda.component';
 
 const routes: Routes = [
   {path:'', component:InstalacionesComponent},
-  {path:'reservas/agenda', component:AgendaComponent}
+  {path:'agenda', component:AgendaComponent}
 ];
 
 @NgModule({
