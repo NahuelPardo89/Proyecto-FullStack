@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+  margin: 15px;
+  padding: 10px;
+}
+th{
+  width: 20%;
+}
+.pointer{
+  cursor: pointer;
+}
+.sinproductos{
+  text-align: center;
+}
+#imgcarrito{
+  width: 100px; 
+  height: 100px;
+  margin: 10px;
+}
+.carritoimg{
+  display: flex;
+  justify-content: center;
+}
+.botonpagar{
+  text-align: center;
+  margin: 10px;
+}
+.preciototal{
+  text-align: center;
+  margin: 15px;
+  color: rgb(221, 78, 12);
+}

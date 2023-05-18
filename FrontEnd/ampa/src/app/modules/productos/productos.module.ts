@@ -4,7 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ProductosRoutingModule } from './productos-routing.module';
 import { ProductosComponent } from './components/productos/productos.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
-
+import {MatTableModule} from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -13,7 +19,14 @@ import { CarritoComponent } from './components/carrito/carrito.component';
   ],
   imports: [
     CommonModule,
-    ProductosRoutingModule
-  ]
+    ProductosRoutingModule,
+    MatTableModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatSnackBarModule,
+    MatButtonModule
+  ],
 })
 export class ProductosModule { }
