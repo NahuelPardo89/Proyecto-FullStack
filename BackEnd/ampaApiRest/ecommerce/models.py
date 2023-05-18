@@ -16,14 +16,14 @@ class Proveedor(models.Model):
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
-
     
-
     class Meta:
         db_table = 'Categoria'
         verbose_name='Categoria'
         verbose_name_plural= 'Categorias'
-
+    def __str__(self):
+        return (self.nombre)
+        
 class Producto(models.Model):
     idProducto = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50,null=False, blank=False)
