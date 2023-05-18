@@ -9,7 +9,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_display = ['nombre']
 
 class ProductoAdmin(admin.ModelAdmin):
-    list_display = ['idProducto', 'nombre', 'marca', 'descripcion', 'precio', 'stock', 'proveedor', 'categoria']
+    list_display = ['idProducto', 'nombre', 'marca', 'descripcion', 'precio', 'stock', 'proveedor', 'categoria','foto']
 
 admin.site.register(Proveedor, ProveedorAdmin)
 admin.site.register(Categoria, CategoriaAdmin)
