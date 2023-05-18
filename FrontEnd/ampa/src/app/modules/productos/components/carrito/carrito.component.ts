@@ -32,10 +32,13 @@ export class CarritoComponent {
 
   constructor(private _carritoService: CarritoService, private _snackBar: MatSnackBar) {
   }
-
+  //variable total para el precio total
+  total: any;
 //se inicializa el metodo al cargar la pagina
 ngOnInit(): void {
   this.cargarProductos();
+  
+  
 }
 //metodo para cargar productos el el template cuando carga
 cargarProductos(){
@@ -48,6 +51,7 @@ cargarProductos(){
 eliminarProducto(index: number){
   console.log(index);
   this._carritoService.eliminarProducto(index);
+  
   this.cargarProductos();
   //mensajito de eliminacion
   this._snackBar.open('El producto fue eliminado de su carrito','',{
@@ -56,6 +60,40 @@ eliminarProducto(index: number){
     verticalPosition: 'bottom'
   })
 }
+//Metdos de incrementar y decrementar productos del carrito
+incrementarCantidad(index: number){
+  console.log(index);
+  this._carritoService.incrementarCantidad(index);
+  this._carritoService.actualizarPrecio(index);
+  this.cargarProductos();
+  //mensajito de agregar
+  this._snackBar.open('El producto fue agregado correctamente','',{
+    duration: 2000,
+    horizontalPosition: 'center',
+    verticalPosition: 'bottom'
+  })
+}
+decrementarCantidad(index: number){
+console.log(index);
+this._carritoService.decrementarCantidad(index);
+this._carritoService.actualizarPrecio(index);
+//mensajito de decremento
+this._snackBar.open('El producto fue restado correctamente','',{
+  duration: 2000,
+  horizontalPosition: 'center',
+  verticalPosition: 'bottom'
+})
+this.cargarProductos();
+}
+//Metodo de calculo del precio total
+calcularPrecioTotal(): number {
+  let precioTotal = 0;
+  for (const producto of this.listaProductos) {
+    precioTotal += producto.precio;
+  }
+  return precioTotal;
+}
+
 
 
 

@@ -40,11 +40,11 @@
                 <th mat-header-cell *matHeaderCellDef> Acciones </th>
                 <td mat-cell *matCellDef="let element; let i = index"> 
                     <!-- Boton agregar -->
-                    <a class="pointer"  matTooltip="Agregar">
+                    <a class="pointer"  matTooltip="Agregar" (click)="incrementarCantidad(i)">
                         <mat-icon>add</mat-icon>
                     </a>
                     <!-- Boton remover -->
-                    <a class="pointer" matTooltip="Remover">
+                    <a class="pointer" matTooltip="Remover" (click)="decrementarCantidad(i)">
                         <mat-icon>remove</mat-icon>
                     </a>
                     <!-- Boton delete -->
@@ -55,6 +55,7 @@
                 </td>
               </ng-container>
         
+
         
         <!--    Paginador -->
         </table>
@@ -64,7 +65,8 @@
         </mat-paginator>  
     </div>
     
-    
+    <h2 class="preciototal">Precio total de los productos: {{ calcularPrecioTotal() }}</h2>
+
     <!-- BOTON DE PAGAR -->
     <div class="botonpagar"><button mat-raised-button color="warn">Pagar</button></div>
     
