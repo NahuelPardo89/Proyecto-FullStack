@@ -1,4 +1,37 @@
-.tarjeta-producto {
-    width: 15%;
+main {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    
+    
     
 }
+.container {
+    width: 10%;
+    display: flex;
+    
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+    
+}
+.container img {
+    width: 80%;
+    object-fit: contain;
+    aspect-ratio: 2/2;
+    
+    margin: auto;
+}
+
+example-header-image {
+    width: 100%;
+}
+
+mat-card-title {
+    text-align: center;
+    width: 100%;
+    margin-right: 30%;
+    border: 2px solid red;
+}
+
