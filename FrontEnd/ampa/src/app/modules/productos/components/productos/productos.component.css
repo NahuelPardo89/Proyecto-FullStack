@@ -4,19 +4,24 @@
     
     display: flex;
     flex-wrap: wrap;
+    flex: 1 0 25%;
+    justify-content: space-between;
+    gap: 10px;
 }
 .banner {
     margin: auto;
-    width: 92%;
+    width: 100%;
     margin-top: 15px;
 }
 
 .card {
     width: 20%;
     max-height: 500px;
-    padding: 10px;
-    margin-left: 4%;
+    padding: 20px;
+    
+    
     margin-top: 25px;
+    
 }
 .card h2 {
     text-align: center;
@@ -43,3 +48,17 @@ button {
              0 0  0 2px rgb(255,255,255),
              0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
+
+@media (max-width: 768px) and ( min-width: 481px) {
+    .card {
+      flex-basis: 40%; /* 2 tarjetas por fila en resoluciones de tablet */
+    }
+    .container {
+        justify-content: space-between;
+        
+    }
+}
+
+
+
+
