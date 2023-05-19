@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReservasRoutingModule } from './reservas-routing.module';
 import { InstalacionesComponent } from './components/instalaciones/instalaciones.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { AgendaComponent } from './components/agenda/agenda.component';
   imports: [
     CommonModule,
     ReservasRoutingModule,
-  
+    HttpClientModule
   ]
 })
 export class ReservasModule { }
