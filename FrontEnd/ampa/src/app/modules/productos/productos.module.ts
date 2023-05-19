@@ -11,6 +11,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatPaginatorModule,
     MatSortModule,
     MatSnackBarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
   ],
 })
 export class ProductosModule { }
