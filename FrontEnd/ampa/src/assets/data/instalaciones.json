@@ -1,0 +1,31 @@
+{
+    "instalaciones": [
+      {
+        "idInstalacion ": 1,
+        "nombre": "Cancha de futbol",
+        "descripcion": "¡Juega como un campeón en nuestra cancha de fútbol de primer nivel! Descubre el lugar perfecto para desatar tu pasión por el fútbol y compartir momentos inolvidables con tus amigos.",
+        "imgInstalacion": "../../../../../assets/img/canchaFutbol.jpg"
+      },
+      {
+        "idInstalacion ": 2,
+        "nombre": "Cancha de basquet",
+        "descripcion": "¡Anímate a mostrar tus habilidades en nuestra cancha de baloncesto de primera categoría! En nuestro espacio dedicado al baloncesto, encontrarás el escenario perfecto para vivir la emoción y la adrenalina de este deporte tan apasionante.",
+        "imgInstalacion": "../../../../../assets/img/cancha-de-basquet.jpeg"
+      }, {
+        "idInstalacion ": 3,
+        "nombre": "Cancha de paddle",
+        "descripcion": "¡Descubre la emoción del paddle en nuestra cancha de primer nivel! Te invitamos a disfrutar de un deporte en auge en nuestras instalaciones diseñadas especialmente para brindarte una experiencia inigualable.",
+        "imgInstalacion": "../../../../../assets/img/canchaPaddle.jpg"
+      }, {
+        "idInstalacion ": 4,
+        "nombre": "Gimnasio",
+        "descripcion": "¡Descubre una nueva forma de mantenerte en forma y alcanzar tus objetivos en nuestro gimnasio de vanguardia! Te invitamos a formar parte de nuestra comunidad fitness, donde encontrarás todas las herramientas y el apoyo que necesitas para lograr tus metas de acondicionamiento físico.",
+        "imgInstalacion": "../../../../../assets/img/Gimnacio.jpg"
+      }, {
+        "idInstalacion ": 5,
+        "nombre": "Salon de eventos A.M.P.A.",
+        "descripcion": "Somos un lugar ideal para celebrar cualquier tipo de evento, desde bodas y quinceañeras, hasta cumpleaños, reuniones empresariales y eventos sociales. Nuestro salón cuenta con una capacidad para hasta 200 personas, lo que lo convierte en el espacio perfecto para tus grandes celebraciones. Contáctanos hoy mismo para obtener más información sobre nuestras promociones y reservar tu fecha. ¡Te esperamos!",
+        "imgInstalacion": "../../../../../assets/img/salon-de-eventos.jpeg"
+      }
+    ]
+  }
