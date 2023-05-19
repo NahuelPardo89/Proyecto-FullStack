@@ -75,13 +75,29 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASES=   {
+    'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'devc8757_ampa',
+        'USER': 'devc8757_root',
+        'PASSWORD': 'ampadb',
+        'HOST': '185.245.180.33',
+        'PORT': '3306',
+        'OPTIONS': {
+        'sql_mode': 'traditional',
+        }
 }
-
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
