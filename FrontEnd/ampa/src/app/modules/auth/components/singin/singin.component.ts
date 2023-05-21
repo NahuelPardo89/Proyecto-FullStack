@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder,  FormGroup,  Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { SinginService } from '../../services/singin.service';
 
 @Component({
   selector: 'app-singin',
@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class SinginComponent {
   registroForm:FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private singinService: SinginService,
+    private router: Router) {
     this.registroForm = this.formBuilder.group({
     dni:[,[Validators.required,Validators.pattern("^[0-9]*$"),Validators.min(1),Validators.max(999000000)] ],
     nombre:['', [Validators.required,]],
@@ -31,9 +32,19 @@ export class SinginComponent {
     if (this.registroForm.valid) {
       const usuario = this.registroForm.value;
       console.log('Usuario registrado:', usuario);
-      //  llamar  servicio para guardar el usuario en la base de datos
-    }
-  }
+      this.singinService.registerUser(usuario).subscribe(
+        (res) => {
+          console.log('Usuario registrado:', res);
+          
+          this.router.navigate(['/dasboard']);
+        },
+        (err) => {
+          // Trata los errores de la petición aquí
+          console.log(err);
+        }
+      );
+    
+  }}
 
   getErrorMessage(fieldName: string): string {
     const field = this.registroForm.get(fieldName);
