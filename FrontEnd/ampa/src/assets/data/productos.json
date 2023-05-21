@@ -1,0 +1,67 @@
+{
+    "productos": [
+      {
+        "nombre": "Zapatillas de running",
+        "categoria": "Calzado",
+        "precio": 89.99,
+        "descripcion": "Zapatillas diseñadas para correr, proporcionan amortiguación y tracción en diferentes terrenos.",
+        "foto_url": "https://atomik.com.ar/wp-content/uploads/2022/09/ONDE-I22-SALMON-2.jpg"
+      },
+      {
+        "nombre": "Balón de fútbol",
+        "categoria": "Accesorios",
+        "precio": 24.99,
+        "descripcion": "Balón oficial de tamaño y peso reglamentario para la práctica del fútbol.",
+        "foto_url": "https://oportunidades-vip.com.ar/wp-content/uploads/2021/01/pelota-de-futbol-4-1080x1080.jpg"
+      },
+      {
+        "nombre": "Raqueta de tenis",
+        "categoria": "Equipamiento",
+        "precio": 79.99,
+        "descripcion": "Raqueta de alta calidad para jugadores de tenis profesionales. Construida con materiales ligeros y resistentes.",
+        "foto_url": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/338/510/products/babolat-pure-drivejr-11-20c5292e096b9e8b8e16536701514231-640-0.webp"
+      },
+      {
+        "nombre": "Camiseta de baloncesto",
+        "categoria": "Ropa",
+        "precio": 34.99,
+        "descripcion": "Camiseta de baloncesto oficial de la NBA, con diseño transpirable y cómodo.",
+        "foto_url": "https://http2.mlstatic.com/D_NQ_NP_664847-MLA31420892713_072019-O.webp"
+      },
+      {
+        "nombre": "Bicicleta de montaña",
+        "categoria": "Ciclismo",
+        "precio": 399.99,
+        "descripcion": "Bicicleta de montaña con cuadro de aluminio, suspensión delantera y cambios de alta precisión.",
+        "foto_url": "https://pedalia.cc/wp-content/uploads/2016/07/FeatureBiciMontana.jpg"
+      },
+      {
+        "nombre": "Guantes de boxeo",
+        "categoria": "Artes marciales",
+        "precio": 49.99,
+        "descripcion": "Guantes de boxeo de cuero sintético, ideales para entrenamiento y combates.",
+        "foto_url": "https://http2.mlstatic.com/D_NQ_NP_860128-MLA50054105617_052022-O.jpg"
+      },
+      {
+        "nombre": "Pelota de tenis",
+        "categoria": "Accesorios",
+        "precio": 9.99,
+        "descripcion": "Pelota de tenis de alta calidad, aprobada por la ITF para torneos profesionales.",
+        "foto_url": "https://http2.mlstatic.com/D_NQ_NP_987304-MLA40665262319_022020-O.webp"
+      },
+      {
+        "nombre": "Pesa rusa",
+        "categoria": "Entrenamiento",
+        "precio": 29.99,
+        "descripcion": "Pesa rusa de hierro fundido, ideal para ejercicios de fuerza y resistencia.",
+        "foto_url": "data:image/jpeg;base64,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"
+      },
+      {
+        "nombre": "Gorra de béisbol",
+        "categoria": "Accesorios",
+        "precio": 14.99,
+        "descripcion": "Gorra de béisbol ajustable con diseño clásico y protección solar.",
+        "foto_url": "https://http2.mlstatic.com/D_NQ_NP_977595-MLA43344770267_092020-V.jpg"
+      }
+    ]
+}

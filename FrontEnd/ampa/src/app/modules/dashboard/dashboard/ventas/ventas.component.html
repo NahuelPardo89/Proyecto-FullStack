@@ -1,0 +1,12 @@
+<div *ngFor="let producto of ventas" class="container_tarjeta">
+    <mat-card class="tarjeta_producto">
+      <mat-card-header>
+        <mat-card-title class="titulo">{{producto.nombre}}</mat-card-title>
+        <mat-card-subtitle class="categoria">{{producto.categoria}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-lg-image  src ={{producto.img}} alt={{producto.nombre}} style="margin-bottom: 20px;">
+      
+      <mat-card-footer class="precio"><b>$ {{producto.precio}}</b></mat-card-footer >
+        
+    </mat-card>
+  </div>

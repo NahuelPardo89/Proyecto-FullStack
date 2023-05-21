@@ -1,0 +1,14 @@
+<main  class="container">
+    <img src="../../../../../assets/img/BANNER-MOSAICO-PRODUCTOS-2240X560PX2.gif" alt="banner" class="banner">
+    <div *ngFor="let producto of productos" class="card">
+        <h2>{{producto.nombre}}</h2>
+        <img [src]="producto.foto_url" alt="{{producto.nombre}}">
+        <h2>$ {{producto.precio}}</h2>
+        <h3>{{producto.descripcion}}</h3>
+        <button mat-raised-button color="warn">COMPRAR</button>
+
+    </div>
+
+</main>   
+
+  
