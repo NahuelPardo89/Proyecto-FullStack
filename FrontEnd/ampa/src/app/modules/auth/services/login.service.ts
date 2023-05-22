@@ -9,7 +9,7 @@ import { User } from '../interfaces/user.interface';
 })
 export class LoginService {
   currentUserLoginON: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({dni:0,nombre:'',apellido:'',teléfono:'',direccion:'',email:'',idCiudad:0,grupo:''})
+  currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({dni:'0',nombre:'',apellido:'',telefono:'',direccion:'',password:''})
 
 
   loggedInUserDni: number | null = null;

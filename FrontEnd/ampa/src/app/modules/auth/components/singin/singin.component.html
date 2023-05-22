@@ -1,4 +1,7 @@
 <div class="container-fluid">
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
 <mat-card  >
     <mat-card-header >
       <mat-card-title >Registro de Usuario</mat-card-title>

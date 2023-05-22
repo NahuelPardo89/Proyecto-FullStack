@@ -10,17 +10,15 @@ import { SinginService } from '../../services/singin.service';
 })
 export class SinginComponent {
   registroForm:FormGroup;
-
+  errorMessage: string | null = null;
   constructor(private formBuilder: FormBuilder,private singinService: SinginService,
     private router: Router) {
     this.registroForm = this.formBuilder.group({
     dni:[,[Validators.required,Validators.pattern("^[0-9]*$"),Validators.min(1),Validators.max(999000000)] ],
     nombre:['', [Validators.required,]],
     apellido:['', [Validators.required,]],
-    email:['', [Validators.required,Validators.email]],
     telefono:['', [Validators.pattern("^[0-9]*$"),]],
     direccion:['', [Validators.required,]],
-    ciudad:['', [Validators.required,Validators.pattern("^[0-9]*$"),]],
     password:['', [Validators.required,Validators.minLength(8)]],
     });
   }
@@ -35,16 +33,16 @@ export class SinginComponent {
       this.singinService.registerUser(usuario).subscribe(
         (res) => {
           console.log('Usuario registrado:', res);
-          
           this.router.navigate(['/dasboard']);
         },
         (err) => {
-          // Trata los errores de la petición aquí
+          // Muestra un mensaje de error en la interfaz de usuario
+          this.errorMessage = 'Hubo un error al intentar registrar el usuario. Por favor intenta nuevamente.';
           console.log(err);
         }
       );
-    
-  }}
+    }
+  }
 
   getErrorMessage(fieldName: string): string {
     const field = this.registroForm.get(fieldName);

@@ -1,11 +1,9 @@
 export interface User{
-    dni:number,
+    dni:string,
     nombre:string,
     apellido:string,
-    teléfono:string,
+    telefono:string,
     direccion:string,
-    email:string,
-    idCiudad:number,
-    grupo: string,
-    message?:string
+    password:string  
+   
 }
