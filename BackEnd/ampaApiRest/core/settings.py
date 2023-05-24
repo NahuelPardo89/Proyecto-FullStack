@@ -38,12 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ecommerce',
+    'usuarios',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -52,6 +55,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {
@@ -81,12 +86,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES=   {
-    'sqlite': {
+sqlite={
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        },
-    'default': {
+        }
+mysql= {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'devc8757_ampa',
         'USER': 'devc8757_root',
@@ -97,11 +101,15 @@ DATABASES=   {
         'sql_mode': 'traditional',
         }
 }
+DATABASES=   {
+    
+    'default': sqlite
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
+AUTH_USER_MODEL = 'usuarios.Usuario'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
