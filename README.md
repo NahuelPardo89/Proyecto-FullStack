@@ -13,7 +13,7 @@ Presentación final Proyecto  : https://www.youtube.com/watch?v=B_L0aNS21BM&ab_c
 
 Para ejecutar el servidor posicionarse en la carpeta FrontEnd/ampa y escribir ng serve -o
 
-# django
+# Django
 
 Para ejecutarlo deben hacer lo siguiente, primero creen un entorno virtual dentro de la carpeta backend
 -  Posicionar la consola en la carpeta backend y  escribir lo siguente: virtualenv -p python3 env
