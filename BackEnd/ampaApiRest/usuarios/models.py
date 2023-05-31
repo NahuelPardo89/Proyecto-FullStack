@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 
 class UsuarioManager(BaseUserManager):
-    def create_user(self, dni, password=None, nombre=None, apellido=None, telefono=None, direccion=None, is_staff=False, is_superuser=False,**extra_fields):
+    def create_user(self, dni, password=None, nombre=None, apellido=None, telefono=None,email=None, direccion=None, is_staff=False, is_superuser=False,**extra_fields):
         if not dni:
             raise ValueError('El DNI es requerido')
 
@@ -10,6 +10,7 @@ class UsuarioManager(BaseUserManager):
             dni=dni,
             nombre=nombre,
             apellido=apellido,
+            email=email,
             telefono=telefono,
             direccion=direccion,
             is_staff=is_staff,
@@ -31,9 +32,10 @@ class UsuarioManager(BaseUserManager):
         return self.create_user(dni, password, **extra_fields)
 
 class Usuario(AbstractBaseUser, PermissionsMixin):
-    dni = models.CharField(primary_key=True, max_length=10, unique=True)
+    dni = models.IntegerField(max_length=10, unique=True)
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
+    email= models.EmailField()
     telefono = models.CharField(max_length=15)
     direccion = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
@@ -42,7 +44,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     objects = UsuarioManager()
 
     USERNAME_FIELD = 'dni'
-    REQUIRED_FIELDS = ['nombre', 'apellido', 'telefono', 'direccion']
+    REQUIRED_FIELDS = ['nombre', 'apellido', 'email']
 
     def __str__(self):
         return f"{self.dni} - {self.apellido}, {self.nombre}"
