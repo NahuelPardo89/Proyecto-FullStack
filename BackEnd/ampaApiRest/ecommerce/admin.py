@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib import admin
-from .models import  Categoria, Producto
+from .models import  Categoria, Producto, CarritoProductos,DetalleCarritoProductos
 
 
 class CategoriaAdmin(admin.ModelAdmin):
@@ -12,3 +12,5 @@ class ProductoAdmin(admin.ModelAdmin):
 
 admin.site.register(Categoria, CategoriaAdmin)
 admin.site.register(Producto, ProductoAdmin)
+admin.site.register(CarritoProductos)
+admin.site.register(DetalleCarritoProductos)
