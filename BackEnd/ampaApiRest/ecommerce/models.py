@@ -1,4 +1,5 @@
 from django.db import models
+from usuarios.models import Usuario
 
 
 class Categoria(models.Model):
@@ -27,3 +28,42 @@ class Producto(models.Model):
         db_table = 'Producto'
         verbose_name='Producto'
         verbose_name_plural= 'Productos'
+
+
+
+
+class CarritoProductos(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='carritos')
+    monto = models.DecimalField(max_digits=6, decimal_places=2,default=0.0)
+
+    def __str__(self):
+        return f'Carrito de {self.usuario}'
+
+    def actualizar_monto(self):
+        self.monto = sum([detalle.monto for detalle in self.detalles.all()])
+        self.save()
+        self.refresh_from_db()
+
+    class Meta:
+        db_table = 'CarritoProductos'
+        verbose_name = 'CarritoProductos'
+        verbose_name_plural = 'CarritosProductos'
+
+
+class DetalleCarritoProductos(models.Model):
+    carrito = models.ForeignKey(CarritoProductos, on_delete=models.CASCADE, related_name='detalles')
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    cantidad = models.PositiveIntegerField()
+    monto = models.DecimalField(max_digits=6, decimal_places=2,default=0.0)
+
+    def __str__(self):
+        return f'{self.cantidad} de {self.producto} en {self.carrito}'
+
+    def save(self, *args, **kwargs):
+        self.monto = self.producto.precio * self.cantidad
+        super().save(*args, **kwargs)
+        self.carrito.actualizar_monto()
+    class Meta:
+        db_table = 'DetalleCarritoProducto'
+        verbose_name = 'DetalleCarritoProducto'
+        verbose_name_plural = 'DetallesCarritosProductos'
