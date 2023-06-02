@@ -60,10 +60,21 @@ class DetalleCarritoProductos(models.Model):
         return f'{self.cantidad} de {self.producto} en {self.carrito}'
 
     def save(self, *args, **kwargs):
+        if self.producto.stock < self.cantidad:
+            raise ValueError("Stock insuficiente para este producto")
+            
         self.monto = self.producto.precio * self.cantidad
         super().save(*args, **kwargs)
         self.carrito.actualizar_monto()
+
     class Meta:
         db_table = 'DetalleCarritoProducto'
         verbose_name = 'DetalleCarritoProducto'
         verbose_name_plural = 'DetallesCarritosProductos'
+
+class Factura(models.Model):
+    fecha = models.DateTimeField(auto_now_add=True)
+    subtotal = models.DecimalField(max_digits=10, decimal_places=2)
+    descuento = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+    carrito = models.OneToOneField(CarritoProductos, on_delete=models.SET_NULL, null=True)
