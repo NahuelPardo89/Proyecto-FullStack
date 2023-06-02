@@ -52,9 +52,13 @@ class LogoutAPI(generics.GenericAPIView):
 
     def post(self, request):
         try:
-            refresh_token = request.data["refresh"]
+            refresh_token = request.data.get("refresh")
+            if not refresh_token:
+                return Response({"error": "No se proporcionó token de actualización"}, status=400)
+
             token = RefreshToken(refresh_token)
             token.blacklist()
             return Response(status=204)
+
         except Exception as e:
-            return Response(status=400)
+            return Response({"error": str(e)}, status=400)
