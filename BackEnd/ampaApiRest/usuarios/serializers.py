@@ -8,7 +8,7 @@ from django.db import IntegrityError
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ('id', 'dni', 'nombre', 'apellido', 'email', 'telefono', 'direccion')
+        fields = ('id', 'dni', 'nombre', 'apellido', 'email', 'telefono', 'direccion','is_staff')
 
 # Register Serializer
 class RegisterSerializer(serializers.ModelSerializer):

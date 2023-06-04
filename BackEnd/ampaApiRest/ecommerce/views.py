@@ -1,5 +1,5 @@
 from django.db.models import Prefetch
-from rest_framework import viewsets
+from rest_framework import viewsets,permissions
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -8,10 +8,12 @@ from .serializers import CategoriaSerializer, ProductoSerializer, CarritoProduct
 
 class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
+    permission_classes = [permissions.IsAuthenticated, ]
     serializer_class = CategoriaSerializer
 
 class ProductoViewSet(viewsets.ModelViewSet):
     queryset = Producto.objects.all()
+    permission_classes = [permissions.IsAuthenticated, ]
     serializer_class = ProductoSerializer
 
 class CarritoProductosViewSet(viewsets.ModelViewSet):
