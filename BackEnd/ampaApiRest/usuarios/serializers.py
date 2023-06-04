@@ -14,7 +14,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ('id', 'dni', 'nombre', 'apellido', 'email', 'telefono', 'direccion', 'password')
+        fields = ('dni', 'nombre', 'apellido', 'email', 'telefono', 'direccion', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -38,7 +38,7 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField()
 
     def validate(self, data):
-        user = authenticate(**data)
+        user = authenticate(username=data.get('dni'), password=data.get('password'))
         if user and user.is_active:
             return user
         raise serializers.ValidationError("Usuario o contraseña incorrecto")

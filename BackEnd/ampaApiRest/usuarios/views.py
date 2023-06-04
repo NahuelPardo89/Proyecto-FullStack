@@ -2,7 +2,7 @@
 
 from rest_framework import viewsets
 from .models import Usuario
-
+from rest_framework import status
 from rest_framework import generics, permissions
 
 from rest_framework.response import Response
@@ -36,14 +36,17 @@ class LoginAPI(generics.GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        user = serializer.validated_data
-        refresh = RefreshToken.for_user(user)
-        return Response({
-            "user": UsuarioSerializer(user, context=self.get_serializer_context()).data,
-            "refresh": str(refresh),
-            "access": str(refresh.access_token),
-        })
+        if serializer.is_valid():
+            user = serializer.validated_data
+            refresh = RefreshToken.for_user(user)
+            return Response({
+                "user": UsuarioSerializer(user, context=self.get_serializer_context()).data,
+                "refresh": str(refresh),
+                "access": str(refresh.access_token),
+            })
+        else:
+            print('Serializer errors:', serializer.errors)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # Logout API
 class LogoutAPI(generics.GenericAPIView):
@@ -51,8 +54,10 @@ class LogoutAPI(generics.GenericAPIView):
     permission_classes = [permissions.IsAuthenticated, ]
 
     def post(self, request):
+        
         try:
             refresh_token = request.data.get("refresh")
+            
             if not refresh_token:
                 return Response({"error": "No se proporcionó token de actualización"}, status=400)
 
@@ -61,4 +66,5 @@ class LogoutAPI(generics.GenericAPIView):
             return Response(status=204)
 
         except Exception as e:
+            print(e)
             return Response({"error": str(e)}, status=400)

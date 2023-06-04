@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { LoginService } from '../../auth/services/login.service';
+import { AuthService } from '../../auth/services/auth.service';
+import { User } from 'src/app/modules/auth/interfaces/user.interface';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -9,13 +10,12 @@ import { LoginService } from '../../auth/services/login.service';
   styleUrls: ['./dashboard-user.component.css']
 })
 export class DashboardUserComponent implements OnInit {
-
   
-  loggedInUserDni: number | null = null;
+  loggedInUser: User | null = null;
 
   compras= "No hay compras a tu nombre"
   reservas= "No hay reservas a tu nombre"
-  /** Based on the screen size, switch from standard to one column per row */
+
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       if (matches) {
@@ -34,9 +34,11 @@ export class DashboardUserComponent implements OnInit {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver, private loginService: LoginService) {}
-  
+  constructor(private breakpointObserver: BreakpointObserver, private authService: AuthService) {}
+
   ngOnInit(): void {
-    this.loggedInUserDni = this.loginService.loggedInUserDni || null;
+    this.authService.currentUser.subscribe(user => {
+      this.loggedInUser = user;
+    });
   }
 }
