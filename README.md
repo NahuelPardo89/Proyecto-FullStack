@@ -12,7 +12,7 @@ Presentación final Proyecto  : https://www.youtube.com/watch?v=B_L0aNS21BM&ab_c
 
 # Proyecto-FullStack  E-commerce 2023
 
-Para ejecutar el servidor posicionarse en la carpeta FrontEnd/ampa y escribir ng serve -o
+Para ejecutar el servidor posicionarse en la carpeta FrontEnd/ampa, hacer npm install en la terminal y luego ng serve -o
 
 ## Django
 
