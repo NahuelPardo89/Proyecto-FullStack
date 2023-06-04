@@ -2,7 +2,7 @@
     <h1>Admin Dashboard</h1>
     <h2>Productos</h2>
     
-    <button mat-button (click)="productoForm.reset()">Agregar Producto</button>
+    <button mat-button (click)="agregarProducto()">Agregar Producto</button>
   <form *ngIf="mostrarFormulario" [formGroup]="productoForm" (ngSubmit)="productoForm.valid && agregarProducto()">
     <mat-form-field>
       <input matInput formControlName="nombre" placeholder="Nombre">
@@ -13,7 +13,7 @@
     <mat-form-field>
         <input matInput formControlName="marca" placeholder="Marca">
         <mat-error *ngIf="productoForm.controls['marca'].invalid && (productoForm.controls['marca'].dirty || productoForm.controls['marca'].touched)">
-          MArca es requerida
+          Marca es requerida
         </mat-error>
       </mat-form-field>
       <mat-form-field>
@@ -45,7 +45,7 @@
       </mat-error>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-raised-button color="primary" type="submit" (click)="ocultarForm()">Submit</button>
   </form>
   <table class="table table-striped table-hover">
     <thead>
@@ -78,10 +78,10 @@
   </table>
   
     <h2>Categorias</h2>
-    <button (click)="categoriaForm.reset()">Agregar Categoria</button>
-    <form [formGroup]="categoriaForm" (ngSubmit)="categoriaForm.valid && agregarCategoria()">
+    <button (click)="agregarCategoria()">Agregar Categoria</button>
+    <form [formGroup]="categoriaForm" *ngIf="mostrarFormCategorias" (ngSubmit)="categoriaForm.valid && agregarCategoria()">
       <!-- Aquí va el código para los campos del formulario de categorías -->
-      <input formControlName="nombre" placeholder="Nombre" />
+      <input formControlName="nombre" placeholder="Nombre" value='General' />
       <!-- Y así sucesivamente para los demás campos -->
       <button type="submit">Submit</button>
     </form>
