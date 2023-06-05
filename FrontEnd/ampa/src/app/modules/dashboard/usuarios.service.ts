@@ -22,13 +22,17 @@ export class UsuariosService {
     return this.http.put<Usuario>(url, usuario);
   }
 
-  deleteUser(dni: number): Observable<any> {
-    const url = `${this.usuariosUrl}/${dni}/`;
+  deleteUser(id: number): Observable<any> {
+    const url = `${this.usuariosUrl}${id}/`;
     return this.http.delete(url);
   }
 
   getUser(dni: number): Observable<Usuario> {
     const url = `${this.usuariosUrl}/${dni}/`;
     return this.http.get<Usuario>(url);
+  }
+
+  getUsers(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.usuariosUrl);
   }
 }
