@@ -1,8 +1,10 @@
 <div class="container">
   <h2>Usuarios</h2>
-  
+  <button class="btn btn-succes" (click)="mostrarFormulario = !mostrarFormulario">
+    {{ mostrarFormulario ? 'Ocultar formulario' : 'Agregar usuario' }}
+  </button>
   <!-- Formulario para agregar/editar usuarios -->
-  <form [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+  <form [formGroup]="usuarioForm" (ngSubmit)="guardarUsuario()" *ngIf="mostrarFormulario">
     <mat-form-field>
       <input matInput formControlName="dni" placeholder="DNI">
       <mat-error *ngIf="usuarioForm.controls['dni'].invalid && (usuarioForm.controls['dni'].dirty || usuarioForm.controls['dni'].touched)">
@@ -56,7 +58,7 @@
     <button type="submit" [disabled]="usuarioForm.invalid">Enviar</button>
   </form>
 
-  
+
 <!-- Lista de usuarios -->
 <table mat-table [dataSource]="usuarios" class="mat-elevation-z8 container">
   <ng-container matColumnDef="dni">
@@ -97,7 +99,7 @@
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef>Acciones</th>
     <td mat-cell *matCellDef="let usuario">
-      <button mat-icon-button color="primary" (click)="editarUsuario(usuario)">
+      <button mat-icon-button color="primary" (click)="editarUsuario(usuario, usuario.id)">
         <mat-icon>edit</mat-icon>
       </button>
       <button mat-icon-button color="warn" (click)="borrarUsuario(usuario)">

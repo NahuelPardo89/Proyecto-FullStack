@@ -18,7 +18,7 @@ export class UsuariosService {
   }
 
   updateUser(usuario: Usuario): Observable<Usuario> {
-    const url = `${this.usuariosUrl}/${usuario.dni}/`;
+    const url = `${this.usuariosUrl}${usuario.id}/`;
     return this.http.put<Usuario>(url, usuario);
   }
 

@@ -24,16 +24,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 
-
-
-
-
-
-
 import { VentasComponent } from './dashboard/ventas/ventas.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
 import { ReservasComponent } from './dashboard/reservas/reservas.component';
 import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
+import { ConfirmDialogComponent } from './dashboard/clientes/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -50,6 +46,7 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
     ReservasComponent,
     IngresosComponent,
     DashboardUserComponent,
+    ConfirmDialogComponent,
    
    
   
@@ -75,7 +72,8 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
     MatButtonModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
 
     
     
