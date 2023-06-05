@@ -80,11 +80,14 @@
     
     <h2>Categorias</h2>
     <button (click)="agregarCategoria()" class="btn btn-succes btnAgregarCategoria">Agregar Categoria</button>
-    <form [formGroup]="categoriaForm" *ngIf="mostrarFormCategorias" (ngSubmit)="categoriaForm.valid && agregarCategoria()">
+    <form class="formCategoria"  [formGroup]="categoriaForm" *ngIf="mostrarFormCategorias" (ngSubmit)="categoriaForm.valid && agregarCategoria()">
       <!-- Aquí va el código para los campos del formulario de categorías -->
-      <input formControlName="nombre" placeholder="Nombre" value='General' />
+      <mat-form-field class="mat-form-field">
+      <input matInput  formControlName="nombre" placeholder="Nombre" value='General' />
       <!-- Y así sucesivamente para los demás campos -->
-      <button type="submit">Submit</button>
+      
+      </mat-form-field>
+      <button type="submit" class="btn btn-primary" (click)="ocultarCategoria()">Agregar</button>
     </form>
     <table class="table">
       <thead>

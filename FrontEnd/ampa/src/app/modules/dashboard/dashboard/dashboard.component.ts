@@ -7,7 +7,6 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 
 
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -19,18 +18,18 @@ export class DashboardComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Ventas', cols: 1, rows: 1 },
-          { title: 'Reservas', cols: 1, rows: 1 },
+          { title: 'Productos', cols: 1, rows: 1 },
+          // { title: 'Reservas', cols: 1, rows: 1 },
           { title: 'Clientes', cols: 1, rows: 1 },
-          { title: 'Ingresos', cols: 1, rows: 1 }
+          // { title: 'Ingresos', cols: 1, rows: 1 }
         ];
       }
 
       return [
-        { title: 'Ventas', cols: 2, rows: 1 },
-        { title: 'Reservas', cols: 1, rows: 1 },
+        { title: 'Productos', cols: 2, rows: 1 },
+        // { title: 'Reservas', cols: 1, rows: 1 },
         { title: 'Clientes', cols: 1, rows: 2 },
-        { title: 'Ingresos', cols: 1, rows: 1 }
+        // { title: 'Ingresos', cols: 1, rows: 1 }
       ];
     })
   );

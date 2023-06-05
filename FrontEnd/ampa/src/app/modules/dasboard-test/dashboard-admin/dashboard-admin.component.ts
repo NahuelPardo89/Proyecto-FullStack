@@ -106,8 +106,15 @@ export class DashboardAdminComponent implements OnInit {
       this.productosService.addCategoria(nuevaCategoria).subscribe(categoria => {
         this.categorias.push(categoria);
         this.categoriaForm.reset();
+        
       });
     }
+  }
+  ocultarCategoria(){
+    setTimeout(() => {
+      this.mostrarFormCategorias = false;
+      
+    }, 100);
   }
   
   editarCategoria(categoria: Categoria): void {
