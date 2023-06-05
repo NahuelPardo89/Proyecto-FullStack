@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardNavComponent } from './dashboard-nav/dashboard-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -16,6 +17,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
@@ -44,6 +51,7 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
     IngresosComponent,
     DashboardUserComponent,
    
+   
   
     
    
@@ -65,7 +73,10 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
     MatFormFieldModule,
     MatTableModule,
     MatButtonModule,
-    
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule
+
     
     
     

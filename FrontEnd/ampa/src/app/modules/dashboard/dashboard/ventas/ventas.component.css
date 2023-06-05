@@ -1,44 +1,30 @@
-.dashboard-card-content {
-    text-align: center;
-  }
-  .container_tarjeta {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-  }
-              
-  .tarjeta_producto {
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 400px;
-    margin-right: 15px;
-    box-sizing: border-box;
-  }
-  
-  .tarjeta_producto img{
-    padding: 10px;
-    flex-shrink: 1;
-    object-fit: contain;
-    
-  }
-  
-  @media screen and (max-width: 768px) {
-    .tarjeta_producto img{
-      display: none;
-    }
-    .titulo {
-      font-size: small;
-    }
-    .categoria {
-      display: none;
-    }
-    .precio {
-      font-size: small;
-    }
+.containerCategoria {
+  width: 40%;
+  text-align: start;
+}
+.formProd {
+  width: 100%;
+}
+.fullwidth {
+  width: 100%;
+}
 
+.btnCategoria {
+  background-color: #dc3545;
+}
 
-  }
+.btnAgregarCategoria {
+  background-color: #198754;
+}
+
+textarea {
+  resize: none;
+  margin: 10px 15px;
+  
+}
+.mat-form-field {
+  
+  display: block;
+  width: 40%;
+  
+}

@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class DashboardNavComponent {
 
-  isAdmin:boolean = false;
+  isAdmin:boolean = true;
 
   isAdminToggle() {
     this.isAdmin = !this.isAdmin

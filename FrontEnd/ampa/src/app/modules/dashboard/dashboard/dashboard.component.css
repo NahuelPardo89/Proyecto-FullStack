@@ -26,3 +26,6 @@
   overflow-x: auto;
 }
 
+button {
+  margin: 20px 0;
+}
