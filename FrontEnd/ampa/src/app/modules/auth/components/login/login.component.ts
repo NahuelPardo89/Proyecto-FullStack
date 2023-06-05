@@ -1,56 +1,48 @@
-import { Component } from '@angular/core';
-import { FormBuilder,  Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../../services/login.service';
-import { LoginRequest } from '../../interfaces/loginRequest.interface';
+import { AuthService } from '../../services/auth.service';
+import { LoginUser } from '../../interfaces/login.interface';
+import { JwtResponse } from '../../interfaces/jwtResponse.interface';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  form=this.fb.group({
-    dni:[,[Validators.required,Validators.pattern("^[0-9]*$"),Validators.min(1),Validators.max(999000000)] ],
-    password:['', [Validators.required,Validators.minLength(8)]],
-  })
-  constructor(private fb:FormBuilder,  private _router:Router, private loginService:LoginService){
-    
+export class LoginComponent implements OnInit {
+  loginForm!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) { }
+
+  ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      dni: [null, [Validators.required, Validators.pattern("^[0-9]*$"), Validators.min(1), Validators.max(999000000)]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
+    });
   }
 
-  get dni() { 
-    return this.form.controls.dni;
-  }
-
-  get password() { 
-    return  this.form.controls.password; }
-
-  login(){
-    if (this.form.valid){
-      this.loginService.login(this.form.value as LoginRequest).subscribe({
-        next: (userData) => {
-          console.log(userData)
-          this.loginService.loggedInUserDni = this.form.value.dni ?? null;
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      
+      let user: LoginUser = this.loginForm.value as LoginUser;
+      user.dni = Number(user.dni);
+      
+      this.authService.login(user).subscribe({
+        next: (response: JwtResponse) => {
+          localStorage.setItem('access_token', response.access);
+          localStorage.setItem('refresh_token', response.refresh);
+          localStorage.setItem('user', JSON.stringify(response.user));
+          this.router.navigateByUrl('/dashboard');
         },
-        error:(errorData) => {
-          console.log(errorData)
-        },
-        complete:() => {
-          console.log("login successful");
-          this._router.navigateByUrl("/dashboard");
-          this.form.reset();
+        error: (error) => {
+          console.log(error);
         }
-      })
-      
-    }
-    else {
-      
-      this.error("asd")
+      });
     }
   }
-
-  error(errorParams:string){
-    
-  }
-
 }

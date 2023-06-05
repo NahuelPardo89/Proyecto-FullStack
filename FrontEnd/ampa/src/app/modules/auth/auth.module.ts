@@ -14,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,9 @@ import {MatCardModule} from '@angular/material/card';
     MatProgressSpinnerModule,
     MatFormFieldModule,
     ReactiveFormsModule
-  ]
+  ],
+  providers: [    
+    AuthService,    
+  ],
 })
 export class AuthModule { }

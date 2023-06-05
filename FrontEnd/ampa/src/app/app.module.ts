@@ -19,11 +19,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { AuthInterceptor } from './modules/auth/services/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     
   ],
   imports: [
@@ -42,7 +46,8 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
     LayoutModule
   ],
   exports:[SharedModule],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

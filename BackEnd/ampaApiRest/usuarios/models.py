@@ -46,6 +46,10 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     direccion = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    class Meta:
+        db_table = 'Usuario'
+        verbose_name='Usuario'
+        verbose_name_plural= 'Usuarios'
     
     objects = UsuarioManager()
 
