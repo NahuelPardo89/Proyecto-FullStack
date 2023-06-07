@@ -11,6 +11,8 @@
             <input matInput formControlName="dni" required>
             <mat-error *ngIf="loginForm.controls['dni'].errors?.['required']">Este campo es requerido</mat-error>
             <mat-error *ngIf="loginForm.controls['dni'].errors?.['pattern']">Debe ingresar solo números</mat-error>
+            <mat-error *ngIf="loginForm.controls['dni'].errors?.['max']">Ingrese un DNI Correcto</mat-error>
+            <mat-error *ngIf="loginForm.controls['dni'].errors?.['min']">Ingrese un DNI Correcto</mat-error>
           </mat-form-field>
   
           <mat-form-field class="ancho" appearance="fill">
