@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -146,11 +146,31 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+"""
+------------------------------------------------------------------------------------------
+STATIC_URL y STATICFILES_DIRS está relacionada con los archivos estáticos de nuestra aplicación.
+Por otro lado, la configuración de la carpeta de medios (MEDIA_ROOT y MEDIA_URL) se refiere a los
+archivos cargados por los usuarios, no borrar nada, cuando necesitemos cargar una imagen en el panel 
+de Django realizar los siguientes pasos:
 
-STATIC_URL = 'static/'
+1-copiar las imagenes que queremos cargar en Django en la carpeta /core/static/img/ (aqui crear la carpeta
+de su aplicacion, por ejemplo: productos y meter las imagenes dentro de tu carpeta, para ser organizados)
 
+2-Ejecutar el siguiente comando: python manage.py collectstatic y reiniciar el servidor
+
+3-Elegir la imagen en el panel de Django normalmente. Asegurarse de que en tu modelo, el campo de la imagen
+sea de tipo: imageField
+
+------------------------------------------------------------------------------------------
+"""
+
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'core/static'),
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
