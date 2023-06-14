@@ -22,25 +22,55 @@
           <hr>
           <div class="historial">
             <div class="container reservas">
-              <h3><b>Reservas: <hr> </b>{{reservas}}</h3> 
+              <h3><b>Reservas:</b></h3>
+              <div *ngIf="loggedInUser">
+                <ng-container *ngIf="reservas.length === 0; else showReservas">
+                  <p>{{ reservas }}</p>
+                </ng-container>
+                <ng-template #showReservas>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Costo</th>
+                        <th>Usuario</th>
+                        <th>Instalaciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let reserva of reservas">
+                        <td>{{ reserva.idReserva }}</td>
+                        <td>{{ reserva.fecha }}</td>
+                        <td>{{ reserva.hora }}</td>
+                        <td>{{ reserva.costo }}</td>
+                        <td>{{ reserva.usuario }}</td>
+                        <td>{{ reserva.instalaciones }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-template>
+              </div>
             </div>
 
             <div class="container compras">
-              <h3><b>Compras Realizadas: </b> <hr>{{compras}}</h3>
+              <h3><b>Compras Realizadas:</b></h3>
+              <p>{{ compras }}</p>
             </div>
 
           </div>
         </mat-card-content>
-        
-        
+
+
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Productos'">
           <div class="container productos">
             <button class="btn btn-secondary"><a routerLink="/dashboard/productos">Ver Productos</a></button>
           </div>
         </mat-card-content>
-        
-        
-        
+
+
+
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Servicios'">
           <div class="container servicios">
             <button class="btn btn-secondary"><a routerLink="/dashboard/reservas">Ver Servicios</a></button>

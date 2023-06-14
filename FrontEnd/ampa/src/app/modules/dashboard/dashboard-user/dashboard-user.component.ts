@@ -3,6 +3,8 @@ import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { AuthService } from '../../auth/services/auth.service';
 import { User } from 'src/app/modules/auth/interfaces/user.interface';
+import { AgendaserviceService } from '../../reservas/components/agenda/service/agendaservice.service';
+import { Observer } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -14,7 +16,7 @@ export class DashboardUserComponent implements OnInit {
   loggedInUser: User | null = null;
 
   compras= "No hay compras a tu nombre"
-  reservas= "No hay reservas a tu nombre"
+  reservas: any[] = [];
 
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -34,11 +36,22 @@ export class DashboardUserComponent implements OnInit {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver, private authService: AuthService) {}
+  constructor(private breakpointObserver: BreakpointObserver, private authService: AuthService, private agendaService: AgendaserviceService) {}
 
   ngOnInit(): void {
     this.authService.currentUser.subscribe(user => {
       this.loggedInUser = user;
+
+      if (user) {
+        this.obtenerReservasUsuario();
+      }
     });
   }
+  obtenerReservasUsuario() {
+    this.agendaService.obtenerReservasUsuario().subscribe((reservas: any) => {
+      this.reservas = reservas.length > 0 ? reservas : "No hay reservas a tu nombre";
+      console.log(reservas);
+    });
+  }
+  
 }
