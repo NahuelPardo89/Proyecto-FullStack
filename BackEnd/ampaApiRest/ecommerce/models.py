@@ -1,6 +1,6 @@
 from django.db import models
 from usuarios.models import Usuario
-
+from django.db import transaction
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
@@ -22,7 +22,7 @@ class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL,null=True, blank=True)
 
     def __str__(self):
-        return f"{self.nombre} - {self.marca}"
+        return f"{self.nombre} - {self.marca} -${self.precio}"
 
     class Meta:
         db_table = 'Producto'
@@ -34,15 +34,19 @@ class Producto(models.Model):
 
 class CarritoProductos(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='carritos')
-    monto = models.DecimalField(max_digits=6, decimal_places=2,default=0.0)
-
+   
+    @property
+    def monto(self):
+        return sum([detalle.monto for detalle in self.detalles.all()])
+    
+    @property
+    def detalles_carrito(self):
+        return [str(detalle) for detalle in self.detalles.all()]
+   
     def __str__(self):
         return f'Carrito de {self.usuario}'
 
-    def actualizar_monto(self):
-        self.monto = sum([detalle.monto for detalle in self.detalles.all()])
-        self.save()
-        self.refresh_from_db()
+    
 
     class Meta:
         db_table = 'CarritoProductos'
@@ -52,20 +56,19 @@ class CarritoProductos(models.Model):
 
 class DetalleCarritoProductos(models.Model):
     carrito = models.ForeignKey(CarritoProductos, on_delete=models.CASCADE, related_name='detalles')
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    producto = models.ForeignKey(Producto, on_delete=models.SET_NULL, null=True)
     cantidad = models.PositiveIntegerField()
-    monto = models.DecimalField(max_digits=6, decimal_places=2,default=0.0)
 
-    def __str__(self):
-        return f'{self.cantidad} de {self.producto} en {self.carrito}'
+    @property
+    def monto(self):
+        return self.producto.precio * self.cantidad
 
     def save(self, *args, **kwargs):
-        if self.producto.stock < self.cantidad:
-            raise ValueError("Stock insuficiente para este producto")
-            
-        self.monto = self.producto.precio * self.cantidad
-        super().save(*args, **kwargs)
-        self.carrito.actualizar_monto()
+        with transaction.atomic():
+            self.producto.refresh_from_db()
+            if self.producto.stock < self.cantidad:
+                raise ValueError("Stock insuficiente para este producto")
+            super().save(*args, **kwargs)
 
     class Meta:
         db_table = 'DetalleCarritoProducto'
@@ -73,8 +76,20 @@ class DetalleCarritoProductos(models.Model):
         verbose_name_plural = 'DetallesCarritosProductos'
 
 class Factura(models.Model):
+    ESTADOS = (
+        ('PE', 'Pendiente'),
+        ('PA', 'Pagado'),        
+    )
     fecha = models.DateTimeField(auto_now_add=True)
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
     descuento = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    total = models.DecimalField(max_digits=10, decimal_places=2)
+    estado = models.CharField(max_length=2, choices=ESTADOS, default='PE')
     carrito = models.OneToOneField(CarritoProductos, on_delete=models.SET_NULL, null=True)
+    @property
+    def total(self):
+        return self.subtotal - self.descuento
+
+    class Meta:
+        db_table = 'Factura'
+        verbose_name = 'Factura'
+        verbose_name_plural = 'Facturas'

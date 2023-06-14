@@ -3,9 +3,10 @@ from rest_framework import viewsets,permissions
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework import status
 from .models import Producto, Categoria,CarritoProductos, DetalleCarritoProductos, Factura
 from .serializers import CategoriaSerializer, ProductoSerializer, CarritoProductosSerializer, DetalleCarritoProductosSerializer,FacturaSerializer
-
+from usuarios.models import Usuario
 class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
     permission_classes = [permissions.IsAuthenticated, ]
@@ -29,10 +30,20 @@ class CarritoProductosViewSet(viewsets.ModelViewSet):
 class DetalleCarritoProductosViewSet(viewsets.ModelViewSet):
     queryset = DetalleCarritoProductos.objects.select_related('producto', 'carrito')
     serializer_class = DetalleCarritoProductosSerializer
+    
 
     def create(self, request, *args, **kwargs):
         producto_id = request.data.get('producto')
         cantidad = request.data.get('cantidad')
+        usuario_id = request.data.get('usuario')
+        print(request.data)
+
+        usuario = Usuario.objects.filter(id=usuario_id).first()
+        if not usuario:
+            return Response({"detail": "Usuario no encontrado"}, status=status.HTTP_404_NOT_FOUND)
+        carrito, created = CarritoProductos.objects.get_or_create(usuario=usuario)
+        if created:
+            carrito.save()
 
         if not producto_id or not cantidad:
             return Response({"detail": "Producto y cantidad son requeridos"}, status=status.HTTP_400_BAD_REQUEST)
@@ -43,11 +54,12 @@ class DetalleCarritoProductosViewSet(viewsets.ModelViewSet):
 
         if producto.stock < cantidad:
             return Response({"detail": "Stock insuficiente para este producto"}, status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            return super().create(request, *args, **kwargs)
-        except ValueError as e:
-            raise ValidationError({'detail': str(e)})
+            
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(carrito=carrito)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
     def update(self, request, *args, **kwargs):
         detalle = self.get_object()

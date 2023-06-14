@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('/dashboard');
         },
         error: (error) => {
+          window.alert('Usuario o contraseña incorrecto ')
           console.log(error);
         }
       });

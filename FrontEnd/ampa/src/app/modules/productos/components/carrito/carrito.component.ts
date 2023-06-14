@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { CarritoService } from './services/carrito.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DetalleCarritoService } from '../../productos/detalle-carrito.service';
 
  
 
@@ -30,7 +31,7 @@ export class CarritoComponent {
   }
   
 
-  constructor(private _carritoService: CarritoService, private _snackBar: MatSnackBar) {
+  constructor(private _carritoService: CarritoService, private _snackBar: MatSnackBar,private detalleCarritoService: DetalleCarritoService) {
   }
   //variable total para el precio total
   total: any;

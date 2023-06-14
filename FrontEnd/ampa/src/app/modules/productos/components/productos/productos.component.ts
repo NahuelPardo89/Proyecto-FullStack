@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { ProductosService } from './productos.service';
 import { Producto } from '../../interfaces/producto.interface';
+import { DetalleCarritoService } from '../../productos/detalle-carrito.service';
+import { DetalleCarritoProducto } from '../../interfaces/detalleCarrito.interface';
 
 @Component({
   selector: 'app-productos',
@@ -12,7 +14,7 @@ export class ProductosComponent implements OnInit {
 
   productos: Producto[];
 
-  constructor(private productosService: ProductosService) {
+  constructor(private productosService: ProductosService,private detalleCarritoService: DetalleCarritoService) {
     this.productos = [];
   }
   ngOnInit() {
@@ -20,6 +22,32 @@ export class ProductosComponent implements OnInit {
       .subscribe(data => {
         this.productos = data;
         console.log(this.productos)
+      });
+  }
+  addToCart(producto: Producto) {
+    // Obtiene el usuario desde localStorage
+    const userItem = localStorage.getItem('user');
+    if (!userItem) {
+        // No hay un usuario logueado. Puedes manejar este caso como necesites.
+        console.error('No hay un usuario logueado');
+        return;
+    }
+
+    const usuario = JSON.parse(userItem);
+    
+    const detalle: DetalleCarritoProducto = {
+      usuario: usuario.id,
+      producto: producto.id,
+      cantidad: 1, // puedes cambiarlo según sea necesario
+    };
+
+    this.detalleCarritoService.addProductoACarrito(detalle)
+      .subscribe(() => {
+        console.log(`Producto ${producto.nombre} añadido al carrito`);
+        // Aquí puedes hacer algo más, como mostrar una notificación al usuario
+      }, error => {
+        console.error(error);
+        // Aquí puedes manejar el error, por ejemplo mostrar un mensaje de error al usuario
       });
   }
 }
