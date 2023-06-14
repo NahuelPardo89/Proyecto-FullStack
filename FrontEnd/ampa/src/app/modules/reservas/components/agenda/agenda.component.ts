@@ -20,12 +20,13 @@ export class AgendaComponent {
   InstalacionSeleccionada: string = '';
   fecha: Date | null = null;
   selectedTime: string = '';
-  
+  today: Date;
   //prueba
 
   //variable fecha y selector
   date: Date = new Date();
   selectedDate: Date | null = null;
+  
   //variable hora y minutos y selector
   selectedHour: string = '';
   selectedMinute: string = '';
@@ -50,7 +51,7 @@ export class AgendaComponent {
     private agendaService: AgendaserviceService,
     private datePipe: DatePipe,
     private snackBar: MatSnackBar
-  ) {}
+  ) {this.today = new Date();}
 
   ngOnInit(): void {
     this.subscription = this.authService.currentUser.subscribe(user => {
@@ -59,6 +60,7 @@ export class AgendaComponent {
       this.instalacionesService.getInstalaciones().subscribe(instalaciones => {
         this.instalaciones = instalaciones;
       });
+      
     });
   }
 
