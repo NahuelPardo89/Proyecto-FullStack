@@ -22,34 +22,31 @@
           <hr>
           <div class="historial">
             <div class="container reservas">
-              <h3><b>Reservas:</b></h3>
+              <h3><b>Reservas de: {{ loggedInUser?.nombre }} {{ loggedInUser?.apellido }}</b></h3>
               <div *ngIf="loggedInUser">
                 <ng-container *ngIf="reservas.length === 0; else showReservas">
                   <p>{{ reservas }}</p>
                 </ng-container>
                 <ng-template #showReservas>
-                  <table>
+                  <table class="table table-hover table-dark">
                     <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>Fecha</th>
+                      <tr class="table-warning">
+                        <th>Fecha Reservada</th>
                         <th>Hora</th>
                         <th>Costo</th>
-                        <th>Usuario</th>
-                        <th>Instalaciones</th>
+                        <th>Instalacion</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr *ngFor="let reserva of reservas">
-                        <td>{{ reserva.idReserva }}</td>
                         <td>{{ reserva.fecha }}</td>
                         <td>{{ reserva.hora }}</td>
                         <td>{{ reserva.costo }}</td>
-                        <td>{{ reserva.usuario }}</td>
-                        <td>{{ reserva.instalaciones }}</td>
+                        <td>{{ obtenerNombreInstalacion(reserva.instalaciones) }}</td>
                       </tr>
                     </tbody>
                   </table>
+                  
                 </ng-template>
               </div>
             </div>

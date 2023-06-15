@@ -11,3 +11,6 @@ class ReservasViewSet(viewsets.ModelViewSet):
     queryset = Reserva.objects.all()
     serializer_class = ReservasSerializer
     
+    def get_queryset(self):
+        user = self.request.user  # Obtener el usuario actual
+        return Reserva.objects.filter(usuario=user)

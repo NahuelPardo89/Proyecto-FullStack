@@ -1,5 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+interface Reserva {
+  idReserva: number;
+  fecha: string;
+  hora: string;
+  costo: string;
+  usuario: string; 
+  instalaciones: string; 
+}
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +22,16 @@ export class AgendaserviceService {
   }
 
 
-  obtenerReservasUsuario() {
-    return this.http.get('http://127.0.0.1:8000/reservas/reservas/');
+  obtenerReservasUsuario(userId: number): Observable<Reserva[]> {
+    const url = `http://127.0.0.1:8000/reservas/reservas/?usuario=${userId}`;
+    return this.http.get<Reserva[]>(url);
   }
+  
+
+  obtenerInstalaciones(): Observable<any[]> {
+    const url = `http://127.0.0.1:8000/instalaciones/`;
+    return this.http.get<any[]>(url);
+  }
+  
   
 }
