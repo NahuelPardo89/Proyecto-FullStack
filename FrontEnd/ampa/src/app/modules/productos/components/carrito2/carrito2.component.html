@@ -1,0 +1,26 @@
+<div *ngIf="carrito">
+    <h2>Carrito de {{ carrito.usuario.nombre }}</h2>
+    <h3>Monto Total: {{ carrito.monto }}</h3>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre Producto</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detalle of carrito.detalles">
+          <td>{{ detalle.producto.nombre }}</td>
+          <td>{{ detalle.producto.marca }}</td>
+          <td>{{ detalle.cantidad }}</td>
+          <td>{{ detalle.monto }}</td>
+          <td><button (click)="eliminarProducto(detalle)" type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>asd</div>

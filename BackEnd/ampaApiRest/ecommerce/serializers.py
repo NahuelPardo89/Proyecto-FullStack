@@ -18,7 +18,7 @@ class DetalleCarritoProductosSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = DetalleCarritoProductos
-        fields = ['producto', 'cantidad',  'carrito', 'monto']
+        fields = ['id','producto', 'cantidad',  'carrito', 'monto']
 
 class CarritoProductosSerializer(serializers.ModelSerializer):
     usuario= UsuarioShortSerializer()

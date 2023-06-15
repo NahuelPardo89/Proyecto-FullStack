@@ -12,11 +12,13 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { Carrito2Component } from './components/carrito2/carrito2.component';
 
 @NgModule({
   declarations: [
     ProductosComponent,
-    CarritoComponent
+    CarritoComponent,
+    Carrito2Component
   ],
   imports: [
     CommonModule,

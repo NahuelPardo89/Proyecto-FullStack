@@ -29,7 +29,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSnackBarModule
   ],
   providers: [
-    DatePipe // Agrega DatePipe en la lista de proveedores
+    DatePipe 
   ]
 })
 export class ReservasModule { }
