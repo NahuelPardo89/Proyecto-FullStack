@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProductosService } from './productos.service';
+import { ProductosService } from '../../services/productos.service';
 import { Producto } from '../../interfaces/producto.interface';
-import { DetalleCarritoService } from '../../productos/detalle-carrito.service';
+
 import { DetalleCarritoProducto } from '../../interfaces/detalleCarrito.interface';
+import { DetalleCarritoService } from '../../services/detalle-carrito.service';
 
 @Component({
   selector: 'app-productos',

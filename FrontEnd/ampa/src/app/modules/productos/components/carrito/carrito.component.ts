@@ -1,11 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { carrito } from './interfaces/carrito';
+import { carrito } from '../../interfaces/carrito';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { CarritoService } from './services/carrito.service';
+
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DetalleCarritoService } from '../../productos/detalle-carrito.service';
+import { DetalleCarritoService } from '../../services/detalle-carrito.service';
+import { CarritoService } from '../../services/carrito.service';
+
 
  
 
