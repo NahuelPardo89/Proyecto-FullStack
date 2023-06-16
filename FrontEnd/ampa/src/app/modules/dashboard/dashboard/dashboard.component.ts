@@ -25,7 +25,11 @@ export class DashboardComponent {
   mostrarUsuarios() {
     this.usuarios = !this.usuarios;
   }
-    
+  
+  reservasVisible = false;
+  mostrarReservas() {
+    this.reservasVisible = !this.reservasVisible;
+  }
   
   
   //----------------------------

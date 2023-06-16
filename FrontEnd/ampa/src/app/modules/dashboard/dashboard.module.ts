@@ -30,6 +30,7 @@ import { ReservasComponent } from './dashboard/reservas/reservas.component';
 import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
 import { ConfirmDialogComponent } from './dashboard/clientes/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -73,7 +74,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
 
     
     

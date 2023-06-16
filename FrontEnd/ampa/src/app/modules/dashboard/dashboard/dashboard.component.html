@@ -8,4 +8,8 @@
     <button class="btn btn-lg btn-secondary" (click)="mostrarUsuarios()">Administrar usuarios</button>
     <app-clientes *ngIf="usuarios"/>
   </div>
+  <div class="reservas">
+    <button class="btn btn-lg btn-secondary" (click)="mostrarReservas()">Administrar Reservas</button>
+    <app-reservas *ngIf="reservasVisible"></app-reservas>
+  </div>
 </div>

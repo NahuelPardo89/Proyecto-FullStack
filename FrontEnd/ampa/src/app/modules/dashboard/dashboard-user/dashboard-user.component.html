@@ -28,6 +28,7 @@
                   <p>{{ reservas }}</p>
                 </ng-container>
                 <ng-template #showReservas>
+                  <div class="table-container">
                   <table class="table table-hover table-dark">
                     <thead>
                       <tr class="table-warning">
@@ -35,6 +36,7 @@
                         <th>Hora</th>
                         <th>Costo</th>
                         <th>Instalacion</th>
+                        <th>Accion</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -43,10 +45,11 @@
                         <td>{{ reserva.hora }}</td>
                         <td>{{ reserva.costo }}</td>
                         <td>{{ obtenerNombreInstalacion(reserva.instalaciones) }}</td>
+                        <td><mat-icon class="mat-warn" (click)="eliminarReserva(reserva.idReserva)">delete</mat-icon></td>
                       </tr>
                     </tbody>
                   </table>
-                  
+                </div>
                 </ng-template>
               </div>
             </div>

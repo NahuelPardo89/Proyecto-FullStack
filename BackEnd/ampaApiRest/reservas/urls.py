@@ -9,4 +9,5 @@ router.register(r'reservas', ReservasViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('reservas/list_all/', ReservasViewSet.as_view({'get': 'list_all_reservas'}), name='reservas-list-all'),
 ]

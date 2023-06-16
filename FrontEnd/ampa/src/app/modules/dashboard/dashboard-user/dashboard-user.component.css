@@ -73,3 +73,8 @@ a {
     font-size: 12px;
   }
 }
+
+.table-container {
+  max-height: 120px; 
+  overflow-y: auto;
+}

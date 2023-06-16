@@ -5,6 +5,7 @@ import { AuthService } from '../../auth/services/auth.service';
 import { User } from 'src/app/modules/auth/interfaces/user.interface';
 import { AgendaserviceService } from '../../reservas/components/agenda/service/agendaservice.service';
 import { InstalacionesService } from '../../reservas/components/instalaciones/service/instalaciones.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -42,7 +43,8 @@ export class DashboardUserComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private authService: AuthService,
     private agendaService: AgendaserviceService,
-    private instalacionesService: InstalacionesService
+    private instalacionesService: InstalacionesService,
+    private snackBar: MatSnackBar
   ) {
     this.instalaciones = [];
   }
@@ -85,4 +87,22 @@ export class DashboardUserComponent implements OnInit {
   obtenerNombreInstalacion(idInstalacion: number): string {
     return this.instalacionesMap[idInstalacion] || '';
   }
+
+  eliminarReserva(idReserva: number) {
+    this.agendaService.eliminarReserva(idReserva).subscribe(
+      () => {
+        this.reservas = this.reservas.filter(reserva => reserva.idReserva !== idReserva);
+  
+        this.snackBar.open('Reserva eliminada exitosamente', 'Cerrar', {
+          duration: 3000, // Duración en milisegundos
+          horizontalPosition: 'center', // Posición horizontal del Snackbar
+          verticalPosition: 'bottom' // Posición vertical del Snackbar
+        });
+      },
+      error => {
+        console.error('Error al eliminar la reserva:', error);
+      }
+    );
+  }
+  
 }

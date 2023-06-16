@@ -8,3 +8,7 @@
     font-size: smaller;
    }
 }
+.table-container {
+    max-height: 400px; 
+    overflow-y: auto;
+  }
