@@ -1,8 +1,8 @@
 <div class="container">
   <h2>Usuarios</h2>
-  <button class="btn btn-succes" (click)="mostrarFormulario = !mostrarFormulario">
+  <button class="btn btn-success m-2" (click)="mostrarFormulario = !mostrarFormulario">
     {{ mostrarFormulario ? 'Ocultar formulario' : 'Agregar usuario' }}
-  </button>
+  </button>  
   <!-- Formulario para agregar/editar usuarios -->
   <form [formGroup]="usuarioForm" (ngSubmit)="guardarUsuario()" *ngIf="mostrarFormulario">
     <mat-form-field>

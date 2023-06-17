@@ -1,15 +1,35 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard Admin</h1>
-  <div class="productos">
-    <button class="btn btn-lg btn-secondary" (click)="mostrarVentas()">Administrar productos</button>
-  <app-ventas *ngIf="ventas"/>
+
+  <div class="productos" [ngClass]="{ 'fade-in': ventasVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarVentas()">
+      Administrar productos
+      <mat-icon>{{ ventasVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-ventas *ngIf="ventasVisible"></app-ventas>
   </div>
-  <div class="usuarios">
-    <button class="btn btn-lg btn-secondary" (click)="mostrarUsuarios()">Administrar usuarios</button>
-    <app-clientes *ngIf="usuarios"/>
+
+  <div class="usuarios" [ngClass]="{ 'fade-in': usuariosVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarUsuarios()">
+      Administrar usuarios
+      <mat-icon>{{ usuariosVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-clientes *ngIf="usuariosVisible"></app-clientes>
   </div>
-  <div class="reservas">
-    <button class="btn btn-lg btn-secondary" (click)="mostrarReservas()">Administrar Reservas</button>
+
+  <div class="reservas" [ngClass]="{ 'fade-in': reservasVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarReservas()">
+      Administrar Reservas
+      <mat-icon>{{ reservasVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
     <app-reservas *ngIf="reservasVisible"></app-reservas>
+  </div>
+
+  <div class="instalaciones" [ngClass]="{ 'fade-in': instalacionesVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarInstalaciones()">
+      Administrar Instalaciones
+      <mat-icon>{{ instalacionesVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+      </button>
+    <app-instalaciones *ngIf="instalacionesVisible"></app-instalaciones>
   </div>
 </div>
