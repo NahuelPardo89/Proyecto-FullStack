@@ -17,4 +17,18 @@
     border-radius: 10px; /* Redondear los bordes de la tabla */
     overflow: hidden; /* Ocultar cualquier contenido que se desborde */
   }
+  .btn-agregar-archivo {
+    background-color: black; /* Cambia el color de fondo */
+    color: #ffffff; /* Cambia el color del texto */
+    padding: 10px 20px; /* Cambia el espaciado interno del botón */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    /* Agrega cualquier otro estilo deseado */
+  }
+  .formulario-container {
+    border: 1px solid #ccc; /* Agrega un borde delgado */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    padding: 20px; /* Agrega espaciado interno */
+    /* Agrega cualquier otro estilo deseado */
+  }
   
+    

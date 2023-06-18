@@ -6,7 +6,7 @@
 <br>
 
 <!-- Formulario para agregar instalación -->
-<div *ngIf="mostrarFormulario" class="mt-4">
+<div *ngIf="mostrarFormulario" class="mt-4  formulario-container">
   <h3>Agregar nueva instalación</h3>
   <form (ngSubmit)="agregarInstalacion()" enctype="multipart/form-data">
     <div class="form-group">
@@ -17,10 +17,12 @@
       <label for="descripcion">Descripción:</label>
       <textarea class="form-control" id="descripcion" [(ngModel)]="nuevaInstalacion.descripcion" name="descripcion" required></textarea>
     </div>
-
-    <div class="form-group">
+    <br>
+    <div class="form-group d-flex justify-content-center">
       <label for="foto">Foto:</label>
-      <input type="file" class="form-control-file" id="foto" (change)="onFileSelected($event, nuevaInstalacion)" name="foto" accept="image/*" [disabled]="!nuevaInstalacion.editandoInstalacion">
+      <br>
+      <input type="file" class="form-control-file btn-agregar-archivo" id="foto" (change)="onFileSelected($event, nuevaInstalacion)" name="foto" accept="image/*" [disabled]="!nuevaInstalacion.editandoInstalacion">
+
     </div>
 
     <div class="d-flex justify-content-center">
@@ -33,7 +35,7 @@
   <div class="d-flex justify-content-center">
     <h2>Instalaciones del Complejo deportivo A.M.PA. </h2>
   </div>
-  <div class="table-container">
+  <div class="table-container  formulario-container">
   <table class="table table-hover table-dark">
     <thead>
       <tr>

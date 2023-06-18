@@ -4,6 +4,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -12,12 +13,15 @@ import {MatButtonModule} from '@angular/material/button';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports:[
     NavComponent,
     FooterComponent,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }
