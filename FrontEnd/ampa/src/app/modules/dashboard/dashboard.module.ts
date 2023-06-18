@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
-
+import { FormsModule } from '@angular/forms';
 import { VentasComponent } from './dashboard/ventas/ventas.component';
 import { ClientesComponent } from './dashboard/clientes/clientes.component';
 import { ReservasComponent } from './dashboard/reservas/reservas.component';
@@ -31,6 +31,7 @@ import { IngresosComponent } from './dashboard/ingresos/ingresos.component';
 import { ConfirmDialogComponent } from './dashboard/clientes/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { InstalacionesComponent } from './dashboard/instalaciones/instalaciones/instalaciones.component';
 
 
 
@@ -48,6 +49,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     IngresosComponent,
     DashboardUserComponent,
     ConfirmDialogComponent,
+    InstalacionesComponent,
    
    
   
@@ -76,7 +78,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSelectModule,
     MatDialogModule,
     MatSnackBarModule,
-
+    FormsModule,
     
     
     

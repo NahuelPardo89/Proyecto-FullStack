@@ -153,12 +153,13 @@ Por otro lado, la configuración de la carpeta de medios (MEDIA_ROOT y MEDIA_URL
 archivos cargados por los usuarios, no borrar nada, cuando necesitemos cargar una imagen en el panel 
 de Django realizar los siguientes pasos:
 
-1-copiar las imagenes que queremos cargar en Django en la carpeta /core/static/img/ (aqui crear la carpeta
+1-copiar las imagenes que queremos cargar en Django en la carpeta ampaApiRest\core\static\assets\img\(aqui crear la carpeta
 de su aplicacion, por ejemplo: productos y meter las imagenes dentro de tu carpeta, para ser organizados)
 
 2-Ejecutar el siguiente comando: python manage.py collectstatic y reiniciar el servidor
 
-3-Elegir la imagen en el panel de Django normalmente. Asegurarse de que en tu modelo, el campo de la imagen
+3-Elegir la imagen en el panel de Django normalmente obviamente desde la carpeta mencionada anteriormente. 
+Asegurarse de que en tu modelo, el campo de la imagen
 sea de tipo: imageField
 
 ------------------------------------------------------------------------------------------
