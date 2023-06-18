@@ -1,7 +1,9 @@
+<div class="container text-end mt-4  ">
+  <a routerLink="/dashboard/productos" type="button" class="btn  btn-danger  ">cerrar</a>
+</div>
 <div *ngIf="carrito">
     <h2>Carrito de {{ carrito.usuario.nombre }}</h2>
-    <h3>Monto Total: {{ carrito.monto }}</h3>
-  
+    
     <table class="table">
       <thead>
         <tr>
@@ -22,5 +24,9 @@
         </tr>
       </tbody>
     </table>
+    <div class="container text-end  ">
+      <h3>Monto Total: {{ carrito.monto }}</h3>
+  
+      <button (click)="finalizarCompra(carrito)" type="button" class="btn  btn-success  ">Finalizar compra</button>
+    </div>
   </div>
-  <div>asd</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Carrito2Service } from './carrito2.service';
 import { DetalleCarritoService } from '../../services/detalle-carrito.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class Carrito2Component implements OnInit {
 
   carrito: any = null;
 
-  constructor(private carritoService: Carrito2Service,private detalleCarritoService: DetalleCarritoService) { }
+  constructor(private carritoService: Carrito2Service,private detalleCarritoService: DetalleCarritoService,private router: Router,) { }
 
   ngOnInit(): void {
     const usuarioString = localStorage.getItem('user');
@@ -39,6 +40,9 @@ export class Carrito2Component implements OnInit {
       console.log(error);
       // Manejar error aquí
     });
+  }
+  finalizarCompra(carrito:any){
+    this.router.navigateByUrl('/dashboard');
   }
 
 }

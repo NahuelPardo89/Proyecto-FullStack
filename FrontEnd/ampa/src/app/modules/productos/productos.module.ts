@@ -13,12 +13,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Carrito2Component } from './components/carrito2/carrito2.component';
+import { PasarelaPagosComponent } from './components/pasarela-pagos/pasarela-pagos.component';
 
 @NgModule({
   declarations: [
     ProductosComponent,
     CarritoComponent,
-    Carrito2Component
+    Carrito2Component,
+    PasarelaPagosComponent
   ],
   imports: [
     CommonModule,
