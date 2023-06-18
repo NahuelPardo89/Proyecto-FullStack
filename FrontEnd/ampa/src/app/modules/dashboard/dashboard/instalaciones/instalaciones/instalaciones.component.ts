@@ -12,7 +12,9 @@ export class InstalacionesComponent {
   mostrarFormulario: boolean = false;
   nuevaInstalacion: any = {
     nombre: '',
-    descripcion: ''
+    descripcion: '',
+    foto: null,
+    editandoInstalacion: true
   };
 
   constructor(private instalacionesService: InstalacionesService, private snackBar: MatSnackBar) {}
@@ -26,7 +28,7 @@ export class InstalacionesComponent {
       this.instalaciones = instalaciones.map(instalacion => ({
         ...instalacion,
         editandoNombre: false,
-        editandoDescripcion: false
+        editandoDescripcion: false,
       }));
     });
   }
@@ -36,22 +38,31 @@ export class InstalacionesComponent {
     instalacion.editandoDescripcion = true;
     instalacion.editandoInstalacion = true;
   }
+  
   cancelarEdicion(instalacion: any) {
     instalacion.editandoInstalacion = false;
   }
   
-
   agregarInstalacion() {
-    this.instalacionesService.agregarInstalacion(this.nuevaInstalacion).subscribe(
+    const formData = new FormData();
+    formData.append('nombre', this.nuevaInstalacion.nombre);
+    formData.append('descripcion', this.nuevaInstalacion.descripcion);
+    if (this.nuevaInstalacion.foto) {
+      formData.append('foto', this.nuevaInstalacion.foto, this.nuevaInstalacion.foto.name);
+    }
+  
+    this.instalacionesService.agregarInstalacion(formData).subscribe(
       response => {
         console.log('Instalación agregada:', response);
         this.actualizarListaInstalaciones(); // Actualizar la lista de instalaciones
         this.nuevaInstalacion = {
           nombre: '',
-          descripcion: ''
+          descripcion: '',
+          foto: null,
+          editandoInstalacion: true
         };
         this.mostrarFormulario = false;
-
+  
         // Mostrar MatSnackBar
         this.snackBar.open('Instalación creada correctamente', 'Cerrar', {
           duration: 3000, // Duración en milisegundos
@@ -62,17 +73,21 @@ export class InstalacionesComponent {
       }
     );
   }
+  
 
   guardarInstalacion(instalacion: any) {
     const formData = new FormData();
     formData.append('nombre', instalacion.nombre);
     formData.append('descripcion', instalacion.descripcion);
-
+    if (instalacion.foto) {
+      formData.append('foto', instalacion.foto, instalacion.foto.name);
+    }
+  
     this.instalacionesService.editarInstalacion(instalacion.idInstalacion, formData).subscribe(
       response => {
         console.log('Instalación actualizada:', response);
         this.actualizarListaInstalaciones(); // Actualizar la lista de instalaciones
-
+  
         // Mostrar MatSnackBar
         this.snackBar.open('Instalación actualizada correctamente', 'Cerrar', {
           duration: 3000, // Duración en milisegundos
@@ -83,8 +98,7 @@ export class InstalacionesComponent {
       }
     );
   }
-
-
+  
   eliminarInstalacion(instalacion: any) {
     this.instalacionesService.eliminarInstalacion(instalacion.idInstalacion).subscribe(
       response => {
@@ -100,5 +114,10 @@ export class InstalacionesComponent {
         console.error('Error al eliminar la instalación:', error);
       }
     );
+  }
+  
+  onFileSelected(event: any, instalacion: any) {
+    const file = event.target.files[0];
+    instalacion.foto = file;
   }
 }

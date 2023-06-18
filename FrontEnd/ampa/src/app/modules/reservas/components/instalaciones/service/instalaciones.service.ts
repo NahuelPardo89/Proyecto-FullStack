@@ -26,8 +26,11 @@ export class InstalacionesService {
     return this.http.put(url, formData, { headers: headers });
   }
 
-  agregarInstalacion(instalacion: any): Observable<any> {
-    return this.http.post(this.apiUrl, instalacion);
+  agregarInstalacion(instalacion: FormData): Observable<any> {
+    const headers = new HttpHeaders();
+    headers.append('enctype', 'multipart/form-data');
+
+    return this.http.post(this.apiUrl, instalacion, { headers: headers });
   }
 
   eliminarInstalacion(idInstalacion: number): Observable<any> {

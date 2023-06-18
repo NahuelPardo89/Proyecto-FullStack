@@ -1,10 +1,8 @@
-
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Producto } from 'src/app/modules/productos/interfaces/producto.interface';
 import { Categoria } from 'src/app/modules/productos/interfaces/categoria.interface';
 import { ProductosService } from 'src/app/modules/dasboard-test/productos.service';
-import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-ventas',
@@ -12,9 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./ventas.component.css']
 })
 export class VentasComponent implements OnInit {
-  
   productos: Producto[] = [];
-  
   categorias: Categoria[] = [];
   editing: boolean = false;
   editingProductoId: number | null = null;
@@ -23,14 +19,17 @@ export class VentasComponent implements OnInit {
   categoriaForm: FormGroup;
   mostrarFormulario = false;
   mostrarFormCategorias = false;
+  imagenSeleccionada: File | null = null;
+  
   constructor(private productosService: ProductosService, private fb: FormBuilder) {
     this.productoForm = this.fb.group({
-      nombre: ['', Validators.required,],
+      nombre: ['', Validators.required],
       marca: ['', Validators.required],
       descripcion: ['', Validators.required],
-      precio: [, Validators.required,],
+      precio: [, Validators.required],
       stock: [, Validators.required],
       categoria: [, Validators.required],
+      
       // Añade los otros campos aquí.
     });
 
@@ -38,8 +37,6 @@ export class VentasComponent implements OnInit {
       nombre: ['', Validators.required],
     });
   }
-  
-  
 
   ngOnInit(): void {
     this.fetchData();
@@ -54,6 +51,7 @@ export class VentasComponent implements OnInit {
       this.categorias = data;
     });
   }
+
   agregarProducto(): void {
     if (this.editing) {
       const productoToUpdate: Producto = { ...this.productoForm.value, id: this.editingProductoId };
@@ -71,7 +69,6 @@ export class VentasComponent implements OnInit {
       this.productosService.addProducto(nuevoProducto).subscribe(producto => {
         this.productos.push(producto);
         this.productoForm.reset();
-        
       });
     }
   }
@@ -106,17 +103,10 @@ export class VentasComponent implements OnInit {
       this.productosService.addCategoria(nuevaCategoria).subscribe(categoria => {
         this.categorias.push(categoria);
         this.categoriaForm.reset();
-        
       });
     }
   }
-  ocultarCategoria(){
-    setTimeout(() => {
-      this.mostrarFormCategorias = false;
-      
-    }, 100);
-  }
-  
+
   editarCategoria(categoria: Categoria): void {
     this.categoriaForm.patchValue(categoria);
     this.editing = true;
@@ -129,11 +119,30 @@ export class VentasComponent implements OnInit {
       this.categorias.splice(index, 1);
     });
   }
+
   ocultarForm() {
     setTimeout(() => {
       this.mostrarFormulario = false;
     }, 300);
   }
 
+  ocultarCategoria() {
+    setTimeout(() => {
+      this.mostrarFormCategorias = false;
+    }, 100);
+  }
 
+  cancelarEdicion(): void {
+    this.editing = false;
+    this.editingProductoId = null;
+    this.editingCategoriaId = null;
+    this.productoForm.reset();
+    this.categoriaForm.reset();
+    this.mostrarFormulario = false;
+    this.mostrarFormCategorias = false;
+  }
+
+  
+  
+  
 }
