@@ -6,7 +6,8 @@ import { InstalacionesService } from '../instalaciones/service/instalaciones.ser
 import { AgendaserviceService } from './service/agendaservice.service';
 import { DatePipe } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { Router } from '@angular/router';
+import { ReservaNotificacionService } from 'src/app/modules/shared/components/nav/services/notificacion-reserva.service';
 @Component({
   selector: 'app-agenda',
   templateUrl: './agenda.component.html',
@@ -50,7 +51,9 @@ export class AgendaComponent {
     private instalacionesService: InstalacionesService,
     private agendaService: AgendaserviceService,
     private datePipe: DatePipe,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router,
+    private reservaNotificacionService: ReservaNotificacionService,
   ) {this.today = new Date();}
 
   ngOnInit(): void {
@@ -82,6 +85,8 @@ export class AgendaComponent {
       response => {
         console.log('Reserva creada exitosamente', response);
         this.mostrarSnackbar('Reserva creada exitosamente');
+        this.router.navigateByUrl('/dashboard-user', { replaceUrl: true });
+        this.reservaNotificacionService.notificarReservaGuardada();
         // Realizar cualquier acción adicional después de crear la reserva
       },
       error => {

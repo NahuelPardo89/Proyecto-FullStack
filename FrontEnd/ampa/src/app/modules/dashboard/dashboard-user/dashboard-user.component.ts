@@ -15,7 +15,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class DashboardUserComponent implements OnInit {
   
   loggedInUser: User | null = null;
-
+  
   compras = "No hay compras a tu nombre";
   reservas: any[] = [];
   instalaciones: any[] = [];
