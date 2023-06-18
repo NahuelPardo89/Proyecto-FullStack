@@ -6,6 +6,7 @@ import { User } from 'src/app/modules/auth/interfaces/user.interface';
 import { AgendaserviceService } from '../../reservas/components/agenda/service/agendaservice.service';
 import { InstalacionesService } from '../../reservas/components/instalaciones/service/instalaciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ReservaNotificacionService } from '../../shared/components/nav/services/notificacion-reserva.service';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -44,7 +45,8 @@ export class DashboardUserComponent implements OnInit {
     private authService: AuthService,
     private agendaService: AgendaserviceService,
     private instalacionesService: InstalacionesService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private reservaNotificacionService: ReservaNotificacionService
   ) {
     this.instalaciones = [];
   }
@@ -98,6 +100,7 @@ export class DashboardUserComponent implements OnInit {
           horizontalPosition: 'center', // Posición horizontal del Snackbar
           verticalPosition: 'bottom' // Posición vertical del Snackbar
         });
+        this.reservaNotificacionService.notificarReservaGuardada();
       },
       error => {
         console.error('Error al eliminar la reserva:', error);
