@@ -11,12 +11,17 @@ export class DashboardComponent {
   usuariosVisible = false;
   reservasVisible = false;
   instalacionesVisible = false;
+  productosVisible = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
-  mostrarVentas() {
+  mostrarProductos() {
+    this.productosVisible = !this.productosVisible;
+  }
+  mostrarVentas(){
     this.ventasVisible = !this.ventasVisible;
   }
+
 
   mostrarUsuarios() {
     this.usuariosVisible = !this.usuariosVisible;

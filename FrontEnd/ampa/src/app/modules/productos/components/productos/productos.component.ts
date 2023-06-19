@@ -22,14 +22,14 @@ export class ProductosComponent implements OnInit {
     this.productosService.getProductos()
       .subscribe(data => {
         this.productos = data;
-        console.log(this.productos)
+        
       });
   }
   addToCart(producto: Producto) {
     // Obtiene el usuario desde localStorage
     const userItem = localStorage.getItem('user');
     if (!userItem) {
-        // No hay un usuario logueado. Puedes manejar este caso como necesites.
+       
         console.error('No hay un usuario logueado');
         return;
     }
@@ -39,7 +39,7 @@ export class ProductosComponent implements OnInit {
     const detalle: DetalleCarritoProducto = {
       usuario: usuario.id,
       producto: producto.id,
-      cantidad: 1, // puedes cambiarlo según sea necesario
+      cantidad: 1, 
     };
 
     this.detalleCarritoService.addProductoACarrito(detalle)

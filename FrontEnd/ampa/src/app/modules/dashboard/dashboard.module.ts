@@ -32,6 +32,7 @@ import { ConfirmDialogComponent } from './dashboard/clientes/confirm-dialog/conf
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InstalacionesComponent } from './dashboard/instalaciones/instalaciones/instalaciones.component';
+import { FacturaComponent } from './dashboard/factura/factura.component';
 
 
 
@@ -50,6 +51,7 @@ import { InstalacionesComponent } from './dashboard/instalaciones/instalaciones/
     DashboardUserComponent,
     ConfirmDialogComponent,
     InstalacionesComponent,
+    FacturaComponent,
    
    
   
