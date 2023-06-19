@@ -30,3 +30,6 @@
       <button (click)="finalizarCompra()" type="button" class="btn  btn-success  ">Finalizar compra</button>
     </div>
   </div>
+  <div *ngIf="!carrito">
+    <p>No hay Productos en el carrito</p>
+  </div>
