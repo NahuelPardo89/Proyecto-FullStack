@@ -28,6 +28,12 @@
     </mat-error>
   </mat-form-field>
   <mat-form-field class="mat-form-field">
+    <input matInput formControlName="stock" type="number" placeholder="Stock">
+    <mat-error *ngIf="productoForm.controls['stock'].invalid && (productoForm.controls['stock'].dirty || productoForm.controls['stock'].touched)">
+      Stock es requerido y debe ser un número
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="mat-form-field">
     <mat-select formControlName="categoria">
       <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">{{categoria.nombre}}</mat-option>
     </mat-select>
