@@ -1,6 +1,6 @@
 from django.contrib import admin
 from rest_framework.exceptions import ValidationError
-from .models import  Categoria, Producto, CarritoProductos,DetalleCarritoProductos
+from .models import  Categoria, Producto, CarritoProductos,DetalleCarritoProductos, Factura
 class DetalleCarritoProductosAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         try:
@@ -21,3 +21,4 @@ admin.site.register(Categoria, CategoriaAdmin)
 admin.site.register(Producto, ProductoAdmin)
 admin.site.register(CarritoProductos)
 admin.site.register(DetalleCarritoProductos, DetalleCarritoProductosAdmin)
+admin.site.register(Factura)

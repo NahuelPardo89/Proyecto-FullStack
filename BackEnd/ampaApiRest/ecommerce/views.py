@@ -81,21 +81,20 @@ class PagoViewSet(viewsets.ViewSet):
 
     def create(self, request):
         # Simula el proceso de pago
-        # Aquí puedes recibir los detalles del pago, como el método de pago y los detalles de la tarjeta
-        # Pero como es solo una simulación, simplemente asumiremos que el pago siempre es correcto
-
-        # Aquí puedes redirigir al cliente a la vista de confirmar_compra
-        # Nota: Esto es solo un ejemplo y puede que necesites ajustar la lógica según tus necesidades
-        carrito_id = request.data.get('carrito')
-        carrito = CarritoProductos.objects.filter(id=carrito_id).first()
-
+        
+       
+        usuario_id = request.data.get('usuario')
+        
+        carrito = CarritoProductos.objects.filter(usuario_id=usuario_id).first()
+        
         if not carrito:
             return Response({"detail": "Carrito no encontrado"}, status=status.HTTP_404_NOT_FOUND)
 
         factura_data = {
             'carrito': carrito.id,
             'subtotal': carrito.monto,
-            'total': carrito.monto  # puedes ajustar este valor de acuerdo al descuento
+            'total': carrito.monto,
+            'estado':'PA'  # puedes ajustar este valor de acuerdo al descuento
         }
 
         factura_serializer = FacturaSerializer(data=factura_data)

@@ -41,8 +41,8 @@ export class Carrito2Component implements OnInit {
       // Manejar error aquí
     });
   }
-  finalizarCompra(carrito:any){
-    this.router.navigateByUrl('/dashboard');
+  finalizarCompra(){
+    this.router.navigateByUrl('dashboard/productos/pagos');
   }
 
 }
