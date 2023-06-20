@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogEdicionComponent } from './dialog-edicion/dialog-edicion.component';
 import { ReservaNotificacionService } from '../../shared/components/nav/services/notificacion-reserva.service';
+import { FacturaService } from '../dashboard/factura/factura.service';
 
 
 
@@ -23,6 +24,7 @@ export class DashboardUserComponent implements OnInit {
   loggedInUser: User | null = null;
   
   compras = "No hay compras a tu nombre";
+  facturas: any[] = [];
   reservas: any[] = [];
   instalaciones: any[] = [];
   instalacionesMap: { [id: number]: string } = {}; // Mapa para almacenar los nombres de las instalaciones
@@ -52,7 +54,8 @@ export class DashboardUserComponent implements OnInit {
     private instalacionesService: InstalacionesService,
     private snackBar: MatSnackBar,
     private dialog: MatDialog,
-    private reservaNotificacionService: ReservaNotificacionService
+    private reservaNotificacionService: ReservaNotificacionService,
+    private facturaService: FacturaService
   ) {
     this.instalaciones = [];
     
@@ -65,6 +68,10 @@ export class DashboardUserComponent implements OnInit {
 
       if (user) {
         this.obtenerReservasUsuario();
+        this.facturaService.getFacturasPorUsuario(this.loggedInUser!.id).subscribe(facturas => {
+          this.facturas = facturas;
+          console.log(this.facturas)
+        });
       }
     });
 

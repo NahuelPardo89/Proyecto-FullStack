@@ -15,4 +15,7 @@ export class FacturaService {
   getFacturas(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+  getFacturasPorUsuario(usuarioId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}usuario/${usuarioId}/`);
+  }
 }

@@ -60,7 +60,30 @@
 
             <div class="container compras">
               <h3><b>Compras Realizadas:</b></h3>
-              <p>{{ compras }}</p>
+              <div class="table-container">
+                <table class="table table-hover table-dark">
+                  <thead>
+                    <tr class="table-warning">
+                      <th>ID</th>
+                      <th>Usuario</th>
+                      <th>Fecha</th>
+                      <th>Subtotal</th>
+                      <th>Descuento</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let factura of facturas">
+                      <td>{{ factura.id }}</td>
+                      <td>{{ factura.carrito.usuario.nombre }} {{ factura.carrito.usuario.apellido }}</td>
+                      <td>{{ factura.fecha }}</td>
+                      <td>{{ factura.subtotal }}</td>
+                      <td>{{ factura.descuento }}</td>
+                      <td>En Camino</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
           </div>

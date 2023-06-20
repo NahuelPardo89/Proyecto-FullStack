@@ -83,6 +83,17 @@ class DetalleCarritoProductosViewSet(viewsets.ModelViewSet):
 class FacturaViewSet(viewsets.ModelViewSet):
     queryset = Factura.objects.all()
     serializer_class = FacturaSerializer2
+    @action(detail=False, methods=['get'], url_path='usuario/(?P<usuario_id>\d+)')
+    def get_facturas_por_usuario(self, request, usuario_id=None):
+        print(request.data)
+        try:
+            user = Usuario.objects.get(id=usuario_id)
+            
+        except User.DoesNotExist:
+            return Response({'error': 'Usuario no encontrado'}, status=404)
+        facturas = Factura.objects.filter(carrito__usuario=user)
+        serializer = FacturaSerializer2(facturas, many=True)
+        return Response(serializer.data)
 
 class PagoViewSet(viewsets.ViewSet):
 
