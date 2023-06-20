@@ -7,6 +7,15 @@
     
     
 }
+mat-form-field {
+    margin-left: 10px;
+}
+#fecha {
+    width: 100px;
+}
+#cvc {
+    width: 80px;
+}
 .botones {
     display: flex;
     
