@@ -84,7 +84,7 @@ class Factura(models.Model):
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
     descuento = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     estado = models.CharField(max_length=2, choices=ESTADOS, default='PE')
-    carrito = models.OneToOneField(CarritoProductos, on_delete=models.SET_NULL, null=True)
+    carrito = models.ForeignKey(CarritoProductos, on_delete=models.SET_NULL, null=True)
     @property
     def total(self):
         return self.subtotal - self.descuento

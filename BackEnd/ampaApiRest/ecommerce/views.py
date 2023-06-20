@@ -1,11 +1,12 @@
 from django.db.models import Prefetch
+from django.shortcuts import get_object_or_404
 from rest_framework import viewsets,permissions
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework import status
 from .models import Producto, Categoria,CarritoProductos, DetalleCarritoProductos, Factura
-from .serializers import CategoriaSerializer, ProductoSerializer, CarritoProductosSerializer, DetalleCarritoProductosSerializer,FacturaSerializer
+from .serializers import CategoriaSerializer, ProductoSerializer, CarritoProductosSerializer, DetalleCarritoProductosSerializer,FacturaSerializer, FacturaSerializer2
 from usuarios.models import Usuario
 class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
@@ -20,7 +21,12 @@ class ProductoViewSet(viewsets.ModelViewSet):
 class CarritoProductosViewSet(viewsets.ModelViewSet):
     queryset = CarritoProductos.objects.all()
     serializer_class = CarritoProductosSerializer
-
+    def retrieve(self, request, *args, **kwargs):
+        usuario_id = kwargs.get('pk')
+        queryset = CarritoProductos.objects.filter(usuario_id=usuario_id)
+        carrito = get_object_or_404(queryset)
+        serializer = self.get_serializer(carrito)
+        return Response(serializer.data)
     def get_queryset(self):
         return super().get_queryset().prefetch_related(
             Prefetch('detalles', queryset=DetalleCarritoProductos.objects.select_related('producto'))
@@ -75,38 +81,42 @@ class DetalleCarritoProductosViewSet(viewsets.ModelViewSet):
 
 class FacturaViewSet(viewsets.ModelViewSet):
     queryset = Factura.objects.all()
-    serializer_class = FacturaSerializer
+    serializer_class = FacturaSerializer2
 
 class PagoViewSet(viewsets.ViewSet):
 
     def create(self, request):
         # Simula el proceso de pago
         
-       
+        
         usuario_id = request.data.get('usuario')
         
         carrito = CarritoProductos.objects.filter(usuario_id=usuario_id).first()
+        print(carrito)
         
         if not carrito:
             return Response({"detail": "Carrito no encontrado"}, status=status.HTTP_404_NOT_FOUND)
+        
 
+        
         factura_data = {
             'carrito': carrito.id,
             'subtotal': carrito.monto,
             'total': carrito.monto,
-            'estado':'PA'  # puedes ajustar este valor de acuerdo al descuento
+            'estado':'PA'  
         }
 
         factura_serializer = FacturaSerializer(data=factura_data)
         if factura_serializer.is_valid():
             factura_serializer.save()
+            
 
             # Actualiza el stock del producto.
             for detalle in carrito.detalles.all():
                 producto = detalle.producto
                 producto.stock -= detalle.cantidad
                 producto.save()
-
+            carrito.detalles.all().delete()
             return Response(factura_serializer.data, status=status.HTTP_201_CREATED)
 
         return Response(factura_serializer.errors, status=status.HTTP_400_BAD_REQUEST)

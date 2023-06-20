@@ -8,12 +8,12 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class Carrito2Service {
 
-  private API_URL = 'http://127.0.0.1:8000/tienda/carritos/';  // Cambiar con tu URL de API
+  private API_URL = 'http://127.0.0.1:8000/tienda/carritos/';  
 
   constructor(private http: HttpClient,private productoService: ProductosService) { }
 
   getCarrito(usuarioId: number): Observable<any> {
-    return this.http.get(`${this.API_URL}${usuarioId}/`);  // Cambiar con tu endpoint correcto
+    return this.http.get(`${this.API_URL}${usuarioId}/`);  
   }
 
   getProductoDetails(id: number): Observable<any> {
