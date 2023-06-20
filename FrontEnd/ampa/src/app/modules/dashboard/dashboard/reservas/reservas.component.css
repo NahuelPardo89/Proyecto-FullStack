@@ -13,18 +13,18 @@
     overflow-y: auto;
   }
   .table-container::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px; 
   }
   
   .table-container::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    background-color: #f1f1f1; 
   }
   
   .table-container::-webkit-scrollbar-thumb {
-    background-color: blue; /* Color de la barra de desplazamiento */
+    background-color: blue; 
   }
   .table {
-    border-radius: 10px; /* Redondear los bordes de la tabla */
-    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    border-radius: 10px; 
+    overflow: hidden; 
   }
   

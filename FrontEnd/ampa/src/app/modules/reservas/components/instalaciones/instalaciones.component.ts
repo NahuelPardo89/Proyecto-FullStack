@@ -7,7 +7,7 @@ import { InstalacionesService } from './service/instalaciones.service';
   styleUrls: ['./instalaciones.component.css']
 })
 export class InstalacionesComponent implements OnInit {
-  //creamos e inicializamos el array de instalaciones
+  
   instalaciones: any[] = [];
   
   constructor(private instalacionesService: InstalacionesService) {

@@ -14,21 +14,21 @@
     background-color: blue; /* Color de la barra de desplazamiento */
   }
   .table {
-    border-radius: 10px; /* Redondear los bordes de la tabla */
-    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    border-radius: 10px; 
+    overflow: hidden; 
   }
   .btn-agregar-archivo {
-    background-color: black; /* Cambia el color de fondo */
-    color: #ffffff; /* Cambia el color del texto */
-    padding: 10px 20px; /* Cambia el espaciado interno del botón */
-    border-radius: 5px; /* Agrega bordes redondeados */
-    /* Agrega cualquier otro estilo deseado */
+    background-color: black; 
+    color: #ffffff;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    
   }
   .formulario-container {
-    border: 1px solid #ccc; /* Agrega un borde delgado */
-    border-radius: 5px; /* Agrega bordes redondeados */
-    padding: 20px; /* Agrega espaciado interno */
-    /* Agrega cualquier otro estilo deseado */
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 20px; 
+   
   }
   
     

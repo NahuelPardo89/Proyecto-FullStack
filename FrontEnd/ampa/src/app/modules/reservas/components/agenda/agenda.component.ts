@@ -88,27 +88,24 @@ export class AgendaComponent {
         console.log(this.InstalacionSeleccionada);
         this.router.navigateByUrl('/dashboard-user', { replaceUrl: true });
         this.reservaNotificacionService.notificarReservaGuardada();
-        // Realizar cualquier acción adicional después de crear la reserva
+        
       },
       error => {
         console.error('Error al crear la reserva', error);
         console.log(this.InstalacionSeleccionada);
         this.mostrarErrorSnackbar('Error al crear la reserva, verifique los campos seleccionados.');
-        // Manejar el error de acuerdo a tus necesidades
+        
       }
     );
   }
   
   filtroFecha = (fecha: Date | null) => {
-    // Define aquí cualquier filtro de fechas que desees aplicar
-    // Puedes retornar true si deseas permitir todas las fechas
-    // o false para deshabilitar fechas específicas.
     return true;
   }
 
   mostrarSnackbar(mensaje: string) {
     this.snackBar.open(mensaje, 'Cerrar', {
-      duration: 3000, // Duración en milisegundos
+      duration: 3000, 
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
     });

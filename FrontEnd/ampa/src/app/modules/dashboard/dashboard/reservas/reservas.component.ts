@@ -10,9 +10,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./reservas.component.css']
 })
 export class ReservasComponent {
-  reservas: any[] = []; // Arreglo para almacenar las reservas
+  reservas: any[] = []; 
   instalaciones: any[] = [];
-  instalacionesMap: { [id: number]: string } = {}; // Mapa para almacenar los nombres de las instalaciones
+  instalacionesMap: { [id: number]: string } = {}; 
 
   usuarios: any[] = [];
   usuariosMap: { [id: number]: string } = {}; 
@@ -27,7 +27,7 @@ export class ReservasComponent {
     }
 
     ngOnInit() {
-      // Obtener todas las reservas
+      
       this.agendaService.obtenerTodasLasReservas().subscribe(
         (reservas: any[]) => {
           this.reservas = reservas;
@@ -37,7 +37,7 @@ export class ReservasComponent {
           console.error('Error al obtener las reservas:', error);
         }
       );
-      // Llamada al método obtenerTodosLosUsuarios()
+      
       this.agendaService.obtenerTodosLosUsuarios().subscribe(
         usuarios => {
           console.log('Usuarios:', usuarios);
@@ -47,7 +47,7 @@ export class ReservasComponent {
         }
       );
     
-      // Obtener todas las reservas
+     
       this.obtenerTodasLasReservas();
     
       this.agendaService.obtenerTodosLosUsuarios().subscribe(usuarios => {
@@ -62,7 +62,7 @@ export class ReservasComponent {
       this.instalacionesService.getInstalaciones().subscribe(instalaciones => {
         this.instalaciones = instalaciones;
     
-        // Crear un mapa de instalaciones utilizando el ID como clave y el nombre como valor
+       
         this.instalacionesMap = instalaciones.reduce((map, instalacion) => {
           map[instalacion.idInstalacion] = instalacion.nombre;
           return map;
@@ -74,7 +74,7 @@ export class ReservasComponent {
     this.agendaService.obtenerTodasLasReservas().subscribe(
       (reservas: any[]) => {
         this.reservas = reservas;
-        // Imprimir el nombre de usuario para la primera reserva
+        
         if (reservas.length > 0) {
           const primeraReserva = reservas[0];
           const nombreUsuario = this.obtenerNombreUsuario(primeraReserva.usuario);
@@ -93,9 +93,9 @@ export class ReservasComponent {
         this.reservas = this.reservas.filter(reserva => reserva.idReserva !== idReserva);
   
         this.snackBar.open('Reserva eliminada exitosamente', 'Cerrar', {
-          duration: 3000, // Duración en milisegundos
-          horizontalPosition: 'center', // Posición horizontal del Snackbar
-          verticalPosition: 'bottom' // Posición vertical del Snackbar
+          duration: 3000, 
+          horizontalPosition: 'center', 
+          verticalPosition: 'bottom' 
         });
       },
       error => {

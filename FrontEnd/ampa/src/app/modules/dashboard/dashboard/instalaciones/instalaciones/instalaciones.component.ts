@@ -54,7 +54,7 @@ export class InstalacionesComponent {
     this.instalacionesService.agregarInstalacion(formData).subscribe(
       response => {
         console.log('Instalación agregada:', response);
-        this.actualizarListaInstalaciones(); // Actualizar la lista de instalaciones
+        this.actualizarListaInstalaciones(); 
         this.nuevaInstalacion = {
           nombre: '',
           descripcion: '',
@@ -63,9 +63,9 @@ export class InstalacionesComponent {
         };
         this.mostrarFormulario = false;
   
-        // Mostrar MatSnackBar
+       
         this.snackBar.open('Instalación creada correctamente', 'Cerrar', {
-          duration: 3000, // Duración en milisegundos
+          duration: 3000, 
         });
       },
       error => {
@@ -86,11 +86,11 @@ export class InstalacionesComponent {
     this.instalacionesService.editarInstalacion(instalacion.idInstalacion, formData).subscribe(
       response => {
         console.log('Instalación actualizada:', response);
-        this.actualizarListaInstalaciones(); // Actualizar la lista de instalaciones
+        this.actualizarListaInstalaciones(); 
   
         // Mostrar MatSnackBar
         this.snackBar.open('Instalación actualizada correctamente', 'Cerrar', {
-          duration: 3000, // Duración en milisegundos
+          duration: 3000, 
         });
       },
       error => {
@@ -103,11 +103,11 @@ export class InstalacionesComponent {
     this.instalacionesService.eliminarInstalacion(instalacion.idInstalacion).subscribe(
       response => {
         console.log('Instalación eliminada:', response);
-        this.actualizarListaInstalaciones(); // Actualizar la lista de instalaciones
+        this.actualizarListaInstalaciones(); 
 
-        // Mostrar MatSnackBar
+        
         this.snackBar.open('Instalación eliminada correctamente', 'Cerrar', {
-          duration: 3000, // Duración en milisegundos
+          duration: 3000, 
         });
       },
       error => {

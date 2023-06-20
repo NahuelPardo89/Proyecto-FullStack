@@ -28,7 +28,7 @@ export class DashboardUserComponent implements OnInit {
   facturas: any[] = [];
   reservas: any[] = [];
   instalaciones: any[] = [];
-  instalacionesMap: { [id: number]: string } = {}; // Mapa para almacenar los nombres de las instalaciones
+  instalacionesMap: { [id: number]: string } = {};
 
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -80,7 +80,7 @@ export class DashboardUserComponent implements OnInit {
     this.instalacionesService.getInstalaciones().subscribe(instalaciones => {
       this.instalaciones = instalaciones;
       
-      // Crear un mapa de instalaciones utilizando el ID como clave y el nombre como valor
+      
       this.instalacionesMap = instalaciones.reduce((map, instalacion) => {
         map[instalacion.idInstalacion] = instalacion.nombre;
         return map;
@@ -120,7 +120,7 @@ export class DashboardUserComponent implements OnInit {
   actualizarDatosUsuario(user: User) {
     this.loggedInUser = user;
     
-    // Realiza las acciones necesarias después de actualizar los datos
+    
   }
   
 
@@ -149,9 +149,9 @@ export class DashboardUserComponent implements OnInit {
         this.reservas = this.reservas.filter(reserva => reserva.idReserva !== idReserva);
   
         this.snackBar.open('Reserva eliminada exitosamente', 'Cerrar', {
-          duration: 3000, // Duración en milisegundos
-          horizontalPosition: 'center', // Posición horizontal del Snackbar
-          verticalPosition: 'bottom' // Posición vertical del Snackbar
+          duration: 3000, 
+          horizontalPosition: 'center', 
+          verticalPosition: 'bottom' 
         });
         this.reservaNotificacionService.notificarReservaGuardada();
       },
