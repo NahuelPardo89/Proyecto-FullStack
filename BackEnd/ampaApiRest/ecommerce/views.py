@@ -8,18 +8,31 @@ from rest_framework import status
 from .models import Producto, Categoria,CarritoProductos, DetalleCarritoProductos, Factura
 from .serializers import CategoriaSerializer, ProductoSerializer, CarritoProductosSerializer, DetalleCarritoProductosSerializer,FacturaSerializer, FacturaSerializer2
 from usuarios.models import Usuario
+
+#Permisos de solo lectura a menos que sea admin
+class IsAdminOrReadOnly(permissions.BasePermission):
+  
+    def has_permission(self, request, view):
+        if request.method in permissions.SAFE_METHODS or \
+           (request.user and request.user.is_staff):
+            return True
+        return False
+
+
 class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
-    permission_classes = [permissions.IsAuthenticated, ]
+    permission_classes = [permissions.IsAuthenticated, IsAdminOrReadOnly ]
     serializer_class = CategoriaSerializer
 
 class ProductoViewSet(viewsets.ModelViewSet):
     queryset = Producto.objects.all()
-    permission_classes = [permissions.IsAuthenticated, ]
+    permission_classes = [permissions.IsAuthenticated, IsAdminOrReadOnly ]
     serializer_class = ProductoSerializer
 
 class CarritoProductosViewSet(viewsets.ModelViewSet):
     queryset = CarritoProductos.objects.all()
+    permission_classes = [permissions.IsAuthenticated, ]
+    serializer_class = CategoriaSerializer
     serializer_class = CarritoProductosSerializer
     def retrieve(self, request, *args, **kwargs):
         usuario_id = kwargs.get('pk')
@@ -36,6 +49,7 @@ class CarritoProductosViewSet(viewsets.ModelViewSet):
 
 class DetalleCarritoProductosViewSet(viewsets.ModelViewSet):
     queryset = DetalleCarritoProductos.objects.select_related('producto', 'carrito')
+    permission_classes = [permissions.IsAuthenticated, ]
     serializer_class = DetalleCarritoProductosSerializer
     
 
@@ -82,6 +96,7 @@ class DetalleCarritoProductosViewSet(viewsets.ModelViewSet):
 
 class FacturaViewSet(viewsets.ModelViewSet):
     queryset = Factura.objects.all()
+    permission_classes = [permissions.IsAuthenticated, ]
     serializer_class = FacturaSerializer2
     @action(detail=False, methods=['get'], url_path='usuario/(?P<usuario_id>\d+)')
     def get_facturas_por_usuario(self, request, usuario_id=None):
