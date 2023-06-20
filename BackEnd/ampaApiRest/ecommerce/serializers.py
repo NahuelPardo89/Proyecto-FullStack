@@ -30,6 +30,7 @@ class CarritoProductosSerializer(serializers.ModelSerializer):
         fields = ['usuario',  'detalles', 'monto']
 
 class FacturaSerializer(serializers.ModelSerializer):
+    carrito=CarritoProductosSerializer()
     class Meta:
         model = Factura
         fields = '__all__'

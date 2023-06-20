@@ -1,12 +1,12 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard Admin</h1>
 
-  <div class="productos" [ngClass]="{ 'fade-in': ventasVisible }">
-    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarVentas()">
+  <div class="productos" [ngClass]="{ 'fade-in': productosVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarProductos()">
       Administrar productos
-      <mat-icon>{{ ventasVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+      <mat-icon>{{ productosVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
     </button>
-    <app-ventas *ngIf="ventasVisible"></app-ventas>
+    <app-ventas *ngIf="productosVisible"></app-ventas>
   </div>
 
   <div class="usuarios" [ngClass]="{ 'fade-in': usuariosVisible }">
@@ -32,4 +32,12 @@
       </button>
     <app-instalaciones *ngIf="instalacionesVisible"></app-instalaciones>
   </div>
+  <div class="productos" [ngClass]="{ 'fade-in': ventasVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarVentas()">
+      Ventas
+      <mat-icon>{{ ventasVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-factura *ngIf="ventasVisible"></app-factura>
+  </div>
 </div>
+
