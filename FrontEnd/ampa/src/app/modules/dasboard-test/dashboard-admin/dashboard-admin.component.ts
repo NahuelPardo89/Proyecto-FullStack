@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Producto } from '../../productos/interfaces/producto.interface';
 import { Categoria } from '../../productos/interfaces/categoria.interface';
-import { ProductosService } from '../productos.service';
+import { ProductosService } from '../../dashboard/services/productos.service';
 import { MatTableDataSource } from '@angular/material/table';
 
 

@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Producto } from 'src/app/modules/productos/interfaces/producto.interface';
 import { Categoria } from 'src/app/modules/productos/interfaces/categoria.interface';
-import { ProductosService } from 'src/app/modules/dasboard-test/productos.service';
+import { ProductosService } from 'src/app/modules/dashboard/services/productos.service';
 
 @Component({
   selector: 'app-ventas',
