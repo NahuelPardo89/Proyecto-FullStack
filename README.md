@@ -4,7 +4,7 @@
 # Proyecto-FullStack  E-commerce 2023
 Pagina Web para complejo deportivo, Incluye tienda virtual y reserva de instalaciones
 
-Presentación Final Proyecto: https://drive.google.com/file/d/1MfHSWrN1NGiqYWUIoZ9smrXUnlujpjGL/view?usp=drivesdk
+Presentación Final Proyecto:https://drive.google.com/drive/folders/14Ap87teqhfvP3BEievryjY4aAX7seXtw
 
 
 # Proyecto-FullStack 2022
