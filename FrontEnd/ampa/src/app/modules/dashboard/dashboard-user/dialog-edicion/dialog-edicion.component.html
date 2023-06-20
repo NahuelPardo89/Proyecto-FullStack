@@ -1,5 +1,4 @@
 <div class="contenedor">
-  
   <form [formGroup]="usuarioForm" (ngSubmit)="editarDatos()">
     <mat-form-field>
       <input matInput formControlName="dni" placeholder="DNI">
@@ -9,7 +8,22 @@
       </mat-error>
     </mat-form-field>
   
-    
+    <mat-form-field>
+      <input matInput formControlName="nombre" placeholder="Nombre">
+      <mat-label>Nombre</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['nombre'].invalid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)">
+        Nombre es requerido
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="apellido" placeholder="Apellido">
+      <mat-label>Apellido</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['apellido'].invalid && (usuarioForm.controls['apellido'].dirty || usuarioForm.controls['apellido'].touched)">
+        Apellido es requerido
+      </mat-error>
+    </mat-form-field>
+  
     <mat-form-field>
       <input matInput formControlName="email" placeholder="Email">
       <mat-label>Email</mat-label>
