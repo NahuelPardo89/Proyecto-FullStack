@@ -85,12 +85,14 @@ export class AgendaComponent {
       response => {
         console.log('Reserva creada exitosamente', response);
         this.mostrarSnackbar('Reserva creada exitosamente');
+        console.log(this.InstalacionSeleccionada);
         this.router.navigateByUrl('/dashboard-user', { replaceUrl: true });
         this.reservaNotificacionService.notificarReservaGuardada();
         // Realizar cualquier acción adicional después de crear la reserva
       },
       error => {
         console.error('Error al crear la reserva', error);
+        console.log(this.InstalacionSeleccionada);
         this.mostrarErrorSnackbar('Error al crear la reserva, verifique los campos seleccionados.');
         // Manejar el error de acuerdo a tus necesidades
       }
