@@ -15,70 +15,93 @@
     </div>
     
     <div class="col-md-10 mx-auto col-lg-5">
-      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" (ngSubmit)="guardarReserva()">
 
 <!-- NOMBRE -->
 
         <div class="input-group mb-3">
            <span class="input-group-text" id="inputGroup-sizing-default">Nombre:</span>
-           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+           <input type="text" class="form-control" [value]="user?.nombre" readonly aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
 <!-- APELLIDO -->
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Apellido:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" [value]="user?.apellido" readonly aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
        </div>
 <!-- TELEFONO-->
 <div class="input-group mb-3">
   <span class="input-group-text" id="inputGroup-sizing-default">Telefono:</span>
-  <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <input type="number" class="form-control" [value]="user?.telefono" readonly aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 <!-- CORREO -->
        <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+        <input type="email" class="form-control" [value]="user?.email" readonly>
         <label for="floatingInput">Correo:</label>
       </div>
-      
+      <h4>Elige tu instalacion:</h4>
 <!-- MULTIPLE CHOISE DE INSTALACION -->
-       <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="InstalacionSeleccionada" name="opcion">
         <option selected>¡Elige tu instalacion favorita!</option>
-        <option value="1">01- Cancha de futbol</option>
-        <option value="2">02- Cancha de basquet</option>
-        <option value="3">03- Cancha de paddle</option>
-        <option value="4">04- Gimnasio</option>
-        <option value="5">05- Salón de eventos AM.P.A.</option>
+        <option value="1">{{instalaciones[0].nombre}}</option>
+        <option value="2">{{instalaciones[1].nombre}}</option>
+        <option value="3">{{instalaciones[2].nombre}}</option>
+        <option value="4">{{instalaciones[3].nombre}}</option>
+        <option value="5">{{instalaciones[4].nombre}}</option>
       </select> <br>
-<!-- SWITCH DE EQUIPAMIENTO -->
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">¡Quiero mi equipamiento!</label>
-        <p class="text-muted">*Tarifa adicional: ARS900</p>
-      </div> <br>
-
-<!-- ELIGE FECHA-->
-  <p>
-      <label for="date">Elige tu fecha: </label><br>
-      <input type="date" id="date">
-    </p>
-        
-<!-- ELIGE HORA -->
-
-
-      <p>
-        <label for="time">Elige tu hora: </label><br>
-        <input type="time" id="time">
-      </p>
 
 
 
-<!-- BOTON RESERVAR -->
-      <div class="col-12" style="text-align: end;">
-        <button class="btn btn-primary" type="submit">Reservar</button>
-      </div>
+<h4>Elige fecha:</h4>
+<!-- Campo para la fecha -->
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" [(ngModel)]="selectedDate" name="selectedDate" [min]="today">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
 
-<!-- TERMINOS Y CONDICIONES -->
-        <hr class="my-4">
-        <small class="text-body-secondary">Al hacer click en Reservar, estas aceptando los térnminos y condiciones.</small>
+<br>
+<h4>Elige hora:</h4>
+<!-- Campo para la hora y minutos -->
+<div class="input-group">
+  <select class="form-select" id="hourSelect" (change)="onHourChange($event)">
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    
+  </select>
+
+  <span class="input-group-text">:</span>
+
+  <select class="form-select" id="minuteSelect" (change)="onMinuteChange($event)">
+    <option value="00">00</option>
+    <option value="15">15</option>
+    <option value="30">30</option>
+    <option value="45">45</option>
+  </select>
+</div>
+
+<h2>Valor de la reserva: 1500 ARS</h2>
+
+<!-- Botón Reservar -->
+<div class="col-12 text-end">
+  <button class="btn btn-primary" type="submit">Reservar</button>
+</div>
+
+<!-- Términos y condiciones -->
+<hr class="my-4">
+<small class="text-body-secondary">Al hacer click en Reservar, estás aceptando los términos y condiciones.</small>
       </form>
     </div>
   </div>

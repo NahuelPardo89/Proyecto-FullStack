@@ -10,6 +10,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuario
         fields = ('id', 'dni', 'nombre', 'apellido', 'email', 'telefono', 'direccion','is_staff')
 
+class UsuarioShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
+        fields = ( 'id','nombre', 'apellido')
+
 # Register Serializer
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:

@@ -17,30 +17,87 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Mi cuenta'">
           <div class="container micuenta">
-            <h2>Bienvenido</h2>
+            <h2>{{ loggedInUser?.nombre }} {{ loggedInUser?.apellido }}</h2>
+            <button class="btn btn-primary" (click)="editarDatos()">Mis datos</button>
           </div>
+            
+           
+          
           <hr>
           <div class="historial">
             <div class="container reservas">
-              <h3><b>Reservas: <hr> </b>{{reservas}}</h3> 
+              <h3><b>Reservas de: {{ loggedInUser?.nombre }} {{ loggedInUser?.apellido }}</b></h3>
+              <div *ngIf="loggedInUser">
+                <ng-container *ngIf="reservas.length === 0; else showReservas">
+                  <p>{{ reservas }}</p>
+                </ng-container>
+                <ng-template #showReservas>
+                  <div class="table-container">
+                  <table class="table table-hover table-dark">
+                    <thead>
+                      <tr class="table-warning">
+                        <th>Fecha Reservada</th>
+                        <th>Hora</th>
+                        <th>Costo</th>
+                        <th>Instalacion</th>
+                        <th>Accion</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let reserva of reservas">
+                        <td>{{ reserva.fecha }}</td>
+                        <td>{{ reserva.hora }}</td>
+                        <td>{{ reserva.costo }}</td>
+                        <td>{{ obtenerNombreInstalacion(reserva.instalaciones) }}</td>
+                        <td><mat-icon class="mat-warn" (click)="eliminarReserva(reserva.idReserva)">delete</mat-icon></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                </ng-template>
+              </div>
             </div>
 
             <div class="container compras">
-              <h3><b>Compras Realizadas: </b> <hr>{{compras}}</h3>
+              <h3><b>Compras Realizadas:</b></h3>
+              <div class="table-container">
+                <table class="table table-hover table-dark">
+                  <thead>
+                    <tr class="table-warning">
+                      <th>ID</th>
+                      <th>Usuario</th>
+                      <th>Fecha</th>
+                      <th>Subtotal</th>
+                      <th>Descuento</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let factura of facturas">
+                      <td>{{ factura.id }}</td>
+                      <td>{{ factura.carrito.usuario.nombre }} {{ factura.carrito.usuario.apellido }}</td>
+                      <td>{{ factura.fecha }}</td>
+                      <td>{{ factura.subtotal }}</td>
+                      <td>{{ factura.descuento }}</td>
+                      <td>En Camino</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
           </div>
         </mat-card-content>
-        
-        
+
+
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Productos'">
           <div class="container productos">
             <button class="btn btn-secondary"><a routerLink="/dashboard/productos">Ver Productos</a></button>
           </div>
         </mat-card-content>
-        
-        
-        
+
+
+
         <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Servicios'">
           <div class="container servicios">
             <button class="btn btn-secondary"><a routerLink="/dashboard/reservas">Ver Servicios</a></button>

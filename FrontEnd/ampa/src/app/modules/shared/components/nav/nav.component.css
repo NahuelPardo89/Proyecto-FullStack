@@ -33,3 +33,19 @@
     background-color: #fff;
     margin-bottom: 5px;
     }
+.whatsapp-icon {
+        position: fixed;
+        bottom: 30px;
+        font-size: 32px;
+        border-radius: 50%;
+        color: white;
+        background-color: #25D366;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        right: 30px;
+        z-index: 9999;
+      }
+        .vertical-center {
+        margin-top: 5px;
+        margin-right: 5px;
+      }
+      

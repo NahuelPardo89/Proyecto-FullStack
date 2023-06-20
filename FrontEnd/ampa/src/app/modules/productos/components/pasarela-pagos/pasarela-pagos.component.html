@@ -1,0 +1,74 @@
+
+
+<form class="formulario" [formGroup]="formulario">
+    <!-- Datos del comprador -->
+    <div class="comprador">
+        <h2>Datos de facturación</h2>
+    <mat-form-field>
+      <input matInput placeholder="Nombre" formControlName="nombre" required>
+      <mat-error *ngIf="formulario.get('nombre')?.hasError('required')">Nombre es necesario</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Apellido" formControlName="apellido" required>
+      <mat-error *ngIf="formulario.get('apellido')?.hasError('required')">Apellido es necesario</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="number" matInput placeholder="DNI" formControlName="dni" required>
+      <mat-error *ngIf="formulario.get('dni')?.hasError('required')">DNI es necesario</mat-error>
+      <mat-error *ngIf="formulario.get('dni')?.hasError('pattern')">El dni debe contener entre 7 y 9 números</mat-error>
+    </mat-form-field>
+    </div>
+  
+    <!-- Datos de la tarjeta -->
+    <div class="tarjeta">
+        <h2>Datos de la tarjeta</h2>
+    <mat-form-field>
+        <input matInput placeholder="Nombre del titular" formControlName="nombreTitular" required>
+        <mat-error *ngIf="formulario.get('nombreTitular')?.hasError('required')">Nombre de tarjeta es necesario</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="number" matInput placeholder="Número de tarjeta" formControlName="numeroTarjeta" required>
+      <mat-error *ngIf="formulario.get('numeroTarjeta')?.hasError('required')">Numero de tarjeta es necesario</mat-error>
+      <mat-error *ngIf="formulario.get('numeroTarjeta')?.hasError('pattern')">debe contener 16 dígitos</mat-error>
+    </mat-form-field>
+    <mat-form-field id="fecha">
+      <input matInput placeholder="MM/AA" formControlName="fecha" required >
+      <mat-error *ngIf="formulario.get('fecha')?.hasError('required')">La fecha de vencimiento es necesaria</mat-error>
+      <mat-error *ngIf="formulario.get('fecha')?.hasError('pattern')">debe tener el formato mes/año</mat-error>
+    </mat-form-field>
+    <mat-form-field id="cvc">
+      <input matInput placeholder="CVC" formControlName="cvc" required >
+      <mat-error *ngIf="formulario.get('cvc')?.hasError('required')">Código de tarjeta necesario</mat-error>
+      <mat-error *ngIf="formulario.get('cvc')?.hasError('pattern')">3 números</mat-error>
+    </mat-form-field>
+    </div>
+  
+    <!-- Datos de envío -->
+    <div class="envio">
+        <h2>Datos de envío</h2>
+    <mat-form-field>
+      <input matInput placeholder="País" formControlName="pais" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Provincia" formControlName="provincia" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Localidad" formControlName="localidad" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Dirección" formControlName="direccion" required>
+    </mat-form-field>
+    </div>
+    
+  
+    <!-- Términos y condiciones -->
+    <div class="botones">
+    <mat-checkbox required class="terms" formControlName="terminos">Acepto los términos y condiciones</mat-checkbox>
+    <mat-error *ngIf="formulario.get('terminos')?.hasError('required')">Debe aceptar los terminos y condiciones</mat-error>
+  
+    <!-- Botones -->
+    
+      <button mat-raised-button  type="submit" (click)="pagar()" class="comprar btn">Comprar</button>
+      
+    </div>
+  </form>

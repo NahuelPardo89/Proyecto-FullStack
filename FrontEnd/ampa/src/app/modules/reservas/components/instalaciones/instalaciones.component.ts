@@ -7,17 +7,17 @@ import { InstalacionesService } from './service/instalaciones.service';
   styleUrls: ['./instalaciones.component.css']
 })
 export class InstalacionesComponent implements OnInit {
-  //creamos e inicializamos el array de instalaciones
-  instalaciones: any[];
-
+  
+  instalaciones: any[] = [];
+  
   constructor(private instalacionesService: InstalacionesService) {
     this.instalaciones = [];
   }
 
   ngOnInit() {
     this.instalacionesService.getInstalaciones()
-      .subscribe(data => {
-        this.instalaciones = data.instalaciones;
+      .subscribe(instalaciones => {
+        this.instalaciones = instalaciones;
       });
   }
 }

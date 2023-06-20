@@ -13,77 +13,19 @@
 
 
 
-  <!-- DIV INSTALACIONES #1 -->
+  <!-- DIV INSTALACIONES -->
+  <div class="row">
+    <div *ngFor="let instalacion of instalaciones" class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img [src]="instalacion.foto" class="card-img-top" alt="Imagen de la instalación">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">{{ instalacion.nombre }}</h5>
+          <p class="card-text">{{ instalacion.descripcion }}</p>
+          <div class="mt-auto text-center">
+            <a routerLink="/dashboard/reservas/agenda" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div  class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <!-- basquet -->
-      <div class="my-3 p-3">
-        <h2 class="display-5">{{ instalaciones[1].nombre }}</h2>
-        <p class="descripcion">{{ instalaciones[1].descripcion }}</p>
-        <a routerLink="/dashboard/reservas/agenda"><button type="button" class="btn btn-primary btn-lg">Reservar</button></a>
-      </div>
-      <div>
-        <img [src]="instalaciones[1].imgInstalacion" class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"  alt="cancha-de-basquet">
-        </div>
-    </div>
-    <!-- futbol -->
-    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 py-3">
-        <h2 class="display-5">{{ instalaciones[0].nombre }}</h2>
-        <p class="descripcion">{{ instalaciones[0].descripcion }}</p>
-        <a routerLink="/dashboard/reservas/agenda"><button type="button" class="btn btn-light btn-lg">Reservar</button></a>
-      </div>
-      <div>
-        <img [src]="instalaciones[0].imgInstalacion" class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" alt="">
-        </div>
-    </div>
-  </div>
-
-  
-<!-- DIV INSTALACIONES #2 -->
-
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3" id="instalaciones2">
-    <!-- paddle -->
-    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 py-3">
-        <h2 class="display-5">{{ instalaciones[2].nombre }}</h2>
-        <p class="descripcion">{{ instalaciones[2].descripcion }}</p>
-        <a routerLink="/dashboard/reservas/agenda"><button type="button" class="btn btn-light btn-lg">Reservar</button></a>
-      </div>
-      <div>
-        <img [src]="instalaciones[2].imgInstalacion" class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" alt="cancha-de-paddle">
-        </div>
-    </div>
-    <!-- gimnasio -->
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">{{ instalaciones[3].nombre }}</h2>
-        <p class="descripcion">{{ instalaciones[3].descripcion }}</p>
-        <a routerLink="/dashboard/reservas/agenda"><button type="button" class="btn btn-primary btn-lg">Reservar</button></a>
-      </div>
-      <div>
-        <img [src]="instalaciones[3].imgInstalacion" class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" alt="gimnasio">
-        </div>
-    </div>
-  </div>
-
-
-<!-- SALON DE EVENTOS -->
-
-
-<div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img [src]="instalaciones[4].imgInstalacion" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="1700" height="1500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ instalaciones[4].nombre }}</h1>
-        <p class="lead">{{ instalaciones[4].descripcion }}</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a routerLink="/dashboard/reservas/agenda"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Reservar</button></a>
-    
-        </div>
-      </div>
-    </div>
-  </div>

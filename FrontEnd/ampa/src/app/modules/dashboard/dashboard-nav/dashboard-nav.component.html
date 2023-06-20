@@ -5,8 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a  *ngIf="isAdmin === true" mat-list-item routerLink="/home/Productos">Productos</a>
-      <a  *ngIf="isAdmin === true" mat-list-item routerLink="/home/Servicios">Servicios</a>
+      <a  *ngIf="isAdmin === true" mat-list-item routerLink="/dashboard/productos">Productos</a>
+      <a  *ngIf="isAdmin === true" mat-list-item routerLink="/dashboard/reservas/">Instalaciones</a>
       <a  *ngIf="isAdmin === false" mat-list-item routerLink="/home">Home</a>
       <button class="btn" (click)="isAdminToggle()">
         Cambiar rol

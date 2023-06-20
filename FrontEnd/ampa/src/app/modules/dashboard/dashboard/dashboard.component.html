@@ -1,55 +1,43 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard Admin</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
 
-        <!-- VENTAS -->
-        <mat-card-content class="dashboard-card-content" *ngIf="card.title === 'Ventas'">
-          
-          
-          <app-ventas style="display: flex;"/>
+  <div class="productos" [ngClass]="{ 'fade-in': productosVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarProductos()">
+      Administrar productos
+      <mat-icon>{{ productosVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-ventas *ngIf="productosVisible"></app-ventas>
+  </div>
 
+  <div class="usuarios" [ngClass]="{ 'fade-in': usuariosVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarUsuarios()">
+      Administrar usuarios
+      <mat-icon>{{ usuariosVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-clientes *ngIf="usuariosVisible"></app-clientes>
+  </div>
 
-        </mat-card-content>
+  <div class="reservas" [ngClass]="{ 'fade-in': reservasVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarReservas()">
+      Administrar Reservas
+      <mat-icon>{{ reservasVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-reservas *ngIf="reservasVisible"></app-reservas>
+  </div>
 
-
-        <!-- RESERVAS -->
-        <mat-card-content class="dashboard-card-content reservas" *ngIf="card.title === 'Reservas'">
-          
-          
-          <app-reservas/>  
-        </mat-card-content>
-
-
-        <!-- INGRESOS -->
-        <mat-card-content class="dashboard-card-content ingresos" *ngIf="card.title === 'Ingresos'">
-          
-          <app-ingresos/>
-        </mat-card-content>
-          
-
-        <!-- CLIENTES -->
-        <mat-card-content class="dashboard-card-content clientes" *ngIf="card.title === 'Clientes'">
-          
-         <app-clientes class="clientes-component"/>
-
-        </mat-card-content>
-      </mat-card>
-
-
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="instalaciones" [ngClass]="{ 'fade-in': instalacionesVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarInstalaciones()">
+      Administrar Instalaciones
+      <mat-icon>{{ instalacionesVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+      </button>
+    <app-instalaciones *ngIf="instalacionesVisible"></app-instalaciones>
+  </div>
+  <div class="productos" [ngClass]="{ 'fade-in': ventasVisible }">
+    <button class="btn btn-lg btn-secondary btn-icon" (click)="mostrarVentas()">
+      Ventas
+      <mat-icon>{{ ventasVisible ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+    </button>
+    <app-factura *ngIf="ventasVisible"></app-factura>
+  </div>
 </div>
+

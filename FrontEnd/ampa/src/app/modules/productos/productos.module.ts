@@ -12,11 +12,22 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { Carrito2Component } from './components/carrito2/carrito2.component';
+import { PasarelaPagosComponent } from './components/pasarela-pagos/pasarela-pagos.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CompraExitosaComponent } from './components/pasarela-pagos/compra-exitosa/compra-exitosa.component';
+
 
 @NgModule({
   declarations: [
     ProductosComponent,
-    CarritoComponent
+    CarritoComponent,
+    Carrito2Component,
+    PasarelaPagosComponent,
+    CompraExitosaComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +40,10 @@ import {MatCardModule} from '@angular/material/card';
     MatSnackBarModule,
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
 })
 export class ProductosModule { }

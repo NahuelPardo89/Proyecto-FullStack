@@ -61,7 +61,14 @@ a {
   display: flex;
   flex-direction: column;
 }
-
+.micuenta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.editarForm {
+  text-align: start;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -72,4 +79,9 @@ a {
   .compras h3 {
     font-size: 12px;
   }
+}
+
+.table-container {
+  max-height: 120px; 
+  overflow-y: auto;
 }

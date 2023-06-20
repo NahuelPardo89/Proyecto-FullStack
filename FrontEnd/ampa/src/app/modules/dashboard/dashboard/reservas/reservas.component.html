@@ -1,70 +1,28 @@
-<div class="botones">
-    <button  class="btn btn-primary" (click)="cambiarDeporte(1)">Fútbol</button>
-    <button class="btn btn-danger" (click)="cambiarDeporte(2)">Tenis</button>
-    <button class="btn btn-success" (click)="cambiarDeporte(3)">Padel</button>
-</div>
-<div class="contenido" [ngSwitch]="deporte">
-    <!--TURNOS FUTBOL-->
-    <div *ngSwitchCase="1">
-        <h3>Turnos Fútbol</h3>
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Hora</th>
-                <th>Nombre</th>
-                <th>Cancha</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let turno of futbol">
-                <td>{{ turno.hora }}</td>
-                <td>{{ turno.nombre }}</td>
-                <td>{{ turno.cancha }}</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-
-    <!--TURNOS TENIS-->
-    <div *ngSwitchCase="2">
-        <h3>Turnos Tenis</h3>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Hora</th>
-                <th>Nombre</th>
-                <th>Cancha</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let turno of tenis">
-                <td>{{ turno.hora }}</td>
-                <td>{{ turno.nombre }}</td>
-                <td>{{ turno.cancha }}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!--TURNOS PADEL-->
-    <div *ngSwitchCase="3">
-        <h3>Turnos Padel</h3>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Hora</th>
-                <th>Nombre</th>
-                <th>Cancha</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let turno of padel">
-                <td>{{ turno.hora }}</td>
-                <td>{{ turno.nombre }}</td>
-                <td>{{ turno.cancha }}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
+<h2 style="text-align: center;">Administración reservas de todos los usuarios</h2>
+<br>
+<div class="table-container">
+<table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th>ID Reserva</th>
+        <th>Fecha reservada</th>
+        <th>Hora</th>
+        <th>Costo</th>
+        <th>Usuario</th>
+        <th>Instalacion</th>
+        <th>Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reserva of reservas">
+        <td>{{ reserva.idReserva }}</td>
+        <td>{{ reserva.fecha }}</td>
+        <td>{{ reserva.hora }}</td>
+        <td>{{ reserva.costo }}</td>
+        <td>{{ obtenerNombreUsuario(reserva.usuario) }}</td>
+        <td>{{ obtenerNombreInstalacion(reserva.instalaciones) }}</td>
+        <td><mat-icon class="mat-warn" (click)="eliminarReserva(reserva.idReserva)">delete</mat-icon></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

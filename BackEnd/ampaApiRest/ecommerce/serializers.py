@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from .models import Producto, Categoria, DetalleCarritoProductos, CarritoProductos, Factura
-
+from usuarios.serializers import UsuarioShortSerializer
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
@@ -13,21 +13,30 @@ class ProductoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class DetalleCarritoProductosSerializer(serializers.ModelSerializer):
-    producto = ProductoSerializer()
-    monto = serializers.ReadOnlyField()
+    producto = serializers.PrimaryKeyRelatedField(queryset=Producto.objects.all())
+    carrito = serializers.PrimaryKeyRelatedField(read_only=True)
+    
     class Meta:
         model = DetalleCarritoProductos
-        fields = ['producto', 'cantidad', 'monto']
+        fields = ['id','producto', 'cantidad',  'carrito', 'monto']
 
 class CarritoProductosSerializer(serializers.ModelSerializer):
+    usuario= UsuarioShortSerializer()
     monto = serializers.ReadOnlyField()
     detalles = DetalleCarritoProductosSerializer(many=True, read_only=True)
 
     class Meta:
         model = CarritoProductos
-        fields = ['usuario', 'monto', 'detalles']
+        fields = ['usuario',  'detalles', 'monto']
 
 class FacturaSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Factura
         fields = '__all__'
+class FacturaSerializer2(serializers.ModelSerializer):
+    carrito= CarritoProductosSerializer()
+    class Meta:
+        model = Factura
+        fields = '__all__'
+    

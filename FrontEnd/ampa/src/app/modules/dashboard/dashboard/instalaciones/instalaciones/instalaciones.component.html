@@ -1,0 +1,73 @@
+
+<!-- Botón para agregar instalación -->
+<div class="d-flex justify-content-center">
+  <button class="btn btn-primary" style="margin: 10px;" (click)="mostrarFormulario = true">Agregar nueva instalación</button>
+</div>
+<br>
+
+<!-- Formulario para agregar instalación -->
+<div *ngIf="mostrarFormulario" class="mt-4  formulario-container">
+  <h3>Agregar nueva instalación</h3>
+  <form (ngSubmit)="agregarInstalacion()" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevaInstalacion.nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea class="form-control" id="descripcion" [(ngModel)]="nuevaInstalacion.descripcion" name="descripcion" required></textarea>
+    </div>
+    <br>
+    <div class="form-group d-flex justify-content-center">
+      <label for="foto">Foto:</label>
+      <br>
+      <input type="file" class="form-control-file btn-agregar-archivo" id="foto" (change)="onFileSelected($event, nuevaInstalacion)" name="foto" accept="image/*" [disabled]="!nuevaInstalacion.editandoInstalacion">
+
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary m-2">Guardar</button>
+      <button type="button" class="btn btn-secondary m-2" (click)="mostrarFormulario = false">Cancelar</button>
+    </div>
+  </form>
+</div>
+
+  <div class="d-flex justify-content-center">
+    <h2>Instalaciones del Complejo deportivo A.M.PA. </h2>
+  </div>
+  <div class="table-container  formulario-container">
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th>idInstalacion</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Foto</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let instalacion of instalaciones">
+        <td>{{ instalacion.idInstalacion }}</td>
+        <td>
+          <input type="text" [(ngModel)]="instalacion.nombre" [disabled]="!instalacion.editandoInstalacion">
+        </td>
+        <td>
+          <textarea [(ngModel)]="instalacion.descripcion" [disabled]="!instalacion.editandoInstalacion"></textarea>
+        </td>
+        <td>
+          <img [src]="instalacion.foto" alt="Foto de la instalación" width="100">
+          <input type="file" (change)="onFileSelected($event, instalacion)" [disabled]="!instalacion.editandoInstalacion">
+        </td>
+        
+        <td>
+          <button class="btn btn-primary m-2" *ngIf="!instalacion.editandoInstalacion" (click)="editarInstalacion(instalacion)">Editar</button>
+          <button class="btn btn-secondary m-2" *ngIf="instalacion.editandoInstalacion" (click)="cancelarEdicion(instalacion)">Cancelar</button>
+          <button class="btn btn-success m-2" *ngIf="instalacion.editandoInstalacion" (click)="guardarInstalacion(instalacion)">Guardar</button>
+          <button class="btn btn-danger m-2" *ngIf="!instalacion.editandoInstalacion" (click)="eliminarInstalacion(instalacion)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
