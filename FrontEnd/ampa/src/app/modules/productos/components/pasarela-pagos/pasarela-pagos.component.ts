@@ -38,6 +38,7 @@ export class PasarelaPagosComponent {
     this.pagos.realizarPago({ usuario: this.carrito.usuario.id}).subscribe(
       res => {
         console.log('Pago realizado:', res);
+        
       },
       err => {
         console.log('Hubo un error al realizar el pago:', err);

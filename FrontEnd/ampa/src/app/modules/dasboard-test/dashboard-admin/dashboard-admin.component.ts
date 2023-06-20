@@ -31,7 +31,7 @@ export class DashboardAdminComponent implements OnInit {
       precio: [, Validators.required,],
       stock: [, Validators.required],
       categoria: [, Validators.required],
-      // Añade los otros campos aquí.
+      
     });
 
     this.categoriaForm = this.fb.group({
