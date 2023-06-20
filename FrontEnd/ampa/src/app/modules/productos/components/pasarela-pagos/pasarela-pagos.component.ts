@@ -18,6 +18,7 @@ export class PasarelaPagosComponent {
   carrito: any = null;
   formulario: FormGroup;
 
+
   constructor(private carritoService: Carrito2Service, private pagos: PagosService, private formBuilder: FormBuilder, private dialog: MatDialog) {
     this.formulario = this.formBuilder.group({
       nombre: ['', Validators.required],
@@ -58,6 +59,8 @@ export class PasarelaPagosComponent {
     this.pagos.realizarPago({ usuario: this.carrito.usuario.id}).subscribe(
       res => {
         console.log('Pago realizado:', res);
+        
+        
         
       },
       err => {

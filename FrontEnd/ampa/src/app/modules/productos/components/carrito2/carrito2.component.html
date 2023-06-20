@@ -31,6 +31,6 @@
       <button (click)="finalizarCompra()" type="button" class="btn  btn-success  ">Finalizar compra</button>
     </div>
   </div>
-  <div *ngIf="carrito && carrito.detalles.length === 0">
-    <p>No hay Productos en el carrito</p>
+  <div class="container" *ngIf="carrito && carrito.detalles.length === 0">
+    <h1>No hay Productos en el carrito</h1>
   </div>
