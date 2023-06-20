@@ -14,7 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { MatTableModule } from '@angular/material/table';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 
@@ -33,6 +33,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InstalacionesComponent } from './dashboard/instalaciones/instalaciones/instalaciones.component';
 import { FacturaComponent } from './dashboard/factura/factura.component';
+import { DialogEdicionComponent } from './dashboard-user/dialog-edicion/dialog-edicion.component';
+
+
+
+
 
 
 
@@ -52,6 +57,7 @@ import { FacturaComponent } from './dashboard/factura/factura.component';
     ConfirmDialogComponent,
     InstalacionesComponent,
     FacturaComponent,
+    DialogEdicionComponent,
    
    
   
@@ -81,6 +87,7 @@ import { FacturaComponent } from './dashboard/factura/factura.component';
     MatDialogModule,
     MatSnackBarModule,
     FormsModule,
+    
     
     
     

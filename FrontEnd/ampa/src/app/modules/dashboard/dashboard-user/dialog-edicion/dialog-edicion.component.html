@@ -1,0 +1,52 @@
+<form [formGroup]="usuarioForm" (ngSubmit)="editarDatos()">
+    <mat-form-field>
+      <input matInput formControlName="dni" placeholder="DNI">
+      <mat-label>DNI</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['dni'].invalid && (usuarioForm.controls['dni'].dirty || usuarioForm.controls['dni'].touched)">
+        DNI es requerido
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="nombre" placeholder="Nombre">
+      <mat-label>Nombre</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['nombre'].invalid && (usuarioForm.controls['nombre'].dirty || usuarioForm.controls['nombre'].touched)">
+        Nombre es requerido
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="apellido" placeholder="Apellido">
+      <mat-label>Apellido</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['apellido'].invalid && (usuarioForm.controls['apellido'].dirty || usuarioForm.controls['apellido'].touched)">
+        Apellido es requerido
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="email" placeholder="Email">
+      <mat-label>Email</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['email'].invalid && (usuarioForm.controls['email'].dirty || usuarioForm.controls['email'].touched)">
+        Email es requerido y debe ser válido
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="telefono" placeholder="Teléfono">
+      <mat-label>Teléfono</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['telefono'].invalid && (usuarioForm.controls['telefono'].dirty || usuarioForm.controls['telefono'].touched)">
+        Teléfono es requerido
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="direccion" placeholder="Dirección">
+      <mat-label>Dirección</mat-label>
+      <mat-error *ngIf="usuarioForm.controls['direccion'].invalid && (usuarioForm.controls['direccion'].dirty || usuarioForm.controls['direccion'].touched)">
+        Dirección es requerida
+      </mat-error>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit" [disabled]="usuarioForm.invalid">Enviar</button>
+  </form>
+  

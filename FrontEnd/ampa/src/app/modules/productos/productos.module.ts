@@ -17,6 +17,8 @@ import { PasarelaPagosComponent } from './components/pasarela-pagos/pasarela-pag
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CompraExitosaComponent } from './components/pasarela-pagos/compra-exitosa/compra-exitosa.component';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ProductosComponent,
     CarritoComponent,
     Carrito2Component,
-    PasarelaPagosComponent
+    PasarelaPagosComponent,
+    CompraExitosaComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +42,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
 })
 export class ProductosModule { }

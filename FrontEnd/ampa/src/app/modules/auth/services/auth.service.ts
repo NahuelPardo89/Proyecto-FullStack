@@ -35,6 +35,7 @@ export class AuthService {
       })
     );
   }
+  
  
   register(user: RegisterUser): Observable<JwtResponse> {
     return this.http.post<JwtResponse>(this.registerUrl, user).pipe(
@@ -72,5 +73,8 @@ export class AuthService {
     localStorage.setItem('access_token', response.access);
     localStorage.setItem('refresh_token', response.refresh);
     this.currentUserSubject.next(response.user);
+  }
+  getCurrentUser(): Observable<User | null> {
+    return this.currentUserSubject.asObservable();
   }
 }
