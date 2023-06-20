@@ -1,7 +1,7 @@
 <div class="container text-end mt-4  ">
   <a routerLink="/dashboard/productos" type="button" class="btn  btn-danger  ">cerrar</a>
 </div>
-<div *ngIf="carrito">
+<div *ngIf="carrito && carrito.detalles.length > 0">
     <h2>Carrito de {{ carrito.usuario.nombre }}</h2>
     
     <table class="table">
@@ -15,6 +15,7 @@
         </tr>
       </thead>
       <tbody>
+
         <tr *ngFor="let detalle of carrito.detalles">
           <td>{{ detalle.producto.nombre }}</td>
           <td>{{ detalle.producto.marca }}</td>
@@ -30,6 +31,6 @@
       <button (click)="finalizarCompra()" type="button" class="btn  btn-success  ">Finalizar compra</button>
     </div>
   </div>
-  <div *ngIf="!carrito">
+  <div *ngIf="carrito && carrito.detalles.length === 0">
     <p>No hay Productos en el carrito</p>
   </div>
