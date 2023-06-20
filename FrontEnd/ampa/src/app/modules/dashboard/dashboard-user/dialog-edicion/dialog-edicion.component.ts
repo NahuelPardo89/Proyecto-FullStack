@@ -15,7 +15,8 @@ export class DialogEdicionComponent implements OnInit {
   
   loggedInUser: User | null = null;
   usuarioForm: FormGroup;
-  
+  datosUser: User | null = null;
+
   constructor(private dialogRef: MatDialogRef<DialogEdicionComponent>,
     private usuariosService: UsuariosService, 
     private fb: FormBuilder, 
@@ -34,6 +35,19 @@ export class DialogEdicionComponent implements OnInit {
     });
 
     
+  }
+  resetForm() {
+    if (this.loggedInUser) {
+      this.usuarioForm.patchValue({
+        dni: this.loggedInUser.dni,
+        nombre: this.loggedInUser.nombre,
+        apellido: this.loggedInUser.apellido,
+        email: this.loggedInUser.email,
+        telefono: this.loggedInUser.telefono,
+        direccion: this.loggedInUser.direccion,
+        is_staff: this.loggedInUser.is_staff
+      });
+    }
   }
   
   
@@ -66,19 +80,12 @@ export class DialogEdicionComponent implements OnInit {
   ngOnInit(): void {
     this.authService.currentUser.subscribe((user) => {
       this.loggedInUser = user;
+      
       if (user) {
-        this.usuarioForm.patchValue({
-          dni: user.dni,
-          nombre: user.nombre,
-          apellido: user.apellido,
-          email: user.email,
-          telefono: user.telefono,
-          direccion: user.direccion,
-          
-          is_staff: user.is_staff,
-        });
+        
+        this.resetForm(); // Restablece los valores del formulario al abrir el diálogo
       }
     });
+    
   }
-
 }

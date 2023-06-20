@@ -1,0 +1,12 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    
+}
