@@ -69,7 +69,7 @@ export class PasarelaPagosComponent {
   
       // Abre el diálogo de compra exitosa
       const dialogRef = this.dialog.open(CompraExitosaComponent, {
-        width: '80%',
+        width: '60%',
         disableClose: true, // Impide cerrar el diálogo haciendo clic fuera de él
       });
   
