@@ -22,6 +22,7 @@ export class DashboardUserComponent implements OnInit {
   
   
   loggedInUser: User | null = null;
+  updatedUser: User | null = null;
   
   compras = "No hay compras a tu nombre";
   facturas: any[] = [];
@@ -100,15 +101,26 @@ export class DashboardUserComponent implements OnInit {
         // Actualiza los datos del loggedInUser solo si el diálogo se cerró con éxito
         this.authService.getCurrentUser().subscribe(
           user => {
-            this.loggedInUser = user;
-            // Realiza las acciones necesarias después de actualizar los datos
+            if (user) {
+              this.actualizarDatosUsuario(user); // Actualiza los datos del usuario en el componente
+            } else {
+              console.error('No se pudo obtener el usuario actual');
+            }
           },
           error => {
             console.error('Error al obtener los datos del usuario:', error);
           }
         );
       }
+      
+      dialogRef.componentInstance.resetForm();
     });
+  }
+  
+  actualizarDatosUsuario(user: User) {
+    this.loggedInUser = user;
+    
+    // Realiza las acciones necesarias después de actualizar los datos
   }
   
 
