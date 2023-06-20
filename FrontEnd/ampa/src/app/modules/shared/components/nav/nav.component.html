@@ -44,7 +44,7 @@
                       </li>
 
                     <li class="nav-item" *ngIf="user">
-                        <span class="nav-link text-light">Bienvenido: {{user.nombre}}, {{user.apellido}}</span>
+                        <span class="nav-link text-light">Bienvenido: {{user.nombre}}, {{user.apellido}} | Rol: {{rol}}</span>
                     </li>
                     <li class="nav-item" *ngIf="user">
                         <a class="btn btn-danger" routerLink="/home" (click)="logout()">Cerrar sesión</a>
