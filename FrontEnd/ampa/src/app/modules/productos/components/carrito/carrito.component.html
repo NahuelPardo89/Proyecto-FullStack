@@ -68,7 +68,7 @@
     <h2 class="preciototal">Precio total de los productos: {{ calcularPrecioTotal() }}</h2>
 
     <!-- BOTON DE PAGAR -->
-    <div class="botonpagar"><button mat-raised-button color="warn">Pagar</button></div>
+    <div class="botonpagar"><button mat-raised-button color="warn" (click)="abrirPasarelaPago()">Pagar</button></div>
     
 </div>
 
@@ -76,6 +76,8 @@
 <div class="sinproductos"><h2 *ngIf="listaProductos.length == 0">¡Oops! No tienes productos en tu carrito</h2></div>
 
 <div class="botonpagar"></div>
+
+
 
 
   

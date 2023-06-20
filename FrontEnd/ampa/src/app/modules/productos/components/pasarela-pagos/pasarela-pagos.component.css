@@ -1,0 +1,25 @@
+.formulario {
+    display: flex;
+    
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px;
+    
+    
+}
+.botones {
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    
+}
+.terms {
+    margin: 10px;
+}
+.comprar {
+    margin: 20px;
+    background-color: #dc3545;
+    color: white;
+}

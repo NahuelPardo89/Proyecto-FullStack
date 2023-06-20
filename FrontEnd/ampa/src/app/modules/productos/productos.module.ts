@@ -14,6 +14,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Carrito2Component } from './components/carrito2/carrito2.component';
 import { PasarelaPagosComponent } from './components/pasarela-pagos/pasarela-pagos.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { PasarelaPagosComponent } from './components/pasarela-pagos/pasarela-pag
     MatSnackBarModule,
     MatButtonModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
 })
 export class ProductosModule { }
