@@ -3,6 +3,8 @@ import { carrito } from '../../interfaces/carrito';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { MatDialog } from '@angular/material/dialog';
+import { PasarelaPagosComponent } from '../pasarela-pagos/pasarela-pagos.component';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DetalleCarritoService } from '../../services/detalle-carrito.service';
@@ -33,7 +35,7 @@ export class CarritoComponent {
   }
   
 
-  constructor(private _carritoService: CarritoService, private _snackBar: MatSnackBar,private detalleCarritoService: DetalleCarritoService) {
+  constructor(private _carritoService: CarritoService, private _snackBar: MatSnackBar,private detalleCarritoService: DetalleCarritoService, private dialog: MatDialog) {
   }
   //variable total para el precio total
   total: any;
@@ -97,7 +99,10 @@ calcularPrecioTotal(): number {
   return precioTotal;
 }
 
+abrirPasarelaPago() {
+  const dialogRef = this.dialog.open(PasarelaPagosComponent);
 
+}
 
 
 }

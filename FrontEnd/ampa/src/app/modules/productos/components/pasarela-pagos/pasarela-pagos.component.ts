@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Carrito2Service } from '../carrito2/carrito2.service';
 import { PagosService } from '../../services/pagos.service';
 
+
+
+
 @Component({
   selector: 'app-pasarela-pagos',
   templateUrl: './pasarela-pagos.component.html',
@@ -39,6 +42,16 @@ export class PasarelaPagosComponent {
       err => {
         console.log('Hubo un error al realizar el pago:', err);
       }
+      
     );
+    
   }
+  
+    //function to close dialog
+    cerrarDialog(){
+    
+    }
+
+    
+  
 }
