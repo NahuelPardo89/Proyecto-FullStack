@@ -27,8 +27,8 @@ export class UsuariosService {
     return this.http.delete(url);
   }
 
-  getUser(dni: number): Observable<Usuario> {
-    const url = `${this.usuariosUrl}/${dni}/`;
+  getUser(id: number): Observable<Usuario> {
+    const url = `${this.usuariosUrl}/${id}/`;
     return this.http.get<Usuario>(url);
   }
 

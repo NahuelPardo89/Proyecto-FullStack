@@ -6,7 +6,11 @@ import { User } from 'src/app/modules/auth/interfaces/user.interface';
 import { AgendaserviceService } from '../../reservas/components/agenda/service/agendaservice.service';
 import { InstalacionesService } from '../../reservas/components/instalaciones/service/instalaciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogEdicionComponent } from './dialog-edicion/dialog-edicion.component';
 import { ReservaNotificacionService } from '../../shared/components/nav/services/notificacion-reserva.service';
+
+
 
 @Component({
   selector: 'app-dashboard-user',
@@ -14,6 +18,7 @@ import { ReservaNotificacionService } from '../../shared/components/nav/services
   styleUrls: ['./dashboard-user.component.css']
 })
 export class DashboardUserComponent implements OnInit {
+  
   
   loggedInUser: User | null = null;
   
@@ -46,9 +51,11 @@ export class DashboardUserComponent implements OnInit {
     private agendaService: AgendaserviceService,
     private instalacionesService: InstalacionesService,
     private snackBar: MatSnackBar,
+    private dialog: MatDialog,
     private reservaNotificacionService: ReservaNotificacionService
   ) {
     this.instalaciones = [];
+    
   }
 
   ngOnInit(): void {
@@ -70,8 +77,35 @@ export class DashboardUserComponent implements OnInit {
         map[instalacion.idInstalacion] = instalacion.nombre;
         return map;
       }, {});
+
+       
     });
   }
+  // Editar datos de usuario actual
+  editarDatos() {
+    const dialogRef = this.dialog.open(DialogEdicionComponent, {
+      width: '400px',
+      data: this.loggedInUser
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Actualiza los datos del loggedInUser solo si el diálogo se cerró con éxito
+        this.authService.getCurrentUser().subscribe(
+          user => {
+            this.loggedInUser = user;
+            // Realiza las acciones necesarias después de actualizar los datos
+          },
+          error => {
+            console.error('Error al obtener los datos del usuario:', error);
+          }
+        );
+      }
+    });
+  }
+  
+
+  
 
   // Obtener las reservas del usuario actual
   obtenerReservasUsuario() {

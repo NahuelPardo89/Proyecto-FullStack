@@ -7,5 +7,6 @@ export interface User {
     telefono: string;
     direccion: string;
     is_staff: boolean;
+    
 }
 
