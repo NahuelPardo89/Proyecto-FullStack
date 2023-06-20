@@ -16,6 +16,7 @@ export class NavComponent implements OnInit, OnDestroy {
   reservas: any[] = [];
   loggedInUser: User | null = null;
   totalReservations: number = 0;
+  rol: String='Cliente'
 
   constructor(
     private authService: AuthService,
@@ -29,6 +30,9 @@ export class NavComponent implements OnInit, OnDestroy {
       this.loggedInUser = user; // Asignar el usuario actual a loggedInUser
       if (user) {
         this.obtenerReservasUsuario();
+      }
+      if (this.user?.is_staff) {
+        this.rol = 'Admin'
       }
     });
 
