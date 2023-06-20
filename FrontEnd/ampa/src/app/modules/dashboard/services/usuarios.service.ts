@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Usuario } from '../productos/interfaces/usuario.interface';
+import { Usuario } from '../../productos/interfaces/usuario.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({

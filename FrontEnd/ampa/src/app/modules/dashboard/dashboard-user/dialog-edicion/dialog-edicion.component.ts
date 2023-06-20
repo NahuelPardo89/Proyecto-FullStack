@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/modules/productos/interfaces/usuario.interface';
-import { UsuariosService } from '../../usuarios.service';
+import { UsuariosService } from '../../services/usuarios.service';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { User } from 'src/app/modules/auth/interfaces/user.interface';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';

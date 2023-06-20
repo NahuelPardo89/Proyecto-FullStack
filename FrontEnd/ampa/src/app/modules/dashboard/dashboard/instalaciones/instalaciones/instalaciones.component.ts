@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InstalacionesService } from 'src/app/modules/reservas/components/instalaciones/service/instalaciones.service';
+import { InstalacionesService } from 'src/app/modules/reservas/services/instalaciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
