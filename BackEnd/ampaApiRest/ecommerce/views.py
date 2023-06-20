@@ -26,6 +26,7 @@ class CarritoProductosViewSet(viewsets.ModelViewSet):
         queryset = CarritoProductos.objects.filter(usuario_id=usuario_id)
         carrito = get_object_or_404(queryset)
         serializer = self.get_serializer(carrito)
+        
         return Response(serializer.data)
     def get_queryset(self):
         return super().get_queryset().prefetch_related(

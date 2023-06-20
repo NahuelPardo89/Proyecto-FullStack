@@ -24,7 +24,7 @@ export class Carrito2Component implements OnInit {
         
       this.carritoService.getCarrito(usuarioId).subscribe(data => {
         
-        console.log(this.carrito)
+        this.carrito = data
         for (let detalle of this.carrito.detalles) {
           this.carritoService.getProductoDetails(detalle.producto).subscribe(producto => {
             detalle.producto = producto;
