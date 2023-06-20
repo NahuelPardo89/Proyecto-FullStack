@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProductosRoutingModule } from './productos-routing.module';
 import { ProductosComponent } from './components/productos/productos.component';
-import { CarritoComponent } from './components/carrito/carrito.component';
+
 import {MatTableModule} from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -24,7 +24,6 @@ import { CompraExitosaComponent } from './components/pasarela-pagos/compra-exito
 @NgModule({
   declarations: [
     ProductosComponent,
-    CarritoComponent,
     Carrito2Component,
     PasarelaPagosComponent,
     CompraExitosaComponent

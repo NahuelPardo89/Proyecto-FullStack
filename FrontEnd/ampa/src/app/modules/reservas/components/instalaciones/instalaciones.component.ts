@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InstalacionesService } from './service/instalaciones.service';
+import { InstalacionesService } from '../../services/instalaciones.service';
 
 @Component({
   selector: 'app-instalaciones',

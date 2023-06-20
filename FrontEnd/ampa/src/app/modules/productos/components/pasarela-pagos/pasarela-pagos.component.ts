@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Carrito2Service } from '../carrito2/carrito2.service';
+import { Carrito2Service } from '../../services/carrito2.service';
 import { PagosService } from '../../services/pagos.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';

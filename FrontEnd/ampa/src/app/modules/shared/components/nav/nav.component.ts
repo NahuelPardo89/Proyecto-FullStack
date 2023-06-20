@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/modules/auth/interfaces/user.interface';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
-import { AgendaserviceService } from 'src/app/modules/reservas/components/agenda/service/agendaservice.service';
+import { AgendaserviceService } from 'src/app/modules/reservas/services/agendaservice.service';
 import { ReservaNotificacionService } from './services/notificacion-reserva.service';
 
 @Component({

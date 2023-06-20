@@ -3,13 +3,13 @@ import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { AuthService } from '../../auth/services/auth.service';
 import { User } from 'src/app/modules/auth/interfaces/user.interface';
-import { AgendaserviceService } from '../../reservas/components/agenda/service/agendaservice.service';
-import { InstalacionesService } from '../../reservas/components/instalaciones/service/instalaciones.service';
+import { AgendaserviceService } from '../../reservas/services/agendaservice.service';
+import { InstalacionesService } from '../../reservas/services/instalaciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogEdicionComponent } from './dialog-edicion/dialog-edicion.component';
 import { ReservaNotificacionService } from '../../shared/components/nav/services/notificacion-reserva.service';
-import { FacturaService } from '../dashboard/factura/factura.service';
+import { FacturaService } from '../services/factura.service';
 
 
 

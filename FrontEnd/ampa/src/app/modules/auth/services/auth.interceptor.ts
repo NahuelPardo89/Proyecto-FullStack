@@ -3,7 +3,9 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError, switchMap, take, filter } from 'rxjs/operators';
 import { AuthService } from './auth.service';
-
+// Queda a la escucha de los errores, si el back devuelve 401 
+// por que se vencio el access token envia el refresh token
+//para obtener un nuevo acces token
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
   private isRefreshing = false;

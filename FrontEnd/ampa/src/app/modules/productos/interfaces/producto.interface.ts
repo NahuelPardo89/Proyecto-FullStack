@@ -5,7 +5,7 @@ export interface Producto {
     descripcion: string;
     precio: number;
     stock: number;
-    foto: string | null;  // Ajustado para permitir null
-    categoria: number;  // Ajustado para ser solo un ID de número, no un objeto de Categoria
+    foto: string | null;  
+    categoria: number;  
     estaEnCarrito?: boolean;
   }
