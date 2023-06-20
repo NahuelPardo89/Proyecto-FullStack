@@ -5,6 +5,7 @@ import { Producto } from '../../interfaces/producto.interface';
 
 import { DetalleCarritoProducto } from '../../interfaces/detalleCarrito.interface';
 import { DetalleCarritoService } from '../../services/detalle-carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productos',
@@ -14,14 +15,19 @@ import { DetalleCarritoService } from '../../services/detalle-carrito.service';
 export class ProductosComponent implements OnInit {
 
   productos: Producto[];
+  
 
-  constructor(private productosService: ProductosService,private detalleCarritoService: DetalleCarritoService) {
+  constructor(private productosService: ProductosService,private detalleCarritoService: DetalleCarritoService,private router: Router) {
     this.productos = [];
   }
   ngOnInit() {
     this.productosService.getProductos()
       .subscribe(data => {
-        this.productos = data;
+        this.productos = data.map(producto => ({ 
+          ...producto, 
+          estaEnCarrito: false ,
+        
+        }));
         
       });
   }
@@ -45,10 +51,14 @@ export class ProductosComponent implements OnInit {
     this.detalleCarritoService.addProductoACarrito(detalle)
       .subscribe(() => {
         console.log(`Producto ${producto.nombre} añadido al carrito`);
-        // Aquí puedes hacer algo más, como mostrar una notificación al usuario
+        producto.estaEnCarrito = true;
+        
       }, error => {
         console.error(error);
-        // Aquí puedes manejar el error, por ejemplo mostrar un mensaje de error al usuario
+       
       });
+  }
+  carro(){
+    this.router.navigate(['/dashboard/productos/carrito2'])
   }
 }

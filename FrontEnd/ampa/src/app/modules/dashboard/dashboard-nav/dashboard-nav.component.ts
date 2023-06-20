@@ -10,7 +10,8 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class DashboardNavComponent {
 
-  isAdmin:boolean = true;
+  isAdmin: boolean = false;
+  
 
   isAdminToggle() {
     this.isAdmin = !this.isAdmin
@@ -22,8 +23,17 @@ export class DashboardNavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.loadAdminStatus();
+  }
 
-  
+  loadAdminStatus() {
+    const userItem = localStorage.getItem('user');
+    if (userItem) {
+      const usuario = JSON.parse(userItem);
+      this.isAdmin = usuario.is_staff;
+      
+    }
+  }
 
 }
