@@ -9,6 +9,7 @@ from rest_framework import viewsets,permissions
 
 class ReservasViewSet(viewsets.ModelViewSet):
     queryset = Reserva.objects.all()
+    permission_classes = [permissions.IsAuthenticated, ]
     serializer_class = ReservasSerializer
     
     def get_queryset(self):

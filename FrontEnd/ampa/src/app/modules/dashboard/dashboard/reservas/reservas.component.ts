@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AgendaserviceService } from 'src/app/modules/reservas/components/agenda/service/agendaservice.service';
-import { InstalacionesService } from 'src/app/modules/reservas/components/instalaciones/service/instalaciones.service';
+import { AgendaserviceService } from 'src/app/modules/reservas/services/agendaservice.service';
+import { InstalacionesService } from 'src/app/modules/reservas/services/instalaciones.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 

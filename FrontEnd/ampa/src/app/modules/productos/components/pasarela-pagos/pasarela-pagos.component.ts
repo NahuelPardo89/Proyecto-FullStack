@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Carrito2Service } from '../carrito2/carrito2.service';
+import { Carrito2Service } from '../../services/carrito2.service';
 import { PagosService } from '../../services/pagos.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -17,6 +17,7 @@ import { CompraExitosaComponent } from './compra-exitosa/compra-exitosa.componen
 export class PasarelaPagosComponent {
   carrito: any = null;
   formulario: FormGroup;
+
 
   constructor(private carritoService: Carrito2Service, private pagos: PagosService, private formBuilder: FormBuilder, private dialog: MatDialog) {
     this.formulario = this.formBuilder.group({
@@ -58,6 +59,8 @@ export class PasarelaPagosComponent {
     this.pagos.realizarPago({ usuario: this.carrito.usuario.id}).subscribe(
       res => {
         console.log('Pago realizado:', res);
+        
+        
         
       },
       err => {

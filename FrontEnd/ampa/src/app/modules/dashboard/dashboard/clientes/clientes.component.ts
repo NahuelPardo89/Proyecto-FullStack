@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/modules/productos/interfaces/usuario.interface';
-import { UsuariosService } from '../../usuarios.service';
+import { UsuariosService } from '../../services/usuarios.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
